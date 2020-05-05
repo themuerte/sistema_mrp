@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sistema_mrp
 {
-    public partial class Form1 : Form
+    public partial class inicio : Form
     {
-        public Form1()
+        public inicio()
         {
             InitializeComponent();
         }

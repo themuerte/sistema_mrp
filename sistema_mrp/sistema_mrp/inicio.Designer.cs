@@ -1,6 +1,6 @@
 ﻿namespace sistema_mrp
 {
-    partial class Form1
+    partial class inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
