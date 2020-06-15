@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_modeloP = new System.Windows.Forms.Button();
-            this.btn_MRP = new System.Windows.Forms.Button();
-            this.btn_planeacioA = new System.Windows.Forms.Button();
-            this.btn_atras = new System.Windows.Forms.Button();
             this.btn_modeloQ = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_atras = new System.Windows.Forms.Button();
+            this.btn_planeacioA = new System.Windows.Forms.Button();
+            this.btn_MRP = new System.Windows.Forms.Button();
+            this.btn_modeloP = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_prin = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,42 +52,14 @@
             this.panel1.Size = new System.Drawing.Size(223, 621);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btn_modeloQ
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS PGothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Gestion De Inventario";
-            // 
-            // btn_modeloP
-            // 
-            this.btn_modeloP.Location = new System.Drawing.Point(10, 156);
-            this.btn_modeloP.Name = "btn_modeloP";
-            this.btn_modeloP.Size = new System.Drawing.Size(197, 46);
-            this.btn_modeloP.TabIndex = 1;
-            this.btn_modeloP.Text = "button1";
-            this.btn_modeloP.UseVisualStyleBackColor = true;
-            // 
-            // btn_MRP
-            // 
-            this.btn_MRP.Location = new System.Drawing.Point(10, 307);
-            this.btn_MRP.Name = "btn_MRP";
-            this.btn_MRP.Size = new System.Drawing.Size(197, 46);
-            this.btn_MRP.TabIndex = 2;
-            this.btn_MRP.Text = "button2";
-            this.btn_MRP.UseVisualStyleBackColor = true;
-            // 
-            // btn_planeacioA
-            // 
-            this.btn_planeacioA.Location = new System.Drawing.Point(10, 379);
-            this.btn_planeacioA.Name = "btn_planeacioA";
-            this.btn_planeacioA.Size = new System.Drawing.Size(197, 46);
-            this.btn_planeacioA.TabIndex = 3;
-            this.btn_planeacioA.Text = "button3";
-            this.btn_planeacioA.UseVisualStyleBackColor = true;
+            this.btn_modeloQ.Location = new System.Drawing.Point(7, 230);
+            this.btn_modeloQ.Name = "btn_modeloQ";
+            this.btn_modeloQ.Size = new System.Drawing.Size(197, 46);
+            this.btn_modeloQ.TabIndex = 5;
+            this.btn_modeloQ.Text = "button1";
+            this.btn_modeloQ.UseVisualStyleBackColor = true;
             // 
             // btn_atras
             // 
@@ -99,28 +71,57 @@
             this.btn_atras.UseVisualStyleBackColor = true;
             this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
             // 
-            // btn_modeloQ
+            // btn_planeacioA
             // 
-            this.btn_modeloQ.Location = new System.Drawing.Point(7, 230);
-            this.btn_modeloQ.Name = "btn_modeloQ";
-            this.btn_modeloQ.Size = new System.Drawing.Size(197, 46);
-            this.btn_modeloQ.TabIndex = 5;
-            this.btn_modeloQ.Text = "button1";
-            this.btn_modeloQ.UseVisualStyleBackColor = true;
+            this.btn_planeacioA.Location = new System.Drawing.Point(10, 379);
+            this.btn_planeacioA.Name = "btn_planeacioA";
+            this.btn_planeacioA.Size = new System.Drawing.Size(197, 46);
+            this.btn_planeacioA.TabIndex = 3;
+            this.btn_planeacioA.Text = "button3";
+            this.btn_planeacioA.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // btn_MRP
             // 
-            this.panel2.Location = new System.Drawing.Point(231, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(943, 621);
-            this.panel2.TabIndex = 1;
+            this.btn_MRP.Location = new System.Drawing.Point(10, 307);
+            this.btn_MRP.Name = "btn_MRP";
+            this.btn_MRP.Size = new System.Drawing.Size(197, 46);
+            this.btn_MRP.TabIndex = 2;
+            this.btn_MRP.Text = "button2";
+            this.btn_MRP.UseVisualStyleBackColor = true;
+            // 
+            // btn_modeloP
+            // 
+            this.btn_modeloP.Location = new System.Drawing.Point(10, 156);
+            this.btn_modeloP.Name = "btn_modeloP";
+            this.btn_modeloP.Size = new System.Drawing.Size(197, 46);
+            this.btn_modeloP.TabIndex = 1;
+            this.btn_modeloP.Text = "button1";
+            this.btn_modeloP.UseVisualStyleBackColor = true;
+            this.btn_modeloP.Click += new System.EventHandler(this.btn_modeloP_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS PGothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Gestion De Inventario";
+            // 
+            // panel_prin
+            // 
+            this.panel_prin.Location = new System.Drawing.Point(231, 3);
+            this.panel_prin.Name = "panel_prin";
+            this.panel_prin.Size = new System.Drawing.Size(943, 621);
+            this.panel_prin.TabIndex = 1;
             // 
             // principal_GI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 627);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel_prin);
             this.Controls.Add(this.panel1);
             this.Name = "principal_GI";
             this.Text = "principal_GI";
@@ -139,6 +140,6 @@
         private System.Windows.Forms.Button btn_planeacioA;
         private System.Windows.Forms.Button btn_MRP;
         private System.Windows.Forms.Button btn_modeloP;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_prin;
     }
 }

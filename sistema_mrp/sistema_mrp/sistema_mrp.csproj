@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vistas\Gestion De Inventario\modelo_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\modelo_P.Designer.cs">
+      <DependentUpon>modelo_P.cs</DependentUpon>
+    </Compile>
     <Compile Include="vistas\Gestion De Inventario\principal_GI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vistas\Gestion De Inventario\modelo_P.resx">
+      <DependentUpon>modelo_P.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Gestion De Inventario\principal_GI.resx">
       <DependentUpon>principal_GI.cs</DependentUpon>
     </EmbeddedResource>
