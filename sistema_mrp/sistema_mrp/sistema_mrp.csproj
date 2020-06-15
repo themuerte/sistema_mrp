@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="vistas\principal_GI.cs">
+    <Compile Include="vistas\Gestion De Inventario\principal_GI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vistas\principal_GI.Designer.cs">
+    <Compile Include="vistas\Gestion De Inventario\principal_GI.Designer.cs">
       <DependentUpon>principal_GI.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\inicio_P.cs">
@@ -69,7 +69,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vistas\principal_GI.resx">
+    <EmbeddedResource Include="vistas\Gestion De Inventario\principal_GI.resx">
       <DependentUpon>principal_GI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\inicio_P.resx">
