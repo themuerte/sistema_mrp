@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="inicio.cs">
+    <Compile Include="vistas\principal_GI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="inicio.Designer.cs">
-      <DependentUpon>inicio.cs</DependentUpon>
+    <Compile Include="vistas\principal_GI.Designer.cs">
+      <DependentUpon>principal_GI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\inicio_P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\inicio_P.Designer.cs">
+      <DependentUpon>inicio_P.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,6 +69,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vistas\principal_GI.resx">
+      <DependentUpon>principal_GI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\inicio_P.resx">
+      <DependentUpon>inicio_P.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="vistas\Historial\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
