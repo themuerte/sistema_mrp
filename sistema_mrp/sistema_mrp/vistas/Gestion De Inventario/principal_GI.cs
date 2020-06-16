@@ -52,6 +52,19 @@ namespace sistema_mrp.vistas.Gestion_de_inventario
 
         }
 
+        private void btn_modeloQ_Click(object sender, EventArgs e)
+        {
+            internal_frame(new modelo_Q());
+        }
 
+        private void btn_MRP_Click(object sender, EventArgs e)
+        {
+            internal_frame(new MRP());
+        }
+
+        private void btn_planeacioA_Click(object sender, EventArgs e)
+        {
+            internal_frame(new plan_agregado());
+        }
     }
 }

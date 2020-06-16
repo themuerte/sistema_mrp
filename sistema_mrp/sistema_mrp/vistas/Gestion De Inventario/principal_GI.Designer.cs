@@ -58,8 +58,9 @@
             this.btn_modeloQ.Name = "btn_modeloQ";
             this.btn_modeloQ.Size = new System.Drawing.Size(197, 46);
             this.btn_modeloQ.TabIndex = 5;
-            this.btn_modeloQ.Text = "button1";
+            this.btn_modeloQ.Text = "Modelo Q";
             this.btn_modeloQ.UseVisualStyleBackColor = true;
+            this.btn_modeloQ.Click += new System.EventHandler(this.btn_modeloQ_Click);
             // 
             // btn_atras
             // 
@@ -77,8 +78,9 @@
             this.btn_planeacioA.Name = "btn_planeacioA";
             this.btn_planeacioA.Size = new System.Drawing.Size(197, 46);
             this.btn_planeacioA.TabIndex = 3;
-            this.btn_planeacioA.Text = "button3";
+            this.btn_planeacioA.Text = "Plan Agregado";
             this.btn_planeacioA.UseVisualStyleBackColor = true;
+            this.btn_planeacioA.Click += new System.EventHandler(this.btn_planeacioA_Click);
             // 
             // btn_MRP
             // 
@@ -86,8 +88,9 @@
             this.btn_MRP.Name = "btn_MRP";
             this.btn_MRP.Size = new System.Drawing.Size(197, 46);
             this.btn_MRP.TabIndex = 2;
-            this.btn_MRP.Text = "button2";
+            this.btn_MRP.Text = "MRP";
             this.btn_MRP.UseVisualStyleBackColor = true;
+            this.btn_MRP.Click += new System.EventHandler(this.btn_MRP_Click);
             // 
             // btn_modeloP
             // 
@@ -95,7 +98,7 @@
             this.btn_modeloP.Name = "btn_modeloP";
             this.btn_modeloP.Size = new System.Drawing.Size(197, 46);
             this.btn_modeloP.TabIndex = 1;
-            this.btn_modeloP.Text = "button1";
+            this.btn_modeloP.Text = "Modelo P";
             this.btn_modeloP.UseVisualStyleBackColor = true;
             this.btn_modeloP.Click += new System.EventHandler(this.btn_modeloP_Click);
             // 

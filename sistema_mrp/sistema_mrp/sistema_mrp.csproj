@@ -46,11 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="vistas\Gestion De Inventario\modelo_P.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\Gestion De Inventario\modelo_P.Designer.cs">
       <DependentUpon>modelo_P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\modelo_Q.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\modelo_Q.Designer.cs">
+      <DependentUpon>modelo_Q.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\MRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\MRP.Designer.cs">
+      <DependentUpon>MRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\plan_agregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Gestion De Inventario\plan_agregado.Designer.cs">
+      <DependentUpon>plan_agregado.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\Gestion De Inventario\principal_GI.cs">
       <SubType>Form</SubType>
@@ -77,6 +96,15 @@
     </Compile>
     <EmbeddedResource Include="vistas\Gestion De Inventario\modelo_P.resx">
       <DependentUpon>modelo_P.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Gestion De Inventario\modelo_Q.resx">
+      <DependentUpon>modelo_Q.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Gestion De Inventario\MRP.resx">
+      <DependentUpon>MRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Gestion De Inventario\plan_agregado.resx">
+      <DependentUpon>plan_agregado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\Gestion De Inventario\principal_GI.resx">
       <DependentUpon>principal_GI.cs</DependentUpon>
