@@ -25,21 +25,30 @@ namespace sistema_mrp.controlador
             this.dias_trabajados = dias_trabajados;
         }
 
-        public double get_Qoptimo()
+        public int get_Qoptimo()
         {
             double Q_optimo = 0;
             Q_optimo = Math.Sqrt((2 * demanda_anual * costo_pedir) / (costo_mantenimiento));
             Q_optimo = Math.Round(Q_optimo);
-            return Q_optimo;
+            return Convert.ToInt32( Q_optimo);
         }
 
         public int get_pedidosA()
         {
             int num_pedidosA = 0;
-            num_pedidosA = demanda_anual / Convert.ToInt32(get_Qoptimo());
+            num_pedidosA = demanda_anual / get_Qoptimo();
 
             return num_pedidosA;
         }
+
+        public double get_tiempoEntreP()
+        {
+            double tiempo_entreP;
+            tiempo_entreP = get_Qoptimo() / demanda_anual;
+            return tiempo_entreP;
+        }
+        
+      
 
 
 

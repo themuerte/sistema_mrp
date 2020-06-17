@@ -45,7 +45,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_plazoE = new System.Windows.Forms.Label();
             this.txt_plazoE = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txt_costoTotal = new System.Windows.Forms.TextBox();
+            this.txt_puntoReo = new System.Windows.Forms.TextBox();
+            this.txt_numPedidos = new System.Windows.Forms.TextBox();
+            this.txt_Qoptimo = new System.Windows.Forms.TextBox();
+            this.txt_TiempoEntreP = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_modeloQ
@@ -145,7 +152,7 @@
             // 
             // btn_calcular
             // 
-            this.btn_calcular.Location = new System.Drawing.Point(60, 345);
+            this.btn_calcular.Location = new System.Drawing.Point(71, 298);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(75, 23);
             this.btn_calcular.TabIndex = 11;
@@ -155,7 +162,7 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.Location = new System.Drawing.Point(171, 345);
+            this.btn_limpiar.Location = new System.Drawing.Point(187, 298);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
             this.btn_limpiar.TabIndex = 12;
@@ -166,7 +173,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(320, 78);
+            this.label6.Location = new System.Drawing.Point(317, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 13;
@@ -197,15 +204,72 @@
             this.txt_plazoE.Size = new System.Drawing.Size(100, 20);
             this.txt_plazoE.TabIndex = 16;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(317, 172);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Punto de reorden:";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(320, 151);
+            this.label8.Location = new System.Drawing.Point(320, 204);
             this.label8.Name = "label8";
-            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(92, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Punto de reorden:";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Costo total:";
+            // 
+            // txt_costoTotal
+            // 
+            this.txt_costoTotal.Location = new System.Drawing.Point(466, 201);
+            this.txt_costoTotal.Name = "txt_costoTotal";
+            this.txt_costoTotal.Size = new System.Drawing.Size(100, 20);
+            this.txt_costoTotal.TabIndex = 23;
+            // 
+            // txt_puntoReo
+            // 
+            this.txt_puntoReo.Location = new System.Drawing.Point(466, 169);
+            this.txt_puntoReo.Name = "txt_puntoReo";
+            this.txt_puntoReo.Size = new System.Drawing.Size(100, 20);
+            this.txt_puntoReo.TabIndex = 22;
+            // 
+            // txt_numPedidos
+            // 
+            this.txt_numPedidos.Enabled = false;
+            this.txt_numPedidos.Location = new System.Drawing.Point(466, 113);
+            this.txt_numPedidos.Name = "txt_numPedidos";
+            this.txt_numPedidos.Size = new System.Drawing.Size(100, 20);
+            this.txt_numPedidos.TabIndex = 21;
+            // 
+            // txt_Qoptimo
+            // 
+            this.txt_Qoptimo.Enabled = false;
+            this.txt_Qoptimo.Location = new System.Drawing.Point(466, 78);
+            this.txt_Qoptimo.Name = "txt_Qoptimo";
+            this.txt_Qoptimo.Size = new System.Drawing.Size(100, 20);
+            this.txt_Qoptimo.TabIndex = 20;
+            this.txt_Qoptimo.TextChanged += new System.EventHandler(this.txt_Qoptimo_TextChanged);
+            // 
+            // txt_TiempoEntreP
+            // 
+            this.txt_TiempoEntreP.Enabled = false;
+            this.txt_TiempoEntreP.Location = new System.Drawing.Point(466, 143);
+            this.txt_TiempoEntreP.Name = "txt_TiempoEntreP";
+            this.txt_TiempoEntreP.Size = new System.Drawing.Size(100, 20);
+            this.txt_TiempoEntreP.TabIndex = 25;
+            this.txt_TiempoEntreP.TextChanged += new System.EventHandler(this.txt_TiempoEntreP_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(317, 146);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(109, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Tiempo entre pedidos";
             // 
             // modelo_Q
             // 
@@ -213,7 +277,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(943, 621);
+            this.Controls.Add(this.txt_TiempoEntreP);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txt_costoTotal);
+            this.Controls.Add(this.txt_puntoReo);
+            this.Controls.Add(this.txt_numPedidos);
+            this.Controls.Add(this.txt_Qoptimo);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_plazoE);
             this.Controls.Add(this.lbl_plazoE);
             this.Controls.Add(this.label7);
@@ -234,6 +305,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modelo_Q";
             this.Text = "modelo_Q";
+            this.Load += new System.EventHandler(this.modelo_Q_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +330,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_plazoE;
         private System.Windows.Forms.TextBox txt_plazoE;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_costoTotal;
+        private System.Windows.Forms.TextBox txt_puntoReo;
+        private System.Windows.Forms.TextBox txt_numPedidos;
+        private System.Windows.Forms.TextBox txt_Qoptimo;
+        private System.Windows.Forms.TextBox txt_TiempoEntreP;
+        private System.Windows.Forms.Label label10;
     }
 }

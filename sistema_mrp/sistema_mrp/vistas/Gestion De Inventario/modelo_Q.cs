@@ -102,5 +102,20 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 e.Handled = true;
             }
         }
+
+        private void txt_Qoptimo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_TiempoEntreP_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modelo_Q_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
