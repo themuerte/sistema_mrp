@@ -175,7 +175,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(320, 113);
+            this.label7.Location = new System.Drawing.Point(317, 116);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 13);
             this.label7.TabIndex = 14;
@@ -200,11 +200,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(320, 158);
+            this.label8.Location = new System.Drawing.Point(320, 151);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(92, 13);
             this.label8.TabIndex = 17;
-            this.label8.Text = "label8";
+            this.label8.Text = "Punto de reorden:";
             // 
             // modelo_Q
             // 
