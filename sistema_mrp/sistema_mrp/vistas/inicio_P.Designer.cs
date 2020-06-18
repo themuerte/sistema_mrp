@@ -71,6 +71,7 @@
             this.btn_historia.TabIndex = 2;
             this.btn_historia.Text = "Historial";
             this.btn_historia.UseVisualStyleBackColor = true;
+            this.btn_historia.Click += new System.EventHandler(this.btn_historia_Click);
             // 
             // btn_GesInventario
             // 

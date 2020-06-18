@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using sistema_mrp.vistas.Gestion_de_inventario;
+using sistema_mrp.vistas.Historial;
 
 namespace sistema_mrp
 {
@@ -16,7 +17,7 @@ namespace sistema_mrp
         public btn_GesInventario()
         {
             InitializeComponent();
-
+            this.Location = new Point(0, 0);
         }
 
 
@@ -27,5 +28,11 @@ namespace sistema_mrp
             principal.Show();
         }
 
+        private void btn_historia_Click(object sender, EventArgs e)
+        {
+            principal_historial principal = new principal_historial();
+            this.Hide();
+            principal.Show();
+        }
     }
 }

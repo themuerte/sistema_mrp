@@ -19,7 +19,7 @@ namespace sistema_mrp.vistas.Gestion_de_inventario
         {
             InitializeComponent();
 
-            //this.Location = new Point(0,0);
+            this.Location = new Point(0,0);
         }
 
         private void internal_frame(object ob)//metodo para generar los componentes adentro del panel
