@@ -56,5 +56,9 @@ namespace sistema_mrp.vistas.Historial
             btn_Ges.Show();
         }
 
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

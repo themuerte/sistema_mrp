@@ -34,5 +34,10 @@ namespace sistema_mrp
             this.Hide();
             principal.Show();
         }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

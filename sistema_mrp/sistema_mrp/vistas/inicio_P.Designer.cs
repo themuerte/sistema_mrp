@@ -32,6 +32,7 @@
             this.lbl_inicio = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_historia = new System.Windows.Forms.Button();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,15 +74,27 @@
             this.btn_historia.UseVisualStyleBackColor = true;
             this.btn_historia.Click += new System.EventHandler(this.btn_historia_Click);
             // 
+            // btn_salir
+            // 
+            this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
+            this.btn_salir.Location = new System.Drawing.Point(12, 345);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(35, 34);
+            this.btn_salir.TabIndex = 3;
+            this.btn_salir.Text = "}";
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // btn_GesInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 391);
+            this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.btn_historia);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "btn_GesInventario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -95,6 +108,7 @@
         private System.Windows.Forms.Label lbl_inicio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_historia;
+        private System.Windows.Forms.Button btn_salir;
     }
 }
 

@@ -35,11 +35,13 @@
             this.btn_modeloQyP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_principal = new System.Windows.Forms.Panel();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Controls.Add(this.btn_atras);
             this.panel1.Controls.Add(this.btn_planAgre);
             this.panel1.Controls.Add(this.btn_MRP);
@@ -52,7 +54,7 @@
             // 
             // btn_atras
             // 
-            this.btn_atras.Location = new System.Drawing.Point(71, 485);
+            this.btn_atras.Location = new System.Drawing.Point(71, 471);
             this.btn_atras.Name = "btn_atras";
             this.btn_atras.Size = new System.Drawing.Size(75, 23);
             this.btn_atras.TabIndex = 4;
@@ -107,6 +109,16 @@
             this.panel_principal.Size = new System.Drawing.Size(943, 621);
             this.panel_principal.TabIndex = 1;
             // 
+            // btn_salir
+            // 
+            this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
+            this.btn_salir.Location = new System.Drawing.Point(13, 575);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(38, 40);
+            this.btn_salir.TabIndex = 5;
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // principal_historial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +126,7 @@
             this.ClientSize = new System.Drawing.Size(1173, 627);
             this.Controls.Add(this.panel_principal);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "principal_historial";
             this.Text = "principal_historial";
             this.panel1.ResumeLayout(false);
@@ -131,5 +144,6 @@
         private System.Windows.Forms.Button btn_atras;
         private System.Windows.Forms.Button btn_planAgre;
         private System.Windows.Forms.Button btn_MRP;
+        private System.Windows.Forms.Button btn_salir;
     }
 }

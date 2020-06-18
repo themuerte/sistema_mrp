@@ -66,5 +66,10 @@ namespace sistema_mrp.vistas.Gestion_de_inventario
         {
             internal_frame(new plan_agregado());
         }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

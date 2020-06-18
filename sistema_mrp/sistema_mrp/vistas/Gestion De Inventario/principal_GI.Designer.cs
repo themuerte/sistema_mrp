@@ -36,11 +36,13 @@
             this.btn_modeloP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_prin = new System.Windows.Forms.Panel();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Controls.Add(this.btn_modeloQ);
             this.panel1.Controls.Add(this.btn_atras);
             this.panel1.Controls.Add(this.btn_planeacioA);
@@ -64,7 +66,7 @@
             // 
             // btn_atras
             // 
-            this.btn_atras.Location = new System.Drawing.Point(69, 544);
+            this.btn_atras.Location = new System.Drawing.Point(62, 479);
             this.btn_atras.Name = "btn_atras";
             this.btn_atras.Size = new System.Drawing.Size(75, 23);
             this.btn_atras.TabIndex = 4;
@@ -119,6 +121,16 @@
             this.panel_prin.Size = new System.Drawing.Size(943, 621);
             this.panel_prin.TabIndex = 1;
             // 
+            // btn_salir
+            // 
+            this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
+            this.btn_salir.Location = new System.Drawing.Point(10, 571);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(37, 38);
+            this.btn_salir.TabIndex = 6;
+            this.btn_salir.UseVisualStyleBackColor = true;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // principal_GI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +138,7 @@
             this.ClientSize = new System.Drawing.Size(1173, 627);
             this.Controls.Add(this.panel_prin);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "principal_GI";
             this.Text = "principal_GI";
             this.panel1.ResumeLayout(false);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Button btn_MRP;
         private System.Windows.Forms.Button btn_modeloP;
         private System.Windows.Forms.Panel panel_prin;
+        private System.Windows.Forms.Button btn_salir;
     }
 }
