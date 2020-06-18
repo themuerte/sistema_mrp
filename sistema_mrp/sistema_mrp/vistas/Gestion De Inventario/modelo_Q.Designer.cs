@@ -225,6 +225,7 @@
             // 
             // txt_costoTotal
             // 
+            this.txt_costoTotal.Enabled = false;
             this.txt_costoTotal.Location = new System.Drawing.Point(605, 213);
             this.txt_costoTotal.Name = "txt_costoTotal";
             this.txt_costoTotal.Size = new System.Drawing.Size(100, 20);
@@ -232,6 +233,7 @@
             // 
             // txt_puntoReo
             // 
+            this.txt_puntoReo.Enabled = false;
             this.txt_puntoReo.Location = new System.Drawing.Point(605, 181);
             this.txt_puntoReo.Name = "txt_puntoReo";
             this.txt_puntoReo.Size = new System.Drawing.Size(100, 20);
@@ -252,7 +254,6 @@
             this.txt_Qoptimo.Name = "txt_Qoptimo";
             this.txt_Qoptimo.Size = new System.Drawing.Size(100, 20);
             this.txt_Qoptimo.TabIndex = 20;
-            this.txt_Qoptimo.TextChanged += new System.EventHandler(this.txt_Qoptimo_TextChanged);
             // 
             // txt_TiempoEntreP
             // 
@@ -261,7 +262,6 @@
             this.txt_TiempoEntreP.Name = "txt_TiempoEntreP";
             this.txt_TiempoEntreP.Size = new System.Drawing.Size(100, 20);
             this.txt_TiempoEntreP.TabIndex = 25;
-            this.txt_TiempoEntreP.TextChanged += new System.EventHandler(this.txt_TiempoEntreP_TextChanged);
             // 
             // label10
             // 
@@ -316,7 +316,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modelo_Q";
             this.Text = "modelo_Q";
-            this.Load += new System.EventHandler(this.modelo_Q_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

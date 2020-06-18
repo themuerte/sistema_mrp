@@ -29,7 +29,14 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
+            if (txt_demanda.Text==""||txt_costoPro.Text==""||txt_costoM.Text==""||txt_costoPedir.Text==""||txt_plazoE.Text==""||txt_diasAño.Text=="")
+            {
+                MessageBox.Show("Verifique los datos", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
 
+            }
         }
 
         //validacion que no puedan ingresar 
@@ -101,21 +108,6 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             {
                 e.Handled = true;
             }
-        }
-
-        private void txt_Qoptimo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_TiempoEntreP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modelo_Q_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
