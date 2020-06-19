@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_mrp.controlador;
 
 namespace sistema_mrp.vistas.Gestion_De_Inventario
 {
@@ -29,12 +30,23 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
-            if (txt_demanda.Text==""||txt_costoPro.Text==""||txt_costoM.Text==""||txt_costoPedir.Text==""||txt_plazoE.Text==""||txt_diasAño.Text=="")
+            if (txt_demanda.Text == "" || txt_costoPro.Text == "" || txt_costoM.Text == "" || txt_costoPedir.Text == "" || txt_plazoE.Text == "" || txt_diasAño.Text == "" || txt_tiempoEspera.Text == "")
             {
                 MessageBox.Show("Verifique los datos", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                txt_Qoptimo.Enabled = true;
+                txt_numPedidos.Enabled = true;
+                txt_TiempoEntreP.Enabled = true;
+                txt_puntoReo.Enabled = true;
+                txt_inventarioSegu.Enabled = true;
+                txt_costoTotal.Enabled = true;
+
+                Modelo_Q modelo_q = new Modelo_Q(Convert.ToDouble(txt_demanda.Text), Convert.ToDouble(txt_costoPro.Text), Convert.ToDouble(txt_costoM.Text)
+                    , Convert.ToDouble(txt_costoPedir.Text), Convert.ToInt32(txt_plazoE.Text), Convert.ToInt32(txt_diasAño.Text), Convert.ToInt32(txt_tiempoEspera.Text));
+
+                //falta poner los valores de resultados en su capo, problemas con convertir
 
             }
         }
@@ -97,6 +109,34 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         }
 
         private void txt_diasAño_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_plazoE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_tiempoEspera_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
