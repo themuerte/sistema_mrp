@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlador\Modelo_P.cs" />
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="vistas\Gestion De Inventario\modelo_P.cs">
       <SubType>Form</SubType>
@@ -164,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="vistas\shapes-and-symbols.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="modelo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
