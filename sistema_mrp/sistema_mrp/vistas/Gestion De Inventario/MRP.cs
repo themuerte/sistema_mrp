@@ -16,5 +16,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
             InitializeComponent();
         }
+
+        private void MRP_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
