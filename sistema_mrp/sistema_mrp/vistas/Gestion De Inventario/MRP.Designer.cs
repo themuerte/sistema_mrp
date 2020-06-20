@@ -126,7 +126,6 @@
             this.label6.Size = new System.Drawing.Size(100, 14);
             this.label6.TabIndex = 45;
             this.label6.Text = "Costo de Pedir (S)";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -272,7 +271,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panel1.Location = new System.Drawing.Point(354, 155);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(545, 50);
+            this.panel1.Size = new System.Drawing.Size(545, 73);
             this.panel1.TabIndex = 59;
             // 
             // panel2
@@ -321,7 +320,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MRP";
             this.Text = "MRP";
-            this.Load += new System.EventHandler(this.MRP_Load);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

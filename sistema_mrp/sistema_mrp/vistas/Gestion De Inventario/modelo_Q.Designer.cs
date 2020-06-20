@@ -397,7 +397,6 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Modelo Q";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // modelo_Q
             // 
@@ -440,7 +439,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modelo_Q";
             this.Text = "modelo_Q";
-            this.Load += new System.EventHandler(this.modelo_Q_Load);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

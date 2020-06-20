@@ -48,6 +48,14 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
                 //falta poner los valores de resultados en su capo, problemas con convertir
 
+                txt_Qoptimo.Text = modelo_q.get_Qoptimo();
+                txt_numPedidos.Text = modelo_q.get_pedidosA();
+                txt_TiempoEntreP.Text = modelo_q.get_tiempoEntreP();
+                txt_puntoReo.Text = modelo_q.get_puntoReorden();
+                txt_inventarioSegu.Text = modelo_q.get_inventarionSeguridad();
+                txt_costoTotal.Text = modelo_q.get_costoTotal();
+
+
             }
         }
 
@@ -150,14 +158,6 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             }
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void modelo_Q_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

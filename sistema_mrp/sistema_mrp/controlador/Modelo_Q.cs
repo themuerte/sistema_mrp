@@ -27,37 +27,54 @@ namespace sistema_mrp.controlador
             this.tiempo_espera = tiempo_espera;
         }
 
-        public int get_Qoptimo()
+        public String get_Qoptimo()
         {
             double Q_optimo = 0;
             Q_optimo = Math.Sqrt((2 * demanda_anual * costo_pedir) / (costo_mantenimiento));
             Q_optimo = Math.Round(Q_optimo);
-            return Convert.ToInt32( Q_optimo);
+            return Convert.ToString( Q_optimo);
         }
 
-        public int get_pedidosA()
+        public String get_pedidosA()
         {
             int num_pedidosA = 0;
-            num_pedidosA = Convert.ToInt32(demanda_anual / get_Qoptimo());
-            return num_pedidosA;
+            num_pedidosA = Convert.ToInt32(demanda_anual /Convert.ToInt32( get_Qoptimo()));
+            return Convert.ToString( num_pedidosA);
         }
 
-        public double get_tiempoEntreP()
+        public String get_tiempoEntreP()
         {
             double tiempo_entreP;
-            tiempo_entreP = get_Qoptimo() / demanda_anual;
-            return tiempo_entreP;
+            tiempo_entreP = Convert.ToDouble( get_Qoptimo()) / demanda_anual;
+            return Convert.ToString( tiempo_entreP);
         }
         
-        public double get_inventarionSeguridad()
+        public String get_inventarionSeguridad()
         {
-            double inv_seguridad = 0;
-            inv_seguridad = (demanda_anual / dias_trabajados) * tiempo_espera;
-            return inv_seguridad;
+            int inv_seguridad = 0;
+            inv_seguridad = Convert.ToInt32((demanda_anual / dias_trabajados) * tiempo_espera);
+            return Convert.ToString( inv_seguridad);
 
         }
-      
 
+        public String get_puntoReorden()
+        {
+            int punto_reorden;
+            punto_reorden = Convert.ToInt32((demanda_anual / dias_trabajados) * plazo_entrega);
+            return Convert.ToString(punto_reorden);
+        }
+
+        public String get_costoTotal()
+        {
+            double costo_total = 0;
+            double costo_ordenar = (demanda_anual / Convert.ToDouble(get_Qoptimo())) / costo_pedir;
+            double costos_mantener = (Convert.ToDouble(get_Qoptimo()) / 2) * costo_mantenimiento;
+            double costo_invetanrio = demanda_anual * costo_producto;
+
+            costo_total = costo_ordenar + costo_invetanrio + costos_mantener;
+
+            return Convert.ToString(costo_total);
+        }
 
 
     }
