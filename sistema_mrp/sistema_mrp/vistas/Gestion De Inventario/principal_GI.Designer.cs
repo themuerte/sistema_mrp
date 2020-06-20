@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_salir = new System.Windows.Forms.Button();
             this.btn_modeloQ = new System.Windows.Forms.Button();
             this.btn_atras = new System.Windows.Forms.Button();
             this.btn_planeacioA = new System.Windows.Forms.Button();
@@ -36,12 +37,12 @@
             this.btn_modeloP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_prin = new System.Windows.Forms.Panel();
-            this.btn_salir = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
             this.panel1.Controls.Add(this.btn_salir);
             this.panel1.Controls.Add(this.btn_modeloQ);
             this.panel1.Controls.Add(this.btn_atras);
@@ -54,63 +55,107 @@
             this.panel1.Size = new System.Drawing.Size(223, 621);
             this.panel1.TabIndex = 0;
             // 
+            // btn_salir
+            // 
+            this.btn_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_salir.FlatAppearance.BorderSize = 0;
+            this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salir.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
+            this.btn_salir.Location = new System.Drawing.Point(10, 571);
+            this.btn_salir.Name = "btn_salir";
+            this.btn_salir.Size = new System.Drawing.Size(55, 41);
+            this.btn_salir.TabIndex = 6;
+            this.btn_salir.UseVisualStyleBackColor = false;
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            // 
             // btn_modeloQ
             // 
-            this.btn_modeloQ.Location = new System.Drawing.Point(7, 230);
+            this.btn_modeloQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_modeloQ.FlatAppearance.BorderSize = 0;
+            this.btn_modeloQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_modeloQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modeloQ.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modeloQ.ForeColor = System.Drawing.Color.White;
+            this.btn_modeloQ.Location = new System.Drawing.Point(10, 199);
             this.btn_modeloQ.Name = "btn_modeloQ";
-            this.btn_modeloQ.Size = new System.Drawing.Size(197, 46);
+            this.btn_modeloQ.Size = new System.Drawing.Size(197, 39);
             this.btn_modeloQ.TabIndex = 5;
             this.btn_modeloQ.Text = "Modelo Q";
-            this.btn_modeloQ.UseVisualStyleBackColor = true;
+            this.btn_modeloQ.UseVisualStyleBackColor = false;
             this.btn_modeloQ.Click += new System.EventHandler(this.btn_modeloQ_Click);
             // 
             // btn_atras
             // 
-            this.btn_atras.Location = new System.Drawing.Point(62, 479);
+            this.btn_atras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_atras.FlatAppearance.BorderSize = 0;
+            this.btn_atras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_atras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_atras.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atras.ForeColor = System.Drawing.Color.White;
+            this.btn_atras.Location = new System.Drawing.Point(10, 407);
             this.btn_atras.Name = "btn_atras";
-            this.btn_atras.Size = new System.Drawing.Size(75, 23);
+            this.btn_atras.Size = new System.Drawing.Size(197, 31);
             this.btn_atras.TabIndex = 4;
             this.btn_atras.Text = "Atras";
-            this.btn_atras.UseVisualStyleBackColor = true;
+            this.btn_atras.UseVisualStyleBackColor = false;
             this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
             // 
             // btn_planeacioA
             // 
-            this.btn_planeacioA.Location = new System.Drawing.Point(10, 379);
+            this.btn_planeacioA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_planeacioA.FlatAppearance.BorderSize = 0;
+            this.btn_planeacioA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_planeacioA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_planeacioA.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_planeacioA.ForeColor = System.Drawing.Color.White;
+            this.btn_planeacioA.Location = new System.Drawing.Point(10, 290);
             this.btn_planeacioA.Name = "btn_planeacioA";
-            this.btn_planeacioA.Size = new System.Drawing.Size(197, 46);
+            this.btn_planeacioA.Size = new System.Drawing.Size(197, 39);
             this.btn_planeacioA.TabIndex = 3;
             this.btn_planeacioA.Text = "Plan Agregado";
-            this.btn_planeacioA.UseVisualStyleBackColor = true;
+            this.btn_planeacioA.UseVisualStyleBackColor = false;
             this.btn_planeacioA.Click += new System.EventHandler(this.btn_planeacioA_Click);
             // 
             // btn_MRP
             // 
-            this.btn_MRP.Location = new System.Drawing.Point(10, 307);
+            this.btn_MRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_MRP.FlatAppearance.BorderSize = 0;
+            this.btn_MRP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_MRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MRP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MRP.ForeColor = System.Drawing.Color.White;
+            this.btn_MRP.Location = new System.Drawing.Point(10, 244);
             this.btn_MRP.Name = "btn_MRP";
-            this.btn_MRP.Size = new System.Drawing.Size(197, 46);
+            this.btn_MRP.Size = new System.Drawing.Size(197, 40);
             this.btn_MRP.TabIndex = 2;
             this.btn_MRP.Text = "MRP";
-            this.btn_MRP.UseVisualStyleBackColor = true;
+            this.btn_MRP.UseVisualStyleBackColor = false;
             this.btn_MRP.Click += new System.EventHandler(this.btn_MRP_Click);
             // 
             // btn_modeloP
             // 
+            this.btn_modeloP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_modeloP.FlatAppearance.BorderSize = 0;
+            this.btn_modeloP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btn_modeloP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modeloP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modeloP.ForeColor = System.Drawing.Color.White;
             this.btn_modeloP.Location = new System.Drawing.Point(10, 156);
             this.btn_modeloP.Name = "btn_modeloP";
-            this.btn_modeloP.Size = new System.Drawing.Size(197, 46);
+            this.btn_modeloP.Size = new System.Drawing.Size(197, 37);
             this.btn_modeloP.TabIndex = 1;
             this.btn_modeloP.Text = "Modelo P";
-            this.btn_modeloP.UseVisualStyleBackColor = true;
+            this.btn_modeloP.UseVisualStyleBackColor = false;
             this.btn_modeloP.Click += new System.EventHandler(this.btn_modeloP_Click);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 48);
+            this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(0, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 20);
+            this.label1.Size = new System.Drawing.Size(223, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Gestion De Inventario";
             // 
@@ -120,16 +165,6 @@
             this.panel_prin.Name = "panel_prin";
             this.panel_prin.Size = new System.Drawing.Size(943, 621);
             this.panel_prin.TabIndex = 1;
-            // 
-            // btn_salir
-            // 
-            this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
-            this.btn_salir.Location = new System.Drawing.Point(10, 571);
-            this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(37, 38);
-            this.btn_salir.TabIndex = 6;
-            this.btn_salir.UseVisualStyleBackColor = true;
-            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // principal_GI
             // 
@@ -142,7 +177,6 @@
             this.Name = "principal_GI";
             this.Text = "principal_GI";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

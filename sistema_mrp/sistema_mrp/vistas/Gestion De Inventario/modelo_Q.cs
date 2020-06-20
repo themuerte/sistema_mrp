@@ -149,5 +149,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 e.Handled = true;
             }
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modelo_Q_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
