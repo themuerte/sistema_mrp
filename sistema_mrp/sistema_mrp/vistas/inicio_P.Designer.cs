@@ -44,14 +44,14 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 120);
+            this.panel1.Size = new System.Drawing.Size(261, 104);
             this.panel1.TabIndex = 0;
             // 
             // lbl_inicio
             // 
             this.lbl_inicio.AutoSize = true;
             this.lbl_inicio.Font = new System.Drawing.Font("Microsoft JhengHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_inicio.Location = new System.Drawing.Point(77, 44);
+            this.lbl_inicio.Location = new System.Drawing.Point(73, 32);
             this.lbl_inicio.Name = "lbl_inicio";
             this.lbl_inicio.Size = new System.Drawing.Size(103, 41);
             this.lbl_inicio.TabIndex = 0;
@@ -65,11 +65,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(47, 162);
+            this.button1.Location = new System.Drawing.Point(50, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 58);
             this.button1.TabIndex = 1;
-            this.button1.Text = "gestion de inventario";
+            this.button1.Text = "Gestión de inventario";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -81,7 +81,7 @@
             this.btn_historia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_historia.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_historia.ForeColor = System.Drawing.Color.White;
-            this.btn_historia.Location = new System.Drawing.Point(47, 250);
+            this.btn_historia.Location = new System.Drawing.Point(50, 233);
             this.btn_historia.Name = "btn_historia";
             this.btn_historia.Size = new System.Drawing.Size(157, 58);
             this.btn_historia.TabIndex = 2;

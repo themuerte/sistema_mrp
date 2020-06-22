@@ -148,6 +148,7 @@
             this.txt_costoM.Name = "txt_costoM";
             this.txt_costoM.Size = new System.Drawing.Size(100, 21);
             this.txt_costoM.TabIndex = 8;
+            this.txt_costoM.TextChanged += new System.EventHandler(this.txt_costoM_TextChanged);
             this.txt_costoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_costoM_KeyPress);
             // 
             // txt_diasAño

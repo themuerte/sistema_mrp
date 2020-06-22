@@ -158,6 +158,9 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             }
         }
 
-       
+        private void txt_costoM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
