@@ -165,6 +165,7 @@
             this.panel_prin.Name = "panel_prin";
             this.panel_prin.Size = new System.Drawing.Size(943, 621);
             this.panel_prin.TabIndex = 1;
+            this.panel_prin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prin_Paint);
             // 
             // principal_GI
             // 
