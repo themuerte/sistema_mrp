@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,11 +15,10 @@ namespace sistema_mrp
         [STAThread]
         static void Main()
         {
+            controlador.Producto.mostrarProductos();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new btn_GesInventario());
-            
-
         }
     }
 }

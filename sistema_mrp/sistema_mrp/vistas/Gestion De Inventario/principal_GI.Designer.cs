@@ -97,7 +97,7 @@
             this.btn_atras.Name = "btn_atras";
             this.btn_atras.Size = new System.Drawing.Size(197, 31);
             this.btn_atras.TabIndex = 4;
-            this.btn_atras.Text = "Atras";
+            this.btn_atras.Text = "Atrás";
             this.btn_atras.UseVisualStyleBackColor = false;
             this.btn_atras.Click += new System.EventHandler(this.btn_atras_Click);
             // 
