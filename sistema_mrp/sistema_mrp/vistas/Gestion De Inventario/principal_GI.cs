@@ -71,5 +71,10 @@ namespace sistema_mrp.vistas.Gestion_de_inventario
         {
             Application.Exit();
         }
+
+        private void panel_prin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
