@@ -31,19 +31,22 @@ namespace sistema_mrp.controlador
         public double PrecioActual { get => precioActual; set => precioActual = value; }
         public int CantidadInventario { get => cantidadInventario; set => cantidadInventario = value; }
 
-        public static void mostrarProductos()
+        public static List<Producto> mostrarProductos()
         {
             var con = new Conexion().getConexion();
             con.Open();
             var cmd = new NpgsqlCommand("SELECT * FROM mrp.producto", con);
             NpgsqlDataReader reader = cmd.ExecuteReader();
+            List<Producto> productos = new List<Producto>();
             while (reader.Read())
             {
                 Producto producto = new Producto(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetInt32(4));
-                MessageBox.Show($"Producto {producto.idProducto}: {producto.nombre} vale {producto.precioActual} córdobas.");
+                productos.Add(producto);
+                
             }
-            
-
+            con.Close();
+            return productos;
         }
+         
     }
 }

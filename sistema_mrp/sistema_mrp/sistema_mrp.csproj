@@ -54,6 +54,12 @@
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
     <Compile Include="controlador\Producto.cs" />
+    <Compile Include="vistas\Administracion\Administracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Administracion\Administracion.Designer.cs">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="vistas\Gestion De Inventario\modelo_P.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="vistas\Administracion\Administracion.resx">
+      <DependentUpon>Administracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Gestion De Inventario\modelo_P.resx">
       <DependentUpon>modelo_P.cs</DependentUpon>
     </EmbeddedResource>
