@@ -30,7 +30,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
-            if (txt_demanda.Text == "" || txt_costoPro.Text == "" || txt_costoM.Text == "" || txt_costoPedir.Text == "" || txt_plazoE.Text == "" || txt_diasAño.Text == "" || txt_tiempoEspera.Text == "")
+            if (txt_demanda.Text == "" || txt_costoPro.Text == "" || txt_costoM.Text == "" || txt_costoPedir.Text == "" || txt_plazoE.Text == "" || txt_diasAño.Text == "" )
             {
                 MessageBox.Show("Verifique los datos", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -39,19 +39,17 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 txt_Qoptimo.Enabled = true;
                 txt_numPedidos.Enabled = true;
                 txt_TiempoEntreP.Enabled = true;
-                txt_puntoReo.Enabled = true;
                 txt_inventarioSegu.Enabled = true;
                 txt_costoTotal.Enabled = true;
 
                 Modelo_Q modelo_q = new Modelo_Q(Convert.ToDouble(txt_demanda.Text), Convert.ToDouble(txt_costoPro.Text), Convert.ToDouble(txt_costoM.Text)
-                    , Convert.ToDouble(txt_costoPedir.Text), Convert.ToInt32(txt_plazoE.Text), Convert.ToInt32(txt_diasAño.Text), Convert.ToInt32(txt_tiempoEspera.Text));
+                    , Convert.ToDouble(txt_costoPedir.Text), Convert.ToInt32(txt_plazoE.Text), Convert.ToInt32(txt_diasAño.Text));
 
                 //falta poner los valores de resultados en su capo, problemas con convertir
 
                 txt_Qoptimo.Text = modelo_q.get_Qoptimo();
                 txt_numPedidos.Text = modelo_q.get_pedidosA();
                 txt_TiempoEntreP.Text = modelo_q.get_tiempoEntreP();
-                txt_puntoReo.Text = modelo_q.get_puntoReorden();
                 txt_inventarioSegu.Text = modelo_q.get_inventarionSeguridad();
                 txt_costoTotal.Text = modelo_q.get_costoTotal();
 
@@ -162,5 +160,12 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
 
         }
+
+        private void modelo_Q_Load(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

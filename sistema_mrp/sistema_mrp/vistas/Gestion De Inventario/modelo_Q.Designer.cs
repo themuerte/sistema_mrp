@@ -44,10 +44,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_plazoE = new System.Windows.Forms.Label();
             this.txt_plazoE = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_costoTotal = new System.Windows.Forms.TextBox();
-            this.txt_puntoReo = new System.Windows.Forms.TextBox();
             this.txt_numPedidos = new System.Windows.Forms.TextBox();
             this.txt_Qoptimo = new System.Windows.Forms.TextBox();
             this.txt_TiempoEntreP = new System.Windows.Forms.TextBox();
@@ -57,8 +55,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.txt_inventarioSegu = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txt_tiempoEspera = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
@@ -108,7 +104,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(87, 329);
+            this.label5.Location = new System.Drawing.Point(87, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 14);
             this.label5.TabIndex = 5;
@@ -154,7 +150,7 @@
             // txt_diasAño
             // 
             this.txt_diasAño.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_diasAño.Location = new System.Drawing.Point(227, 329);
+            this.txt_diasAño.Location = new System.Drawing.Point(227, 281);
             this.txt_diasAño.Name = "txt_diasAño";
             this.txt_diasAño.Size = new System.Drawing.Size(100, 21);
             this.txt_diasAño.TabIndex = 10;
@@ -167,7 +163,7 @@
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(125, 365);
+            this.btn_calcular.Location = new System.Drawing.Point(125, 317);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(75, 31);
             this.btn_calcular.TabIndex = 11;
@@ -182,7 +178,7 @@
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
-            this.btn_limpiar.Location = new System.Drawing.Point(241, 365);
+            this.btn_limpiar.Location = new System.Drawing.Point(241, 317);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(75, 31);
             this.btn_limpiar.TabIndex = 12;
@@ -229,21 +225,11 @@
             this.txt_plazoE.TabIndex = 16;
             this.txt_plazoE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_plazoE_KeyPress);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(477, 212);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 14);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Punto de reorden";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(512, 271);
+            this.label8.Location = new System.Drawing.Point(512, 246);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 14);
             this.label8.TabIndex = 19;
@@ -253,19 +239,10 @@
             // 
             this.txt_costoTotal.Enabled = false;
             this.txt_costoTotal.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_costoTotal.Location = new System.Drawing.Point(582, 268);
+            this.txt_costoTotal.Location = new System.Drawing.Point(582, 243);
             this.txt_costoTotal.Name = "txt_costoTotal";
             this.txt_costoTotal.Size = new System.Drawing.Size(100, 21);
             this.txt_costoTotal.TabIndex = 23;
-            // 
-            // txt_puntoReo
-            // 
-            this.txt_puntoReo.Enabled = false;
-            this.txt_puntoReo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_puntoReo.Location = new System.Drawing.Point(582, 212);
-            this.txt_puntoReo.Name = "txt_puntoReo";
-            this.txt_puntoReo.Size = new System.Drawing.Size(100, 21);
-            this.txt_puntoReo.TabIndex = 22;
             // 
             // txt_numPedidos
             // 
@@ -342,7 +319,7 @@
             // 
             this.txt_inventarioSegu.Enabled = false;
             this.txt_inventarioSegu.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_inventarioSegu.Location = new System.Drawing.Point(582, 238);
+            this.txt_inventarioSegu.Location = new System.Drawing.Point(582, 213);
             this.txt_inventarioSegu.Name = "txt_inventarioSegu";
             this.txt_inventarioSegu.Size = new System.Drawing.Size(100, 21);
             this.txt_inventarioSegu.TabIndex = 30;
@@ -351,30 +328,11 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(445, 241);
+            this.label13.Location = new System.Drawing.Point(445, 216);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(131, 14);
             this.label13.TabIndex = 29;
             this.label13.Text = "Inventario de seguridad";
-            // 
-            // txt_tiempoEspera
-            // 
-            this.txt_tiempoEspera.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tiempoEspera.Location = new System.Drawing.Point(227, 291);
-            this.txt_tiempoEspera.Name = "txt_tiempoEspera";
-            this.txt_tiempoEspera.Size = new System.Drawing.Size(100, 21);
-            this.txt_tiempoEspera.TabIndex = 32;
-            this.txt_tiempoEspera.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tiempoEspera_KeyPress);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(119, 291);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(99, 14);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Tiempo de espera";
             // 
             // panel3
             // 
@@ -406,8 +364,6 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(943, 621);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.txt_tiempoEspera);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.txt_inventarioSegu);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -416,11 +372,9 @@
             this.Controls.Add(this.txt_TiempoEntreP);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txt_costoTotal);
-            this.Controls.Add(this.txt_puntoReo);
             this.Controls.Add(this.txt_numPedidos);
             this.Controls.Add(this.txt_Qoptimo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_plazoE);
             this.Controls.Add(this.lbl_plazoE);
             this.Controls.Add(this.label7);
@@ -440,6 +394,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modelo_Q";
             this.Text = "modelo_Q";
+            this.Load += new System.EventHandler(this.modelo_Q_Load);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -463,10 +418,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_plazoE;
         private System.Windows.Forms.TextBox txt_plazoE;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txt_costoTotal;
-        private System.Windows.Forms.TextBox txt_puntoReo;
         private System.Windows.Forms.TextBox txt_numPedidos;
         private System.Windows.Forms.TextBox txt_Qoptimo;
         private System.Windows.Forms.TextBox txt_TiempoEntreP;
@@ -476,8 +429,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txt_inventarioSegu;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txt_tiempoEspera;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label15;
     }

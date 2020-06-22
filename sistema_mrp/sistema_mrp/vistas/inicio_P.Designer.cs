@@ -57,6 +57,7 @@
             this.lbl_inicio.Size = new System.Drawing.Size(103, 41);
             this.lbl_inicio.TabIndex = 0;
             this.lbl_inicio.Text = "Inicio";
+            this.lbl_inicio.Click += new System.EventHandler(this.lbl_inicio_Click);
             // 
             // button1
             // 

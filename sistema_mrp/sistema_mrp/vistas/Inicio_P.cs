@@ -47,5 +47,10 @@ namespace sistema_mrp
             this.Hide();
             administracion.Show();
         }
+
+        private void lbl_inicio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

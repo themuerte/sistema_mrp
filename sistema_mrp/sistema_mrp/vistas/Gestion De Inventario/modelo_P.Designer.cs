@@ -45,9 +45,7 @@
             this.btn_calcular = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.cmb_desviacionEstandar = new System.Windows.Forms.ComboBox();
-            this.cmb_probabilidadDemanda = new System.Windows.Forms.ComboBox();
+            this.txt_periodoRevi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rdr_dias = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -55,6 +53,8 @@
             this.rdr_mensual = new System.Windows.Forms.RadioButton();
             this.rdr_anual = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_desviacion = new System.Windows.Forms.TextBox();
+            this.txt_probabilidadDemanda = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,11 +102,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(169, 325);
+            this.label7.Location = new System.Drawing.Point(217, 325);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 14);
+            this.label7.Size = new System.Drawing.Size(60, 14);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Desvision estandar";
+            this.label7.Text = "Desvision ";
             // 
             // label8
             // 
@@ -201,6 +201,7 @@
             this.btn_calcular.TabIndex = 19;
             this.btn_calcular.Text = "Calcular";
             this.btn_calcular.UseVisualStyleBackColor = false;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
             // btn_limpiar
             // 
@@ -227,31 +228,13 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Periodo de revision";
             // 
-            // textBox3
+            // txt_periodoRevi
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(287, 292);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 10;
-            // 
-            // cmb_desviacionEstandar
-            // 
-            this.cmb_desviacionEstandar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_desviacionEstandar.FormattingEnabled = true;
-            this.cmb_desviacionEstandar.Location = new System.Drawing.Point(287, 322);
-            this.cmb_desviacionEstandar.Name = "cmb_desviacionEstandar";
-            this.cmb_desviacionEstandar.Size = new System.Drawing.Size(100, 22);
-            this.cmb_desviacionEstandar.TabIndex = 21;
-            // 
-            // cmb_probabilidadDemanda
-            // 
-            this.cmb_probabilidadDemanda.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmb_probabilidadDemanda.FormattingEnabled = true;
-            this.cmb_probabilidadDemanda.Location = new System.Drawing.Point(287, 352);
-            this.cmb_probabilidadDemanda.Name = "cmb_probabilidadDemanda";
-            this.cmb_probabilidadDemanda.Size = new System.Drawing.Size(100, 22);
-            this.cmb_probabilidadDemanda.TabIndex = 22;
+            this.txt_periodoRevi.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_periodoRevi.Location = new System.Drawing.Point(287, 292);
+            this.txt_periodoRevi.Name = "txt_periodoRevi";
+            this.txt_periodoRevi.Size = new System.Drawing.Size(100, 21);
+            this.txt_periodoRevi.TabIndex = 10;
             // 
             // label1
             // 
@@ -337,16 +320,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipo de demanda";
             // 
+            // txt_desviacion
+            // 
+            this.txt_desviacion.Location = new System.Drawing.Point(287, 325);
+            this.txt_desviacion.Name = "txt_desviacion";
+            this.txt_desviacion.Size = new System.Drawing.Size(100, 20);
+            this.txt_desviacion.TabIndex = 30;
+            // 
+            // txt_probabilidadDemanda
+            // 
+            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(287, 355);
+            this.txt_probabilidadDemanda.Name = "txt_probabilidadDemanda";
+            this.txt_probabilidadDemanda.Size = new System.Drawing.Size(100, 20);
+            this.txt_probabilidadDemanda.TabIndex = 31;
+            // 
             // modelo_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 621);
+            this.Controls.Add(this.txt_probabilidadDemanda);
+            this.Controls.Add(this.txt_desviacion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmb_probabilidadDemanda);
-            this.Controls.Add(this.cmb_desviacionEstandar);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_calcular);
             this.Controls.Add(this.txt_cantidadOptima);
@@ -355,7 +352,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txt_periodoRevi);
             this.Controls.Add(this.txt_plazoEntrega);
             this.Controls.Add(this.txt_demandaP);
             this.Controls.Add(this.label8);
@@ -392,9 +389,7 @@
         private System.Windows.Forms.Button btn_calcular;
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox cmb_desviacionEstandar;
-        private System.Windows.Forms.ComboBox cmb_probabilidadDemanda;
+        private System.Windows.Forms.TextBox txt_periodoRevi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdr_dias;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -402,5 +397,7 @@
         private System.Windows.Forms.RadioButton rdr_mensual;
         private System.Windows.Forms.RadioButton rdr_anual;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_desviacion;
+        private System.Windows.Forms.TextBox txt_probabilidadDemanda;
     }
 }
