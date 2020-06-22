@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_mrp.vistas.Administracion;
 using sistema_mrp.vistas.Gestion_de_inventario;
 using sistema_mrp.vistas.Historial;
 
@@ -38,6 +39,13 @@ namespace sistema_mrp
         private void btn_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Administracion administracion = new Administracion();
+            this.Hide();
+            administracion.Show();
         }
     }
 }
