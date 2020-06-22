@@ -21,5 +21,23 @@ namespace sistema_mrp.vistas.Administracion
         {
             Application.Exit();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddComponent_Click(object sender, EventArgs e)
+        {
+            AddNewComponente fcomponente = new AddNewComponente("", -1);
+            fcomponente.Show();
+            
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProducto producto = new AddProducto();
+            producto.Show();
+        }
     }
 }

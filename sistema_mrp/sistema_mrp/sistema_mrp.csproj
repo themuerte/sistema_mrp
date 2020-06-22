@@ -33,12 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.11.0\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Npgsql\v4.0_3.2.7.0__5d8b90d52f46fda7\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,11 +59,23 @@
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
     <Compile Include="controlador\Producto.cs" />
+    <Compile Include="vistas\Administracion\AddProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Administracion\AddProducto.Designer.cs">
+      <DependentUpon>AddProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="vistas\Administracion\Administracion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vistas\Administracion\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Administracion\AddNewComponente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Administracion\AddNewComponente.Designer.cs">
+      <DependentUpon>AddNewComponente.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\Gestion De Inventario\modelo_P.cs">
       <SubType>Form</SubType>
@@ -132,6 +149,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="vistas\Administracion\AddNewComponente.resx">
+      <DependentUpon>AddNewComponente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Administracion\AddProducto.resx">
+      <DependentUpon>AddProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Administracion\Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +188,7 @@
     <EmbeddedResource Include="vistas\inicio_P.resx">
       <DependentUpon>inicio_P.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

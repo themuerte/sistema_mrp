@@ -47,6 +47,12 @@ namespace sistema_mrp.controlador
             con.Close();
             return productos;
         }
-         
+        public int agregarProducto(Producto p)
+        {
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"INSERT INTO mrp.producto VALUES('{p.Nombre}'::text,'{p.Descripcion}'::text,{p.PrecioActual}::money, {p.cantidadInventario});");
+            return cmd.ExecuteNonQuery();
+        }
     }
 }
