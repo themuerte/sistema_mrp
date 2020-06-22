@@ -17,14 +17,26 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        void getSelectedRB_Click(object sender, EventArgs e)
         {
-
+            if (rdr_dias.Checked == true)
+            {
+                lbl_demanda.Text = "Demanda Diaria:";
+            }
+            else if (rdr_mensual.Checked == true)
+            {
+                lbl_demanda.Text = "Demanda Mensual:";
+            }
+            else if (rdr_semanal.Checked == true)
+            {
+                lbl_demanda.Text = "Demanda Semanal:";
+            }
+            else if (rdr_anual.Checked == true)
+            {
+                lbl_demanda.Text = "Demanda Anual:";
+            }
         }
 
-        private void modelo_P_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
