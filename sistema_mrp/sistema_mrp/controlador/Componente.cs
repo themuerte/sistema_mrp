@@ -67,7 +67,7 @@ namespace sistema_mrp.controlador
         {
             NpgsqlConnection con = new Conexion().getConexion();
             con.Open();
-            NpgsqlCommand command = new NpgsqlCommand($"DELETE  FROM mrp.componente WHERE id_componente = {c.IdComponente};", con);
+            NpgsqlCommand command = new NpgsqlCommand($"DELETE FROM mrp.componente WHERE id_componente = {c.IdComponente};", con);
             int res = command.ExecuteNonQuery();
             con.Close();
             return res;
@@ -75,23 +75,52 @@ namespace sistema_mrp.controlador
         }
         public int UpdateNombre(string nombre)
         {
-            return 0;
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.componente SET nombre='{this.Nombre}' WHERE id_componente={this.IdComponente}", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
         }
         public int UpdateDescripcion(string descripcion)
         {
-            return 0;
+            this.Descripcion = descripcion;
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.componente SET descripcion='{this.Descripcion}' WHERE id_componente={this.IdComponente}", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
         }
         public int UpdatePrecio(double precio)
         {
-            return 0;
+            var con = new Conexion().getConexion();
+            this.PrecioUnit = precio;
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.componente SET precio_unit={this.PrecioUnit}::money WHERE id_componente={this.IdComponente}", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
         }
         public int UpdatePlazo(double plazo)
         {
-            return 0;
+            var con = new Conexion().getConexion();
+            this.Plazo = plazo;
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.componente SET plazo={this.Plazo}::real WHERE id_componente={this.IdComponente}", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
         }
         public int UpdateTipoPlazo(char tipoPlazo)
         {
-            return 0;
+            var con = new Conexion().getConexion();
+            this.TipoPlazo = tipoPlazo;
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.componente SET tipo_plazo='{this.TipoPlazo}' WHERE id_componente={this.IdComponente}", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
         }
     }
 }

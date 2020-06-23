@@ -15,7 +15,7 @@ namespace sistema_mrp
         [STAThread]
         static void Main()
         {
-           // controlador.Producto.mostrarProductos();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new btn_GesInventario());
