@@ -65,7 +65,7 @@ namespace sistema_mrp.controlador
         {
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"DELETE FROM mrp.producto WHERE id_producto={p.IdProducto}");
+            var cmd = new NpgsqlCommand($"DELETE FROM mrp.producto WHERE id_producto={p.IdProducto}", con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
@@ -75,7 +75,7 @@ namespace sistema_mrp.controlador
         {
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET nombre='{this.Nombre}' WHERE id_producto={this.IdProducto}");
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET nombre='{this.Nombre}' WHERE id_producto={this.IdProducto}", con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
@@ -85,7 +85,7 @@ namespace sistema_mrp.controlador
             this.Descripcion = descripcion;
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET descripcion='{this.Descripcion}' WHERE id_producto={this.IdProducto}");
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET descripcion='{this.Descripcion}' WHERE id_producto={this.IdProducto}",con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
@@ -95,7 +95,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             this.PrecioActual = precio;
             con.Open();
-            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET precio_actual='{this.PrecioActual}' WHERE id_producto={this.IdProducto}");
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET precio_actual={this.PrecioActual}::money WHERE id_producto={this.IdProducto}",con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
