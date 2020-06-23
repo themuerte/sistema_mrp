@@ -54,6 +54,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 txt_z.Text = modelo.get_z();
                 txt_desvEstandarDem.Text = modelo.get_desviacionDemanda();
                 txt_cantidadOptima.Text = modelo.get_cantidadOptima();
+
             }
             else if (rdr_mensual.Checked == true)
             {

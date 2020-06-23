@@ -37,9 +37,7 @@ namespace sistema_mrp.controlador
         {
 
             MathNet.Numerics.Distributions.Normal distribucion;
-
-            distribucion = MathNet.Numerics.Distributions.Normal.WithMeanStdDev(Convert.ToDouble(periodo_revision + plazon_entrega), desviacion);
-            
+            distribucion = MathNet.Numerics.Distributions.Normal.WithMeanStdDev(Convert.ToDouble(demanda), desviacion);
             return Convert.ToString(distribucion.StdDev);
         }
 
@@ -48,7 +46,7 @@ namespace sistema_mrp.controlador
             int cantidad;
             cantidad = Convert.ToInt32(demanda*(plazon_entrega+periodo_revision) + (Convert.ToDouble(get_z())*Convert.ToDouble(get_desviacionDemanda()))
                 - inventario_actual);
-            return Convert.ToString(cantidad);      
+            return Convert.ToString(cantidad);
         }
 
 
