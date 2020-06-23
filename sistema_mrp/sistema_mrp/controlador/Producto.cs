@@ -1,10 +1,6 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace sistema_mrp.controlador
 {
@@ -31,7 +27,7 @@ namespace sistema_mrp.controlador
         public double PrecioActual { get => precioActual; set => precioActual = value; }
         public int CantidadInventario { get => cantidadInventario; set => cantidadInventario = value; }
 
-        public static List<Producto> mostrarProductos()
+        public static List<Producto> GetProductos()
         {
             var con = new Conexion().getConexion();
             con.Open();
@@ -47,12 +43,72 @@ namespace sistema_mrp.controlador
             con.Close();
             return productos;
         }
-        public int agregarProducto(Producto p)
+        public static int AddProducto(Producto p)
         {
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"INSERT INTO mrp.producto VALUES('{p.Nombre}'::text,'{p.Descripcion}'::text,{p.PrecioActual}::money, {p.cantidadInventario});");
-            return cmd.ExecuteNonQuery();
+            var cmd = new NpgsqlCommand($"INSERT INTO mrp.producto VALUES('{p.Nombre}'::text,'{p.Descripcion}'::text,{p.PrecioActual}::money, {p.cantidadInventario});", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+        public static int UpdateProducto(Producto p)
+        {
+            NpgsqlConnection con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET nombre='{p.Nombre}', descripcion='{p.Descripcion}', precio_actual={p.precioActual}::money, cantidad_inventario={p.CantidadInventario} WHERE id_producto={p.IdProducto}", con);
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+        public static int DeleteProducto(Producto p)
+        {
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"DELETE FROM mrp.producto WHERE id_producto={p.IdProducto}");
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+
+        public int UpdateNombre(string nombre)
+        {
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET nombre='{this.Nombre}' WHERE id_producto={this.IdProducto}");
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+        public int UpdateDescripcion(string descripcion)
+        {
+            this.Descripcion = descripcion;
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET descripcion='{this.Descripcion}' WHERE id_producto={this.IdProducto}");
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+        public int UpdatePrecio(double precio)
+        {
+            var con = new Conexion().getConexion();
+            this.PrecioActual = precio;
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET precio_actual='{this.PrecioActual}' WHERE id_producto={this.IdProducto}");
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
+        }
+        public int UpdateInventario(int inventario)
+        {
+            this.CantidadInventario = inventario;
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET cantidad_inventario='{this.CantidadInventario}' WHERE id_producto={this.IdProducto}");
+            int res = cmd.ExecuteNonQuery();
+            con.Close();
+            return res;
         }
     }
 }
