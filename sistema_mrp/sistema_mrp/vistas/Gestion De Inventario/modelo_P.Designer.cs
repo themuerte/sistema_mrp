@@ -55,6 +55,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_desviacion = new System.Windows.Forms.TextBox();
             this.txt_probabilidadDemanda = new System.Windows.Forms.TextBox();
+            this.txt_inventarioAct = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +104,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(217, 325);
+            this.label7.Location = new System.Drawing.Point(217, 345);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 14);
             this.label7.TabIndex = 6;
@@ -112,7 +114,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(82, 355);
+            this.label8.Location = new System.Drawing.Point(82, 375);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 14);
             this.label8.TabIndex = 7;
@@ -322,23 +324,42 @@
             // 
             // txt_desviacion
             // 
-            this.txt_desviacion.Location = new System.Drawing.Point(287, 325);
+            this.txt_desviacion.Location = new System.Drawing.Point(287, 345);
             this.txt_desviacion.Name = "txt_desviacion";
             this.txt_desviacion.Size = new System.Drawing.Size(100, 20);
             this.txt_desviacion.TabIndex = 30;
             // 
             // txt_probabilidadDemanda
             // 
-            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(287, 355);
+            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(287, 375);
             this.txt_probabilidadDemanda.Name = "txt_probabilidadDemanda";
             this.txt_probabilidadDemanda.Size = new System.Drawing.Size(100, 20);
             this.txt_probabilidadDemanda.TabIndex = 31;
+            // 
+            // txt_inventarioAct
+            // 
+            this.txt_inventarioAct.Location = new System.Drawing.Point(286, 319);
+            this.txt_inventarioAct.Name = "txt_inventarioAct";
+            this.txt_inventarioAct.Size = new System.Drawing.Size(100, 20);
+            this.txt_inventarioAct.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(183, 319);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 14);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Inventario actual";
             // 
             // modelo_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 621);
+            this.Controls.Add(this.txt_inventarioAct);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_probabilidadDemanda);
             this.Controls.Add(this.txt_desviacion);
             this.Controls.Add(this.groupBox1);
@@ -399,5 +420,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txt_desviacion;
         private System.Windows.Forms.TextBox txt_probabilidadDemanda;
+        private System.Windows.Forms.TextBox txt_inventarioAct;
+        private System.Windows.Forms.Label label4;
     }
 }
