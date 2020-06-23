@@ -32,7 +32,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
             if (txt_demanda.Text == "" || txt_costoPro.Text == "" || txt_costoM.Text == "" || txt_costoPedir.Text == "" || txt_plazoE.Text == "" || txt_diasAño.Text == "" )
             {
-                MessageBox.Show("Verifique los datos", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Verifique los datos", "AVISO!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
