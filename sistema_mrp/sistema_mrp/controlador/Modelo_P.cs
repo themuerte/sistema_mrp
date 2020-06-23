@@ -36,11 +36,11 @@ namespace sistema_mrp.controlador
         public String get_desviacionDemanda()
         {
 
-            double desv_demanda;
-            MathNet.Numerics.Distributions.Normal result = new MathNet.Numerics.Distributions.Normal();
-            desv_demanda = result.WithMeanStdDev(Convert.ToDouble(periodo_revision + plazon_entrega), desviacion, randomSource = null);
+            MathNet.Numerics.Distributions.Normal distribucion;
 
-            return Convert.ToString(desv_demanda);
+            distribucion = MathNet.Numerics.Distributions.Normal.WithMeanStdDev(Convert.ToDouble(periodo_revision + plazon_entrega), desviacion);
+            
+            return Convert.ToString(distribucion.StdDev);
         }
 
         public String get_cantidadOptima()
