@@ -44,7 +44,7 @@ namespace sistema_mrp.controlador
         public String get_cantidadOptima()
         {
             int cantidad;
-            cantidad = Convert.ToInt32(demanda*(plazon_entrega+periodo_revision) + (Convert.ToDouble(get_z())*Convert.ToDouble(get_desviacionDemanda()))
+            cantidad = Convert.ToInt16(demanda*(plazon_entrega+periodo_revision) + (Convert.ToDouble(get_z())*Convert.ToDouble(get_desviacionDemanda()))
                 - inventario_actual);
             return Convert.ToString(cantidad);
         }

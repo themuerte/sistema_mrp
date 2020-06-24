@@ -47,9 +47,6 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             if (txt_demandaP.Text == "" || txt_plazoEntrega.Text == "" || txt_periodoRevi.Text == "" || txt_desviacion.Text==""||txt_probabilidadDemanda.Text==""||txt_inventarioAct.Text=="")
             {
                 MessageBox.Show("Verifique los datos", "AVISO!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }else if (rdr_anual.Checked == false || rdr_dias.Checked == false || rdr_mensual.Checked == false || rdr_semanal.Checked == false)
-            {
-                MessageBox.Show("Seleccione el tipo de demanda", "AVISO!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }else
             {
                 if (rdr_dias.Checked == true)
