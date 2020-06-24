@@ -54,7 +54,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     //Diaria
                     lbl_demanda.Text = "Demanda Diaria:";
                     Modelo_P modelo = new Modelo_P(Convert.ToInt32(txt_demandaP.Text), Convert.ToDouble(txt_plazoEntrega.Text), Convert.ToDouble(txt_periodoRevi.Text),
-                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text));
+                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text), Convert.ToDouble(txt_demandaP.Text));
 
                     txt_z.Text = modelo.get_z();
                     txt_desvEstandarDem.Text = modelo.get_desviacionDemanda();
@@ -66,7 +66,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     //Mensual
                     lbl_demanda.Text = "Demanda Mensual:";
                     Modelo_P modelo = new Modelo_P(Convert.ToInt32(txt_demandaP.Text) / 30, Convert.ToDouble(txt_plazoEntrega.Text), Convert.ToDouble(txt_periodoRevi.Text),
-                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text));
+                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text), Convert.ToDouble(txt_demandaP.Text));
 
                     txt_z.Text = modelo.get_z();
                     txt_desvEstandarDem.Text = modelo.get_desviacionDemanda();
@@ -77,7 +77,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     //Semanal
                     lbl_demanda.Text = "Demanda Semanal:";
                     Modelo_P modelo = new Modelo_P(Convert.ToInt32(txt_demandaP.Text) / 7, Convert.ToDouble(txt_plazoEntrega.Text), Convert.ToDouble(txt_periodoRevi.Text),
-                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text));
+                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text), Convert.ToDouble(txt_demandaP.Text));
 
                     txt_z.Text = modelo.get_z();
                     txt_desvEstandarDem.Text = modelo.get_desviacionDemanda();
@@ -87,20 +87,14 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 {
                     //Anual
                     Modelo_P modelo = new Modelo_P(Convert.ToInt32(txt_demandaP.Text) / 360, Convert.ToDouble(txt_plazoEntrega.Text), Convert.ToDouble(txt_periodoRevi.Text),
-                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text));
+                    Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text), Convert.ToDouble(txt_demandaP.Text));
 
                     txt_z.Text = modelo.get_z();
                     txt_desvEstandarDem.Text = modelo.get_desviacionDemanda();
                     txt_cantidadOptima.Text = modelo.get_cantidadOptima();
                 }
             }
-            Modelo_P modelo2 = new Modelo_P(Convert.ToInt32(txt_demandaP.Text), Convert.ToDouble(txt_plazoEntrega.Text), Convert.ToDouble(txt_periodoRevi.Text),
-                   Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text));
-
-            txt_z.Text = modelo2.get_z();
-            txt_desvEstandarDem.Text = modelo2.get_desviacionDemanda();
-            txt_cantidadOptima.Text = modelo2.get_cantidadOptima();
-
+            
 
 
 
