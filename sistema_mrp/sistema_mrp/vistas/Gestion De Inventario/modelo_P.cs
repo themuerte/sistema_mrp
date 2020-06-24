@@ -94,7 +94,13 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     txt_cantidadOptima.Text = modelo.get_cantidadOptima();
                 }
             }
-                
+            Modelo_P modelo2 = new Modelo_P(Convert.ToInt32(txt_demandaP.Text), Convert.ToDouble(txt_plazoEntrega.Text), Convert.ToDouble(txt_periodoRevi.Text),
+                   Convert.ToDouble(txt_desviacion.Text), Convert.ToDouble(txt_probabilidadDemanda.Text), Convert.ToInt32(txt_inventarioAct.Text));
+
+            txt_z.Text = modelo2.get_z();
+            txt_desvEstandarDem.Text = modelo2.get_desviacionDemanda();
+            txt_cantidadOptima.Text = modelo2.get_cantidadOptima();
+
 
 
 
