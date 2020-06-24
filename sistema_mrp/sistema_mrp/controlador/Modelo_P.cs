@@ -40,8 +40,7 @@ namespace sistema_mrp.controlador
             double result;
             MathNet.Numerics.Distributions.Normal distribucion;
             distribucion = MathNet.Numerics.Distributions.Normal.WithMeanStdDev(demanda_desv, desviacion);
-            result = Math.Sqrt((plazon_entrega+periodo_revision)*distribucion.StdDev);
-
+            result = Math.Sqrt((plazon_entrega+periodo_revision)*Math.Pow(distribucion.StdDev,2));
             return Convert.ToString(result);
         }
 
