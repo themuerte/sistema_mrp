@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controlador\Componente.cs" />
+    <Compile Include="controlador\ComponenteRelacion.cs" />
     <Compile Include="controlador\Modelo_P.cs" />
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
