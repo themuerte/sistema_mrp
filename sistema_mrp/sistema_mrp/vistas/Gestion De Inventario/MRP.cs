@@ -17,14 +17,19 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
+            
 
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (txt_semanas.Text == "" || txt_semanas.Text == "")
+            {
+                MessageBox.Show("Verifique las semanas", "AVISO!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+               dtg_semana.
+            }
         }
     }
 }
