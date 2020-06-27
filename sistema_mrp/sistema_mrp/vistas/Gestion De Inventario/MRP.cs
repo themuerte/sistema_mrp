@@ -20,7 +20,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+            int cant = Convert.ToInt32(txt_semanas.Text);
 
             if (txt_semanas.Text == "" || txt_semanas.Text == "")
             {
@@ -28,7 +28,22 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             }
             else
             {
-               dtg_semana.
+                dtg_semana.Columns.Clear();
+                dtg_semana.Rows.Clear();
+
+                DataGridViewTextBoxColumn columna = new DataGridViewTextBoxColumn();
+                columna.HeaderText = "Datos";
+                columna.Width = 130;
+                columna.ReadOnly = true;
+                dtg_semana.Columns.Add(columna);
+                dtg_semana.Rows.Add("Demanda");
+                dtg_semana.Rows.Add("Dias laborados");
+
+                int i = 0;
+                
+
+                
+
             }
         }
     }
