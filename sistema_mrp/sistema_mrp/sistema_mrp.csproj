@@ -220,6 +220,8 @@
     <Content Include="vistas\shapes-and-symbols.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="controlador\MRP\" />
+    <Folder Include="controlador\plan_agregado\" />
     <Folder Include="modelo\" />
   </ItemGroup>
   <ItemGroup>

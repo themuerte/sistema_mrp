@@ -276,6 +276,7 @@
             this.dtg_semana.Name = "dtg_semana";
             this.dtg_semana.Size = new System.Drawing.Size(566, 139);
             this.dtg_semana.TabIndex = 59;
+            this.dtg_semana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtg_semana_KeyPress);
             // 
             // dtg_resultado
             // 
