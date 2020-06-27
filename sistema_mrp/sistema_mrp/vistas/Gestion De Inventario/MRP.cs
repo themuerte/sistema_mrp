@@ -54,5 +54,10 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
             }
         }
+
+        private void btn_calcular_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
