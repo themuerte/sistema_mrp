@@ -12,13 +12,25 @@ using Npgsql;
 
 namespace sistema_mrp.vistas.Administracion
 {
-    public partial class AddProducto : Form
+    public partial class EditProducto : Form
     {
         Administracion padre;
-        public AddProducto(Administracion padre)
+        Producto p;
+        public EditProducto(Administracion padre, Producto p)
         {
             InitializeComponent();
             this.padre = padre;
+            this.p = p;
+            llenarContenido();
+            
+        }
+
+        private void llenarContenido()
+        {
+            tbNombre.Text = p.Nombre;
+            tbDescripcion.Text = p.Descripcion;
+            mtbUnidades.Text = p.CantidadInventario.ToString();
+            mtbPrecio.Text = p.PrecioActual.ToString();
         }
 
         private void AddProducto_Load(object sender, EventArgs e)
@@ -26,9 +38,9 @@ namespace sistema_mrp.vistas.Administracion
 
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
+        private void btnEditProduct_Click(object sender, EventArgs e)
         {
-            if(mtbPrecio.Text == "" || mtbUnidades.Text == "" || tbNombre.Text == "")
+            if (mtbPrecio.Text == "" || mtbUnidades.Text == "" || tbNombre.Text == "")
             {
                 MessageBox.Show(this, "Campos Vacíos");
             }
@@ -40,21 +52,22 @@ namespace sistema_mrp.vistas.Administracion
                     int unidades = int.Parse(mtbUnidades.Text);
                     string nombre = tbNombre.Text;
                     string descripcion = tbDescripcion.Text;
-                    Producto.AddProducto(new Producto(nombre, descripcion, precio, unidades));
+                    p.UpdateNombre(nombre);
+                    p.UpdateDescripcion(descripcion);
+                    p.UpdatePrecio(precio);
+                    p.UpdateInventario(unidades);
                     padre.recargarTablaProductos();
                     this.Dispose();
                 }
                 catch (Exception except)
                 {
-                    MessageBox.Show(this,"" + except.Message);
+                    MessageBox.Show(this, "" + except.Message);
 
                 }
-                
+
 
 
             }
-            
         }
-
     }
 }

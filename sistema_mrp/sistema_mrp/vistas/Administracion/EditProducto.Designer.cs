@@ -1,6 +1,6 @@
 ﻿namespace sistema_mrp.vistas.Administracion
 {
-    partial class AddProducto
+    partial class EditProducto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnEditProduct = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
@@ -39,15 +39,15 @@
             this.tbDescripcion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnAddProduct
+            // btnEditProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(86, 241);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.btnAddProduct.TabIndex = 22;
-            this.btnAddProduct.Text = "Agregar";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            this.btnEditProduct.Location = new System.Drawing.Point(62, 241);
+            this.btnEditProduct.Name = "btnEditProduct";
+            this.btnEditProduct.Size = new System.Drawing.Size(129, 23);
+            this.btnEditProduct.TabIndex = 22;
+            this.btnEditProduct.Text = "Guardar Cambios";
+            this.btnEditProduct.UseVisualStyleBackColor = true;
+            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
             // 
             // label10
             // 
@@ -115,7 +115,7 @@
             this.tbDescripcion.Size = new System.Drawing.Size(100, 20);
             this.tbDescripcion.TabIndex = 26;
             // 
-            // AddProducto
+            // EditProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -124,13 +124,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mtbUnidades);
             this.Controls.Add(this.mtbPrecio);
-            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.btnEditProduct);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.label5);
-            this.Name = "AddProducto";
-            this.Text = "Nuevo Producto";
+            this.Name = "EditProducto";
+            this.Text = "Editar Producto";
             this.Load += new System.EventHandler(this.AddProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnEditProduct;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbNombre;

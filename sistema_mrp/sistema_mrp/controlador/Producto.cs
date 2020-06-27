@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace sistema_mrp.controlador
 {
-    class Producto
+    public class Producto
     {
         int idProducto;
         string nombre;
@@ -15,6 +15,14 @@ namespace sistema_mrp.controlador
         public Producto(int idProducto, string nombre, string descripcion, double precioActual, int cantidadInventario)
         {
             IdProducto = idProducto;
+            Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
+            Descripcion = descripcion ?? throw new ArgumentNullException(nameof(descripcion));
+            PrecioActual = precioActual;
+            CantidadInventario = cantidadInventario;
+        }
+
+        public Producto(string nombre, string descripcion, double precioActual, int cantidadInventario)
+        {
             Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
             Descripcion = descripcion ?? throw new ArgumentNullException(nameof(descripcion));
             PrecioActual = precioActual;
@@ -47,7 +55,7 @@ namespace sistema_mrp.controlador
         {
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"INSERT INTO mrp.producto VALUES('{p.Nombre}'::text,'{p.Descripcion}'::text,{p.PrecioActual}::money, {p.cantidadInventario});", con);
+            var cmd = new NpgsqlCommand($"INSERT INTO mrp.producto(nombre, descripcion, precio_actual, cantidad_inventario) VALUES ('{p.Nombre}'::text,'{p.Descripcion}'::text,{p.PrecioActual}::money, {p.cantidadInventario});", con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
@@ -105,7 +113,7 @@ namespace sistema_mrp.controlador
             this.CantidadInventario = inventario;
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET cantidad_inventario='{this.CantidadInventario}' WHERE id_producto={this.IdProducto}");
+            var cmd = new NpgsqlCommand($"UPDATE mrp.producto SET cantidad_inventario='{this.CantidadInventario}' WHERE id_producto={this.IdProducto}",con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;

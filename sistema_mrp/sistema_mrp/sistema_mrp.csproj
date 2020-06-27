@@ -63,6 +63,13 @@
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
     <Compile Include="controlador\Producto.cs" />
+    <Compile Include="controlador\ProductoComponente.cs" />
+    <Compile Include="vistas\Administracion\EditProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Administracion\EditProducto.Designer.cs">
+      <DependentUpon>EditProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="vistas\Administracion\AddProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="vistas\Administracion\AddNewComponente.resx">
       <DependentUpon>AddNewComponente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Administracion\EditProducto.resx">
+      <DependentUpon>EditProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\Administracion\AddProducto.resx">
       <DependentUpon>AddProducto.cs</DependentUpon>
