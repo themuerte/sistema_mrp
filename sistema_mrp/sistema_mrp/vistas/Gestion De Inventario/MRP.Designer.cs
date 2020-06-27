@@ -281,6 +281,7 @@
             this.dtg_resultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_resultado.Location = new System.Drawing.Point(362, 349);
             this.dtg_resultado.Name = "dtg_resultado";
+            this.dtg_resultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtg_resultado.Size = new System.Drawing.Size(566, 204);
             this.dtg_resultado.TabIndex = 60;
             // 
