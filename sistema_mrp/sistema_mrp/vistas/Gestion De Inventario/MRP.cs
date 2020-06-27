@@ -17,12 +17,45 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            int cant = Convert.ToInt32(txt_semanas.Text);
+
+            if (txt_semanas.Text == "" || txt_semanas.Text == "")
+            {
+                MessageBox.Show("Verifique las semanas", "AVISO!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                dtg_semana.Columns.Clear();
+                dtg_semana.Rows.Clear();
+
+                DataGridViewTextBoxColumn columna = new DataGridViewTextBoxColumn();
+                columna.HeaderText = "Datos";
+                columna.Width = 130;
+                columna.ReadOnly = true;
+                dtg_semana.Columns.Add(columna);
+                dtg_semana.Rows.Add("Demanda");
+                dtg_semana.Rows.Add("Dias laborados");
+
+                int num = 1;
+                for (int i = 0; i < cant; i++)
+                {
+                    DataGridViewTextBoxColumn columna1 = new DataGridViewTextBoxColumn();
+                    columna1.HeaderText = "periodo" + num;
+                    columna1.Width = 130;
+                    dtg_semana.Columns.Add(columna1);
+                    num++;
+                }
+                
+
+                
+
+            }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void btn_calcular_Click(object sender, EventArgs e)
         {
 
         }

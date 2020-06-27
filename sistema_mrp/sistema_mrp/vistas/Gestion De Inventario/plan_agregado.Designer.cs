@@ -31,7 +31,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNumeroDatos = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.panelTabla1 = new System.Windows.Forms.Panel();
             this.txtplanes = new System.Windows.Forms.Label();
             this.bPersecución = new System.Windows.Forms.RadioButton();
             this.bFuerzasNiveladas = new System.Windows.Forms.RadioButton();
@@ -40,7 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panelTabla2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,7 +64,11 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -105,15 +107,6 @@
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
-            // 
-            // panelTabla1
-            // 
-            this.panelTabla1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelTabla1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelTabla1.Location = new System.Drawing.Point(55, 150);
-            this.panelTabla1.Name = "panelTabla1";
-            this.panelTabla1.Size = new System.Drawing.Size(721, 100);
-            this.panelTabla1.TabIndex = 4;
             // 
             // txtplanes
             // 
@@ -200,14 +193,6 @@
             this.label6.Size = new System.Drawing.Size(107, 14);
             this.label6.TabIndex = 14;
             this.label6.Text = "Costo Contratación";
-            // 
-            // panelTabla2
-            // 
-            this.panelTabla2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panelTabla2.Location = new System.Drawing.Point(55, 391);
-            this.panelTabla2.Name = "panelTabla2";
-            this.panelTabla2.Size = new System.Drawing.Size(863, 141);
-            this.panelTabla2.TabIndex = 15;
             // 
             // label7
             // 
@@ -449,11 +434,29 @@
             this.label1.Text = "Planeación Agregada";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(74, 150);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(643, 116);
+            this.dataGridView1.TabIndex = 41;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(74, 403);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(643, 187);
+            this.dataGridView2.TabIndex = 42;
+            // 
             // plan_agregado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 621);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCalcular);
@@ -478,7 +481,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.panelTabla2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -487,7 +489,6 @@
             this.Controls.Add(this.bFuerzasNiveladas);
             this.Controls.Add(this.bPersecución);
             this.Controls.Add(this.txtplanes);
-            this.Controls.Add(this.panelTabla1);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtNumeroDatos);
             this.Controls.Add(this.label2);
@@ -497,6 +498,8 @@
             this.Load += new System.EventHandler(this.plan_agregado_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,7 +509,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNumeroDatos;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Panel panelTabla1;
         private System.Windows.Forms.Label txtplanes;
         private System.Windows.Forms.RadioButton bPersecución;
         private System.Windows.Forms.RadioButton bFuerzasNiveladas;
@@ -515,7 +517,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panelTabla2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -541,5 +542,7 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
