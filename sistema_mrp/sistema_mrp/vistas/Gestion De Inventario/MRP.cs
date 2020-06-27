@@ -57,7 +57,23 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
-
+            for(int i =0; i < dtg_semana.Rows.Count - 1; i++)
+            {
+                for (int j = 0;j < dtg_semana.Rows[i].Cells.Count; j++)
+                {
+                    if (i == 0 && j == 0||i==1 && j == 0)
+                    {
+                        //se evita que entre en los campos de Demada y Dias Laborados
+                    }
+                    else
+                    {
+                        string valor = dtg_semana.Rows[i].Cells[j].Value.ToString();
+                        MessageBox.Show(valor);
+                    }
+                }
+            }
         }
+
+
     }
 }
