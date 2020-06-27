@@ -39,7 +39,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 dtg_semana.Rows.Add("Demanda");
                 dtg_semana.Rows.Add("Dias laborados");
 
-                int i = 0;
+                int num = 1;
+                for (int i = 0; i < cant; i++)
+                {
+                    DataGridViewTextBoxColumn columna1 = new DataGridViewTextBoxColumn();
+                    columna1.HeaderText = "periodo" + num;
+                    columna1.Width = 130;
+                    dtg_semana.Columns.Add(columna1);
+                    num++;
+                }
                 
 
                 
