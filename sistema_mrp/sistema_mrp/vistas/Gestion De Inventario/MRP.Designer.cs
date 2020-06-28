@@ -48,10 +48,10 @@
             this.btn_calcular = new System.Windows.Forms.Button();
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.dtg_semana = new System.Windows.Forms.DataGridView();
+            this.dtg_semanas = new System.Windows.Forms.DataGridView();
             this.dtg_resultado = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_semana)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_resultado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -269,13 +269,13 @@
             this.label8.TabIndex = 58;
             this.label8.Text = "Ingrese la demanda por cada semana";
             // 
-            // dtg_semana
+            // dtg_semanas
             // 
-            this.dtg_semana.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_semana.Location = new System.Drawing.Point(362, 157);
-            this.dtg_semana.Name = "dtg_semana";
-            this.dtg_semana.Size = new System.Drawing.Size(566, 139);
-            this.dtg_semana.TabIndex = 59;
+            this.dtg_semanas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_semanas.Location = new System.Drawing.Point(362, 157);
+            this.dtg_semanas.Name = "dtg_semanas";
+            this.dtg_semanas.Size = new System.Drawing.Size(566, 139);
+            this.dtg_semanas.TabIndex = 59;
             // 
             // dtg_resultado
             // 
@@ -292,7 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 621);
             this.Controls.Add(this.dtg_resultado);
-            this.Controls.Add(this.dtg_semana);
+            this.Controls.Add(this.dtg_semanas);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btn_limpiar);
             this.Controls.Add(this.btn_calcular);
@@ -316,7 +316,7 @@
             this.Name = "MRP";
             this.Text = "MRP";
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_semana)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_resultado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -345,7 +345,7 @@
         private System.Windows.Forms.Button btn_calcular;
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dtg_semana;
+        private System.Windows.Forms.DataGridView dtg_semanas;
         private System.Windows.Forms.DataGridView dtg_resultado;
     }
 }

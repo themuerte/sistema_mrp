@@ -43,7 +43,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 {
                     DataGridViewTextBoxColumn columna1 = new DataGridViewTextBoxColumn();
                     columna1.HeaderText = "periodo" + num;
-                    columna1.Width = 130;
+                    columna1.Width = 100;
                     dtg_semanas.Columns.Add(columna1);
                     num++;
                 }
