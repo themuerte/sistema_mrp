@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace sistema_mrp.controlador.MRP
 {
     class L4L
@@ -21,6 +22,7 @@ namespace sistema_mrp.controlador.MRP
             this.demanda = demanda;
         }
          
+        
 
     }
 }
