@@ -62,6 +62,7 @@
     <Compile Include="controlador\Modelo_P.cs" />
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
+    <Compile Include="controlador\MRP\L4L.cs" />
     <Compile Include="controlador\Producto.cs" />
     <Compile Include="controlador\ProductoComponente.cs" />
     <Compile Include="vistas\Administracion\EditProducto.cs">
@@ -220,7 +221,6 @@
     <Content Include="vistas\shapes-and-symbols.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="controlador\MRP\" />
     <Folder Include="controlador\plan_agregado\" />
     <Folder Include="modelo\" />
   </ItemGroup>

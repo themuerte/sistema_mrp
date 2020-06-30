@@ -36,10 +36,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.bL4L = new System.Windows.Forms.RadioButton();
-            this.bEOQ = new System.Windows.Forms.RadioButton();
-            this.bLTC = new System.Windows.Forms.RadioButton();
-            this.bLUC = new System.Windows.Forms.RadioButton();
+            this.rdr_L4L = new System.Windows.Forms.RadioButton();
+            this.rdr_EOQ = new System.Windows.Forms.RadioButton();
+            this.rdr_LTC = new System.Windows.Forms.RadioButton();
+            this.rdr_LUC = new System.Windows.Forms.RadioButton();
             this.txt_semanas = new System.Windows.Forms.TextBox();
             this.txt_tasa = new System.Windows.Forms.TextBox();
             this.txt_costoOportu = new System.Windows.Forms.TextBox();
@@ -138,53 +138,53 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Tipo";
             // 
-            // bL4L
+            // rdr_L4L
             // 
-            this.bL4L.AutoSize = true;
-            this.bL4L.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bL4L.Location = new System.Drawing.Point(65, 340);
-            this.bL4L.Name = "bL4L";
-            this.bL4L.Size = new System.Drawing.Size(44, 18);
-            this.bL4L.TabIndex = 47;
-            this.bL4L.TabStop = true;
-            this.bL4L.Text = "L4L";
-            this.bL4L.UseVisualStyleBackColor = true;
+            this.rdr_L4L.AutoSize = true;
+            this.rdr_L4L.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdr_L4L.Location = new System.Drawing.Point(65, 340);
+            this.rdr_L4L.Name = "rdr_L4L";
+            this.rdr_L4L.Size = new System.Drawing.Size(44, 18);
+            this.rdr_L4L.TabIndex = 47;
+            this.rdr_L4L.TabStop = true;
+            this.rdr_L4L.Text = "L4L";
+            this.rdr_L4L.UseVisualStyleBackColor = true;
             // 
-            // bEOQ
+            // rdr_EOQ
             // 
-            this.bEOQ.AutoSize = true;
-            this.bEOQ.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bEOQ.Location = new System.Drawing.Point(65, 364);
-            this.bEOQ.Name = "bEOQ";
-            this.bEOQ.Size = new System.Drawing.Size(49, 18);
-            this.bEOQ.TabIndex = 48;
-            this.bEOQ.TabStop = true;
-            this.bEOQ.Text = "EOQ";
-            this.bEOQ.UseVisualStyleBackColor = true;
+            this.rdr_EOQ.AutoSize = true;
+            this.rdr_EOQ.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdr_EOQ.Location = new System.Drawing.Point(65, 364);
+            this.rdr_EOQ.Name = "rdr_EOQ";
+            this.rdr_EOQ.Size = new System.Drawing.Size(49, 18);
+            this.rdr_EOQ.TabIndex = 48;
+            this.rdr_EOQ.TabStop = true;
+            this.rdr_EOQ.Text = "EOQ";
+            this.rdr_EOQ.UseVisualStyleBackColor = true;
             // 
-            // bLTC
+            // rdr_LTC
             // 
-            this.bLTC.AutoSize = true;
-            this.bLTC.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bLTC.Location = new System.Drawing.Point(123, 340);
-            this.bLTC.Name = "bLTC";
-            this.bLTC.Size = new System.Drawing.Size(44, 18);
-            this.bLTC.TabIndex = 49;
-            this.bLTC.TabStop = true;
-            this.bLTC.Text = "LTC";
-            this.bLTC.UseVisualStyleBackColor = true;
+            this.rdr_LTC.AutoSize = true;
+            this.rdr_LTC.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdr_LTC.Location = new System.Drawing.Point(123, 340);
+            this.rdr_LTC.Name = "rdr_LTC";
+            this.rdr_LTC.Size = new System.Drawing.Size(44, 18);
+            this.rdr_LTC.TabIndex = 49;
+            this.rdr_LTC.TabStop = true;
+            this.rdr_LTC.Text = "LTC";
+            this.rdr_LTC.UseVisualStyleBackColor = true;
             // 
-            // bLUC
+            // rdr_LUC
             // 
-            this.bLUC.AutoSize = true;
-            this.bLUC.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bLUC.Location = new System.Drawing.Point(123, 364);
-            this.bLUC.Name = "bLUC";
-            this.bLUC.Size = new System.Drawing.Size(46, 18);
-            this.bLUC.TabIndex = 50;
-            this.bLUC.TabStop = true;
-            this.bLUC.Text = "LUC";
-            this.bLUC.UseVisualStyleBackColor = true;
+            this.rdr_LUC.AutoSize = true;
+            this.rdr_LUC.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdr_LUC.Location = new System.Drawing.Point(123, 364);
+            this.rdr_LUC.Name = "rdr_LUC";
+            this.rdr_LUC.Size = new System.Drawing.Size(46, 18);
+            this.rdr_LUC.TabIndex = 50;
+            this.rdr_LUC.TabStop = true;
+            this.rdr_LUC.Text = "LUC";
+            this.rdr_LUC.UseVisualStyleBackColor = true;
             // 
             // txt_semanas
             // 
@@ -301,10 +301,10 @@
             this.Controls.Add(this.txt_costoOportu);
             this.Controls.Add(this.txt_tasa);
             this.Controls.Add(this.txt_semanas);
-            this.Controls.Add(this.bLUC);
-            this.Controls.Add(this.bLTC);
-            this.Controls.Add(this.bEOQ);
-            this.Controls.Add(this.bL4L);
+            this.Controls.Add(this.rdr_LUC);
+            this.Controls.Add(this.rdr_LTC);
+            this.Controls.Add(this.rdr_EOQ);
+            this.Controls.Add(this.rdr_L4L);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -333,10 +333,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton bL4L;
-        private System.Windows.Forms.RadioButton bEOQ;
-        private System.Windows.Forms.RadioButton bLTC;
-        private System.Windows.Forms.RadioButton bLUC;
+        private System.Windows.Forms.RadioButton rdr_L4L;
+        private System.Windows.Forms.RadioButton rdr_EOQ;
+        private System.Windows.Forms.RadioButton rdr_LTC;
+        private System.Windows.Forms.RadioButton rdr_LUC;
         private System.Windows.Forms.TextBox txt_semanas;
         private System.Windows.Forms.TextBox txt_tasa;
         private System.Windows.Forms.TextBox txt_costoOportu;

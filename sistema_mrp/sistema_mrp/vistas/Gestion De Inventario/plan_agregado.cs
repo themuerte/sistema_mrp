@@ -67,5 +67,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 }
             }
         }
+
+
+
     }
 }

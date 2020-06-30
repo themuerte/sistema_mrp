@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_mrp.controlador.MRP;
 
 namespace sistema_mrp.vistas.Gestion_De_Inventario
 {
@@ -70,8 +71,24 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     }
                 }
             }
+
+            if (rdr_L4L.Checked == true)
+            {
+
+            }else if (rdr_EOQ.Checked == true)
+            {
+
+            }else if (rdr_LTC.Checked == true)
+            {
+
+            }else if (rdr_LUC.Checked == true)
+            {
+
+            }
+
         }
 
-    
+
+
     }
 }
