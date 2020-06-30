@@ -58,7 +58,8 @@ namespace sistema_mrp.controlador
         {
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand($"INSERT INTO mrp.producto_componente(id_producto, id_componente, unidades_necesarias, margen_seguridad) VALUES ({pc.idProducto},{pc.IdComponente},{pc.UnidadesNecesarias},{pc.MargenSeguridad})", con);
+            string consulta = $"INSERT INTO mrp.producto_componente(id_producto, id_componente, unidades_necesarias, margen_seguridad) VALUES ({pc.idProducto},{pc.IdComponente},{pc.UnidadesNecesarias},{pc.MargenSeguridad})";
+            var cmd = new NpgsqlCommand(consulta, con);
 
             int res = cmd.ExecuteNonQuery();
             con.Close();

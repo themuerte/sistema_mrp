@@ -16,6 +16,19 @@ namespace sistema_mrp.vistas.Administracion
         public AddNewComponente()
         {
             InitializeComponent();
+            cargarTablaComponentes();
+        }
+
+        private void cargarTablaComponentes()
+        {    
+            Trucazos.vaciarDataGridView(dgvComponentesEx);
+            List<Componente> componentes = Componente.GetComponentesAjenosProducto(idProducto);
+            foreach (Componente c in componentes)
+            {
+                Object[] row = { c.IdComponente, c.Nombre, c.Descripcion, c.PrecioUnit, c.Plazo, c.TipoPlazo };
+                dgvComponentesEx.Rows.Add(row);
+            }
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -29,7 +42,32 @@ namespace sistema_mrp.vistas.Administracion
             c.Nombre = tbNombre.Text;
             c.Descripcion = "";
             c.PrecioUnit = double.Parse(tbPrecio.Text);
-            c.Plazo = 
+            c.Plazo = int.Parse(tbplazoNew.Text);
+            switch (cbTipoNew.SelectedIndex)
+            {
+                case 0:
+                    c.TipoPlazo = "horas";
+                    break;
+                case 1:
+                    c.TipoPlazo = "dias";
+                    break;
+                case 2:
+                    c.TipoPlazo = "semanas";
+                    break;
+                case 3:
+                    c.TipoPlazo = "meses";
+                    break;
+        
+                default:
+                    c.TipoPlazo = "dias";
+                    break;
+            }
+            int idComponente = Componente.AddComponente(c);
+            c.IdComponente = idComponente;
+            int margenSeguridad = int.Parse(tbMargenSegNew.Text);
+            int unidades = int.Parse(tbMargenSegNew.Text);
+            ProductoComponente pc = new ProductoComponente(idProducto, idComponente, margenSeguridad, unidades);
+            ProductoComponente.AddProductoComponente(pc);
             this.Dispose();
         }
 
@@ -60,7 +98,44 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAddComponentExist_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            try
+            {
+                int idComponente = int.Parse(lIdComponente.Text);
+                int unidades = int.Parse(tbUnidNecExist.Text);
+                int margen = int.Parse(tbMargenSegExist.Text);
+                ProductoComponente pc = new ProductoComponente(idProducto, idComponente, unidades, margen);
+                ProductoComponente.AddProductoComponente(pc);
+                vaciarTbExist();
+                this.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " +ex.Message);
+                
+            }
+            
+        }
+
+        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+        {
+           if(dgvComponentesEx.SelectedRows.Count > 0)
+            {
+                int index = dgvComponentesEx.SelectedRows[0].Index;
+                lIdComponente.Text = index + "";
+                    
+            }
+        }
+
+        private void vaciarTbExist()
+        {
+            tbUnidNecExist.Text = "";
+            lIdComponente.Text = "<idComponente>";
+            tbMargenSegExist.Text = "";
+        }
+
+        private void AddNewComponente_Load(object sender, EventArgs e)
+        {
+            cargarTablaComponentes();
         }
     }
 }

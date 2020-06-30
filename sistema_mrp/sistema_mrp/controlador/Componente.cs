@@ -11,7 +11,7 @@ namespace sistema_mrp.controlador
         string descripcion;
         double precioUnit;
         double plazo;
-        char tipoPlazo;
+        string tipoPlazo;
        
 
         public int IdComponente { get => idComponente; set => idComponente = value; }
@@ -19,13 +19,13 @@ namespace sistema_mrp.controlador
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public double PrecioUnit { get => precioUnit; set => precioUnit = value; }
         public double Plazo { get => plazo; set => plazo = value; }
-        public char TipoPlazo { get => tipoPlazo; set => tipoPlazo = value; }
+        public string TipoPlazo { get => tipoPlazo; set => tipoPlazo = value; }
 
         public Componente()
         {
         }
 
-        public Componente(int idComponente, string nombre, string descripcion, double precioUnit, double plazo, char tipoPlazo)
+        public Componente(int idComponente, string nombre, string descripcion, double precioUnit, double plazo, string tipoPlazo)
         {
             IdComponente = idComponente;
             Nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
@@ -43,12 +43,31 @@ namespace sistema_mrp.controlador
             List<Componente> componentes = new List<Componente>();
             while (reader.Read())
             {
-                Componente componente = new Componente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetDouble(4), reader.GetChar(5));
+                Componente componente = new Componente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetDouble(4), reader.GetString(5));
                 componentes.Add(componente);
             }
             con.Close();
             return componentes;
         }
+        
+        public static List<Componente> GetComponentesAjenosProducto(int idProducto)
+        {
+            NpgsqlConnection con = new Conexion().getConexion();
+            con.Open();
+            string consulta = $"SELECT c.id_componente, c.nombre, c.descripcion, c.precio_unit,c.plazo, c.tipo_plazo FROM mrp.componente c INNER JOIN mrp.producto_componente pc ON c.id_componente = pc.id_componente WHERE pc.id_producto != { idProducto}; ";
+            NpgsqlCommand cmd = new NpgsqlCommand(consulta, con);
+            Console.WriteLine(consulta);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            List<Componente> componentes = new List<Componente>();
+            while (reader.Read())
+            {
+                Componente componente = new Componente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetDouble(4), reader.GetString(5));
+                componentes.Add(componente);
+            }
+            con.Close();
+            return componentes;
+        }
+
         public static List<Componente> GetComponentes()
         {
             NpgsqlConnection con = new Conexion().getConexion();
@@ -58,7 +77,7 @@ namespace sistema_mrp.controlador
             List<Componente> componentes = new List<Componente>();
             while (reader.Read())
             {
-                Componente componente = new Componente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetDouble(4), reader.GetChar(5));
+                Componente componente = new Componente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetDouble(4), reader.GetString(5));
                 componentes.Add(componente);
             }
             con.Close();
@@ -68,7 +87,8 @@ namespace sistema_mrp.controlador
         {
             NpgsqlConnection con = new Conexion().getConexion();
             con.Open();
-            NpgsqlCommand cmd = new NpgsqlCommand($"INSERT INTO mrp.componente VALUES('{c.Nombre}','{c.Descripcion}',{c.PrecioUnit}::money, {c.Plazo}::real, {c.TipoPlazo})", con);
+            string consulta = $"INSERT INTO mrp.componente(nombre, descripcion, precio_unit, plazo, tipo_plazo) VALUES('{c.Nombre}','{c.Descripcion}',{c.PrecioUnit}::money, {c.Plazo}::real, '{c.TipoPlazo}')";
+            NpgsqlCommand cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
             return res;
@@ -131,7 +151,7 @@ namespace sistema_mrp.controlador
             con.Close();
             return res;
         }
-        public int UpdateTipoPlazo(char tipoPlazo)
+        public int UpdateTipoPlazo(string tipoPlazo)
         {
             var con = new Conexion().getConexion();
             this.TipoPlazo = tipoPlazo;

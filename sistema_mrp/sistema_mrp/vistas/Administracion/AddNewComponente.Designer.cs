@@ -3,13 +3,13 @@
     partial class AddNewComponente
     {
         private string tipo;
-        private int idPadre;
+        private int idProducto;
 
-        public AddNewComponente(string tipo, int idPadre)
+        public AddNewComponente(string tipo, int idProducto)
         {
             InitializeComponent();
             this.tipo = tipo;
-            this.idPadre = idPadre;
+            this.idProducto = idProducto;
         }
 
         /// <summary>
@@ -40,37 +40,37 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.btnAddComponentExist = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbMargenSegExist = new System.Windows.Forms.TextBox();
+            this.tbUnidNecExist = new System.Windows.Forms.TextBox();
+            this.lIdComponente = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvComponentesEx = new System.Windows.Forms.DataGridView();
             this.idComponenteH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precioCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plazoCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbUnidNecExist = new System.Windows.Forms.TextBox();
-            this.tbMargenSegExist = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnAddComponentExist = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.tbPrecio = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbplazoNew = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbUnidNew = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAgregarComponenteNew = new System.Windows.Forms.Button();
+            this.cbTipoNew = new System.Windows.Forms.ComboBox();
             this.tbMargenSegNew = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cbTipoNew = new System.Windows.Forms.ComboBox();
-            this.btnAgregarComponenteNew = new System.Windows.Forms.Button();
+            this.tbUnidNew = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbplazoNew = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbPrecio = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComponentesEx)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,9 +92,9 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.tbMargenSegExist);
             this.tabPage1.Controls.Add(this.tbUnidNecExist);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lIdComponente);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.dataGridView3);
+            this.tabPage1.Controls.Add(this.dgvComponentesEx);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -104,44 +104,90 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.UseWaitCursor = true;
             // 
-            // tabPage2
+            // btnAddComponentExist
             // 
-            this.tabPage2.Controls.Add(this.btnAgregarComponenteNew);
-            this.tabPage2.Controls.Add(this.cbTipoNew);
-            this.tabPage2.Controls.Add(this.tbMargenSegNew);
-            this.tabPage2.Controls.Add(this.label11);
-            this.tabPage2.Controls.Add(this.tbUnidNew);
-            this.tabPage2.Controls.Add(this.label10);
-            this.tabPage2.Controls.Add(this.tbplazoNew);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.tbPrecio);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.tbNombre);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(545, 310);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Nuevo Componente";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.UseWaitCursor = true;
+            this.btnAddComponentExist.Location = new System.Drawing.Point(370, 271);
+            this.btnAddComponentExist.Name = "btnAddComponentExist";
+            this.btnAddComponentExist.Size = new System.Drawing.Size(75, 23);
+            this.btnAddComponentExist.TabIndex = 24;
+            this.btnAddComponentExist.Text = "Agregar";
+            this.btnAddComponentExist.UseVisualStyleBackColor = true;
+            this.btnAddComponentExist.UseWaitCursor = true;
+            this.btnAddComponentExist.Click += new System.EventHandler(this.btnAddComponentExist_Click);
             // 
-            // dataGridView3
+            // label4
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(298, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Márgen de Seguridad:";
+            this.label4.UseWaitCursor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(298, 209);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Unidades Necesarias:";
+            this.label3.UseWaitCursor = true;
+            // 
+            // tbMargenSegExist
+            // 
+            this.tbMargenSegExist.Location = new System.Drawing.Point(412, 235);
+            this.tbMargenSegExist.Name = "tbMargenSegExist";
+            this.tbMargenSegExist.Size = new System.Drawing.Size(100, 20);
+            this.tbMargenSegExist.TabIndex = 21;
+            this.tbMargenSegExist.UseWaitCursor = true;
+            // 
+            // tbUnidNecExist
+            // 
+            this.tbUnidNecExist.Location = new System.Drawing.Point(412, 206);
+            this.tbUnidNecExist.Name = "tbUnidNecExist";
+            this.tbUnidNecExist.Size = new System.Drawing.Size(100, 20);
+            this.tbUnidNecExist.TabIndex = 20;
+            this.tbUnidNecExist.UseWaitCursor = true;
+            // 
+            // lIdComponente
+            // 
+            this.lIdComponente.AutoSize = true;
+            this.lIdComponente.Location = new System.Drawing.Point(207, 229);
+            this.lIdComponente.Name = "lIdComponente";
+            this.lIdComponente.Size = new System.Drawing.Size(27, 13);
+            this.lIdComponente.TabIndex = 19;
+            this.lIdComponente.Text = "<id>";
+            this.lIdComponente.UseWaitCursor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 229);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Id del componente seleccionado: ";
+            this.label1.UseWaitCursor = true;
+            // 
+            // dgvComponentesEx
+            // 
+            this.dgvComponentesEx.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvComponentesEx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComponentesEx.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idComponenteH,
             this.nombreCH,
             this.descripcionCH,
             this.precioCH,
             this.plazoCH,
             this.tipoCH});
-            this.dataGridView3.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(533, 190);
-            this.dataGridView3.TabIndex = 17;
+            this.dgvComponentesEx.Location = new System.Drawing.Point(6, 6);
+            this.dgvComponentesEx.Name = "dgvComponentesEx";
+            this.dgvComponentesEx.Size = new System.Drawing.Size(533, 190);
+            this.dgvComponentesEx.TabIndex = 17;
+            this.dgvComponentesEx.UseWaitCursor = true;
+            this.dgvComponentesEx.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
             // idComponenteH
             // 
@@ -180,117 +226,72 @@
             this.tipoCH.Name = "tipoCH";
             this.tipoCH.ReadOnly = true;
             // 
-            // label1
+            // tabPage2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 229);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Id del componente seleccionado: ";
+            this.tabPage2.Controls.Add(this.btnAgregarComponenteNew);
+            this.tabPage2.Controls.Add(this.cbTipoNew);
+            this.tabPage2.Controls.Add(this.tbMargenSegNew);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.tbUnidNew);
+            this.tabPage2.Controls.Add(this.label10);
+            this.tabPage2.Controls.Add(this.tbplazoNew);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.tbPrecio);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.tbNombre);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(545, 310);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Nuevo Componente";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.UseWaitCursor = true;
             // 
-            // label2
+            // btnAgregarComponenteNew
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(207, 229);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "<id>";
+            this.btnAgregarComponenteNew.Location = new System.Drawing.Point(231, 203);
+            this.btnAgregarComponenteNew.Name = "btnAgregarComponenteNew";
+            this.btnAgregarComponenteNew.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarComponenteNew.TabIndex = 15;
+            this.btnAgregarComponenteNew.Text = "Agregar";
+            this.btnAgregarComponenteNew.UseVisualStyleBackColor = true;
+            this.btnAgregarComponenteNew.UseWaitCursor = true;
+            this.btnAgregarComponenteNew.Click += new System.EventHandler(this.btnAgregarComponenteNew_Click);
             // 
-            // tbUnidNecExist
+            // cbTipoNew
             // 
-            this.tbUnidNecExist.Location = new System.Drawing.Point(412, 206);
-            this.tbUnidNecExist.Name = "tbUnidNecExist";
-            this.tbUnidNecExist.Size = new System.Drawing.Size(100, 20);
-            this.tbUnidNecExist.TabIndex = 20;
+            this.cbTipoNew.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoNew.FormattingEnabled = true;
+            this.cbTipoNew.Items.AddRange(new object[] {
+            "dia",
+            "semana",
+            "mes",
+            "horas"});
+            this.cbTipoNew.Location = new System.Drawing.Point(285, 136);
+            this.cbTipoNew.Name = "cbTipoNew";
+            this.cbTipoNew.Size = new System.Drawing.Size(121, 21);
+            this.cbTipoNew.TabIndex = 14;
+            this.cbTipoNew.UseWaitCursor = true;
             // 
-            // tbMargenSegExist
+            // tbMargenSegNew
             // 
-            this.tbMargenSegExist.Location = new System.Drawing.Point(412, 235);
-            this.tbMargenSegExist.Name = "tbMargenSegExist";
-            this.tbMargenSegExist.Size = new System.Drawing.Size(100, 20);
-            this.tbMargenSegExist.TabIndex = 21;
+            this.tbMargenSegNew.Location = new System.Drawing.Point(410, 87);
+            this.tbMargenSegNew.Name = "tbMargenSegNew";
+            this.tbMargenSegNew.Size = new System.Drawing.Size(100, 20);
+            this.tbMargenSegNew.TabIndex = 13;
+            this.tbMargenSegNew.UseWaitCursor = true;
             // 
-            // label3
+            // label11
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(298, 209);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 13);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Unidades Necesarias:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(298, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Márgen de Seguridad:";
-            // 
-            // btnAddComponentExist
-            // 
-            this.btnAddComponentExist.Location = new System.Drawing.Point(370, 271);
-            this.btnAddComponentExist.Name = "btnAddComponentExist";
-            this.btnAddComponentExist.Size = new System.Drawing.Size(75, 23);
-            this.btnAddComponentExist.TabIndex = 24;
-            this.btnAddComponentExist.Text = "Agregar";
-            this.btnAddComponentExist.UseVisualStyleBackColor = true;
-            this.btnAddComponentExist.Click += new System.EventHandler(this.btnAddComponentExist_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Nombre:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.Location = new System.Drawing.Point(112, 38);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(100, 20);
-            this.tbNombre.TabIndex = 1;
-            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
-            // 
-            // tbPrecio
-            // 
-            this.tbPrecio.Location = new System.Drawing.Point(112, 90);
-            this.tbPrecio.Name = "tbPrecio";
-            this.tbPrecio.Size = new System.Drawing.Size(100, 20);
-            this.tbPrecio.TabIndex = 3;
-            this.tbPrecio.TextChanged += new System.EventHandler(this.tbPrecio_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(30, 93);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Precio Unitario";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // tbplazoNew
-            // 
-            this.tbplazoNew.Location = new System.Drawing.Point(179, 137);
-            this.tbplazoNew.Name = "tbplazoNew";
-            this.tbplazoNew.Size = new System.Drawing.Size(100, 20);
-            this.tbplazoNew.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 140);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Plazo de Entrega (Unid): ";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(273, 90);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(101, 13);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Stock de Seguridad";
+            this.label11.UseWaitCursor = true;
             // 
             // tbUnidNew
             // 
@@ -298,6 +299,7 @@
             this.tbUnidNew.Name = "tbUnidNew";
             this.tbUnidNew.Size = new System.Drawing.Size(100, 20);
             this.tbUnidNew.TabIndex = 11;
+            this.tbUnidNew.UseWaitCursor = true;
             this.tbUnidNew.TextChanged += new System.EventHandler(this.tbUnidNew_TextChanged);
             // 
             // label10
@@ -308,45 +310,66 @@
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 10;
             this.label10.Text = "Unidades:";
+            this.label10.UseWaitCursor = true;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // tbMargenSegNew
+            // tbplazoNew
             // 
-            this.tbMargenSegNew.Location = new System.Drawing.Point(410, 87);
-            this.tbMargenSegNew.Name = "tbMargenSegNew";
-            this.tbMargenSegNew.Size = new System.Drawing.Size(100, 20);
-            this.tbMargenSegNew.TabIndex = 13;
+            this.tbplazoNew.Location = new System.Drawing.Point(179, 137);
+            this.tbplazoNew.Name = "tbplazoNew";
+            this.tbplazoNew.Size = new System.Drawing.Size(100, 20);
+            this.tbplazoNew.TabIndex = 7;
+            this.tbplazoNew.UseWaitCursor = true;
             // 
-            // label11
+            // label8
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(273, 90);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 13);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Stock de Seguridad";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 140);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Plazo de Entrega (Unid): ";
+            this.label8.UseWaitCursor = true;
             // 
-            // cbTipoNew
+            // tbPrecio
             // 
-            this.cbTipoNew.FormattingEnabled = true;
-            this.cbTipoNew.Items.AddRange(new object[] {
-            "dia",
-            "semana",
-            "mes"});
-            this.cbTipoNew.Location = new System.Drawing.Point(285, 136);
-            this.cbTipoNew.Name = "cbTipoNew";
-            this.cbTipoNew.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoNew.TabIndex = 14;
+            this.tbPrecio.Location = new System.Drawing.Point(112, 90);
+            this.tbPrecio.Name = "tbPrecio";
+            this.tbPrecio.Size = new System.Drawing.Size(100, 20);
+            this.tbPrecio.TabIndex = 3;
+            this.tbPrecio.UseWaitCursor = true;
+            this.tbPrecio.TextChanged += new System.EventHandler(this.tbPrecio_TextChanged);
             // 
-            // btnAgregarComponenteNew
+            // label6
             // 
-            this.btnAgregarComponenteNew.Location = new System.Drawing.Point(231, 203);
-            this.btnAgregarComponenteNew.Name = "btnAgregarComponenteNew";
-            this.btnAgregarComponenteNew.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarComponenteNew.TabIndex = 15;
-            this.btnAgregarComponenteNew.Text = "Agregar";
-            this.btnAgregarComponenteNew.UseVisualStyleBackColor = true;
-            this.btnAgregarComponenteNew.Click += new System.EventHandler(this.btnAgregarComponenteNew_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 93);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Precio Unitario";
+            this.label6.UseWaitCursor = true;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.Location = new System.Drawing.Point(112, 38);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(100, 20);
+            this.tbNombre.TabIndex = 1;
+            this.tbNombre.UseWaitCursor = true;
+            this.tbNombre.TextChanged += new System.EventHandler(this.tbNombre_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Nombre:";
+            this.label5.UseWaitCursor = true;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // AddNewComponente
             // 
@@ -356,12 +379,13 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "AddNewComponente";
             this.Text = "Nuevo Componente";
+            this.Load += new System.EventHandler(this.AddNewComponente_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvComponentesEx)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,9 +400,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbMargenSegExist;
         private System.Windows.Forms.TextBox tbUnidNecExist;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lIdComponente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvComponentesEx;
         private System.Windows.Forms.DataGridViewTextBoxColumn idComponenteH;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCH;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionCH;
