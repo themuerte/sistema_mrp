@@ -22,7 +22,10 @@ namespace sistema_mrp.controlador.MRP
             this.demanda = demanda;
         }
          
-        
+        public void get_L4L()
+        {
+
+        }
 
     }
 }
