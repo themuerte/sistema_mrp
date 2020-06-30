@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNumeroDatos = new System.Windows.Forms.TextBox();
+            this.txt_numeroDatos = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtplanes = new System.Windows.Forms.Label();
             this.bPersecución = new System.Windows.Forms.RadioButton();
@@ -64,11 +64,11 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtg_semanas = new System.Windows.Forms.DataGridView();
+            this.dtg_resulatdo = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_resulatdo)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -77,22 +77,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 115);
+            this.label2.Location = new System.Drawing.Point(61, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 14);
             this.label2.TabIndex = 1;
             this.label2.Text = "Número de datos";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtNumeroDatos
+            // txt_numeroDatos
             // 
-            this.txtNumeroDatos.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroDatos.Location = new System.Drawing.Point(168, 112);
-            this.txtNumeroDatos.Name = "txtNumeroDatos";
-            this.txtNumeroDatos.Size = new System.Drawing.Size(100, 21);
-            this.txtNumeroDatos.TabIndex = 2;
+            this.txt_numeroDatos.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_numeroDatos.Location = new System.Drawing.Point(168, 112);
+            this.txt_numeroDatos.Name = "txt_numeroDatos";
+            this.txt_numeroDatos.Size = new System.Drawing.Size(100, 21);
+            this.txt_numeroDatos.TabIndex = 2;
             // 
             // btnAceptar
             // 
@@ -107,6 +106,7 @@
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // txtplanes
             // 
@@ -203,7 +203,6 @@
             this.label7.Size = new System.Drawing.Size(93, 14);
             this.label7.TabIndex = 16;
             this.label7.Text = "Inventario Inicial";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -244,7 +243,6 @@
             this.label11.Size = new System.Drawing.Size(148, 14);
             this.label11.TabIndex = 17;
             this.label11.Text = "Costo de Sub-Contratación";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // tbCostoDeProducción
             // 
@@ -309,7 +307,6 @@
             this.tbStockSeguridad.Name = "tbStockSeguridad";
             this.tbStockSeguridad.Size = new System.Drawing.Size(67, 21);
             this.tbStockSeguridad.TabIndex = 28;
-            this.tbStockSeguridad.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
             // tbFuerzaLaboral
             // 
@@ -362,7 +359,6 @@
             this.label13.Size = new System.Drawing.Size(103, 14);
             this.label13.TabIndex = 31;
             this.label13.Text = "Costo Horas Extras";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -396,6 +392,7 @@
             this.btnCalcular.TabIndex = 37;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnLimpiar
             // 
@@ -434,29 +431,29 @@
             this.label1.Text = "Planeación Agregada";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // dataGridView1
+            // dtg_semanas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(74, 150);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 116);
-            this.dataGridView1.TabIndex = 41;
+            this.dtg_semanas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_semanas.Location = new System.Drawing.Point(74, 150);
+            this.dtg_semanas.Name = "dtg_semanas";
+            this.dtg_semanas.Size = new System.Drawing.Size(643, 116);
+            this.dtg_semanas.TabIndex = 41;
             // 
-            // dataGridView2
+            // dtg_resulatdo
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(74, 403);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(643, 187);
-            this.dataGridView2.TabIndex = 42;
+            this.dtg_resulatdo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_resulatdo.Location = new System.Drawing.Point(74, 403);
+            this.dtg_resulatdo.Name = "dtg_resulatdo";
+            this.dtg_resulatdo.Size = new System.Drawing.Size(643, 187);
+            this.dtg_resulatdo.TabIndex = 42;
             // 
             // plan_agregado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 621);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtg_resulatdo);
+            this.Controls.Add(this.dtg_semanas);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCalcular);
@@ -490,16 +487,15 @@
             this.Controls.Add(this.bPersecución);
             this.Controls.Add(this.txtplanes);
             this.Controls.Add(this.btnAceptar);
-            this.Controls.Add(this.txtNumeroDatos);
+            this.Controls.Add(this.txt_numeroDatos);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "plan_agregado";
             this.Text = "plan_agregado";
-            this.Load += new System.EventHandler(this.plan_agregado_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_resulatdo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,7 +503,7 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNumeroDatos;
+        private System.Windows.Forms.TextBox txt_numeroDatos;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label txtplanes;
         private System.Windows.Forms.RadioButton bPersecución;
@@ -542,7 +538,7 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtg_semanas;
+        private System.Windows.Forms.DataGridView dtg_resulatdo;
     }
 }
