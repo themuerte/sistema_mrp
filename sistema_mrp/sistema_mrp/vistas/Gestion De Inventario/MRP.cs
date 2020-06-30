@@ -126,13 +126,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 Carga();
             }else if (rdr_EOQ.Checked == true)
             {
-
-            }else if (rdr_LTC.Checked == true)
+                Carga();
+            }
+            else if (rdr_LTC.Checked == true)
             {
-
-            }else if (rdr_LUC.Checked == true)
+                Carga();
+            }
+            else if (rdr_LUC.Checked == true)
             {
-
+                Carga();
             }
 
         }
