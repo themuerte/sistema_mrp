@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sistema_mrp.controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,11 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAgregarComponenteNew_Click(object sender, EventArgs e)
         {
-            // todo
+            Componente c = new Componente();
+            c.Nombre = tbNombre.Text;
+            c.Descripcion = "";
+            c.PrecioUnit = double.Parse(tbPrecio.Text);
+            c.Plazo = 
             this.Dispose();
         }
 

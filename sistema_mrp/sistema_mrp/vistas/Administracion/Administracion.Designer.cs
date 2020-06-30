@@ -38,7 +38,7 @@
             this.lProd = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
-            this.tbComponents = new System.Windows.Forms.TabControl();
+            this.dgvBOM = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnSubirPrimerNivel = new System.Windows.Forms.Button();
             this.btnAddComponent = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lNombreComponente = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvBeanOfMat = new System.Windows.Forms.DataGridView();
             this.idComponenteH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionCH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,10 +71,12 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.plazoC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lIdProductoSel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            this.tbComponents.SuspendLayout();
+            this.dgvBOM.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBeanOfMat)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -105,8 +107,7 @@
             this.dgvProductos.Size = new System.Drawing.Size(744, 92);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellDoubleClick);
-            this.dgvProductos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvProductos_KeyDown);
-            this.dgvProductos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvProductos_KeyPress);
+            this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
             // idProducto
             // 
@@ -165,15 +166,15 @@
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // tbComponents
+            // dgvBOM
             // 
-            this.tbComponents.Controls.Add(this.tabPage1);
-            this.tbComponents.Controls.Add(this.tabPage3);
-            this.tbComponents.Location = new System.Drawing.Point(134, 161);
-            this.tbComponents.Name = "tbComponents";
-            this.tbComponents.SelectedIndex = 0;
-            this.tbComponents.Size = new System.Drawing.Size(801, 450);
-            this.tbComponents.TabIndex = 16;
+            this.dgvBOM.Controls.Add(this.tabPage1);
+            this.dgvBOM.Controls.Add(this.tabPage3);
+            this.dgvBOM.Location = new System.Drawing.Point(134, 161);
+            this.dgvBOM.Name = "dgvBOM";
+            this.dgvBOM.SelectedIndex = 0;
+            this.dgvBOM.Size = new System.Drawing.Size(801, 450);
+            this.dgvBOM.TabIndex = 16;
             // 
             // tabPage1
             // 
@@ -190,7 +191,7 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.lNombreComponente);
-            this.tabPage1.Controls.Add(this.dataGridView3);
+            this.tabPage1.Controls.Add(this.dgvBeanOfMat);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -312,21 +313,21 @@
             this.lNombreComponente.TabIndex = 17;
             this.lNombreComponente.Text = "Nombre: ";
             // 
-            // dataGridView3
+            // dgvBeanOfMat
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvBeanOfMat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBeanOfMat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBeanOfMat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idComponenteH,
             this.nombreCH,
             this.descripcionCH,
             this.precioCH,
             this.plazoCH,
             this.tipoCH});
-            this.dataGridView3.Location = new System.Drawing.Point(303, 81);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(445, 298);
-            this.dataGridView3.TabIndex = 16;
+            this.dgvBeanOfMat.Location = new System.Drawing.Point(303, 81);
+            this.dgvBeanOfMat.Name = "dgvBeanOfMat";
+            this.dgvBeanOfMat.Size = new System.Drawing.Size(445, 298);
+            this.dgvBeanOfMat.TabIndex = 16;
             // 
             // idComponenteH
             // 
@@ -457,12 +458,32 @@
             this.tipo.Name = "tipo";
             this.tipo.ReadOnly = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "IdProductoSeleccionado";
+            // 
+            // lIdProductoSel
+            // 
+            this.lIdProductoSel.AutoSize = true;
+            this.lIdProductoSel.Location = new System.Drawing.Point(48, 200);
+            this.lIdProductoSel.Name = "lIdProductoSel";
+            this.lIdProductoSel.Size = new System.Drawing.Size(33, 13);
+            this.lIdProductoSel.TabIndex = 18;
+            this.lIdProductoSel.Text = "None";
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 675);
-            this.Controls.Add(this.tbComponents);
+            this.Controls.Add(this.lIdProductoSel);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dgvBOM);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lProd);
@@ -472,10 +493,10 @@
             this.Text = "Administracion";
             this.Load += new System.EventHandler(this.Administracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            this.tbComponents.ResumeLayout(false);
+            this.dgvBOM.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBeanOfMat)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -491,7 +512,7 @@
         private System.Windows.Forms.Label lProd;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAddProduct;
-        private System.Windows.Forms.TabControl tbComponents;
+        private System.Windows.Forms.TabControl dgvBOM;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnAddComponent;
         private System.Windows.Forms.Button button3;
@@ -505,7 +526,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lNombreComponente;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvBeanOfMat;
         private System.Windows.Forms.DataGridViewTextBoxColumn idComponenteH;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCH;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionCH;
@@ -529,5 +550,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadInventario;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lIdProductoSel;
     }
 }
