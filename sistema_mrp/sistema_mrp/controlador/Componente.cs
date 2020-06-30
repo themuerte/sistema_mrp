@@ -21,6 +21,10 @@ namespace sistema_mrp.controlador
         public double Plazo { get => plazo; set => plazo = value; }
         public char TipoPlazo { get => tipoPlazo; set => tipoPlazo = value; }
 
+        public Componente()
+        {
+        }
+
         public Componente(int idComponente, string nombre, string descripcion, double precioUnit, double plazo, char tipoPlazo)
         {
             IdComponente = idComponente;
@@ -29,6 +33,21 @@ namespace sistema_mrp.controlador
             PrecioUnit = precioUnit;
             Plazo = plazo;
             TipoPlazo = tipoPlazo;
+        }
+        public static List<Componente> GetComponentesPorProducto(int idProducto)
+        {
+            NpgsqlConnection con = new Conexion().getConexion();
+            con.Open();
+            NpgsqlCommand cmd = new NpgsqlCommand($"SELECT c.id_componente, c.nombre, c.descripcion, c.precio_unit,c.plazo, c.tipo_plazo FROM mrp.componente c INNER JOIN mrp.producto_componente pc ON c.id_componente = pc.id_componente WHERE pc.id_producto = {idProducto}", con);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            List<Componente> componentes = new List<Componente>();
+            while (reader.Read())
+            {
+                Componente componente = new Componente(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), Decimal.ToDouble(reader.GetDecimal(3)), reader.GetDouble(4), reader.GetChar(5));
+                componentes.Add(componente);
+            }
+            con.Close();
+            return componentes;
         }
         public static List<Componente> GetComponentes()
         {

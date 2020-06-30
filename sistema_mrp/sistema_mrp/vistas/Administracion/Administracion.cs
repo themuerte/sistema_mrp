@@ -32,7 +32,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAddComponent_Click(object sender, EventArgs e)
         {
-            AddNewComponente fcomponente = new AddNewComponente("", -1);
+            AddNewComponente fcomponente = new AddNewComponente("", int.Parse(lIdProductoSel.Text));
             fcomponente.Show();
             
         }
@@ -68,18 +68,7 @@ namespace sistema_mrp.vistas.Administracion
             }
         }
 
-        private void dgvProductos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-
-
-            
-        }
-
-        private void dgvProductos_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
+      
 
         private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -99,6 +88,32 @@ namespace sistema_mrp.vistas.Administracion
             Producto p = new Producto(idProducto, nombre, descripcion, precioActual, cantidadInventario);
             EditProducto edit = new EditProducto(this, p);
             edit.Show();
+        }
+
+        private void dgvProductos_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dgvProductos.SelectedRows.Count > 0)
+            {
+                int index = dgvProductos.SelectedRows[0].Index;
+                int idProducto = int.Parse(dgvProductos.Rows[index].Cells[0].Value.ToString());
+                lIdProductoSel.Text = idProducto + "";
+                llenarTabla();
+            }
+        }
+
+        private void llenarTabla()
+        {
+            int idProducto = int.Parse(lIdProductoSel.Text);
+            vaciarDataGridView(dgvBeanOfMat);
+            List<Componente> componentes = Componente.GetComponentesPorProducto(idProducto);
+
+           
+
+            foreach (Componente c in componentes)
+            {
+                Object[] row = { c.IdComponente, c.Nombre, c.Descripcion, c.PrecioUnit, c.Plazo, c.TipoPlazo };
+                dgvProductos.Rows.Add(row);
+            }
         }
     }
 }
