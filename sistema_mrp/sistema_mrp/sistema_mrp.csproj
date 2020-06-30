@@ -65,6 +65,7 @@
     <Compile Include="controlador\MRP\L4L.cs" />
     <Compile Include="controlador\Producto.cs" />
     <Compile Include="controlador\ProductoComponente.cs" />
+    <Compile Include="controlador\Trucazos.cs" />
     <Compile Include="vistas\Administracion\EditProducto.cs">
       <SubType>Form</SubType>
     </Compile>

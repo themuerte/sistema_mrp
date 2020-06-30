@@ -32,8 +32,16 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAddComponent_Click(object sender, EventArgs e)
         {
-            AddNewComponente fcomponente = new AddNewComponente("", int.Parse(lIdProductoSel.Text));
-            fcomponente.Show();
+            try
+            {
+                AddNewComponente fcomponente = new AddNewComponente("", int.Parse(lIdProductoSel.Text));
+                fcomponente.Show();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione un producto primero.");
+            }
             
         }
 
@@ -50,7 +58,7 @@ namespace sistema_mrp.vistas.Administracion
 
         public void recargarTablaProductos()
         {
-            vaciarDataGridView(dgvProductos);
+            Trucazos.vaciarDataGridView(dgvProductos);
             List<Producto> productos = Producto.GetProductos();
             
             foreach (Producto producto in productos)
@@ -60,13 +68,7 @@ namespace sistema_mrp.vistas.Administracion
             }
         }
 
-        private void vaciarDataGridView(DataGridView dgv)
-        {
-            while (dgv.Rows.Count > 1)
-            {
-                dgv.Rows.Remove(dgv.Rows[0]);
-            }
-        }
+        
 
       
 
@@ -94,25 +96,30 @@ namespace sistema_mrp.vistas.Administracion
         {
             if(dgvProductos.SelectedRows.Count > 0)
             {
-                int index = dgvProductos.SelectedRows[0].Index;
-                int idProducto = int.Parse(dgvProductos.Rows[index].Cells[0].Value.ToString());
-                lIdProductoSel.Text = idProducto + "";
-                llenarTabla();
+                try
+                {
+                    int index = dgvProductos.SelectedRows[0].Index;
+                    int idProducto = int.Parse(dgvProductos.Rows[index].Cells[0].Value.ToString());
+                    lIdProductoSel.Text = idProducto + "";
+                    llenarTabla();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                
             }
         }
 
         private void llenarTabla()
         {
             int idProducto = int.Parse(lIdProductoSel.Text);
-            vaciarDataGridView(dgvBeanOfMat);
+            Trucazos.vaciarDataGridView(dgvBeanOfMat);
             List<Componente> componentes = Componente.GetComponentesPorProducto(idProducto);
-
-           
-
             foreach (Componente c in componentes)
             {
                 Object[] row = { c.IdComponente, c.Nombre, c.Descripcion, c.PrecioUnit, c.Plazo, c.TipoPlazo };
-                dgvProductos.Rows.Add(row);
+                dgvBeanOfMat.Rows.Add(row);
             }
         }
     }
