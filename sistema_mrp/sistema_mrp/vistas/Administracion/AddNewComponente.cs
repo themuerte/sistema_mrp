@@ -25,12 +25,12 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAgregarComponenteNew_Click(object sender, EventArgs e)
         {
-            Componente c = new Componente();
-            c.Nombre = tbNombre.Text;
-            c.Descripcion = "";
-            c.PrecioUnit = double.Parse(tbPrecio.Text);
-            c.Plazo = 
-            this.Dispose();
+            //Componente c = new Componente();
+            //c.Nombre = tbNombre.Text;
+            //c.Descripcion = "";
+            //c.PrecioUnit = double.Parse(tbPrecio.Text);
+            //c.Plazo = 
+            //this.Dispose();
         }
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
