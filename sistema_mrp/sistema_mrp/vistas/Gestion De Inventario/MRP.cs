@@ -77,23 +77,23 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
             if (rdr_L4L.Checked == true)
             {
-                
-                Carga();
+                L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text),);
+
             }
             
             if (rdr_EOQ.Checked == true)
             {
-                Carga();
+                
             }
             
             if (rdr_LTC.Checked == true)
             {
-                Carga();
+                
             }
             
             if (rdr_LUC.Checked == true)
             {
-                Carga();
+                
             }
 
         }

@@ -10,13 +10,15 @@ namespace sistema_mrp.controlador.MRP
 {
     class L4L
     {
+        private int semanas;
         private double tasa;
         private double costo_pedir;
         private double costo_mantenimiento;
         private List<int> demanda = new List<int>();
 
-        public L4L(double tasa, double costo_pedir, double costo_mantenimiento, List<int> demanda)
+        public L4L(int semanas, double tasa, double costo_pedir, double costo_mantenimiento, List<int> demanda)
         {
+            this.semanas = semanas;
             this.tasa = tasa;
             this.costo_pedir = costo_pedir;
             this.costo_mantenimiento = costo_mantenimiento;
@@ -24,6 +26,7 @@ namespace sistema_mrp.controlador.MRP
         }
 
         DataGridView dtg_resultado = new DataGridView();
+
         protected void Carga()
         {
             DataGridViewTextBoxColumn semanas = new DataGridViewTextBoxColumn();
@@ -72,6 +75,58 @@ namespace sistema_mrp.controlador.MRP
         public DataGridView get_L4L()
         {
             Carga();
+            for (int i = 1; i == semanas + 1 ; i++)
+            {
+                for (int j = 1; j == 8; j++)
+                {
+                    if (i == 0)
+                    {
+                        //se evita que entre en los campos de Datos
+                    }
+                    else
+                    {
+                        switch (j)
+                        {
+                            //semana
+                            case 1:
+                                    dtg_resultado.Columns.Add(new DataGridViewColumn(){HeaderText= i.ToString() });
+                                break;
+
+                            //demanda
+                            case 2:
+                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = demanda[i].ToString() });
+                                break;
+
+                            //produccion
+                            case 3:
+                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = demanda[i].ToString() });
+                                break;
+                            
+                            //inventario final
+                            case 4:
+                                break;
+                            
+                            //costo de mantenimiento
+                            case 5:
+                                break;
+                            
+                            //costo de envio
+                            case 6:
+                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = costo_pedir.ToString()});
+                                break;
+                            
+                            //costo total
+                            case 7:
+                                double valor0 = Convert.ToDouble(dtg_resultado.Rows[i - 1].Cells[7].Value);
+                                double valor1 = Convert.ToDouble(dtg_resultado.Rows[i].Cells[7].Value);
+                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = Convert.ToString(valor0+valor1) }) ;
+                                break;
+                          
+
+                        }
+                    }
+                }
+            }
 
             return dtg_resultado;
         }
