@@ -13,11 +13,13 @@ namespace sistema_mrp.vistas.Administracion
 {
     public partial class Administracion : Form
     {
-        
+
+        Producto productoSel;
+        Empresa empresa;
         public Administracion()
         {
             InitializeComponent();
-            
+            empresa = Empresa.GetEmpresa();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,65 +34,50 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAddComponent_Click(object sender, EventArgs e)
         {
-            try
-            {
-                AddNewComponente fcomponente = new AddNewComponente("", int.Parse(lIdProductoSel.Text));
-                fcomponente.Show();
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Seleccione un producto primero.");
-            }
-            
+           
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             AddProducto producto = new AddProducto(this);
-            producto.Show();
+            producto.Visible = true;
         }
 
         private void Administracion_Load(object sender, EventArgs e)
         {
             recargarTablaProductos();
+            cargarEmpresaDatos();
+        }
+
+        private void cargarEmpresaDatos()
+        {
+            tbNombreEmpresa.Text = empresa.Nombre;
+            tbDiaTrabajadoXAnio.Text = empresa.DiasTrabajadosPorAnio + "";
+            tbCostoContratacion.Text = empresa.CostoContratacion + "";
+            tbCostoSubContratacion.Text = empresa.CostoSubContratacion + "";
+            tbCostoDespido.Text = empresa.CostoDespido + "";
+            tbFuerzaLaboral.Text = empresa.FuerzaLaboral + "";
+
+
         }
 
         public void recargarTablaProductos()
         {
             Trucazos.vaciarDataGridView(dgvProductos);
-            List<Producto> productos = Producto.GetProductos();
-            
-            foreach (Producto producto in productos)
+            List<Object[]> productos = Producto.GetProductosCorto();
+            if (productos.Count > 0)
             {
-               // Object[] p = {producto.IdProducto, producto.Nombre, producto.Descripcion,producto.PrecioActual, producto.CantidadInventario };
-               // dgvProductos.Rows.Add(p);
+                foreach (Object[] producto in productos)
+                {
+                    dgvProductos.Rows.Add(producto);
+                }
             }
+            
         }
 
         
 
       
-
-        private void dgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int nFila = e.RowIndex;
-
-            DataGridViewCell cell = dgvProductos.Rows[nFila].Cells[0];
-            int idProducto = Convert.ToInt32(cell.Value);
-            cell = dgvProductos.Rows[nFila].Cells[1];
-            string nombre = Convert.ToString(cell.Value);
-            cell = dgvProductos.Rows[nFila].Cells[2];
-            string descripcion = Convert.ToString(cell.Value);
-            cell = dgvProductos.Rows[nFila].Cells[3];
-            double precioActual = Convert.ToDouble(cell.Value);
-            cell = dgvProductos.Rows[nFila].Cells[4];
-            int cantidadInventario = Convert.ToInt32(cell.Value);
-
-            //Producto p = new Producto(idProducto, nombre, descripcion, precioActual, cantidadInventario);
-           // EditProducto edit = new EditProducto(this, p);
-            //edit.Show();
-        }
 
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
         {
@@ -101,7 +88,8 @@ namespace sistema_mrp.vistas.Administracion
                     int index = dgvProductos.SelectedRows[0].Index;
                     int idProducto = int.Parse(dgvProductos.Rows[index].Cells[0].Value.ToString());
                     lIdProductoSel.Text = idProducto + "";
-                    llenarTabla();
+                    
+                    llenarParametros();
                 }
                 catch (Exception ex)
                 {
@@ -111,9 +99,227 @@ namespace sistema_mrp.vistas.Administracion
             }
         }
 
-        private void llenarTabla()
+        private void llenarParametros()
         {
-            
+            try
+            {
+                int idProducto = int.Parse(lIdProductoSel.Text);
+                productoSel = Producto.GetProductoById(idProducto);
+                tbNombre.Text = productoSel.Nombre;
+                tbDescripcion.Text = productoSel.Descripcion;
+                tbInventario.Text = productoSel.Inventario + "";
+                tbCostoUnitario.Text = productoSel.CostoUnitario + "";
+                tbCostoPorPedir.Text = productoSel.CostoPedir + "";
+                tbCostoMantenimiento.Text = productoSel.CostoMantenimiento + "";
+                tbDesviacion.Text = productoSel.DesviacionDemanda + "";
+                tbDemandaDiaria.Text = productoSel.DemandaDiaria + "";
+                tbPeriodoRevision.Text = productoSel.PeriodoRevision + "";
+                tbProbabilidadDemanda.Text = productoSel.ProbabilidadDemanda + "";
+                tbPlazodeEntregaP.Text = productoSel.PlazoEntregaDias + "";
+                tbInventarioInicial.Text = productoSel.InventarioInicial + "";
+                tbHorasRequeridas.Text = productoSel.HorasRequeridas + "";
+                tbStockSeguridad.Text = productoSel.StockSeguridad + "";
+                tbCostoFaltante.Text = productoSel.CostoFaltante + "";
+                tbCostosxHoras.Text = productoSel.CostoHrs + "";
+                tbCostoHrsExtras.Text = productoSel.CostoHrsExtras + "";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+             
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(tbNombre.Text == "" || tbDescripcion.Text == "" || tbInventario.Text == "")
+            {
+                MessageBox.Show("Rellene los campos vacíos!");
+            }
+            else
+            {
+                try
+                {
+                    string nombre = tbNombre.Text;
+                    string descripcion = tbDescripcion.Text;
+                    double inventario = double.Parse(tbInventario.Text);
+                    if (lIdProductoSel.Text == "id")
+                    {
+                        MessageBox.Show("Seleccione un producto primero!");
+                    }
+                    else
+                    {
+                        productoSel.UpdateNombre(nombre);
+                        productoSel.UpdateDescripcion(descripcion);
+                        productoSel.UpdateInventario(inventario);
+                        MessageBox.Show("Datos Actualizados!!");
+                        llenarParametros();
+                    }
+
+                }
+                catch (Exception ex )
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btnEditarP2_Click(object sender, EventArgs e)
+        {
+            if(tbCostoFaltante.Text == "" || tbCostoUnitario.Text =="" || tbCostoMantenimiento.Text =="" || tbStockSeguridad.Text == "" || tbInventarioInicial.Text == "")
+            {
+                MessageBox.Show("Rellene los campos vacíos!");
+            }
+            else
+            {
+                try
+                {
+                    double costoFaltante, costoProducto, costoMantenimiento, stockSeguridad, inventarioInicial;
+                    costoFaltante = double.Parse(tbCostoFaltante.Text);
+                    costoProducto = double.Parse(tbCostoUnitario.Text);
+                    costoMantenimiento = double.Parse(tbCostoMantenimiento.Text);
+                    stockSeguridad = double.Parse(tbStockSeguridad.Text);
+                    inventarioInicial = double.Parse(tbInventarioInicial.Text);
+
+                    productoSel.UpdateCostoFaltante(costoFaltante);
+                    productoSel.UpdateCostoUnitario(costoProducto);
+                    productoSel.UpdateCostoMantenimiento(costoMantenimiento);
+                    productoSel.UpdateStockSeguridad(stockSeguridad);
+                    productoSel.UpdateInventarioInicial(inventarioInicial);
+                    MessageBox.Show("Datos Parte 2 Actualizados!!");
+                    llenarParametros();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    
+                }
+            }
+        }
+
+        private void btnEditarP1_Click(object sender, EventArgs e)
+        {
+            if (tbDemandaDiaria.Text == "" || tbPlazodeEntregaP.Text == "" || tbPeriodoRevision.Text == "" || tbDesviacion.Text == "" || tbProbabilidadDemanda.Text == "")
+            {
+                MessageBox.Show("Rellene los campos vacíos!");
+            }
+            else
+            {
+                try
+                {
+                    double demandaDiaria, plazoEntrega, periodoRevision, desviacion, probabilidadDemanda;
+                    demandaDiaria = double.Parse(tbDemandaDiaria.Text);
+                    plazoEntrega = double.Parse(tbPlazodeEntregaP.Text);
+                    periodoRevision = double.Parse(tbPeriodoRevision.Text);
+                    desviacion = double.Parse(tbDesviacion.Text);
+                    probabilidadDemanda = double.Parse(tbProbabilidadDemanda.Text);
+
+                    productoSel.UpdateDemandaDiaria(demandaDiaria);
+                    productoSel.UpdatePlazoEntregaDias(plazoEntrega);
+                    productoSel.UpdatePeriodoRevision(periodoRevision);
+                    productoSel.UpdateDesviacionDemanda(desviacion);
+                    productoSel.UpdateProbabilidadDemanda(probabilidadDemanda);
+                    MessageBox.Show("Datos Parte 1 Actualizados!!");
+                    llenarParametros();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
+        }
+
+        private void btnEditarP3_Click(object sender, EventArgs e)
+        {
+            if (tbCostoPorPedir.Text == "" || tbHorasRequeridas.Text == "" || tbCostosxHoras.Text == "" || tbCostoHrsExtras.Text == "")
+            {
+                MessageBox.Show("Rellene los campos vacíos!");
+            }
+            else
+            {
+                try
+                {
+                    double costoPedir, horasRequeridas, costoHora, costoHoraExtra;
+                    costoPedir = double.Parse(tbCostoPorPedir.Text);
+                    horasRequeridas = double.Parse(tbHorasRequeridas.Text);
+                    costoHora = double.Parse(tbCostosxHoras.Text);
+                    costoHoraExtra = double.Parse(tbCostoHrsExtras.Text);
+
+
+                    productoSel.UpdateCostoPedir(costoPedir);
+                    productoSel.UpdateHorasRequeridas(horasRequeridas);
+                    productoSel.UpdateCostoHrs(costoHora);
+                    productoSel.UpdateCostoHrsEx(costoHoraExtra);
+                    MessageBox.Show("Datos Parte 3 Actualizados!!");
+                    llenarParametros();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void btnEditarOD_Click(object sender, EventArgs e)
+        {
+            if (tbNombreEmpresa.Text == "" || tbDiaTrabajadoXAnio.Text == "" || tbCostoContratacion.Text == "" || tbCostoSubContratacion.Text == "" || tbCostoDespido.Text == "" || tbFuerzaLaboral.Text == "")
+            {
+                MessageBox.Show("Rellene los campos vacíos!");
+            }
+            else
+            {
+                try
+                {
+                    empresa.Nombre= tbNombreEmpresa.Text; 
+                    
+                    empresa.DiasTrabajadosPorAnio = double.Parse(tbDiaTrabajadoXAnio.Text);
+                    empresa.CostoContratacion = double.Parse(tbCostoContratacion.Text);
+                    empresa.CostoSubContratacion = double.Parse(tbCostoSubContratacion.Text);
+                    empresa.CostoDespido = double.Parse(tbCostoDespido.Text);
+                    empresa.FuerzaLaboral = double.Parse(tbFuerzaLaboral.Text);
+
+                    Empresa.UpdateEmpresa(empresa);
+                    cargarEmpresaDatos();
+                    MessageBox.Show("Datos Actualizados!!");
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+            }
         }
     }
 }

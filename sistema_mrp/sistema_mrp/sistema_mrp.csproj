@@ -57,18 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlador\Empresa.cs" />
     <Compile Include="controlador\Modelo_P.cs" />
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
     <Compile Include="controlador\MRP\L4L.cs" />
     <Compile Include="controlador\Producto.cs" />
     <Compile Include="controlador\Trucazos.cs" />
-    <Compile Include="vistas\Administracion\EditProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Administracion\EditProducto.Designer.cs">
-      <DependentUpon>EditProducto.cs</DependentUpon>
-    </Compile>
     <Compile Include="vistas\Administracion\AddProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,12 +75,6 @@
     </Compile>
     <Compile Include="vistas\Administracion\Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\Administracion\AddNewComponente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Administracion\AddNewComponente.Designer.cs">
-      <DependentUpon>AddNewComponente.cs</DependentUpon>
     </Compile>
     <Compile Include="vistas\Gestion De Inventario\modelo_P.cs">
       <SubType>Form</SubType>
@@ -159,12 +148,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="vistas\Administracion\AddNewComponente.resx">
-      <DependentUpon>AddNewComponente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Administracion\EditProducto.resx">
-      <DependentUpon>EditProducto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Administracion\AddProducto.resx">
       <DependentUpon>AddProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +199,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\editarbtn.bmp" />
+    <None Include="vistas\Administracion\edit.png" />
     <Content Include="vistas\shapes-and-symbols.png" />
   </ItemGroup>
   <ItemGroup>

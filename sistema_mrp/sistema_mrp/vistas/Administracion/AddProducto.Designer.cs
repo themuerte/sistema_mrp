@@ -28,110 +28,80 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddProduct = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.mtbPrecio = new System.Windows.Forms.MaskedTextBox();
-            this.mtbUnidades = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.lNombreComponente = new System.Windows.Forms.Label();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnAddProduct
+            // tbDescripcion
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(86, 241);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.btnAddProduct.TabIndex = 22;
-            this.btnAddProduct.Text = "Agregar";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Unidades:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Precio Unitario";
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.Location = new System.Drawing.Point(126, 25);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(100, 20);
-            this.tbNombre.TabIndex = 17;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Nombre:";
-            // 
-            // mtbPrecio
-            // 
-            this.mtbPrecio.Location = new System.Drawing.Point(126, 80);
-            this.mtbPrecio.Mask = "9999.99";
-            this.mtbPrecio.Name = "mtbPrecio";
-            this.mtbPrecio.Size = new System.Drawing.Size(100, 20);
-            this.mtbPrecio.TabIndex = 23;
-            // 
-            // mtbUnidades
-            // 
-            this.mtbUnidades.Location = new System.Drawing.Point(126, 126);
-            this.mtbUnidades.Mask = "999";
-            this.mtbUnidades.Name = "mtbUnidades";
-            this.mtbUnidades.Size = new System.Drawing.Size(100, 20);
-            this.mtbUnidades.TabIndex = 24;
+            this.tbDescripcion.Location = new System.Drawing.Point(88, 133);
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(169, 20);
+            this.tbDescripcion.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 176);
+            this.label1.Location = new System.Drawing.Point(12, 136);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 32;
             this.label1.Text = "Descripción:";
             // 
-            // tbDescripcion
+            // tbNombre
             // 
-            this.tbDescripcion.Location = new System.Drawing.Point(126, 173);
-            this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.tbDescripcion.TabIndex = 26;
+            this.tbNombre.Location = new System.Drawing.Point(88, 95);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(169, 20);
+            this.tbNombre.TabIndex = 30;
+            // 
+            // lNombreComponente
+            // 
+            this.lNombreComponente.AutoSize = true;
+            this.lNombreComponente.Location = new System.Drawing.Point(12, 98);
+            this.lNombreComponente.Name = "lNombreComponente";
+            this.lNombreComponente.Size = new System.Drawing.Size(50, 13);
+            this.lNombreComponente.TabIndex = 28;
+            this.lNombreComponente.Text = "Nombre: ";
+            this.lNombreComponente.Click += new System.EventHandler(this.lNombreComponente_Click);
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Location = new System.Drawing.Point(78, 184);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(105, 23);
+            this.btnAddProduct.TabIndex = 34;
+            this.btnAddProduct.Text = "Nuevo Producto";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(75, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 13);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Ingrese el nuevo producto:";
             // 
             // AddProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 332);
+            this.ClientSize = new System.Drawing.Size(282, 268);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.tbDescripcion);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.mtbUnidades);
-            this.Controls.Add(this.mtbPrecio);
-            this.Controls.Add(this.btnAddProduct);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lNombreComponente);
             this.Name = "AddProducto";
-            this.Text = "Nuevo Producto";
-            this.Load += new System.EventHandler(this.AddProducto_Load);
+            this.Text = "Administracion";
+            this.Load += new System.EventHandler(this.Administracion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,14 +109,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddProduct;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox mtbPrecio;
-        private System.Windows.Forms.MaskedTextBox mtbUnidades;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbDescripcion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.Label lNombreComponente;
+        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Label label2;
     }
 }

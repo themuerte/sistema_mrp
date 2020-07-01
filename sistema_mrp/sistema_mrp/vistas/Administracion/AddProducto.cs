@@ -8,47 +8,100 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql;
 
 namespace sistema_mrp.vistas.Administracion
 {
     public partial class AddProducto : Form
     {
-        Administracion padre;
-        public AddProducto(Administracion padre)
+
+        Producto productoSel;
+        Administracion papa;
+        public AddProducto(Administracion papa)
         {
             InitializeComponent();
-            this.padre = padre;
+            this.papa = papa;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        private void AddProducto_Load(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddComponent_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            if(mtbPrecio.Text == "" || mtbUnidades.Text == "" || tbNombre.Text == "")
+            
+        }
+
+        private void Administracion_Load(object sender, EventArgs e)
+        {
+            
+        }
+    
+
+        private void llenarParametros()
+        {
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        
+    
+
+        private void lNombreComponente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddProduct_Click_1(object sender, EventArgs e)
+        {
+            if (tbNombre.Text == "" || tbDescripcion.Text == "")
             {
-                MessageBox.Show(this, "Campos Vacíos");
+                MessageBox.Show("Rellene los campos vacíos!");
             }
             else
             {
                 try
                 {
-                    
+                    string nombre = tbNombre.Text;
+                    string descripcion = tbDescripcion.Text;
+
+                    Producto.AddProductoCorto(nombre, descripcion);
+                    papa.recargarTablaProductos();
+                    this.Dispose(true);
+
                 }
-                catch (Exception except)
+                catch (Exception ex)
                 {
-                    MessageBox.Show(this,"" + except.Message);
-
+                    MessageBox.Show(ex.Message);
                 }
-                
-
-
             }
-            
         }
-
     }
 }
