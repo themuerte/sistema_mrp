@@ -48,6 +48,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dtg_semanas = new System.Windows.Forms.DataGridView();
             this.dtg_resultado = new System.Windows.Forms.DataGridView();
+            this.txt_tasaMantenimiento = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_resultado)).BeginInit();
@@ -266,11 +268,31 @@
             this.dtg_resultado.Size = new System.Drawing.Size(566, 204);
             this.dtg_resultado.TabIndex = 60;
             // 
+            // txt_tasaMantenimiento
+            // 
+            this.txt_tasaMantenimiento.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_tasaMantenimiento.Location = new System.Drawing.Point(168, 236);
+            this.txt_tasaMantenimiento.Name = "txt_tasaMantenimiento";
+            this.txt_tasaMantenimiento.Size = new System.Drawing.Size(72, 21);
+            this.txt_tasaMantenimiento.TabIndex = 62;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 239);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 14);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Tasa de mantenimiento (i)";
+            // 
             // MRP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 621);
+            this.Controls.Add(this.txt_tasaMantenimiento);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dtg_resultado);
             this.Controls.Add(this.dtg_semanas);
             this.Controls.Add(this.label8);
@@ -323,5 +345,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dtg_semanas;
         private System.Windows.Forms.DataGridView dtg_resultado;
+        private System.Windows.Forms.TextBox txt_tasaMantenimiento;
+        private System.Windows.Forms.Label label4;
     }
 }

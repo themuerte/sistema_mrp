@@ -13,13 +13,15 @@ namespace sistema_mrp.controlador.MRP
         private int semanas;
         private double costo_pedir;
         private double costo_unitario;
+        private double tasa_mantenimiento;
         private List<int> demanda = new List<int>();
 
-        public L4L(int semanas, double costo_pedir, double costo_unitario, List<int> demanda)
+        public L4L(int semanas, double costo_pedir, double costo_unitario, double tasa_mantenimiento, List<int> demanda)
         {
             this.semanas = semanas;
             this.costo_pedir = costo_pedir;
             this.costo_unitario = costo_unitario;
+            this.tasa_mantenimiento = tasa_mantenimiento;
             this.demanda = demanda;
         }
 
@@ -49,11 +51,11 @@ namespace sistema_mrp.controlador.MRP
             inventario_final.ReadOnly = true;
             dtg_resultado.Columns.Add(inventario_final);
 
-            DataGridViewTextBoxColumn costo_mantenimiento = new DataGridViewTextBoxColumn();
-            costo_mantenimiento.HeaderText = "Costo de mantenimiento";
-            costo_mantenimiento.Width = 100;
-            costo_mantenimiento.ReadOnly = true;
-            dtg_resultado.Columns.Add(costo_mantenimiento);
+            DataGridViewTextBoxColumn costo_mantenimiento1 = new DataGridViewTextBoxColumn();
+            costo_mantenimiento1.HeaderText = "Costo de mantenimiento";
+            costo_mantenimiento1.Width = 100;
+            costo_mantenimiento1.ReadOnly = true;
+            dtg_resultado.Columns.Add(costo_mantenimiento1);
 
             DataGridViewTextBoxColumn costo_envio = new DataGridViewTextBoxColumn();
             costo_envio.HeaderText = "Costo de envio";
@@ -72,8 +74,8 @@ namespace sistema_mrp.controlador.MRP
             {
                 costo += costo_pedir;
                 dtg_resultado.Rows.Add(new object[] {i + 1, demanda[i],demanda[i],0,0,costo_pedir,costo});
-
             }
+
 
            
         }
