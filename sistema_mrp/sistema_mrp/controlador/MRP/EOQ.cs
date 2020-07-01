@@ -70,7 +70,7 @@ namespace sistema_mrp.controlador.MRP
 
             double demanda_promedio = 0;
             double Q_optimo;
-            double costo_mantenimiento;
+            double H;
 
             for(int i = 0; i < semanas; i++)
             {
@@ -78,10 +78,31 @@ namespace sistema_mrp.controlador.MRP
             }
 
             demanda_promedio = (demanda_promedio / semanas) * 52;
-            costo_mantenimiento = tasa_mantenimiento * costo_unitario * 52;
-            Q_optimo = Math.Sqrt((2*demanda_promedio*costo_unitario)/costo_mantenimiento);
-            
+            H = tasa_mantenimiento * costo_unitario * 52;
+            Q_optimo = Math.Sqrt((2*demanda_promedio*costo_unitario)/H);
 
+            double invetario_final = 0;
+            double costo = 0;
+            double costo_mantenimiento = 0;
+            
+            for(int i = 0; i < semanas; i++)
+            {
+                if (demanda[i] > invetario_final)
+                {
+                    invetario_final = Q_optimo;
+                    costo_mantenimiento = invetario_final * tasa_mantenimiento;
+                    costo = costo + costo_mantenimiento + costo_pedir;
+                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Q_optimo + demanda[i], invetario_final, costo_mantenimiento, costo_pedir, costo });
+                }
+                else
+                {
+                     invetario_final = invetario_final - demanda[i];
+                    costo_mantenimiento = invetario_final * tasa_mantenimiento;
+                    costo = costo + costo_mantenimiento;
+                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], 0, invetario_final, costo_mantenimiento, 0, costo });
+                }
+
+            }
 
         }
 
