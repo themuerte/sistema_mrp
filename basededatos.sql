@@ -21,7 +21,19 @@ create table prod.producto
 	costo_hrs real,
 	costo_hrs_extras real
 );
-
+CREATE TABLE prod.plan_agregado (
+    id_plan_agregado serial not null constraint plan_agregado_pk primary key,
+    mes text not null,
+    dias_habiles real not null
+);
+CREATE TABLE prod.plan_producto(
+    id_plan_producto serial not null constraint plan_producto_pk primary key,
+    id_plan_agregado int not null,
+    id_producto int not null,
+    demanda_estimada real not null,
+    foreign key (id_plan_agregado) references prod.plan_agregado(id_plan_agregado),
+    foreign key (id_producto) references  prod.producto(id_producto)
+);
 comment on column prod.producto.inventario is 'Unidades actuales guardadas en inventario.';
 
 comment on column prod.producto.costo_unitario is 'Costo unitario por producto';
@@ -100,3 +112,14 @@ alter table prod.producto alter column periodo_revision set default 0;
 
 INSERT INTO prod.empresa (nombre, dias_trabajados_por_anio, costo_contratacion, costo_subcontratacion, costo_despido, fuerza_laboral)
 VALUES('Empresa el Don Jajas', 300, 250, 350, 150, 900);
+
+
+INSERT INTO prod.plan_agregado(mes) values ('Enero'),('Febrero'),('Marzo'),('Abril'),('Mayo'),('June'),('Julio'),('Agosto'),('Septiembre'),('Octubre'),('Noviembre'),('Diciembre')
+
+select * from prod.plan_agregado;
+
+INSERT INTO prod.plan_producto(id_plan_agregado, id_producto,  demanda_estimada) values  (1, 5,100), (2, 5,100), (3, 5,100), (4, 5,100), (5, 5,100), (6, 5,100), (7, 5,100), (8, 5,100), (9, 5,100), (10, 5,100), (11, 5,100), (12, 5,100);
+
+SELECT * FROM prod.plan_producto WHERE id_producto=3 ORDER BY id_plan_agregado;
+
+UPDATE prod.plan_producto set demanda_estimada = 0 where id_plan_producto = 1
