@@ -79,7 +79,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             if (rdr_L4L.Checked == true)
             {
                 L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text),Convert.ToDouble(txt_costoUnidad.Text), demanda);
-                dtg_resultado = l4.get_L4L();
+                dtg_resultado.DataSource = l4.get_L4L().DataSource;
+
 
             }
             
