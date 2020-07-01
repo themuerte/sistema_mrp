@@ -73,36 +73,20 @@ namespace sistema_mrp.controlador.MRP
         {
             Carga();
 
-            for (int i = 0; i < semanas ; i++)
+            double costo = 0;
+            for (int i = 0; i < semanas; i++)
             {
-                
-                double costo_ante = 0;
-
-                List<string> resultado = new List<string>();
-                resultado.Add(i.ToString());
-                resultado.Add(demanda[i].ToString());
-                resultado.Add(demanda[i].ToString());
-                resultado.Add(costo_pedir.ToString());
-                if (i == 0)
-                {
-                    resultado.Add(costo_pedir.ToString());
-                    costo_ante = costo_pedir;
-                }
-                else
-                {
-                    resultado.Add(Convert.ToString(costo_ante + costo_pedir));
-                }
+                costo += costo_pedir;
+                dtg_resultado.Rows.Add(new object[] {
+                i + 1, demanda[i],demanda[i],0,0,costo_pedir,costo
+                });
 
 
-                dtg_resultado.Rows.Add(resultado);
-                    
-                
             }
-
-            
 
             return dtg_resultado;
         }
+       
 
         
 
