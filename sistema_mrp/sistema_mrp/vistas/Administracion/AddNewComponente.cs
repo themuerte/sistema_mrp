@@ -33,7 +33,6 @@ namespace sistema_mrp.vistas.Administracion
         private void btnAgregarComponenteNew_Click(object sender, EventArgs e)
         {
 
-<<<<<<< HEAD
             Componente c = new Componente();
             c.Nombre = tbNombre.Text;
             c.Descripcion = "";
@@ -66,8 +65,7 @@ namespace sistema_mrp.vistas.Administracion
             ProductoComponente.AddProductoComponente(pc);
             this.Dispose();
 
-=======
->>>>>>> b5d98e462f0c8b1b2c1269143d8b2f9ee5427e05
+
         }
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
