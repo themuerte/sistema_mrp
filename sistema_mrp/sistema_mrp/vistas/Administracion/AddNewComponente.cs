@@ -38,14 +38,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAgregarComponenteNew_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //Componente c = new Componente();
-            //c.Nombre = tbNombre.Text;
-            //c.Descripcion = "";
-            //c.PrecioUnit = double.Parse(tbPrecio.Text);
-            //c.Plazo = 
-            //this.Dispose();
-=======
+
             Componente c = new Componente();
             c.Nombre = tbNombre.Text;
             c.Descripcion = "";
@@ -77,7 +70,7 @@ namespace sistema_mrp.vistas.Administracion
             ProductoComponente pc = new ProductoComponente(idProducto, idComponente, margenSeguridad, unidades);
             ProductoComponente.AddProductoComponente(pc);
             this.Dispose();
->>>>>>> a91aeff7fd41d875f647cfe96a05b4410f293141
+
         }
 
         private void tbNombre_TextChanged(object sender, EventArgs e)

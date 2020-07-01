@@ -18,54 +18,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             InitializeComponent();
         }
 
-        protected void Carga()
-        {
-            DataGridViewTextBoxColumn semanas = new DataGridViewTextBoxColumn();
-            semanas.HeaderText = "Semana";
-            semanas.Width = 100;
-            semanas.ReadOnly = true;
-            dtg_resultado.Columns.Add(semanas);
-
-            DataGridViewTextBoxColumn demanda = new DataGridViewTextBoxColumn();
-            demanda.HeaderText = "Demanda";
-            demanda.Width = 100;
-            demanda.ReadOnly = true;
-            dtg_resultado.Columns.Add(demanda);
-
-            DataGridViewTextBoxColumn produccion = new DataGridViewTextBoxColumn();
-            produccion.HeaderText = "Produccion";
-            produccion.Width = 100;
-            produccion.ReadOnly = true;
-            dtg_resultado.Columns.Add(produccion);
-
-            DataGridViewTextBoxColumn inventario_final = new DataGridViewTextBoxColumn();
-            inventario_final.HeaderText = "Inventario Final";
-            inventario_final.Width = 130;
-            inventario_final.ReadOnly = true;
-            dtg_resultado.Columns.Add(inventario_final);
-
-            DataGridViewTextBoxColumn costo_mantenimiento = new DataGridViewTextBoxColumn();
-            costo_mantenimiento.HeaderText = "Costo de mantenimiento";
-            costo_mantenimiento.Width = 100;
-            costo_mantenimiento.ReadOnly = true;
-            dtg_resultado.Columns.Add(costo_mantenimiento);
-
-            DataGridViewTextBoxColumn costo_envio = new DataGridViewTextBoxColumn();
-            costo_envio.HeaderText = "Costo de envio";
-            costo_envio.Width = 100;
-            costo_envio.ReadOnly = true;
-            dtg_resultado.Columns.Add(costo_envio);
-
-            DataGridViewTextBoxColumn costo_total = new DataGridViewTextBoxColumn();
-            costo_total.HeaderText = "Costo total";
-            costo_total.Width = 100;
-            costo_total.ReadOnly = true;
-            dtg_resultado.Columns.Add(costo_total);
-
-
-
-
-        }
+      
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -115,24 +68,30 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     }
                     else
                     {
-                        //string valor = dtg_semanas.Rows[i].Cells[j].Value.ToString();
-                        //MessageBox.Show(valor);
+                        List<int> demanda = new List<int>();
+                        string valor = dtg_semanas.Rows[i].Cells[j].Value.ToString();
+                        demanda.Add(Convert.ToInt32(valor));
                     }
                 }
             }
 
             if (rdr_L4L.Checked == true)
             {
+                
                 Carga();
-            }else if (rdr_EOQ.Checked == true)
+            }
+            
+            if (rdr_EOQ.Checked == true)
             {
                 Carga();
             }
-            else if (rdr_LTC.Checked == true)
+            
+            if (rdr_LTC.Checked == true)
             {
                 Carga();
             }
-            else if (rdr_LUC.Checked == true)
+            
+            if (rdr_LUC.Checked == true)
             {
                 Carga();
             }
