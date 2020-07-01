@@ -32,8 +32,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAgregarComponenteNew_Click(object sender, EventArgs e)
         {
-            
-            this.Dispose();
+
         }
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
