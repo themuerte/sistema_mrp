@@ -30,28 +30,19 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lProd = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dgvBOM = new System.Windows.Forms.TabControl();
             this.tpProductosDetalles = new System.Windows.Forms.TabPage();
-            this.tbDescripcion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbInventario = new System.Windows.Forms.TextBox();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lNombreComponente = new System.Windows.Forms.Label();
-            this.tpEmpresa = new System.Windows.Forms.TabPage();
             this.lIdProductoSel = new System.Windows.Forms.Label();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditarPP = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ModP = new System.Windows.Forms.TabPage();
-            this.ModQ = new System.Windows.Forms.TabPage();
-            this.MRP = new System.Windows.Forms.TabPage();
-            this.tbCostoMantenimiento = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnEditarP1 = new System.Windows.Forms.Button();
             this.tbProbabilidadDemanda = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbDesviacion = new System.Windows.Forms.TextBox();
@@ -62,47 +53,56 @@
             this.label12 = new System.Windows.Forms.Label();
             this.tbDemandaDiaria = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.tbCostoPorPedir = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tbNombreEmpresa = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbDiaTrabajadoXAnio = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbCostoSubContratacion = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tbCostoContratacion = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tbFuerzaLaboral = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.tbCostoDespido = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tbInventarioInicial = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tbHorasRequeridas = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.tbCostosxHoras = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tbStockSeguridad = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tbCostoHrsExtras = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.btnEditarPP = new System.Windows.Forms.Button();
-            this.btnEditarP1 = new System.Windows.Forms.Button();
-            this.btnEditarP2 = new System.Windows.Forms.Button();
-            this.btnEditarP3 = new System.Windows.Forms.Button();
-            this.btnEditarOD = new System.Windows.Forms.Button();
-            this.tbCostoFaltante = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.ModQ = new System.Windows.Forms.TabPage();
             this.tbCostoUnitario = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.tbCostoFaltante = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.btnEditarP2 = new System.Windows.Forms.Button();
+            this.tbStockSeguridad = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbInventarioInicial = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tbCostoMantenimiento = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.MRP = new System.Windows.Forms.TabPage();
+            this.btnEditarP3 = new System.Windows.Forms.Button();
+            this.tbCostoHrsExtras = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbCostosxHoras = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tbHorasRequeridas = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tbCostoPorPedir = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbDescripcion = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbInventario = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lNombreComponente = new System.Windows.Forms.Label();
+            this.tpEmpresa = new System.Windows.Forms.TabPage();
+            this.btnEditarOD = new System.Windows.Forms.Button();
+            this.tbCostoDespido = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tbFuerzaLaboral = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.tbCostoContratacion = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tbCostoSubContratacion = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbDiaTrabajadoXAnio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbNombreEmpresa = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.dgvBOM.SuspendLayout();
             this.tpProductosDetalles.SuspendLayout();
-            this.tpEmpresa.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.ModP.SuspendLayout();
             this.ModQ.SuspendLayout();
             this.MRP.SuspendLayout();
+            this.tpEmpresa.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -130,6 +130,23 @@
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
+            // idProducto
+            // 
+            this.idProducto.HeaderText = "idProducto";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "descripcion";
+            this.descripcion.Name = "descripcion";
+            // 
             // lProd
             // 
             this.lProd.AutoSize = true;
@@ -147,6 +164,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddProduct
             // 
@@ -190,78 +208,6 @@
             this.tpProductosDetalles.Text = "Productos";
             this.tpProductosDetalles.UseVisualStyleBackColor = true;
             // 
-            // tbDescripcion
-            // 
-            this.tbDescripcion.Location = new System.Drawing.Point(206, 199);
-            this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(283, 20);
-            this.tbDescripcion.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Descripción:";
-            // 
-            // tbInventario
-            // 
-            this.tbInventario.Location = new System.Drawing.Point(515, 197);
-            this.tbInventario.Name = "tbInventario";
-            this.tbInventario.Size = new System.Drawing.Size(100, 20);
-            this.tbInventario.TabIndex = 23;
-            this.tbInventario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // tbNombre
-            // 
-            this.tbNombre.Location = new System.Drawing.Point(53, 199);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(134, 20);
-            this.tbNombre.TabIndex = 22;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(512, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Inventario:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lNombreComponente
-            // 
-            this.lNombreComponente.AutoSize = true;
-            this.lNombreComponente.Location = new System.Drawing.Point(27, 169);
-            this.lNombreComponente.Name = "lNombreComponente";
-            this.lNombreComponente.Size = new System.Drawing.Size(50, 13);
-            this.lNombreComponente.TabIndex = 17;
-            this.lNombreComponente.Text = "Nombre: ";
-            // 
-            // tpEmpresa
-            // 
-            this.tpEmpresa.Controls.Add(this.btnEditarOD);
-            this.tpEmpresa.Controls.Add(this.tbCostoDespido);
-            this.tpEmpresa.Controls.Add(this.label19);
-            this.tpEmpresa.Controls.Add(this.tbFuerzaLaboral);
-            this.tpEmpresa.Controls.Add(this.label18);
-            this.tpEmpresa.Controls.Add(this.tbCostoContratacion);
-            this.tpEmpresa.Controls.Add(this.label17);
-            this.tpEmpresa.Controls.Add(this.tbCostoSubContratacion);
-            this.tpEmpresa.Controls.Add(this.label16);
-            this.tpEmpresa.Controls.Add(this.tbDiaTrabajadoXAnio);
-            this.tpEmpresa.Controls.Add(this.label5);
-            this.tpEmpresa.Controls.Add(this.tbNombreEmpresa);
-            this.tpEmpresa.Controls.Add(this.label7);
-            this.tpEmpresa.Location = new System.Drawing.Point(4, 22);
-            this.tpEmpresa.Name = "tpEmpresa";
-            this.tpEmpresa.Size = new System.Drawing.Size(701, 476);
-            this.tpEmpresa.TabIndex = 2;
-            this.tpEmpresa.Text = "Otros Datos";
-            this.tpEmpresa.UseVisualStyleBackColor = true;
-            // 
             // lIdProductoSel
             // 
             this.lIdProductoSel.AutoSize = true;
@@ -271,22 +217,16 @@
             this.lIdProductoSel.TabIndex = 18;
             this.lIdProductoSel.Text = "id";
             // 
-            // descripcion
+            // btnEditarPP
             // 
-            this.descripcion.HeaderText = "descripcion";
-            this.descripcion.Name = "descripcion";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.Name = "nombre";
-            // 
-            // idProducto
-            // 
-            this.idProducto.HeaderText = "idProducto";
-            this.idProducto.Name = "idProducto";
-            this.idProducto.ReadOnly = true;
-            this.idProducto.Visible = false;
+            this.btnEditarPP.Image = global::sistema_mrp.Properties.Resources.edit;
+            this.btnEditarPP.Location = new System.Drawing.Point(645, 194);
+            this.btnEditarPP.Name = "btnEditarPP";
+            this.btnEditarPP.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarPP.TabIndex = 29;
+            this.btnEditarPP.Text = "E";
+            this.btnEditarPP.UseVisualStyleBackColor = true;
+            this.btnEditarPP.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabControl1
             // 
@@ -320,60 +260,16 @@
             this.ModP.Text = "Primera Parte";
             this.ModP.UseVisualStyleBackColor = true;
             // 
-            // ModQ
+            // btnEditarP1
             // 
-            this.ModQ.Controls.Add(this.tbCostoUnitario);
-            this.ModQ.Controls.Add(this.label15);
-            this.ModQ.Controls.Add(this.tbCostoFaltante);
-            this.ModQ.Controls.Add(this.label23);
-            this.ModQ.Controls.Add(this.btnEditarP2);
-            this.ModQ.Controls.Add(this.tbStockSeguridad);
-            this.ModQ.Controls.Add(this.label22);
-            this.ModQ.Controls.Add(this.tbInventarioInicial);
-            this.ModQ.Controls.Add(this.label20);
-            this.ModQ.Controls.Add(this.tbCostoMantenimiento);
-            this.ModQ.Controls.Add(this.label6);
-            this.ModQ.Location = new System.Drawing.Point(4, 22);
-            this.ModQ.Name = "ModQ";
-            this.ModQ.Padding = new System.Windows.Forms.Padding(3);
-            this.ModQ.Size = new System.Drawing.Size(646, 171);
-            this.ModQ.TabIndex = 1;
-            this.ModQ.Text = "Segunda Parte";
-            this.ModQ.UseVisualStyleBackColor = true;
-            // 
-            // MRP
-            // 
-            this.MRP.Controls.Add(this.btnEditarP3);
-            this.MRP.Controls.Add(this.tbCostoHrsExtras);
-            this.MRP.Controls.Add(this.label25);
-            this.MRP.Controls.Add(this.tbCostosxHoras);
-            this.MRP.Controls.Add(this.label24);
-            this.MRP.Controls.Add(this.tbHorasRequeridas);
-            this.MRP.Controls.Add(this.label21);
-            this.MRP.Controls.Add(this.tbCostoPorPedir);
-            this.MRP.Controls.Add(this.label14);
-            this.MRP.Location = new System.Drawing.Point(4, 22);
-            this.MRP.Name = "MRP";
-            this.MRP.Size = new System.Drawing.Size(646, 171);
-            this.MRP.TabIndex = 2;
-            this.MRP.Text = "Tercera Parte";
-            this.MRP.UseVisualStyleBackColor = true;
-            // 
-            // tbCostoMantenimiento
-            // 
-            this.tbCostoMantenimiento.Location = new System.Drawing.Point(416, 61);
-            this.tbCostoMantenimiento.Name = "tbCostoMantenimiento";
-            this.tbCostoMantenimiento.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoMantenimiento.TabIndex = 45;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(390, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 13);
-            this.label6.TabIndex = 44;
-            this.label6.Text = "Costo del mantenimiento:";
+            this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.edit;
+            this.btnEditarP1.Location = new System.Drawing.Point(618, 140);
+            this.btnEditarP1.Name = "btnEditarP1";
+            this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP1.TabIndex = 30;
+            this.btnEditarP1.Text = "E";
+            this.btnEditarP1.UseVisualStyleBackColor = true;
+            this.btnEditarP1.Click += new System.EventHandler(this.btnEditarP1_Click);
             // 
             // tbProbabilidadDemanda
             // 
@@ -455,268 +351,26 @@
             this.label13.TabIndex = 40;
             this.label13.Text = "Demanda Diaria:";
             // 
-            // tbCostoPorPedir
+            // ModQ
             // 
-            this.tbCostoPorPedir.Location = new System.Drawing.Point(123, 60);
-            this.tbCostoPorPedir.Name = "tbCostoPorPedir";
-            this.tbCostoPorPedir.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoPorPedir.TabIndex = 43;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(93, 30);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 13);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "Costo por Pedir:";
-            // 
-            // tbNombreEmpresa
-            // 
-            this.tbNombreEmpresa.Location = new System.Drawing.Point(189, 83);
-            this.tbNombreEmpresa.Name = "tbNombreEmpresa";
-            this.tbNombreEmpresa.Size = new System.Drawing.Size(315, 20);
-            this.tbNombreEmpresa.TabIndex = 51;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(173, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Nombre de la Empresa:";
-            // 
-            // tbDiaTrabajadoXAnio
-            // 
-            this.tbDiaTrabajadoXAnio.Location = new System.Drawing.Point(195, 154);
-            this.tbDiaTrabajadoXAnio.Name = "tbDiaTrabajadoXAnio";
-            this.tbDiaTrabajadoXAnio.Size = new System.Drawing.Size(134, 20);
-            this.tbDiaTrabajadoXAnio.TabIndex = 53;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(169, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 13);
-            this.label5.TabIndex = 52;
-            this.label5.Text = "Días Trabajado  por Año:";
-            // 
-            // tbCostoSubContratacion
-            // 
-            this.tbCostoSubContratacion.Location = new System.Drawing.Point(370, 227);
-            this.tbCostoSubContratacion.Name = "tbCostoSubContratacion";
-            this.tbCostoSubContratacion.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoSubContratacion.TabIndex = 55;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(344, 197);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 13);
-            this.label16.TabIndex = 54;
-            this.label16.Text = "Costo de Subcontratación:";
-            // 
-            // tbCostoContratacion
-            // 
-            this.tbCostoContratacion.Location = new System.Drawing.Point(195, 227);
-            this.tbCostoContratacion.Name = "tbCostoContratacion";
-            this.tbCostoContratacion.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoContratacion.TabIndex = 57;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(169, 197);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 13);
-            this.label17.TabIndex = 56;
-            this.label17.Text = "Costo de Contratación: ";
-            // 
-            // tbFuerzaLaboral
-            // 
-            this.tbFuerzaLaboral.Location = new System.Drawing.Point(370, 302);
-            this.tbFuerzaLaboral.Name = "tbFuerzaLaboral";
-            this.tbFuerzaLaboral.Size = new System.Drawing.Size(134, 20);
-            this.tbFuerzaLaboral.TabIndex = 59;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(344, 272);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 13);
-            this.label18.TabIndex = 58;
-            this.label18.Text = "Fuerza Laboral:";
-            // 
-            // tbCostoDespido
-            // 
-            this.tbCostoDespido.Location = new System.Drawing.Point(195, 302);
-            this.tbCostoDespido.Name = "tbCostoDespido";
-            this.tbCostoDespido.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoDespido.TabIndex = 61;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(169, 272);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 13);
-            this.label19.TabIndex = 60;
-            this.label19.Text = "Costo de despido:";
-            // 
-            // tbInventarioInicial
-            // 
-            this.tbInventarioInicial.Location = new System.Drawing.Point(416, 121);
-            this.tbInventarioInicial.Name = "tbInventarioInicial";
-            this.tbInventarioInicial.Size = new System.Drawing.Size(134, 20);
-            this.tbInventarioInicial.TabIndex = 49;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(390, 91);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 13);
-            this.label20.TabIndex = 48;
-            this.label20.Text = "Inventario Inicial";
-            // 
-            // tbHorasRequeridas
-            // 
-            this.tbHorasRequeridas.Location = new System.Drawing.Point(359, 60);
-            this.tbHorasRequeridas.Name = "tbHorasRequeridas";
-            this.tbHorasRequeridas.Size = new System.Drawing.Size(134, 20);
-            this.tbHorasRequeridas.TabIndex = 47;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(329, 30);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(163, 13);
-            this.label21.TabIndex = 46;
-            this.label21.Text = "Horas requeridas para producirlo:";
-            // 
-            // tbCostosxHoras
-            // 
-            this.tbCostosxHoras.Location = new System.Drawing.Point(123, 127);
-            this.tbCostosxHoras.Name = "tbCostosxHoras";
-            this.tbCostosxHoras.Size = new System.Drawing.Size(134, 20);
-            this.tbCostosxHoras.TabIndex = 53;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(93, 97);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(84, 13);
-            this.label24.TabIndex = 52;
-            this.label24.Text = "Costo por horas:";
-            // 
-            // tbStockSeguridad
-            // 
-            this.tbStockSeguridad.Location = new System.Drawing.Point(246, 121);
-            this.tbStockSeguridad.Name = "tbStockSeguridad";
-            this.tbStockSeguridad.Size = new System.Drawing.Size(134, 20);
-            this.tbStockSeguridad.TabIndex = 51;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(216, 91);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(102, 13);
-            this.label22.TabIndex = 50;
-            this.label22.Text = "Stock de seguridad:";
-            // 
-            // tbCostoHrsExtras
-            // 
-            this.tbCostoHrsExtras.Location = new System.Drawing.Point(359, 127);
-            this.tbCostoHrsExtras.Name = "tbCostoHrsExtras";
-            this.tbCostoHrsExtras.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoHrsExtras.TabIndex = 55;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(329, 97);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(115, 13);
-            this.label25.TabIndex = 54;
-            this.label25.Text = "Costo por horas extras:";
-            // 
-            // btnEditarPP
-            // 
-            this.btnEditarPP.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarPP.Location = new System.Drawing.Point(645, 194);
-            this.btnEditarPP.Name = "btnEditarPP";
-            this.btnEditarPP.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarPP.TabIndex = 29;
-            this.btnEditarPP.Text = "E";
-            this.btnEditarPP.UseVisualStyleBackColor = true;
-            this.btnEditarPP.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnEditarP1
-            // 
-            this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarP1.Location = new System.Drawing.Point(618, 140);
-            this.btnEditarP1.Name = "btnEditarP1";
-            this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP1.TabIndex = 30;
-            this.btnEditarP1.Text = "E";
-            this.btnEditarP1.UseVisualStyleBackColor = true;
-            this.btnEditarP1.Click += new System.EventHandler(this.btnEditarP1_Click);
-            // 
-            // btnEditarP2
-            // 
-            this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarP2.Location = new System.Drawing.Point(615, 140);
-            this.btnEditarP2.Name = "btnEditarP2";
-            this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP2.TabIndex = 30;
-            this.btnEditarP2.Text = "E";
-            this.btnEditarP2.UseVisualStyleBackColor = true;
-            this.btnEditarP2.Click += new System.EventHandler(this.btnEditarP2_Click);
-            // 
-            // btnEditarP3
-            // 
-            this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarP3.Location = new System.Drawing.Point(604, 112);
-            this.btnEditarP3.Name = "btnEditarP3";
-            this.btnEditarP3.Size = new System.Drawing.Size(29, 25);
-            this.btnEditarP3.TabIndex = 56;
-            this.btnEditarP3.Text = "E";
-            this.btnEditarP3.UseVisualStyleBackColor = true;
-            this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
-            // 
-            // btnEditarOD
-            // 
-            this.btnEditarOD.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarOD.Location = new System.Drawing.Point(479, 328);
-            this.btnEditarOD.Name = "btnEditarOD";
-            this.btnEditarOD.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarOD.TabIndex = 62;
-            this.btnEditarOD.Text = "E";
-            this.btnEditarOD.UseVisualStyleBackColor = true;
-            this.btnEditarOD.Click += new System.EventHandler(this.btnEditarOD_Click);
-            // 
-            // tbCostoFaltante
-            // 
-            this.tbCostoFaltante.Location = new System.Drawing.Point(91, 61);
-            this.tbCostoFaltante.Name = "tbCostoFaltante";
-            this.tbCostoFaltante.Size = new System.Drawing.Size(134, 20);
-            this.tbCostoFaltante.TabIndex = 53;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(61, 31);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 13);
-            this.label23.TabIndex = 52;
-            this.label23.Text = "Costo Faltante: ";
+            this.ModQ.Controls.Add(this.tbCostoUnitario);
+            this.ModQ.Controls.Add(this.label15);
+            this.ModQ.Controls.Add(this.tbCostoFaltante);
+            this.ModQ.Controls.Add(this.label23);
+            this.ModQ.Controls.Add(this.btnEditarP2);
+            this.ModQ.Controls.Add(this.tbStockSeguridad);
+            this.ModQ.Controls.Add(this.label22);
+            this.ModQ.Controls.Add(this.tbInventarioInicial);
+            this.ModQ.Controls.Add(this.label20);
+            this.ModQ.Controls.Add(this.tbCostoMantenimiento);
+            this.ModQ.Controls.Add(this.label6);
+            this.ModQ.Location = new System.Drawing.Point(4, 22);
+            this.ModQ.Name = "ModQ";
+            this.ModQ.Padding = new System.Windows.Forms.Padding(3);
+            this.ModQ.Size = new System.Drawing.Size(646, 171);
+            this.ModQ.TabIndex = 1;
+            this.ModQ.Text = "Segunda Parte";
+            this.ModQ.UseVisualStyleBackColor = true;
             // 
             // tbCostoUnitario
             // 
@@ -734,6 +388,353 @@
             this.label15.TabIndex = 54;
             this.label15.Text = "Costo por unidad:";
             // 
+            // tbCostoFaltante
+            // 
+            this.tbCostoFaltante.Location = new System.Drawing.Point(91, 61);
+            this.tbCostoFaltante.Name = "tbCostoFaltante";
+            this.tbCostoFaltante.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoFaltante.TabIndex = 53;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(61, 31);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 13);
+            this.label23.TabIndex = 52;
+            this.label23.Text = "Costo Faltante: ";
+            // 
+            // btnEditarP2
+            // 
+            this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.edit;
+            this.btnEditarP2.Location = new System.Drawing.Point(615, 140);
+            this.btnEditarP2.Name = "btnEditarP2";
+            this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP2.TabIndex = 30;
+            this.btnEditarP2.Text = "E";
+            this.btnEditarP2.UseVisualStyleBackColor = true;
+            this.btnEditarP2.Click += new System.EventHandler(this.btnEditarP2_Click);
+            // 
+            // tbStockSeguridad
+            // 
+            this.tbStockSeguridad.Location = new System.Drawing.Point(246, 121);
+            this.tbStockSeguridad.Name = "tbStockSeguridad";
+            this.tbStockSeguridad.Size = new System.Drawing.Size(134, 20);
+            this.tbStockSeguridad.TabIndex = 51;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(216, 91);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(102, 13);
+            this.label22.TabIndex = 50;
+            this.label22.Text = "Stock de seguridad:";
+            // 
+            // tbInventarioInicial
+            // 
+            this.tbInventarioInicial.Location = new System.Drawing.Point(416, 121);
+            this.tbInventarioInicial.Name = "tbInventarioInicial";
+            this.tbInventarioInicial.Size = new System.Drawing.Size(134, 20);
+            this.tbInventarioInicial.TabIndex = 49;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(390, 91);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 13);
+            this.label20.TabIndex = 48;
+            this.label20.Text = "Inventario Inicial";
+            // 
+            // tbCostoMantenimiento
+            // 
+            this.tbCostoMantenimiento.Location = new System.Drawing.Point(416, 61);
+            this.tbCostoMantenimiento.Name = "tbCostoMantenimiento";
+            this.tbCostoMantenimiento.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoMantenimiento.TabIndex = 45;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(390, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 13);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Costo del mantenimiento:";
+            // 
+            // MRP
+            // 
+            this.MRP.Controls.Add(this.btnEditarP3);
+            this.MRP.Controls.Add(this.tbCostoHrsExtras);
+            this.MRP.Controls.Add(this.label25);
+            this.MRP.Controls.Add(this.tbCostosxHoras);
+            this.MRP.Controls.Add(this.label24);
+            this.MRP.Controls.Add(this.tbHorasRequeridas);
+            this.MRP.Controls.Add(this.label21);
+            this.MRP.Controls.Add(this.tbCostoPorPedir);
+            this.MRP.Controls.Add(this.label14);
+            this.MRP.Location = new System.Drawing.Point(4, 22);
+            this.MRP.Name = "MRP";
+            this.MRP.Size = new System.Drawing.Size(646, 171);
+            this.MRP.TabIndex = 2;
+            this.MRP.Text = "Tercera Parte";
+            this.MRP.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarP3
+            // 
+            this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.edit;
+            this.btnEditarP3.Location = new System.Drawing.Point(604, 112);
+            this.btnEditarP3.Name = "btnEditarP3";
+            this.btnEditarP3.Size = new System.Drawing.Size(29, 25);
+            this.btnEditarP3.TabIndex = 56;
+            this.btnEditarP3.Text = "E";
+            this.btnEditarP3.UseVisualStyleBackColor = true;
+            this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
+            // 
+            // tbCostoHrsExtras
+            // 
+            this.tbCostoHrsExtras.Location = new System.Drawing.Point(359, 127);
+            this.tbCostoHrsExtras.Name = "tbCostoHrsExtras";
+            this.tbCostoHrsExtras.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoHrsExtras.TabIndex = 55;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(329, 97);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(115, 13);
+            this.label25.TabIndex = 54;
+            this.label25.Text = "Costo por horas extras:";
+            // 
+            // tbCostosxHoras
+            // 
+            this.tbCostosxHoras.Location = new System.Drawing.Point(123, 127);
+            this.tbCostosxHoras.Name = "tbCostosxHoras";
+            this.tbCostosxHoras.Size = new System.Drawing.Size(134, 20);
+            this.tbCostosxHoras.TabIndex = 53;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(93, 97);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(84, 13);
+            this.label24.TabIndex = 52;
+            this.label24.Text = "Costo por horas:";
+            // 
+            // tbHorasRequeridas
+            // 
+            this.tbHorasRequeridas.Location = new System.Drawing.Point(359, 60);
+            this.tbHorasRequeridas.Name = "tbHorasRequeridas";
+            this.tbHorasRequeridas.Size = new System.Drawing.Size(134, 20);
+            this.tbHorasRequeridas.TabIndex = 47;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(329, 30);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(163, 13);
+            this.label21.TabIndex = 46;
+            this.label21.Text = "Horas requeridas para producirlo:";
+            // 
+            // tbCostoPorPedir
+            // 
+            this.tbCostoPorPedir.Location = new System.Drawing.Point(123, 60);
+            this.tbCostoPorPedir.Name = "tbCostoPorPedir";
+            this.tbCostoPorPedir.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoPorPedir.TabIndex = 43;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(93, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 13);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Costo por Pedir:";
+            // 
+            // tbDescripcion
+            // 
+            this.tbDescripcion.Location = new System.Drawing.Point(206, 199);
+            this.tbDescripcion.Name = "tbDescripcion";
+            this.tbDescripcion.Size = new System.Drawing.Size(283, 20);
+            this.tbDescripcion.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(203, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Descripción:";
+            // 
+            // tbInventario
+            // 
+            this.tbInventario.Location = new System.Drawing.Point(515, 197);
+            this.tbInventario.Name = "tbInventario";
+            this.tbInventario.Size = new System.Drawing.Size(100, 20);
+            this.tbInventario.TabIndex = 23;
+            this.tbInventario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.Location = new System.Drawing.Point(53, 199);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(134, 20);
+            this.tbNombre.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(512, 169);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Inventario:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lNombreComponente
+            // 
+            this.lNombreComponente.AutoSize = true;
+            this.lNombreComponente.Location = new System.Drawing.Point(27, 169);
+            this.lNombreComponente.Name = "lNombreComponente";
+            this.lNombreComponente.Size = new System.Drawing.Size(50, 13);
+            this.lNombreComponente.TabIndex = 17;
+            this.lNombreComponente.Text = "Nombre: ";
+            // 
+            // tpEmpresa
+            // 
+            this.tpEmpresa.Controls.Add(this.btnEditarOD);
+            this.tpEmpresa.Controls.Add(this.tbCostoDespido);
+            this.tpEmpresa.Controls.Add(this.label19);
+            this.tpEmpresa.Controls.Add(this.tbFuerzaLaboral);
+            this.tpEmpresa.Controls.Add(this.label18);
+            this.tpEmpresa.Controls.Add(this.tbCostoContratacion);
+            this.tpEmpresa.Controls.Add(this.label17);
+            this.tpEmpresa.Controls.Add(this.tbCostoSubContratacion);
+            this.tpEmpresa.Controls.Add(this.label16);
+            this.tpEmpresa.Controls.Add(this.tbDiaTrabajadoXAnio);
+            this.tpEmpresa.Controls.Add(this.label5);
+            this.tpEmpresa.Controls.Add(this.tbNombreEmpresa);
+            this.tpEmpresa.Controls.Add(this.label7);
+            this.tpEmpresa.Location = new System.Drawing.Point(4, 22);
+            this.tpEmpresa.Name = "tpEmpresa";
+            this.tpEmpresa.Size = new System.Drawing.Size(701, 476);
+            this.tpEmpresa.TabIndex = 2;
+            this.tpEmpresa.Text = "Otros Datos";
+            this.tpEmpresa.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarOD
+            // 
+            this.btnEditarOD.Image = global::sistema_mrp.Properties.Resources.edit;
+            this.btnEditarOD.Location = new System.Drawing.Point(479, 328);
+            this.btnEditarOD.Name = "btnEditarOD";
+            this.btnEditarOD.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarOD.TabIndex = 62;
+            this.btnEditarOD.Text = "E";
+            this.btnEditarOD.UseVisualStyleBackColor = true;
+            this.btnEditarOD.Click += new System.EventHandler(this.btnEditarOD_Click);
+            // 
+            // tbCostoDespido
+            // 
+            this.tbCostoDespido.Location = new System.Drawing.Point(195, 302);
+            this.tbCostoDespido.Name = "tbCostoDespido";
+            this.tbCostoDespido.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoDespido.TabIndex = 61;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(169, 272);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(92, 13);
+            this.label19.TabIndex = 60;
+            this.label19.Text = "Costo de despido:";
+            // 
+            // tbFuerzaLaboral
+            // 
+            this.tbFuerzaLaboral.Location = new System.Drawing.Point(370, 302);
+            this.tbFuerzaLaboral.Name = "tbFuerzaLaboral";
+            this.tbFuerzaLaboral.Size = new System.Drawing.Size(134, 20);
+            this.tbFuerzaLaboral.TabIndex = 59;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(344, 272);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(80, 13);
+            this.label18.TabIndex = 58;
+            this.label18.Text = "Fuerza Laboral:";
+            // 
+            // tbCostoContratacion
+            // 
+            this.tbCostoContratacion.Location = new System.Drawing.Point(195, 227);
+            this.tbCostoContratacion.Name = "tbCostoContratacion";
+            this.tbCostoContratacion.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoContratacion.TabIndex = 57;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(169, 197);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(118, 13);
+            this.label17.TabIndex = 56;
+            this.label17.Text = "Costo de Contratación: ";
+            // 
+            // tbCostoSubContratacion
+            // 
+            this.tbCostoSubContratacion.Location = new System.Drawing.Point(370, 227);
+            this.tbCostoSubContratacion.Name = "tbCostoSubContratacion";
+            this.tbCostoSubContratacion.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoSubContratacion.TabIndex = 55;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(344, 197);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(133, 13);
+            this.label16.TabIndex = 54;
+            this.label16.Text = "Costo de Subcontratación:";
+            // 
+            // tbDiaTrabajadoXAnio
+            // 
+            this.tbDiaTrabajadoXAnio.Location = new System.Drawing.Point(195, 154);
+            this.tbDiaTrabajadoXAnio.Name = "tbDiaTrabajadoXAnio";
+            this.tbDiaTrabajadoXAnio.Size = new System.Drawing.Size(134, 20);
+            this.tbDiaTrabajadoXAnio.TabIndex = 53;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(169, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 13);
+            this.label5.TabIndex = 52;
+            this.label5.Text = "Días Trabajado  por Año:";
+            // 
+            // tbNombreEmpresa
+            // 
+            this.tbNombreEmpresa.Location = new System.Drawing.Point(189, 83);
+            this.tbNombreEmpresa.Name = "tbNombreEmpresa";
+            this.tbNombreEmpresa.Size = new System.Drawing.Size(315, 20);
+            this.tbNombreEmpresa.TabIndex = 51;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(173, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.TabIndex = 50;
+            this.label7.Text = "Nombre de la Empresa:";
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -749,8 +750,6 @@
             this.dgvBOM.ResumeLayout(false);
             this.tpProductosDetalles.ResumeLayout(false);
             this.tpProductosDetalles.PerformLayout();
-            this.tpEmpresa.ResumeLayout(false);
-            this.tpEmpresa.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ModP.ResumeLayout(false);
             this.ModP.PerformLayout();
@@ -758,6 +757,8 @@
             this.ModQ.PerformLayout();
             this.MRP.ResumeLayout(false);
             this.MRP.PerformLayout();
+            this.tpEmpresa.ResumeLayout(false);
+            this.tpEmpresa.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -98,6 +98,12 @@ namespace sistema_mrp.controlador
             con.Close();
             return productos;
         }
+
+        public bool isValid()
+        {
+                return true;
+        }
+
         public static List<Object[]> GetProductosCorto()
         {
             var con = new Conexion().getConexion();

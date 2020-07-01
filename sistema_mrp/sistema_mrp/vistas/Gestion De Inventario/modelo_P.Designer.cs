@@ -57,14 +57,25 @@
             this.txt_probabilidadDemanda = new System.Windows.Forms.TextBox();
             this.txt_inventarioAct = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.tbModeloP = new System.Windows.Forms.TabControl();
+            this.tpDatosNuevos = new System.Windows.Forms.TabPage();
+            this.tpProducto = new System.Windows.Forms.TabPage();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            this.tbModeloP.SuspendLayout();
+            this.tpDatosNuevos.SuspendLayout();
+            this.tpProducto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(184, 119);
+            this.label2.Location = new System.Drawing.Point(126, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 1;
@@ -74,7 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(645, 119);
+            this.label3.Location = new System.Drawing.Point(642, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 2;
@@ -84,7 +95,7 @@
             // 
             this.lbl_demanda.AutoSize = true;
             this.lbl_demanda.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_demanda.Location = new System.Drawing.Point(206, 231);
+            this.lbl_demanda.Location = new System.Drawing.Point(148, 116);
             this.lbl_demanda.Name = "lbl_demanda";
             this.lbl_demanda.Size = new System.Drawing.Size(57, 14);
             this.lbl_demanda.TabIndex = 3;
@@ -94,7 +105,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(169, 262);
+            this.label5.Location = new System.Drawing.Point(111, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 14);
             this.label5.TabIndex = 4;
@@ -104,7 +115,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(217, 345);
+            this.label7.Location = new System.Drawing.Point(159, 230);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 14);
             this.label7.TabIndex = 6;
@@ -114,7 +125,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(82, 375);
+            this.label8.Location = new System.Drawing.Point(24, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 14);
             this.label8.TabIndex = 7;
@@ -123,7 +134,7 @@
             // txt_demandaP
             // 
             this.txt_demandaP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_demandaP.Location = new System.Drawing.Point(287, 225);
+            this.txt_demandaP.Location = new System.Drawing.Point(229, 110);
             this.txt_demandaP.Name = "txt_demandaP";
             this.txt_demandaP.Size = new System.Drawing.Size(100, 21);
             this.txt_demandaP.TabIndex = 8;
@@ -131,7 +142,7 @@
             // txt_plazoEntrega
             // 
             this.txt_plazoEntrega.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_plazoEntrega.Location = new System.Drawing.Point(287, 259);
+            this.txt_plazoEntrega.Location = new System.Drawing.Point(229, 144);
             this.txt_plazoEntrega.Name = "txt_plazoEntrega";
             this.txt_plazoEntrega.Size = new System.Drawing.Size(100, 21);
             this.txt_plazoEntrega.TabIndex = 9;
@@ -140,7 +151,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(588, 231);
+            this.label9.Location = new System.Drawing.Point(527, 172);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 14);
             this.label9.TabIndex = 15;
@@ -150,7 +161,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(537, 201);
+            this.label10.Location = new System.Drawing.Point(476, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(191, 14);
             this.label10.TabIndex = 14;
@@ -160,7 +171,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(716, 174);
+            this.label11.Location = new System.Drawing.Point(655, 115);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(12, 14);
             this.label11.TabIndex = 13;
@@ -169,7 +180,7 @@
             // txt_cantidadOptima
             // 
             this.txt_cantidadOptima.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidadOptima.Location = new System.Drawing.Point(740, 228);
+            this.txt_cantidadOptima.Location = new System.Drawing.Point(679, 169);
             this.txt_cantidadOptima.Name = "txt_cantidadOptima";
             this.txt_cantidadOptima.Size = new System.Drawing.Size(100, 21);
             this.txt_cantidadOptima.TabIndex = 18;
@@ -177,7 +188,7 @@
             // txt_desvEstandarDem
             // 
             this.txt_desvEstandarDem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_desvEstandarDem.Location = new System.Drawing.Point(740, 198);
+            this.txt_desvEstandarDem.Location = new System.Drawing.Point(679, 139);
             this.txt_desvEstandarDem.Name = "txt_desvEstandarDem";
             this.txt_desvEstandarDem.Size = new System.Drawing.Size(100, 21);
             this.txt_desvEstandarDem.TabIndex = 17;
@@ -185,7 +196,7 @@
             // txt_z
             // 
             this.txt_z.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_z.Location = new System.Drawing.Point(740, 171);
+            this.txt_z.Location = new System.Drawing.Point(679, 112);
             this.txt_z.Name = "txt_z";
             this.txt_z.Size = new System.Drawing.Size(100, 21);
             this.txt_z.TabIndex = 16;
@@ -197,7 +208,7 @@
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(172, 413);
+            this.btn_calcular.Location = new System.Drawing.Point(114, 298);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(75, 25);
             this.btn_calcular.TabIndex = 19;
@@ -212,7 +223,7 @@
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
-            this.btn_limpiar.Location = new System.Drawing.Point(276, 413);
+            this.btn_limpiar.Location = new System.Drawing.Point(218, 298);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_limpiar.Size = new System.Drawing.Size(75, 25);
@@ -224,7 +235,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(169, 295);
+            this.label6.Location = new System.Drawing.Point(111, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 14);
             this.label6.TabIndex = 5;
@@ -233,7 +244,7 @@
             // txt_periodoRevi
             // 
             this.txt_periodoRevi.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_periodoRevi.Location = new System.Drawing.Point(287, 292);
+            this.txt_periodoRevi.Location = new System.Drawing.Point(229, 177);
             this.txt_periodoRevi.Name = "txt_periodoRevi";
             this.txt_periodoRevi.Size = new System.Drawing.Size(100, 21);
             this.txt_periodoRevi.TabIndex = 10;
@@ -248,7 +259,7 @@
             this.label1.Location = new System.Drawing.Point(0, -1);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(943, 44);
+            this.label1.Size = new System.Drawing.Size(935, 44);
             this.label1.TabIndex = 23;
             this.label1.Text = "Modelo P";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -315,7 +326,7 @@
             this.groupBox1.Controls.Add(this.rdr_anual);
             this.groupBox1.Controls.Add(this.rdr_semanal);
             this.groupBox1.Controls.Add(this.rdr_mensual);
-            this.groupBox1.Location = new System.Drawing.Point(129, 154);
+            this.groupBox1.Location = new System.Drawing.Point(71, 39);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(295, 50);
             this.groupBox1.TabIndex = 29;
@@ -324,21 +335,21 @@
             // 
             // txt_desviacion
             // 
-            this.txt_desviacion.Location = new System.Drawing.Point(287, 345);
+            this.txt_desviacion.Location = new System.Drawing.Point(229, 230);
             this.txt_desviacion.Name = "txt_desviacion";
             this.txt_desviacion.Size = new System.Drawing.Size(100, 20);
             this.txt_desviacion.TabIndex = 30;
             // 
             // txt_probabilidadDemanda
             // 
-            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(287, 375);
+            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(229, 260);
             this.txt_probabilidadDemanda.Name = "txt_probabilidadDemanda";
             this.txt_probabilidadDemanda.Size = new System.Drawing.Size(100, 20);
             this.txt_probabilidadDemanda.TabIndex = 31;
             // 
             // txt_inventarioAct
             // 
-            this.txt_inventarioAct.Location = new System.Drawing.Point(286, 319);
+            this.txt_inventarioAct.Location = new System.Drawing.Point(228, 204);
             this.txt_inventarioAct.Name = "txt_inventarioAct";
             this.txt_inventarioAct.Size = new System.Drawing.Size(100, 20);
             this.txt_inventarioAct.TabIndex = 33;
@@ -347,46 +358,115 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(183, 322);
+            this.label4.Location = new System.Drawing.Point(125, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 14);
             this.label4.TabIndex = 32;
             this.label4.Text = "Inventario actual";
             // 
+            // tbModeloP
+            // 
+            this.tbModeloP.Controls.Add(this.tpDatosNuevos);
+            this.tbModeloP.Controls.Add(this.tpProducto);
+            this.tbModeloP.Location = new System.Drawing.Point(28, 87);
+            this.tbModeloP.Name = "tbModeloP";
+            this.tbModeloP.SelectedIndex = 0;
+            this.tbModeloP.Size = new System.Drawing.Size(406, 393);
+            this.tbModeloP.TabIndex = 34;
+            // 
+            // tpDatosNuevos
+            // 
+            this.tpDatosNuevos.Controls.Add(this.txt_demandaP);
+            this.tpDatosNuevos.Controls.Add(this.txt_inventarioAct);
+            this.tpDatosNuevos.Controls.Add(this.label2);
+            this.tpDatosNuevos.Controls.Add(this.label4);
+            this.tpDatosNuevos.Controls.Add(this.lbl_demanda);
+            this.tpDatosNuevos.Controls.Add(this.txt_probabilidadDemanda);
+            this.tpDatosNuevos.Controls.Add(this.label5);
+            this.tpDatosNuevos.Controls.Add(this.txt_desviacion);
+            this.tpDatosNuevos.Controls.Add(this.label6);
+            this.tpDatosNuevos.Controls.Add(this.groupBox1);
+            this.tpDatosNuevos.Controls.Add(this.label7);
+            this.tpDatosNuevos.Controls.Add(this.label8);
+            this.tpDatosNuevos.Controls.Add(this.txt_plazoEntrega);
+            this.tpDatosNuevos.Controls.Add(this.btn_limpiar);
+            this.tpDatosNuevos.Controls.Add(this.txt_periodoRevi);
+            this.tpDatosNuevos.Controls.Add(this.btn_calcular);
+            this.tpDatosNuevos.Location = new System.Drawing.Point(4, 22);
+            this.tpDatosNuevos.Name = "tpDatosNuevos";
+            this.tpDatosNuevos.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDatosNuevos.Size = new System.Drawing.Size(398, 367);
+            this.tpDatosNuevos.TabIndex = 0;
+            this.tpDatosNuevos.Text = "Datos Nuevos";
+            this.tpDatosNuevos.UseVisualStyleBackColor = true;
+            // 
+            // tpProducto
+            // 
+            this.tpProducto.Controls.Add(this.dgvProductos);
+            this.tpProducto.Location = new System.Drawing.Point(4, 22);
+            this.tpProducto.Name = "tpProducto";
+            this.tpProducto.Padding = new System.Windows.Forms.Padding(3);
+            this.tpProducto.Size = new System.Drawing.Size(398, 367);
+            this.tpProducto.TabIndex = 1;
+            this.tpProducto.Text = "Producto Existente";
+            this.tpProducto.UseVisualStyleBackColor = true;
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idProducto,
+            this.nombre,
+            this.descripcion});
+            this.dgvProductos.Location = new System.Drawing.Point(6, 39);
+            this.dgvProductos.MultiSelect = false;
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.Size = new System.Drawing.Size(386, 264);
+            this.dgvProductos.TabIndex = 2;
+            this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
+            // 
+            // idProducto
+            // 
+            this.idProducto.HeaderText = "idProducto";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            // 
             // modelo_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 621);
-            this.Controls.Add(this.txt_inventarioAct);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_probabilidadDemanda);
-            this.Controls.Add(this.txt_desviacion);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(935, 621);
+            this.Controls.Add(this.tbModeloP);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_limpiar);
-            this.Controls.Add(this.btn_calcular);
             this.Controls.Add(this.txt_cantidadOptima);
             this.Controls.Add(this.txt_desvEstandarDem);
             this.Controls.Add(this.txt_z);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txt_periodoRevi);
-            this.Controls.Add(this.txt_plazoEntrega);
-            this.Controls.Add(this.txt_demandaP);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.lbl_demanda);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modelo_P";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tbModeloP.ResumeLayout(false);
+            this.tpDatosNuevos.ResumeLayout(false);
+            this.tpDatosNuevos.PerformLayout();
+            this.tpProducto.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,5 +502,12 @@
         private System.Windows.Forms.TextBox txt_probabilidadDemanda;
         private System.Windows.Forms.TextBox txt_inventarioAct;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabControl tbModeloP;
+        private System.Windows.Forms.TabPage tpDatosNuevos;
+        private System.Windows.Forms.TabPage tpProducto;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
     }
 }

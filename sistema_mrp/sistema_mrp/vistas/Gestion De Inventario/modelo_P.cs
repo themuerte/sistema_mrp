@@ -13,9 +13,25 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 {
     public partial class modelo_P : Form
     {
+        Producto productoSeleccionado;
         public modelo_P()
         {
             InitializeComponent();
+            cargarProductosTabla();
+        }
+
+        private void cargarProductosTabla()
+        {
+            Trucazos.vaciarDataGridView(dgvProductos);
+            List<Object[]> productos = Producto.GetProductosCorto();
+            if (productos.Count > 0)
+            {
+                foreach (Object[] producto in productos)
+                {
+                    dgvProductos.Rows.Add(producto);
+                }
+            }
+
         }
 
         void getSelectedRB_Click(object sender, EventArgs e)
@@ -98,6 +114,36 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
 
 
+        }
+
+        private void dgvProductos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    int index = dgvProductos.SelectedRows[0].Index;
+                    int idProducto = int.Parse(dgvProductos.Rows[index].Cells[0].Value.ToString());
+                    productoSeleccionado = Producto.GetProductoById(idProducto);
+                    if (productoSeleccionado.isValid())
+                    {
+                        
+                        Modelo_P modelo = new Modelo_P((int)productoSeleccionado.DemandaDiaria, productoSeleccionado.PlazoEntregaDias, productoSeleccionado.PeriodoRevision, productoSeleccionado.DesviacionDemanda, productoSeleccionado.ProbabilidadDemanda, (int)productoSeleccionado.InventarioInicial, productoSeleccionado.DemandaDiaria);
+
+                        txt_z.Text = modelo.get_z();
+                        txt_desvEstandarDem.Text = modelo.get_desviacionDemanda();
+                        txt_cantidadOptima.Text = modelo.get_cantidadOptima();
+                    }
+                    
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+            // seleccionar un producto
         }
     }
 }

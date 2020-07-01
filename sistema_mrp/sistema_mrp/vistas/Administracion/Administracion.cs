@@ -107,21 +107,21 @@ namespace sistema_mrp.vistas.Administracion
                 productoSel = Producto.GetProductoById(idProducto);
                 tbNombre.Text = productoSel.Nombre;
                 tbDescripcion.Text = productoSel.Descripcion;
-                tbInventario.Text = productoSel.Inventario + "";
-                tbCostoUnitario.Text = productoSel.CostoUnitario + "";
-                tbCostoPorPedir.Text = productoSel.CostoPedir + "";
-                tbCostoMantenimiento.Text = productoSel.CostoMantenimiento + "";
-                tbDesviacion.Text = productoSel.DesviacionDemanda + "";
-                tbDemandaDiaria.Text = productoSel.DemandaDiaria + "";
-                tbPeriodoRevision.Text = productoSel.PeriodoRevision + "";
-                tbProbabilidadDemanda.Text = productoSel.ProbabilidadDemanda + "";
-                tbPlazodeEntregaP.Text = productoSel.PlazoEntregaDias + "";
-                tbInventarioInicial.Text = productoSel.InventarioInicial + "";
-                tbHorasRequeridas.Text = productoSel.HorasRequeridas + "";
-                tbStockSeguridad.Text = productoSel.StockSeguridad + "";
-                tbCostoFaltante.Text = productoSel.CostoFaltante + "";
-                tbCostosxHoras.Text = productoSel.CostoHrs + "";
-                tbCostoHrsExtras.Text = productoSel.CostoHrsExtras + "";
+                tbInventario.Text =            Math.Round(productoSel.Inventario, 2) + "";
+                tbCostoUnitario.Text =         Math.Round(productoSel.CostoUnitario, 2) + "";
+                tbCostoPorPedir.Text =         Math.Round(productoSel.CostoPedir, 2) + "";
+                tbCostoMantenimiento.Text =    Math.Round(productoSel.CostoMantenimiento, 2) + "";
+                tbDesviacion.Text =            Math.Round(productoSel.DesviacionDemanda, 2) + "";
+                tbDemandaDiaria.Text =         Math.Round(productoSel.DemandaDiaria, 2) + "";
+                tbPeriodoRevision.Text =       Math.Round(productoSel.PeriodoRevision, 2) + "";
+                tbProbabilidadDemanda.Text =   Math.Round(productoSel.ProbabilidadDemanda, 2) + "";
+                tbPlazodeEntregaP.Text =       Math.Round(productoSel.PlazoEntregaDias, 2) + "";
+                tbInventarioInicial.Text =     Math.Round(productoSel.InventarioInicial, 2) + "";
+                tbHorasRequeridas.Text =       Math.Round(productoSel.HorasRequeridas, 2) + "";
+                tbStockSeguridad.Text =        Math.Round(productoSel.StockSeguridad, 2) + "";
+                tbCostoFaltante.Text =         Math.Round(productoSel.CostoFaltante, 2) + "";
+                tbCostosxHoras.Text =          Math.Round(productoSel.CostoHrs, 2) + "";
+                tbCostoHrsExtras.Text =        Math.Round(productoSel.CostoHrsExtras,2) + "";
             }
             catch (Exception ex)
             {
@@ -320,6 +320,13 @@ namespace sistema_mrp.vistas.Administracion
 
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            btn_GesInventario btn_Ges = new btn_GesInventario();// este es la vista inicio pero no se por que se llama asi en vez de inicio_P
+            this.Hide();
+            btn_Ges.Show();
         }
     }
 }
