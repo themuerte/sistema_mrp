@@ -44,7 +44,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 for (int i = 0; i < cant; i++)
                 {
                     DataGridViewTextBoxColumn columna1 = new DataGridViewTextBoxColumn();
-                    columna1.HeaderText = "periodo" + num;
+                    columna1.HeaderText = "semana" + num;
                     columna1.Width = 100;
                     dtg_semanas.Columns.Add(columna1);
                     num++;
@@ -78,7 +78,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
             if (rdr_L4L.Checked == true)
             {
-                L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), demanda);
+                L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
                 l4.get_L4L(dtg_resultado);
                 
             }
