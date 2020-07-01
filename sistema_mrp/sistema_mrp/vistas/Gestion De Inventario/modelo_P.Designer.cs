@@ -172,7 +172,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(579, 145);
+            this.label10.Location = new System.Drawing.Point(680, 142);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 14);
             this.label10.TabIndex = 14;
@@ -199,7 +199,7 @@
             // txt_desvEstandarDem
             // 
             this.txt_desvEstandarDem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_desvEstandarDem.Location = new System.Drawing.Point(667, 142);
+            this.txt_desvEstandarDem.Location = new System.Drawing.Point(768, 139);
             this.txt_desvEstandarDem.Name = "txt_desvEstandarDem";
             this.txt_desvEstandarDem.Size = new System.Drawing.Size(100, 21);
             this.txt_desvEstandarDem.TabIndex = 17;

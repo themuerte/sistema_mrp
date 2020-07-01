@@ -85,7 +85,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             
             if (rdr_EOQ.Checked == true)
             {
-                
+                EOQ oQ = new EOQ(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
+                oQ.get_EOQ(dtg_resultado);
             }
             
             if (rdr_LTC.Checked == true)
