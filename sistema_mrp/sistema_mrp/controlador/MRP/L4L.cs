@@ -73,9 +73,9 @@ namespace sistema_mrp.controlador.MRP
         public DataGridView get_L4L()
         {
             Carga();
-            for (int i = 1; i <= semanas + 1 ; i++)
+            for (int i = 1; i == semanas + 1 ; i++)
             {
-                for (int j = 1; j <= 8; j++)
+                for (int j = 1; j == 8; j++)
                 {
                     if (i == 0)
                     {

@@ -78,7 +78,7 @@ namespace sistema_mrp.controlador
         {
             var con = new Conexion().getConexion();
             con.Open();
-            var cmd = new NpgsqlCommand("SELECT * FROM prod.producto ORDER BY id_producto;", con);
+            var cmd = new NpgsqlCommand("SELECT * FROM prod.producto ORDER BY idProducto;", con);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             List<Producto> productos = new List<Producto>();
             while (reader.Read())
