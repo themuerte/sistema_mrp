@@ -69,62 +69,37 @@ namespace sistema_mrp.controlador.MRP
             costo_total.ReadOnly = true;
             dtg_resultado.Columns.Add(costo_total);
         }
-
         public DataGridView get_L4L()
         {
             Carga();
-            for (int i = 1; i == semanas + 1 ; i++)
+
+            for (int i = 0; i < semanas ; i++)
             {
-                for (int j = 1; j == 8; j++)
+                
+                double costo_ante = 0;
+
+                List<string> resultado = new List<string>();
+                resultado.Add(i.ToString());
+                resultado.Add(demanda[i].ToString());
+                resultado.Add(demanda[i].ToString());
+                resultado.Add(costo_pedir.ToString());
+                if (i == 0)
                 {
-                    if (i == 0)
-                    {
-                        //se evita que entre en los campos de Datos
-                    }
-                    else
-                    {
-                        switch (j)
-                        {
-                            //semana
-                            case 1:
-                                    dtg_resultado.Columns.Add(new DataGridViewColumn(){HeaderText= i.ToString() });
-                                break;
-
-                            //demanda
-                            case 2:
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = demanda[i].ToString() });
-                                break;
-
-                            //produccion
-                            case 3:
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = demanda[i].ToString() });
-                                break;
-                            
-                            //inventario final
-                            case 4:
-                                break;
-                            
-                            //costo de mantenimiento
-                            case 5:
-                                break;
-                            
-                            //costo de envio
-                            case 6:
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = costo_pedir.ToString()});
-                                break;
-                            
-                            //costo total
-                            case 7:
-                                double valor0 = Convert.ToDouble(dtg_resultado.Rows[i - 1].Cells[7].Value);
-                                double valor1 = Convert.ToDouble(dtg_resultado.Rows[i].Cells[7].Value);
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = Convert.ToString(valor0+valor1) }) ;
-                                break;
-                          
-
-                        }
-                    }
+                    resultado.Add(costo_pedir.ToString());
+                    costo_ante = costo_pedir;
                 }
+                else
+                {
+                    resultado.Add(Convert.ToString(costo_ante + costo_pedir));
+                }
+
+
+                dtg_resultado.Rows.Add(resultado);
+                    
+                
             }
+
+            
 
             return dtg_resultado;
         }

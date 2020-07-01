@@ -34,37 +34,37 @@ namespace sistema_mrp.vistas.Administracion
         {
 
 
-            Componente c = new Componente();
-            c.Nombre = tbNombre.Text;
-            c.Descripcion = "";
-            c.PrecioUnit = double.Parse(tbPrecio.Text);
-            c.Plazo = int.Parse(tbplazoNew.Text);
-            switch (cbTipoNew.SelectedIndex)
-            {
-                case 0:
-                    c.TipoPlazo = "horas";
-                    break;
-                case 1:
-                    c.TipoPlazo = "dias";
-                    break;
-                case 2:
-                    c.TipoPlazo = "semanas";
-                    break;
-                case 3:
-                    c.TipoPlazo = "meses";
-                    break;
+            //Componente c = new Componente();
+            //c.Nombre = tbNombre.Text;
+            //c.Descripcion = "";
+            //c.PrecioUnit = double.Parse(tbPrecio.Text);
+            //c.Plazo = int.Parse(tbplazoNew.Text);
+            //switch (cbTipoNew.SelectedIndex)
+            //{
+            //    case 0:
+            //        c.TipoPlazo = "horas";
+            //        break;
+            //    case 1:
+            //        c.TipoPlazo = "dias";
+            //        break;
+            //    case 2:
+            //        c.TipoPlazo = "semanas";
+            //        break;
+            //    case 3:
+            //        c.TipoPlazo = "meses";
+            //        break;
         
-                default:
-                    c.TipoPlazo = "dias";
-                    break;
-            }
-            int idComponente = Componente.AddComponente(c);
-            c.IdComponente = idComponente;
-            int margenSeguridad = int.Parse(tbMargenSegNew.Text);
-            int unidades = int.Parse(tbMargenSegNew.Text);
-            ProductoComponente pc = new ProductoComponente(idProducto, idComponente, margenSeguridad, unidades);
-            ProductoComponente.AddProductoComponente(pc);
-            this.Dispose();
+            //    default:
+            //        c.TipoPlazo = "dias";
+            //        break;
+            //}
+            //int idComponente = Componente.AddComponente(c);
+            //c.IdComponente = idComponente;
+            //int margenSeguridad = int.Parse(tbMargenSegNew.Text);
+            //int unidades = int.Parse(tbMargenSegNew.Text);
+            //ProductoComponente pc = new ProductoComponente(idProducto, idComponente, margenSeguridad, unidades);
+            //ProductoComponente.AddProductoComponente(pc);
+            //this.Dispose();
 
 
 
