@@ -23,21 +23,19 @@ namespace sistema_mrp.controlador.MRP
             this.demanda = demanda;
         }
 
-        DataGridView dtg_resultado = new DataGridView();
-
-        protected void Carga()
+        public void get_L4L(DataGridView dtg_resultado)
         {
-            DataGridViewTextBoxColumn semanas = new DataGridViewTextBoxColumn();
-            semanas.HeaderText = "Semana";
-            semanas.Width = 100;
-            semanas.ReadOnly = true;
-            dtg_resultado.Columns.Add(semanas);
+            DataGridViewTextBoxColumn semanas1 = new DataGridViewTextBoxColumn();
+            semanas1.HeaderText = "Semana";
+            semanas1.Width = 100;
+            semanas1.ReadOnly = true;
+            dtg_resultado.Columns.Add(semanas1);
 
-            DataGridViewTextBoxColumn demanda = new DataGridViewTextBoxColumn();
-            demanda.HeaderText = "Demanda";
-            demanda.Width = 100;
-            demanda.ReadOnly = true;
-            dtg_resultado.Columns.Add(demanda);
+            DataGridViewTextBoxColumn demanda1 = new DataGridViewTextBoxColumn();
+            demanda1.HeaderText = "Demanda";
+            demanda1.Width = 100;
+            demanda1.ReadOnly = true;
+            dtg_resultado.Columns.Add(demanda1);
 
             DataGridViewTextBoxColumn produccion = new DataGridViewTextBoxColumn();
             produccion.HeaderText = "Produccion";
@@ -68,23 +66,16 @@ namespace sistema_mrp.controlador.MRP
             costo_total.Width = 100;
             costo_total.ReadOnly = true;
             dtg_resultado.Columns.Add(costo_total);
-        }
-        public DataGridView get_L4L()
-        {
-            Carga();
 
             double costo = 0;
             for (int i = 0; i < semanas; i++)
             {
                 costo += costo_pedir;
-                dtg_resultado.Rows.Add(new object[] {
-                i + 1, demanda[i],demanda[i],0,0,costo_pedir,costo
-                });
-
+                dtg_resultado.Rows.Add(new object[] {i + 1, demanda[i],demanda[i],0,0,costo_pedir,costo});
 
             }
 
-            return dtg_resultado;
+           
         }
        
 
