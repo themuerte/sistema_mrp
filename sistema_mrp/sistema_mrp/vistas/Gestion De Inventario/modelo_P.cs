@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using sistema_mrp.controlador;
 
 namespace sistema_mrp.vistas.Gestion_De_Inventario
@@ -18,6 +19,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
             InitializeComponent();
             cargarProductosTabla();
+            tbNumeroPeriodos.Text = "5";
         }
 
         private void cargarProductosTabla()
@@ -144,6 +146,47 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
             }
             // seleccionar un producto
+        }
+
+        private void bUpdateChart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int numPeriodos = int.Parse(tbNumeroPeriodos.Text);
+                cargarChart(numPeriodos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese el número de período c:");
+                Console.WriteLine(ex.Message + "función bUpdateChart_Click");
+                
+            }
+        }
+        public void cargarChart(int numPeriodos)
+        {
+            Series inventario = cModeloP.Series[0];
+            Series qoptimo = cModeloP.Series[1];
+            Series invPromedio = cModeloP.Series[2];
+            inventario.Points.Clear();
+            qoptimo.Points.Clear();
+            invPromedio.Points.Clear();
+
+            double qoptima = double.Parse(txt_cantidadOptima.Text);
+            for (int i = 0; i < numPeriodos; i++)
+            {
+
+                qoptimo.Points.AddXY(i, qoptima);
+                invPromedio.Points.AddXY(i, qoptima / 2);
+                inventario.Points.AddXY(i - 0.001, 0);
+                inventario.Points.AddXY(i, qoptima);
+                
+            }
+            
+        }
+
+        private void cModeloP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

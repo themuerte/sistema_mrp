@@ -13,9 +13,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 {
     public partial class modelo_Q : Form
     {
+        Producto productoSeleccionado;
         public modelo_Q()
         {
             InitializeComponent();
+            cargarProductosTabla();
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
@@ -165,7 +167,51 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
 
         }
+        private void cargarProductosTabla()
+        {
+            Trucazos.vaciarDataGridView(dgvProductos);
+            List<Object[]> productos = Producto.GetProductosCorto();
+            if (productos.Count > 0)
+            {
+                foreach (Object[] producto in productos)
+                {
+                    dgvProductos.Rows.Add(producto);
+                }
+            }
 
-      
+        }
+        private void dgvProductos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvProductos.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    int index = dgvProductos.SelectedRows[0].Index;
+                    int idProducto = int.Parse(dgvProductos.Rows[index].Cells[0].Value.ToString());
+                    productoSeleccionado = Producto.GetProductoById(idProducto);
+                    if (productoSeleccionado.isValid())
+                    {
+
+
+                        Modelo_Q modelo_q = new Modelo_Q( productoSeleccionado.DemandaDiaria * 360, productoSeleccionado.CostoUnitario, productoSeleccionado.CostoMantenimiento , productoSeleccionado.CostoPedir, (int) productoSeleccionado.PlazoEntregaDias, (int) Empresa.GetEmpresa().DiasTrabajadosPorAnio);
+
+                        //falta poner los valores de resultados en su capo, problemas con convertir
+
+                        txt_Qoptimo.Text = modelo_q.get_Qoptimo();
+                        txt_numPedidos.Text = modelo_q.get_pedidosA();
+                        txt_TiempoEntreP.Text = modelo_q.get_tiempoEntreP();
+                        txt_inventarioSegu.Text = modelo_q.get_inventarionSeguridad();
+                        txt_costoTotal.Text = modelo_q.get_costoTotal();
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+            }
+        }
     }
 }

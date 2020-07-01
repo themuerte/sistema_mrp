@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_demanda = new System.Windows.Forms.Label();
@@ -64,11 +70,16 @@
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cModeloP = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tbNumeroPeriodos = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.bUpdateChart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tbModeloP.SuspendLayout();
             this.tpDatosNuevos.SuspendLayout();
             this.tpProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cModeloP)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -151,7 +162,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(527, 172);
+            this.label9.Location = new System.Drawing.Point(616, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 14);
             this.label9.TabIndex = 15;
@@ -161,17 +172,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(476, 142);
+            this.label10.Location = new System.Drawing.Point(579, 145);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(191, 14);
+            this.label10.Size = new System.Drawing.Size(82, 14);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Desviacion estandar de la demanda";
+            this.label10.Text = "Desv Estand Q";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(655, 115);
+            this.label11.Location = new System.Drawing.Point(475, 112);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(12, 14);
             this.label11.TabIndex = 13;
@@ -180,7 +191,7 @@
             // txt_cantidadOptima
             // 
             this.txt_cantidadOptima.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidadOptima.Location = new System.Drawing.Point(679, 169);
+            this.txt_cantidadOptima.Location = new System.Drawing.Point(768, 112);
             this.txt_cantidadOptima.Name = "txt_cantidadOptima";
             this.txt_cantidadOptima.Size = new System.Drawing.Size(100, 21);
             this.txt_cantidadOptima.TabIndex = 18;
@@ -188,7 +199,7 @@
             // txt_desvEstandarDem
             // 
             this.txt_desvEstandarDem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_desvEstandarDem.Location = new System.Drawing.Point(679, 139);
+            this.txt_desvEstandarDem.Location = new System.Drawing.Point(667, 142);
             this.txt_desvEstandarDem.Name = "txt_desvEstandarDem";
             this.txt_desvEstandarDem.Size = new System.Drawing.Size(100, 21);
             this.txt_desvEstandarDem.TabIndex = 17;
@@ -196,7 +207,7 @@
             // txt_z
             // 
             this.txt_z.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_z.Location = new System.Drawing.Point(679, 112);
+            this.txt_z.Location = new System.Drawing.Point(499, 109);
             this.txt_z.Name = "txt_z";
             this.txt_z.Size = new System.Drawing.Size(100, 21);
             this.txt_z.TabIndex = 16;
@@ -443,11 +454,75 @@
             this.descripcion.HeaderText = "Descripción";
             this.descripcion.Name = "descripcion";
             // 
+            // cModeloP
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.cModeloP.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.cModeloP.Legends.Add(legend1);
+            this.cModeloP.Location = new System.Drawing.Point(478, 176);
+            this.cModeloP.Name = "cModeloP";
+            this.cModeloP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Inventario";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "QOptimo";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Inv, Prom.";
+            this.cModeloP.Series.Add(series1);
+            this.cModeloP.Series.Add(series2);
+            this.cModeloP.Series.Add(series3);
+            this.cModeloP.Size = new System.Drawing.Size(427, 300);
+            this.cModeloP.TabIndex = 35;
+            this.cModeloP.Text = "Modelo P";
+            title1.Name = "Title1";
+            title1.Text = "Modelo P";
+            this.cModeloP.Titles.Add(title1);
+            this.cModeloP.Click += new System.EventHandler(this.cModeloP_Click);
+            // 
+            // tbNumeroPeriodos
+            // 
+            this.tbNumeroPeriodos.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumeroPeriodos.Location = new System.Drawing.Point(646, 491);
+            this.tbNumeroPeriodos.Name = "tbNumeroPeriodos";
+            this.tbNumeroPeriodos.Size = new System.Drawing.Size(100, 21);
+            this.tbNumeroPeriodos.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(518, 494);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(115, 14);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Número de Períodos";
+            // 
+            // bUpdateChart
+            // 
+            this.bUpdateChart.Location = new System.Drawing.Point(752, 489);
+            this.bUpdateChart.Name = "bUpdateChart";
+            this.bUpdateChart.Size = new System.Drawing.Size(116, 23);
+            this.bUpdateChart.TabIndex = 38;
+            this.bUpdateChart.Text = "Actualizar Gráfico";
+            this.bUpdateChart.UseVisualStyleBackColor = true;
+            this.bUpdateChart.Click += new System.EventHandler(this.bUpdateChart_Click);
+            // 
             // modelo_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 621);
+            this.Controls.Add(this.bUpdateChart);
+            this.Controls.Add(this.tbNumeroPeriodos);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cModeloP);
             this.Controls.Add(this.tbModeloP);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label1);
@@ -467,6 +542,7 @@
             this.tpDatosNuevos.PerformLayout();
             this.tpProducto.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cModeloP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,5 +585,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataVisualization.Charting.Chart cModeloP;
+        private System.Windows.Forms.TextBox tbNumeroPeriodos;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button bUpdateChart;
     }
 }
