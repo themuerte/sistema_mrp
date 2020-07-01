@@ -241,6 +241,9 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             Series sQoptimo = cModeloQ.Series[0];
             Series sInventario = cModeloQ.Series[1];
             Series sSSeguridad = cModeloQ.Series[2];
+            double stockSeguridad = double.Parse(txt_inventarioSegu.Text);
+            double tiempoPedido = double.Parse(txt_numPedidos.Text);
+            double qOptimo = double.Parse(txt_Qoptimo.Text);
             
         }
     }
