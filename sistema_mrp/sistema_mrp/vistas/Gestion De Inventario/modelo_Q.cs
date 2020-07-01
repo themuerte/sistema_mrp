@@ -204,6 +204,9 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                         txt_TiempoEntreP.Text = modelo_q.get_tiempoEntreP();
                         txt_inventarioSegu.Text = modelo_q.get_inventarionSeguridad();
                         txt_costoTotal.Text = modelo_q.get_costoTotal();
+
+                        int numeroPeriodos = int.Parse(tbNumeroPeriodos.Text);
+                        cargarGrafico(numeroPeriodos);
                     }
 
 
@@ -241,9 +244,23 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             Series sQoptimo = cModeloQ.Series[0];
             Series sInventario = cModeloQ.Series[1];
             Series sSSeguridad = cModeloQ.Series[2];
+            sQoptimo.Points.Clear();
+            sInventario.Points.Clear();
+            sSSeguridad.Points.Clear();
             double stockSeguridad = double.Parse(txt_inventarioSegu.Text);
-            double tiempoPedido = double.Parse(txt_numPedidos.Text);
+            double tiempoPedido = double.Parse(txt_TiempoEntreP.Text);
             double qOptimo = double.Parse(txt_Qoptimo.Text);
+            if(tiempoPedido <= 30)
+            {
+                for (int i = 0; i < numeroPeriodos; i++)
+                {
+                    sQoptimo.Points.AddXY(i, qOptimo);
+                    sInventario.Points.AddXY(i - 0.001, 0);
+                    sInventario.Points.AddXY(i, qOptimo);
+                    sInventario.Points.AddXY(Math.Round(i + tiempoPedido/30,2), stockSeguridad);
+                    sSSeguridad.Points.AddXY(i, stockSeguridad);
+                }
+            }
             
         }
     }
