@@ -58,6 +58,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
+            List<int> demanda = new List<int>();
             for (int i = 0; i < dtg_semanas.Rows.Count - 1; i++)
             {
                 for (int j = 0; j < dtg_semanas.Rows[i].Cells.Count; j++)
@@ -68,7 +69,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     }
                     else
                     {
-                        List<int> demanda = new List<int>();
+                        
                         string valor = dtg_semanas.Rows[i].Cells[j].Value.ToString();
                         demanda.Add(Convert.ToInt32(valor));
                     }
@@ -77,7 +78,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
             if (rdr_L4L.Checked == true)
             {
-                L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text),);
+                L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text),Convert.ToDouble(txt_costoUnidad.Text), demanda);
+                dtg_resultado = l4.get_L4L();
 
             }
             

@@ -11,17 +11,15 @@ namespace sistema_mrp.controlador.MRP
     class L4L
     {
         private int semanas;
-        private double tasa;
         private double costo_pedir;
-        private double costo_mantenimiento;
+        private double costo_unitario;
         private List<int> demanda = new List<int>();
 
-        public L4L(int semanas, double tasa, double costo_pedir, double costo_mantenimiento, List<int> demanda)
+        public L4L(int semanas, double costo_pedir, double costo_unitario, List<int> demanda)
         {
             this.semanas = semanas;
-            this.tasa = tasa;
             this.costo_pedir = costo_pedir;
-            this.costo_mantenimiento = costo_mantenimiento;
+            this.costo_unitario = costo_unitario;
             this.demanda = demanda;
         }
 
