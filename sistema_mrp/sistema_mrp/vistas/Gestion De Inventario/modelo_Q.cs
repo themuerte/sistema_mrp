@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using sistema_mrp.controlador;
 
 namespace sistema_mrp.vistas.Gestion_De_Inventario
@@ -18,6 +19,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
             InitializeComponent();
             cargarProductosTabla();
+            tbNumeroPeriodos.Text = "5";
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
@@ -212,6 +214,34 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 }
 
             }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bUpdateChart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int numeroPeriodos = int.Parse(tbNumeroPeriodos.Text);
+                cargarGrafico(numeroPeriodos);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void cargarGrafico(int numeroPeriodos)
+        {
+            Series sQoptimo = cModeloQ.Series[0];
+            Series sInventario = cModeloQ.Series[1];
+            Series sSSeguridad = cModeloQ.Series[2];
+            
         }
     }
 }
