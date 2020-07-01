@@ -23,21 +23,19 @@ namespace sistema_mrp.controlador.MRP
             this.demanda = demanda;
         }
 
-        DataGridView dtg_resultado = new DataGridView();
-
-        protected void Carga()
+        public void get_L4L(DataGridView dtg_resultado)
         {
-            DataGridViewTextBoxColumn semanas = new DataGridViewTextBoxColumn();
-            semanas.HeaderText = "Semana";
-            semanas.Width = 100;
-            semanas.ReadOnly = true;
-            dtg_resultado.Columns.Add(semanas);
+            DataGridViewTextBoxColumn semanas1 = new DataGridViewTextBoxColumn();
+            semanas1.HeaderText = "Semana";
+            semanas1.Width = 100;
+            semanas1.ReadOnly = true;
+            dtg_resultado.Columns.Add(semanas1);
 
-            DataGridViewTextBoxColumn demanda = new DataGridViewTextBoxColumn();
-            demanda.HeaderText = "Demanda";
-            demanda.Width = 100;
-            demanda.ReadOnly = true;
-            dtg_resultado.Columns.Add(demanda);
+            DataGridViewTextBoxColumn demanda1 = new DataGridViewTextBoxColumn();
+            demanda1.HeaderText = "Demanda";
+            demanda1.Width = 100;
+            demanda1.ReadOnly = true;
+            dtg_resultado.Columns.Add(demanda1);
 
             DataGridViewTextBoxColumn produccion = new DataGridViewTextBoxColumn();
             produccion.HeaderText = "Produccion";
@@ -68,66 +66,18 @@ namespace sistema_mrp.controlador.MRP
             costo_total.Width = 100;
             costo_total.ReadOnly = true;
             dtg_resultado.Columns.Add(costo_total);
-        }
 
-        public DataGridView get_L4L()
-        {
-            Carga();
-            for (int i = 1; i <= semanas + 1 ; i++)
+            double costo = 0;
+            for (int i = 0; i < semanas; i++)
             {
-                for (int j = 1; j <= 8; j++)
-                {
-                    if (i == 0)
-                    {
-                        //se evita que entre en los campos de Datos
-                    }
-                    else
-                    {
-                        switch (j)
-                        {
-                            //semana
-                            case 1:
-                                    dtg_resultado.Columns.Add(new DataGridViewColumn(){HeaderText= i.ToString() });
-                                break;
+                costo += costo_pedir;
+                dtg_resultado.Rows.Add(new object[] {i + 1, demanda[i],demanda[i],0,0,costo_pedir,costo});
 
-                            //demanda
-                            case 2:
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = demanda[i].ToString() });
-                                break;
-
-                            //produccion
-                            case 3:
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = demanda[i].ToString() });
-                                break;
-                            
-                            //inventario final
-                            case 4:
-                                break;
-                            
-                            //costo de mantenimiento
-                            case 5:
-                                break;
-                            
-                            //costo de envio
-                            case 6:
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = costo_pedir.ToString()});
-                                break;
-                            
-                            //costo total
-                            case 7:
-                                double valor0 = Convert.ToDouble(dtg_resultado.Rows[i - 1].Cells[7].Value);
-                                double valor1 = Convert.ToDouble(dtg_resultado.Rows[i].Cells[7].Value);
-                                dtg_resultado.Columns.Add(new DataGridViewColumn() { HeaderText = Convert.ToString(valor0+valor1) }) ;
-                                break;
-                          
-
-                        }
-                    }
-                }
             }
 
-            return dtg_resultado;
+           
         }
+       
 
         
 
