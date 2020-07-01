@@ -77,6 +77,10 @@ namespace sistema_mrp.controlador.MRP
                 demanda_promedio += demanda[i];      
             }
 
+            demanda_promedio = (demanda_promedio / semanas) * 52;
+            costo_mantenimiento = tasa_mantenimiento * costo_unitario * 52;
+            Q_optimo = Math.Sqrt((2*demanda_promedio*costo_unitario)/costo_mantenimiento);
+            
 
 
         }
