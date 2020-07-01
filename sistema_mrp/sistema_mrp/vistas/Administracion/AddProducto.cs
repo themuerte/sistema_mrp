@@ -36,13 +36,7 @@ namespace sistema_mrp.vistas.Administracion
             {
                 try
                 {
-                    double precio = double.Parse(mtbPrecio.Text);
-                    int unidades = int.Parse(mtbUnidades.Text);
-                    string nombre = tbNombre.Text;
-                    string descripcion = tbDescripcion.Text;
-                    Producto.AddProducto(new Producto(nombre, descripcion, precio, unidades));
-                    padre.recargarTablaProductos();
-                    this.Dispose();
+                    
                 }
                 catch (Exception except)
                 {

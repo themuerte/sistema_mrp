@@ -27,10 +27,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void llenarContenido()
         {
-            tbNombre.Text = p.Nombre;
-            tbDescripcion.Text = p.Descripcion;
-            mtbUnidades.Text = p.CantidadInventario.ToString();
-            mtbPrecio.Text = p.PrecioActual.ToString();
+           
         }
 
         private void AddProducto_Load(object sender, EventArgs e)
@@ -54,7 +51,7 @@ namespace sistema_mrp.vistas.Administracion
                     string descripcion = tbDescripcion.Text;
                     p.UpdateNombre(nombre);
                     p.UpdateDescripcion(descripcion);
-                    p.UpdatePrecio(precio);
+                    //p.UpdatePrecio(precio);
                     p.UpdateInventario(unidades);
                     padre.recargarTablaProductos();
                     this.Dispose();
