@@ -21,13 +21,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void cargarTablaComponentes()
         {    
-            Trucazos.vaciarDataGridView(dgvComponentesEx);
-            List<Componente> componentes = Componente.GetComponentesAjenosProducto(idProducto);
-            foreach (Componente c in componentes)
-            {
-                Object[] row = { c.IdComponente, c.Nombre, c.Descripcion, c.PrecioUnit, c.Plazo, c.TipoPlazo };
-                dgvComponentesEx.Rows.Add(row);
-            }
+           
             
         }
 
@@ -39,6 +33,7 @@ namespace sistema_mrp.vistas.Administracion
         private void btnAgregarComponenteNew_Click(object sender, EventArgs e)
         {
 
+<<<<<<< HEAD
             Componente c = new Componente();
             c.Nombre = tbNombre.Text;
             c.Descripcion = "";
@@ -71,6 +66,8 @@ namespace sistema_mrp.vistas.Administracion
             ProductoComponente.AddProductoComponente(pc);
             this.Dispose();
 
+=======
+>>>>>>> b5d98e462f0c8b1b2c1269143d8b2f9ee5427e05
         }
 
         private void tbNombre_TextChanged(object sender, EventArgs e)
@@ -102,11 +99,7 @@ namespace sistema_mrp.vistas.Administracion
         {
             try
             {
-                int idComponente = int.Parse(lIdComponente.Text);
-                int unidades = int.Parse(tbUnidNecExist.Text);
-                int margen = int.Parse(tbMargenSegExist.Text);
-                ProductoComponente pc = new ProductoComponente(idProducto, idComponente, unidades, margen);
-                ProductoComponente.AddProductoComponente(pc);
+                
                 vaciarTbExist();
                 this.Dispose();
             }
@@ -122,8 +115,10 @@ namespace sistema_mrp.vistas.Administracion
         {
            if(dgvComponentesEx.SelectedRows.Count > 0)
             {
+                
                 int index = dgvComponentesEx.SelectedRows[0].Index;
-                lIdComponente.Text = index + "";
+                int idComponente = int.Parse(dgvComponentesEx.Rows[index].Cells[0].Value.ToString());
+                lIdComponente.Text = idComponente + "";
                     
             }
         }

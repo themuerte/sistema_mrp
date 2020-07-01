@@ -63,8 +63,8 @@ namespace sistema_mrp.vistas.Administracion
             
             foreach (Producto producto in productos)
             {
-                Object[] p = {producto.IdProducto, producto.Nombre, producto.Descripcion,producto.PrecioActual, producto.CantidadInventario };
-                dgvProductos.Rows.Add(p);
+               // Object[] p = {producto.IdProducto, producto.Nombre, producto.Descripcion,producto.PrecioActual, producto.CantidadInventario };
+               // dgvProductos.Rows.Add(p);
             }
         }
 
@@ -87,9 +87,9 @@ namespace sistema_mrp.vistas.Administracion
             cell = dgvProductos.Rows[nFila].Cells[4];
             int cantidadInventario = Convert.ToInt32(cell.Value);
 
-            Producto p = new Producto(idProducto, nombre, descripcion, precioActual, cantidadInventario);
-            EditProducto edit = new EditProducto(this, p);
-            edit.Show();
+            //Producto p = new Producto(idProducto, nombre, descripcion, precioActual, cantidadInventario);
+           // EditProducto edit = new EditProducto(this, p);
+            //edit.Show();
         }
 
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
@@ -113,14 +113,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void llenarTabla()
         {
-            int idProducto = int.Parse(lIdProductoSel.Text);
-            Trucazos.vaciarDataGridView(dgvBeanOfMat);
-            List<Componente> componentes = Componente.GetComponentesPorProducto(idProducto);
-            foreach (Componente c in componentes)
-            {
-                Object[] row = { c.IdComponente, c.Nombre, c.Descripcion, c.PrecioUnit, c.Plazo, c.TipoPlazo };
-                dgvBeanOfMat.Rows.Add(row);
-            }
+            
         }
     }
 }
