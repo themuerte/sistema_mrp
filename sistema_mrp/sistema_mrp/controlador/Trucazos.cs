@@ -16,5 +16,9 @@ namespace sistema_mrp.controlador
                 dgv.Rows.Remove(dgv.Rows[0]);
             }
         }
+        public static void expandirColumna(DataGridView dtv)
+        {
+            dtv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
     }
 }
