@@ -68,13 +68,65 @@ namespace sistema_mrp.controlador.MRP
             costo_total.ReadOnly = true;
             dtg_resultado.Columns.Add(costo_total);
 
+
+            int[] lista = new int[semanas];
+            int diferencia = 0;
+            double H = 0;
             int tabla_produccion = 0;
-            int suma = 0;
+            int tempo = 0;
 
             for (int i = 0; i < semanas; i++)
             {
-                suma += demanda[i];
+                if (i == 0)
+                {
+                    lista[i] = demanda[i];
+                }
+                else
+                {
+                    lista[i] = lista[i -1] + demanda[i];
+                    diferencia = lista[i] - lista[i -1];
+                    tempo = lista[i -1];
+                    H += diferencia * i * (tasa_mantenimiento/10);
+
+                    if(H > costo_pedir)
+                    {
+                        tabla_produccion = tempo;
+                        break;
+                    }
+                    else
+                    {
+                        tabla_produccion = Convert.ToInt32(H);
+                    }
+
+                }
             }
+
+            double invetario_final = 0;
+            double costo = 0;
+            double costo_mantenimiento = 0;
+
+            for (int i = 0; i < semanas; i++)
+            {
+                if (demanda[i] > invetario_final)
+                {
+                    invetario_final = tabla_produccion - demanda[i];
+                    costo_mantenimiento = invetario_final * (tasa_mantenimiento / 10);
+                    costo = costo + costo_mantenimiento + costo_pedir;
+                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], tabla_produccion, invetario_final, costo_mantenimiento, costo_pedir, costo });
+                }
+                else
+                {
+                    invetario_final = invetario_final - demanda[i];
+                    costo_mantenimiento = invetario_final * (tasa_mantenimiento / 10);
+                    costo = costo + costo_mantenimiento;
+                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], 0, invetario_final, costo_mantenimiento, 0, costo });
+                }
+
+            }
+
+
+
+
 
         }
 
