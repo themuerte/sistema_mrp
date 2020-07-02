@@ -41,6 +41,7 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(169, 20);
             this.tbDescripcion.TabIndex = 33;
+            this.tbDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDescripcion_KeyPress);
             // 
             // label1
             // 
