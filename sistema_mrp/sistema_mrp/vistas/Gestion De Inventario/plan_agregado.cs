@@ -106,6 +106,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 List<Fila> resultado = ep.getPlanAgregadoSinBD(producto, diasHabiles, demanda, empresa);
                 rellenarPlaneacion(resultado, numPeriodos);
 
+            }else if (bFuerzasNiveladas.Checked)
+            {
+                FuerzaNivelada fn = new FuerzaNivelada(numPeriodos, producto, demanda.ToArray(), diasHabiles.ToArray(), empresa);
+                List<Fila> resultado = fn.getPlanAgregado();
+                rellenarPlaneacion(resultado, numPeriodos);
             }
         }
         
@@ -139,6 +144,12 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     List<Fila> resultado = persecucion.getPlanAgregado();
                     int numPeriodo = int.Parse(tbMeses.Text);
                     rellenarPlaneacion(resultado, numPeriodo);
+                }
+                else if (bFuerzasNiveladas.Checked)
+                {
+                    FuerzaNivelada fn = new FuerzaNivelada(numMeses, prod,  Empresa.GetEmpresa());
+                    List<Fila> resultado = fn.getPlanAgregado();
+                    rellenarPlaneacion(resultado, numMeses);
                 }
             }
             catch (Exception ex)
