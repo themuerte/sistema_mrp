@@ -53,22 +53,62 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         }
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dtg_semanas.Rows.Count - 1; i++)
+            List<double> demanda = new List<double>();
+            List<double> diasHabiles= new List<double>();
+            Producto producto = new Producto();
+            Empresa empresa = new Empresa();
+            int numPeriodos = dtg_semanas.Rows[0].Cells.Count;
+            for (int j = 0; j < numPeriodos; j++)
             {
-                for (int j = 0; j < dtg_semanas.Rows[i].Cells.Count; j++)
+                if ( j == 0)
                 {
-                    if (i == 0 && j == 0 || i == 1 && j == 0)
+                    //se evita que entre en los campos de Demada y Dias Laborados
+                }
+                else
+                {
+                    try
                     {
-                        //se evita que entre en los campos de Demada y Dias Laborados
+                        string sdemanda = dtg_semanas.Rows[0].Cells[j].Value.ToString();
+                        string sdiasHabiles = dtg_semanas.Rows[1].Cells[j].Value.ToString();
+                        demanda.Add(double.Parse(sdemanda));
+                        diasHabiles.Add(double.Parse(sdiasHabiles));
+                        
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        string valor = dtg_semanas.Rows[i].Cells[j].Value.ToString();
-                        MessageBox.Show(valor);
+                        MessageBox.Show(ex.Message);
+                        dtg_semanas.Rows.Clear();
+                        dtg_semanas.Columns.Clear();
+
+                        return;
+                        
                     }
                 }
             }
+            producto.CostoUnitario = double.Parse(tbCostoDeProducción.Text);
+            producto.CostoMantenimiento = double.Parse(tbMantenimiento.Text);
+            empresa.CostoContratacion = double.Parse(tbCostoContratación.Text);
+            producto.InventarioInicial = double.Parse(tbInventarioInicial.Text);
+            empresa.CostoSubContratacion = double.Parse(tbCostoDeSubContratación.Text);
+            empresa.CostoDespido = double.Parse(tbCostoDeDespido.Text);
+            producto.HorasRequeridas = double.Parse(tbHorasRequeridas.Text);
+            producto.StockSeguridad = double.Parse(tbStockSeguridad.Text);
+            producto.CostoFaltante = double.Parse(tbCostoFaltante.Text);
+            producto.CostoHrs = double.Parse(tbCostoHorasNormal.Text);
+            producto.CostoHrsExtras = double.Parse(tbCostoHorasExtras.Text);
+            empresa.FuerzaLaboral = double.Parse(tbFuerzaLaboral.Text);
+            numPeriodos--;
+            if (bPersecución.Checked)
+            {
+                
+                EstrategiaPersecucion ep = new EstrategiaPersecucion(producto, numPeriodos);
+                ep.E = empresa;
+                List<Fila> resultado = ep.getPlanAgregadoSinBD(producto, diasHabiles, demanda, empresa);
+                rellenarPlaneacion(resultado, numPeriodos);
+
+            }
         }
+        
 
         private void plan_agregado_Load(object sender, EventArgs e)
         {
@@ -97,7 +137,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 {
                     EstrategiaPersecucion persecucion = new EstrategiaPersecucion(prod, numMeses);
                     List<Fila> resultado = persecucion.getPlanAgregado();
-                    rellenarPlaneacion(resultado);
+                    int numPeriodo = int.Parse(tbMeses.Text);
+                    rellenarPlaneacion(resultado, numPeriodo);
                 }
             }
             catch (Exception ex)
@@ -107,11 +148,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             
         }
 
-        private void rellenarPlaneacion(List<Fila> resultado)
+        private void rellenarPlaneacion(List<Fila> resultado, int numMeses)
         {
             try
             {
-                int numMeses = int.Parse(tbMeses.Text);
+                
                 Trucazos.vaciarDataGridView(dtgResultado);
                 dtgResultado.Columns.Clear();
                 DataGridViewTextBoxColumn primeraCol = new DataGridViewTextBoxColumn();
@@ -146,5 +187,10 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             }
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            dtgResultado.Rows.Clear();
+            dtgResultado.Columns.Clear();
+        }
     }
 }

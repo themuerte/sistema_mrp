@@ -176,5 +176,128 @@ namespace sistema_mrp.controlador.plan_agregado
             filas.Add(tiempoNormal);
             return filas;
         }
+
+        public List<Fila> getPlanAgregadoSinBD(Producto varProd, List<double> LDiasHabiles, List<double> LDemanda, Empresa varEmpresa)
+        {
+
+            Fila inventarioInicial, demanda, stockSeguridad, inventarioFinal, produccionRequerida, hrsRequeridas, hrsDisponibles, trabRequeridos, contratNum, contratCost, despidosNum, despidosCost, tiempoNormal;
+
+            inventarioInicial = new Fila("Inventario inicial");
+            inventarioInicial.Valores = new double[numeroPeriodos];
+            demanda = new Fila("Demanda");
+            demanda.Valores = new double[numeroPeriodos];
+            stockSeguridad = new Fila("Stock de Seguridad");
+            stockSeguridad.Valores = new double[numeroPeriodos];
+            inventarioFinal = new Fila("Inventario Final");
+            inventarioFinal.Valores = new double[numeroPeriodos];
+            produccionRequerida = new Fila("Producción Requerida");
+            produccionRequerida.Valores = new double[numeroPeriodos];
+            hrsRequeridas = new Fila("Horas Requeridas");
+            hrsRequeridas.Valores = new double[numeroPeriodos];
+            hrsDisponibles = new Fila("Horas Disponibles");
+            hrsDisponibles.Valores = new double[numeroPeriodos];
+            trabRequeridos = new Fila("Trabajadores Requeridos");
+            trabRequeridos.Valores = new double[numeroPeriodos];
+            contratNum = new Fila("Número de contrataciones");
+            contratNum.Valores = new double[numeroPeriodos];
+            contratCost = new Fila("Costo de contrataciones");
+            contratCost.Valores = new double[numeroPeriodos];
+            despidosNum = new Fila("Número de despidos");
+            despidosNum.Valores = new double[numeroPeriodos];
+            despidosCost = new Fila("Costo de despidos");
+            despidosCost.Valores = new double[numeroPeriodos];
+            tiempoNormal = new Fila("Tiempo Normal");
+            tiempoNormal.Valores = new double[numeroPeriodos];
+            Demanda = LDemanda.ToArray();
+            DiasHabiles = LDiasHabiles.ToArray();
+            int numerosTrabajadores = (int)varEmpresa.FuerzaLaboral;
+            for (int i = 0; i < numeroPeriodos; i++)
+            {
+
+                // inventario inicial
+                if (i == 0)
+                {
+                    inventarioInicial.Valores[i] = varProd.InventarioInicial;
+                }
+                else
+                {
+                    inventarioInicial.Valores[i] = inventarioFinal.Valores[i - 1];
+                }
+                // demanda
+                demanda.Valores[i] = Demanda[i];
+                // stock de seguridad
+                stockSeguridad.Valores[i] = varProd.StockSeguridad;
+
+                // prodRequerida
+                produccionRequerida.Valores[i] = demanda.Valores[i] + stockSeguridad.Valores[i] - inventarioInicial.Valores[i];
+
+                // inventario final
+                inventarioFinal.Valores[i] = produccionRequerida.Valores[i] + inventarioInicial.Valores[i] - demanda.Valores[i];
+
+                // horas requeridas
+                hrsRequeridas.Valores[i] = produccionRequerida.Valores[i] * varProd.HorasRequeridas;
+
+                // horas disponibles
+                hrsDisponibles.Valores[i] = DiasHabiles[i] * 8;
+
+                // trabajadores requeridos
+                Decimal paso1 = new decimal(hrsRequeridas.Valores[i] / hrsDisponibles.Valores[i]);
+                paso1 = Math.Floor(paso1); // redondear al mayor
+                double paso2 = double.Parse(paso1.ToString());
+                trabRequeridos.Valores[i] = paso2;
+
+
+                // numero de trabajadores contratados y despedidos y sus costos
+                if (numerosTrabajadores > trabRequeridos.Valores[i])
+                {
+                    int diferencia = numerosTrabajadores - (int)trabRequeridos.Valores[i];
+                    numerosTrabajadores -= diferencia;
+
+                    despidosNum.Valores[i] = diferencia;
+                    despidosCost.Valores[i] = diferencia * varEmpresa.CostoDespido;
+
+                    contratNum.Valores[i] = 0;
+                    contratCost.Valores[i] = 0;
+                }
+                else if (numerosTrabajadores < trabRequeridos.Valores[i])
+                {
+                    int diferencia = (int)trabRequeridos.Valores[i] - numerosTrabajadores;
+                    numerosTrabajadores += diferencia;
+
+                    contratNum.Valores[i] = diferencia;
+                    contratCost.Valores[i] = diferencia * varEmpresa.CostoContratacion;
+
+                    despidosNum.Valores[i] = 0;
+                    despidosCost.Valores[i] = 0;
+
+                }
+                else
+                {
+                    despidosNum.Valores[i] = 0;
+                    despidosCost.Valores[i] = 0;
+
+                    contratNum.Valores[i] = 0;
+                    contratCost.Valores[i] = 0;
+                }
+                // costo tiempo en horas normales
+                tiempoNormal.Valores[i] = hrsRequeridas.Valores[i] * varProd.CostoHrs;
+
+            }
+            List<Fila> filas = new List<Fila>();
+            filas.Add(inventarioInicial);
+            filas.Add(demanda);
+            filas.Add(stockSeguridad);
+            filas.Add(inventarioFinal);
+            filas.Add(produccionRequerida);
+            filas.Add(hrsRequeridas);
+            filas.Add(hrsDisponibles);
+            filas.Add(trabRequeridos);
+            filas.Add(contratNum);
+            filas.Add(contratCost);
+            filas.Add(despidosNum);
+            filas.Add(despidosCost);
+            filas.Add(tiempoNormal);
+            return filas;
+        }
     }
 }
