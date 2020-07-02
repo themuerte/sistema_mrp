@@ -97,7 +97,7 @@ namespace sistema_mrp.controlador.MRP
                 }
                 else
                 {
-                     invetario_final = invetario_final - demanda[i];
+                    invetario_final = invetario_final - demanda[i];
                     costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
                     costo = costo + costo_mantenimiento;
                     dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], 0, invetario_final, costo_mantenimiento, 0, costo });

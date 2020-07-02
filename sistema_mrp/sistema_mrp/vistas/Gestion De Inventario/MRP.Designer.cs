@@ -183,6 +183,7 @@
             this.txt_semanas.Name = "txt_semanas";
             this.txt_semanas.Size = new System.Drawing.Size(72, 21);
             this.txt_semanas.TabIndex = 51;
+            this.txt_semanas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_semanas_KeyPress);
             // 
             // txt_costoUnidad
             // 
@@ -191,6 +192,7 @@
             this.txt_costoUnidad.Name = "txt_costoUnidad";
             this.txt_costoUnidad.Size = new System.Drawing.Size(72, 21);
             this.txt_costoUnidad.TabIndex = 53;
+            this.txt_costoUnidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_costoUnidad_KeyPress);
             // 
             // txt_costoPedir
             // 
@@ -199,6 +201,7 @@
             this.txt_costoPedir.Name = "txt_costoPedir";
             this.txt_costoPedir.Size = new System.Drawing.Size(72, 21);
             this.txt_costoPedir.TabIndex = 54;
+            this.txt_costoPedir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_costoPedir_KeyPress);
             // 
             // btnAceptar
             // 
@@ -240,6 +243,7 @@
             this.btn_limpiar.TabIndex = 57;
             this.btn_limpiar.Text = "Limpiar";
             this.btn_limpiar.UseVisualStyleBackColor = false;
+            this.btn_limpiar.Click += new System.EventHandler(this.btn_limpiar_Click);
             // 
             // label8
             // 
@@ -258,6 +262,8 @@
             this.dtg_semanas.Name = "dtg_semanas";
             this.dtg_semanas.Size = new System.Drawing.Size(566, 139);
             this.dtg_semanas.TabIndex = 59;
+            this.dtg_semanas.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtg_semanas_EditingControlShowing);
+            this.dtg_semanas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtg_semanas_KeyPress);
             // 
             // dtg_resultado
             // 
@@ -275,6 +281,7 @@
             this.txt_tasaMantenimiento.Name = "txt_tasaMantenimiento";
             this.txt_tasaMantenimiento.Size = new System.Drawing.Size(72, 21);
             this.txt_tasaMantenimiento.TabIndex = 62;
+            this.txt_tasaMantenimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_tasaMantenimiento_KeyPress);
             // 
             // label4
             // 

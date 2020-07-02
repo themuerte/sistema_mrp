@@ -191,5 +191,10 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
 
         }
+
+        private void tpDatosNuevos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

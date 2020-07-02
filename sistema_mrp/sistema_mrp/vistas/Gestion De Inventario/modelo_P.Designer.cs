@@ -410,6 +410,7 @@
             this.tpDatosNuevos.TabIndex = 0;
             this.tpDatosNuevos.Text = "Datos Nuevos";
             this.tpDatosNuevos.UseVisualStyleBackColor = true;
+            this.tpDatosNuevos.Click += new System.EventHandler(this.tpDatosNuevos_Click);
             // 
             // tpProducto
             // 
