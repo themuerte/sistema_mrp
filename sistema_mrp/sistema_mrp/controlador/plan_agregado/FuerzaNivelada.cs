@@ -13,7 +13,7 @@ namespace sistema_mrp.controlador.plan_agregado
         int numeroPeriodos;
         double[] aDemanda;
         double[] aDiasHabiles;
-
+        double costoTotal  = 0;
         // con bd
         public FuerzaNivelada(int numPeriodo, Producto prod, Empresa empresa)
         {
@@ -37,10 +37,12 @@ namespace sistema_mrp.controlador.plan_agregado
         public Producto Prod { get => prod; set => prod = value; }
         public double[] ADemanda { get => aDemanda; set => aDemanda = value; }
         public double[] ADiasHabiles { get => aDiasHabiles; set => aDiasHabiles = value; }
+        public double CostoTotal { get => costoTotal; set => costoTotal = value; }
         internal Empresa Empresa { get => empresa; set => empresa = value; }
 
         public List<Fila> getPlanAgregado()
         {
+            CostoTotal = 0;
             Fila inventarioInicial, demanda, stockSeguridad, inventarioFinal, produccionRequerida,produccionReal, hrsDisponibles, ctsFaltante, ctsMant, tiempoNormal;
 
             inventarioInicial = new Fila("Inventario inicial");
@@ -137,6 +139,9 @@ namespace sistema_mrp.controlador.plan_agregado
             filas.Add(ctsFaltante);
             filas.Add(ctsMant);
             filas.Add(tiempoNormal);
+            CostoTotal += ctsFaltante.Valores.Sum();
+            CostoTotal += ctsMant.Valores.Sum();
+            CostoTotal += tiempoNormal.Valores.Sum();
             return filas;
 
             

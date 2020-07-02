@@ -69,14 +69,15 @@
             this.tcModo1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tModo2 = new System.Windows.Forms.TabPage();
+            this.btnCalcular2 = new System.Windows.Forms.Button();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tbMeses = new System.Windows.Forms.TextBox();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCalcular2 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbMeses = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.lTotal = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultado)).BeginInit();
@@ -526,6 +527,20 @@
             this.tModo2.Text = "Productos Existentes";
             this.tModo2.UseVisualStyleBackColor = true;
             // 
+            // btnCalcular2
+            // 
+            this.btnCalcular2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btnCalcular2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular2.ForeColor = System.Drawing.Color.White;
+            this.btnCalcular2.Location = new System.Drawing.Point(265, 28);
+            this.btnCalcular2.Name = "btnCalcular2";
+            this.btnCalcular2.Size = new System.Drawing.Size(75, 28);
+            this.btnCalcular2.TabIndex = 46;
+            this.btnCalcular2.Text = "Calcular";
+            this.btnCalcular2.UseVisualStyleBackColor = false;
+            this.btnCalcular2.Click += new System.EventHandler(this.button1_Click);
+            // 
             // dgvProducto
             // 
             this.dgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -538,6 +553,24 @@
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.Size = new System.Drawing.Size(643, 201);
             this.dgvProducto.TabIndex = 45;
+            // 
+            // idProducto
+            // 
+            this.idProducto.HeaderText = "id";
+            this.idProducto.Name = "idProducto";
+            this.idProducto.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre del producto";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción del producto";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
             // 
             // label16
             // 
@@ -561,38 +594,6 @@
             this.tbMeses.Size = new System.Drawing.Size(100, 21);
             this.tbMeses.TabIndex = 43;
             // 
-            // idProducto
-            // 
-            this.idProducto.HeaderText = "id";
-            this.idProducto.Name = "idProducto";
-            this.idProducto.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre del producto";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripción del producto";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // btnCalcular2
-            // 
-            this.btnCalcular2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
-            this.btnCalcular2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCalcular2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular2.ForeColor = System.Drawing.Color.White;
-            this.btnCalcular2.Location = new System.Drawing.Point(265, 28);
-            this.btnCalcular2.Name = "btnCalcular2";
-            this.btnCalcular2.Size = new System.Drawing.Size(75, 28);
-            this.btnCalcular2.TabIndex = 46;
-            this.btnCalcular2.Text = "Calcular";
-            this.btnCalcular2.UseVisualStyleBackColor = false;
-            this.btnCalcular2.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
@@ -607,11 +608,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // lTotal
+            // 
+            this.lTotal.AutoSize = true;
+            this.lTotal.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTotal.Location = new System.Drawing.Point(791, 436);
+            this.lTotal.Name = "lTotal";
+            this.lTotal.Size = new System.Drawing.Size(50, 19);
+            this.lTotal.TabIndex = 48;
+            this.lTotal.Text = "Total:";
+            // 
             // plan_agregado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 648);
+            this.Controls.Add(this.lTotal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tcModo1);
             this.Controls.Add(this.dtgResultado);
@@ -689,5 +701,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.Button btnCalcular2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lTotal;
     }
 }

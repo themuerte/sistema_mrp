@@ -10,7 +10,7 @@ namespace sistema_mrp.controlador.plan_agregado
     {
         double[] demanda;
         double[] diasHabiles;
-        List<Fila> tabla;
+        double costoTotal = 0;
         Producto p;
         Empresa e;
         int numeroPeriodos;
@@ -32,31 +32,12 @@ namespace sistema_mrp.controlador.plan_agregado
         public double[] Demanda { get => demanda; set => demanda = value; }
         public double[] DiasHabiles { get => diasHabiles; set => diasHabiles = value; }
         public int NumeroPeriodos { get => numeroPeriodos; set => numeroPeriodos = value; }
+        public double CostoTotal { get => costoTotal; set => costoTotal = value; }
         internal Empresa E { get => e; set => e = value; }
 
         public List<Fila> getPlanAgregado()
         {
-            /*filas a crear
-            inventario inicial
-            demanda
-            stock de seguridad
-            inventario final
-            
-            prod requerida
-            hrs requeridas
-            hrs disponibles
-            
-            trabajadores requeridos
-            contrataciones numero
-            contrataciones  dinero
-            
-            despidos numero
-            despidos dinero
-
-            tiempoNormal
-             
-
-             */
+            CostoTotal = 0;
             Fila inventarioInicial, demanda, stockSeguridad, inventarioFinal, produccionRequerida, hrsRequeridas, hrsDisponibles, trabRequeridos, contratNum, contratCost, despidosNum, despidosCost, tiempoNormal;
 
             inventarioInicial = new Fila("Inventario inicial");
@@ -174,6 +155,9 @@ namespace sistema_mrp.controlador.plan_agregado
             filas.Add(despidosNum);
             filas.Add(despidosCost);
             filas.Add(tiempoNormal);
+            CostoTotal += contratCost.Valores.Sum();
+            CostoTotal += despidosCost.Valores.Sum();
+            CostoTotal += tiempoNormal.Valores.Sum();
             return filas;
         }
 

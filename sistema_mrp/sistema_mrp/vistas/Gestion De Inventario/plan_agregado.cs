@@ -144,12 +144,14 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     List<Fila> resultado = persecucion.getPlanAgregado();
                     int numPeriodo = int.Parse(tbMeses.Text);
                     rellenarPlaneacion(resultado, numPeriodo);
+                    lTotal.Text = "Total: " + Math.Round(persecucion.CostoTotal, 2);
                 }
                 else if (bFuerzasNiveladas.Checked)
                 {
                     FuerzaNivelada fn = new FuerzaNivelada(numMeses, prod,  Empresa.GetEmpresa());
                     List<Fila> resultado = fn.getPlanAgregado();
                     rellenarPlaneacion(resultado, numMeses);
+                    lTotal.Text = "Total: " + Math.Round(fn.CostoTotal, 2);
                 }
             }
             catch (Exception ex)
@@ -186,7 +188,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     row[0] = fila.NombreFila;
                     for (int i = 0; i < numMeses; i++)
                     {
-                        row[i + 1] = fila.Valores[i];
+                        if(fila.NombreFila== "Inventario inicial" && fila.Valores[i] < 0)
+                        {
+                            row[i + 1] = 0;
+                        }
+                        else
+                        {
+                            row[i + 1] = fila.Valores[i];
+                        }
+                        
                     }
                     dtgResultado.Rows.Add(row);
                 }
