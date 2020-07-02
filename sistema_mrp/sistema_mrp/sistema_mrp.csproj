@@ -69,6 +69,7 @@
     <Compile Include="controlador\PlanAgregado.cs" />
     <Compile Include="controlador\PlanProducto.cs" />
     <Compile Include="controlador\plan_agregado\EstrategiaPersecucion.cs" />
+    <Compile Include="controlador\plan_agregado\FuerzaNivelada.cs" />
     <Compile Include="controlador\Producto.cs" />
     <Compile Include="controlador\Trucazos.cs" />
     <Compile Include="vistas\Administracion\EditDiasHabiles.cs">
