@@ -90,10 +90,10 @@ namespace sistema_mrp.controlador.MRP
             {
                 if (demanda[i] > invetario_final)
                 {
-                    invetario_final = Convert.ToInt32(Q_optimo) - demanda[i];
+                    invetario_final = Convert.ToInt16(Q_optimo) - demanda[i];
                     costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
                     costo = costo + costo_mantenimiento + costo_pedir;
-                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Convert.ToInt32(Q_optimo), invetario_final, costo_mantenimiento, costo_pedir, costo });
+                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Convert.ToInt16(Q_optimo), invetario_final, costo_mantenimiento, costo_pedir, costo });
                 }
                 else
                 {
