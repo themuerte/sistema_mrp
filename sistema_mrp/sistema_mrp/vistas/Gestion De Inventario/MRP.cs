@@ -18,8 +18,6 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             InitializeComponent();
         }
 
-      
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             int cant = Convert.ToInt32(txt_semanas.Text);
@@ -119,6 +117,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             dtg_semanas.Columns.Clear();
             dtg_resultado.Rows.Clear();
             dtg_resultado.Columns.Clear();
+
+            rdr_EOQ.Checked = false;
+            rdr_L4L.Checked = false;
+            rdr_LTC.Checked = false;
+            rdr_LUC.Checked = false;
         }
 
         private void txt_semanas_KeyPress(object sender, KeyPressEventArgs e)

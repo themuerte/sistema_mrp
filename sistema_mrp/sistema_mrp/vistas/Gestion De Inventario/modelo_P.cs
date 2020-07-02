@@ -187,14 +187,23 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             
         }
 
-        private void cModeloP_Click(object sender, EventArgs e)
+        private void btn_limpiar_Click(object sender, EventArgs e)
         {
+            txt_cantidadOptima.Text = "";
+            txt_demandaP.Text = "";
+            txt_desvEstandarDem.Text = "";
+            txt_desviacion.Text = "";
+            txt_inventarioAct.Text = "";
+            txt_periodoRevi.Text = "";
+            txt_plazoEntrega.Text = "";
+            txt_probabilidadDemanda.Text = "";
+            txt_z.Text = "";
 
-        }
 
-        private void tpDatosNuevos_Click(object sender, EventArgs e)
-        {
-
+            rdr_anual.Checked = false;
+            rdr_dias.Checked = false;
+            rdr_mensual.Checked = false;
+            rdr_semanal.Checked = false;
         }
     }
 }
