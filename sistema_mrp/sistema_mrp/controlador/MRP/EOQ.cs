@@ -28,13 +28,13 @@ namespace sistema_mrp.controlador.MRP
         {
             DataGridViewTextBoxColumn semanas1 = new DataGridViewTextBoxColumn();
             semanas1.HeaderText = "Semana";
-            semanas1.Width = 100;
+            semanas1.Width = 70;
             semanas1.ReadOnly = true;
             dtg_resultado.Columns.Add(semanas1);
 
             DataGridViewTextBoxColumn demanda1 = new DataGridViewTextBoxColumn();
             demanda1.HeaderText = "Demanda";
-            demanda1.Width = 100;
+            demanda1.Width = 80;
             demanda1.ReadOnly = true;
             dtg_resultado.Columns.Add(demanda1);
 
@@ -69,17 +69,18 @@ namespace sistema_mrp.controlador.MRP
             dtg_resultado.Columns.Add(costo_total);
 
             double demanda_promedio = 0;
+            double suma = 0;
             double Q_optimo;
             double H;
 
             for(int i = 0; i < semanas; i++)
             {
-                demanda_promedio += demanda[i];      
+                suma += demanda[i];      
             }
 
-            demanda_promedio = (demanda_promedio / semanas) * 52;
-            H = tasa_mantenimiento * costo_unitario * 52;
-            Q_optimo = Math.Sqrt((2*demanda_promedio*costo_unitario)/H);
+            demanda_promedio = (suma / semanas) * 52;
+            H = (tasa_mantenimiento/100) * costo_unitario * 52;
+            Q_optimo = Math.Sqrt((2* demanda_promedio * costo_pedir)/H);
 
             double invetario_final = 0;
             double costo = 0;
@@ -90,14 +91,14 @@ namespace sistema_mrp.controlador.MRP
                 if (demanda[i] > invetario_final)
                 {
                     invetario_final = Q_optimo;
-                    costo_mantenimiento = invetario_final * tasa_mantenimiento;
+                    costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
                     costo = costo + costo_mantenimiento + costo_pedir;
                     dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Q_optimo + demanda[i], invetario_final, costo_mantenimiento, costo_pedir, costo });
                 }
                 else
                 {
                      invetario_final = invetario_final - demanda[i];
-                    costo_mantenimiento = invetario_final * tasa_mantenimiento;
+                    costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
                     costo = costo + costo_mantenimiento;
                     dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], 0, invetario_final, costo_mantenimiento, 0, costo });
                 }
