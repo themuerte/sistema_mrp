@@ -61,5 +61,24 @@ namespace sistema_mrp.vistas.Administracion
         {
 
         }
+
+        private void tbDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDescripcion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
