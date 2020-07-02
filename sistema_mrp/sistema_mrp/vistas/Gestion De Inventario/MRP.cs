@@ -95,7 +95,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
                 if (rdr_LTC.Checked == true)
                 {
-
+                    LTC tC = new LTC(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
+                    tC.get_LTC(dtg_resultado);
                 }
 
                

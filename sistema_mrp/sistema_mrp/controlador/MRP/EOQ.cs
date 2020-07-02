@@ -90,10 +90,10 @@ namespace sistema_mrp.controlador.MRP
             {
                 if (demanda[i] > invetario_final)
                 {
-                    invetario_final = Q_optimo;
+                    invetario_final = Q_optimo - demanda[i];
                     costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
                     costo = costo + costo_mantenimiento + costo_pedir;
-                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Q_optimo + demanda[i], invetario_final, costo_mantenimiento, costo_pedir, costo });
+                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Q_optimo , invetario_final, costo_mantenimiento, costo_pedir, costo });
                 }
                 else
                 {
