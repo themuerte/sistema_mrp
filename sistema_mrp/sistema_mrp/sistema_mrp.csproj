@@ -127,30 +127,6 @@
     <Compile Include="vistas\Gestion De Inventario\principal_GI.Designer.cs">
       <DependentUpon>principal_GI.cs</DependentUpon>
     </Compile>
-    <Compile Include="vistas\Historial\modelo_QyP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Historial\modelo_QyP.Designer.cs">
-      <DependentUpon>modelo_QyP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\Historial\MRP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Historial\MRP.Designer.cs">
-      <DependentUpon>MRP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\Historial\plan_agregado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Historial\plan_agregado.Designer.cs">
-      <DependentUpon>plan_agregado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="vistas\Historial\principal_historial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vistas\Historial\principal_historial.Designer.cs">
-      <DependentUpon>principal_historial.cs</DependentUpon>
-    </Compile>
     <Compile Include="vistas\inicio_P.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,18 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\Gestion De Inventario\principal_GI.resx">
       <DependentUpon>principal_GI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Historial\modelo_QyP.resx">
-      <DependentUpon>modelo_QyP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Historial\MRP.resx">
-      <DependentUpon>MRP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Historial\plan_agregado.resx">
-      <DependentUpon>plan_agregado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="vistas\Historial\principal_historial.resx">
-      <DependentUpon>principal_historial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vistas\inicio_P.resx">
       <DependentUpon>inicio_P.cs</DependentUpon>

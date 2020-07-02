@@ -839,6 +839,7 @@
             this.Controls.Add(this.dgvBOM);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Administracion";
             this.Text = "Administracion";
             this.Load += new System.EventHandler(this.Administracion_Load);

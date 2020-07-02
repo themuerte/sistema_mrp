@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_inicio = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_historia = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -75,28 +74,12 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btn_historia
-            // 
-            this.btn_historia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
-            this.btn_historia.FlatAppearance.BorderSize = 0;
-            this.btn_historia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btn_historia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_historia.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_historia.ForeColor = System.Drawing.Color.White;
-            this.btn_historia.Location = new System.Drawing.Point(50, 233);
-            this.btn_historia.Name = "btn_historia";
-            this.btn_historia.Size = new System.Drawing.Size(157, 58);
-            this.btn_historia.TabIndex = 2;
-            this.btn_historia.Text = "Historial";
-            this.btn_historia.UseVisualStyleBackColor = false;
-            this.btn_historia.Click += new System.EventHandler(this.btn_historia_Click);
-            // 
             // btn_salir
             // 
             this.btn_salir.FlatAppearance.BorderSize = 0;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
-            this.btn_salir.Location = new System.Drawing.Point(12, 398);
+            this.btn_salir.Location = new System.Drawing.Point(12, 322);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(35, 34);
             this.btn_salir.TabIndex = 3;
@@ -112,7 +95,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(50, 325);
+            this.button2.Location = new System.Drawing.Point(50, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 58);
             this.button2.TabIndex = 4;
@@ -124,13 +107,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 444);
+            this.ClientSize = new System.Drawing.Size(259, 367);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.btn_historia);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "btn_GesInventario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -143,7 +125,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbl_inicio;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btn_historia;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button button2;
     }

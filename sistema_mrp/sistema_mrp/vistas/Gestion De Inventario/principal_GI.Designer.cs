@@ -174,7 +174,7 @@
             this.ClientSize = new System.Drawing.Size(1173, 627);
             this.Controls.Add(this.panel_prin);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "principal_GI";
             this.Text = "principal_GI";
             this.panel1.ResumeLayout(false);
