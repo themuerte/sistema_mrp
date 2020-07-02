@@ -217,6 +217,9 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btnCalcular2_Click(object sender, EventArgs e)
         {
+            dtg_resultado.Rows.Clear();
+            dtg_resultado.Columns.Clear();
+
             int index = dgvProducto.SelectedRows[0].Index;
             int idProducto = int.Parse(dgvProducto.Rows[index].Cells[0].Value.ToString());
             Producto prod = Producto.GetProductoById(idProducto);
