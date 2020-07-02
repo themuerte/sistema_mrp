@@ -78,6 +78,16 @@ namespace sistema_mrp.controlador
             con.Close();
             return planAgregado;
         }
+        public static double [] GetDemandaEstimadaByProducto(int idProducto)
+        {
+            double[] demanda = new double[12];
+            List<PlanProducto> planAgregado = PlanProducto.GetPlanProductosByProducto(idProducto);
+            for (int i = 0; i < demanda.Length; i++)
+            {
+                demanda[i] = planAgregado[i].demandaEstimada;
+            }
+            return demanda;
+        }
         public static PlanProducto GetPlanProductosById(int idPlanProducto)
         {
 

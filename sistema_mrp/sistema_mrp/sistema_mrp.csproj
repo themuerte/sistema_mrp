@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controlador\Empresa.cs" />
+    <Compile Include="controlador\Fila.cs" />
     <Compile Include="controlador\Modelo_P.cs" />
     <Compile Include="controlador\Modelo_Q.cs" />
     <Compile Include="controlador\Conexion.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="controlador\MRP\LTC.cs" />
     <Compile Include="controlador\PlanAgregado.cs" />
     <Compile Include="controlador\PlanProducto.cs" />
+    <Compile Include="controlador\plan_agregado\EstrategiaPersecucion.cs" />
     <Compile Include="controlador\Producto.cs" />
     <Compile Include="controlador\Trucazos.cs" />
     <Compile Include="vistas\Administracion\EditDiasHabiles.cs">
@@ -227,7 +229,6 @@
     <Content Include="vistas\shapes-and-symbols.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="controlador\plan_agregado\" />
     <Folder Include="modelo\" />
   </ItemGroup>
   <ItemGroup>
