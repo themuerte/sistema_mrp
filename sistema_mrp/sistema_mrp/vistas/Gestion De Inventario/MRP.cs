@@ -18,8 +18,6 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             InitializeComponent();
         }
 
-      
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             int cant = Convert.ToInt32(txt_semanas.Text);
@@ -76,32 +74,145 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 }
             }
 
-            if (rdr_L4L.Checked == true)
+            if (txt_costoUnidad.Text==""||txt_costoPedir.Text==""||txt_tasaMantenimiento.Text=="")
             {
-                L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
-                l4.get_L4L(dtg_resultado);
-                
+                MessageBox.Show("Revise los datos ingresados", "AVISO!!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
-            if (rdr_EOQ.Checked == true)
+            else
             {
-                EOQ oQ = new EOQ(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
-                oQ.get_EOQ(dtg_resultado);
-            }
-            
-            if (rdr_LTC.Checked == true)
-            {
-                
-            }
-            
-            if (rdr_LUC.Checked == true)
-            {
-                
-            }
+                if (rdr_L4L.Checked == true)
+                {
+                    L4L l4 = new L4L(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
+                    l4.get_L4L(dtg_resultado);
 
+                }
+
+                if (rdr_EOQ.Checked == true)
+                {
+                    EOQ oQ = new EOQ(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
+                    oQ.get_EOQ(dtg_resultado);
+                }
+
+                if (rdr_LTC.Checked == true)
+                {
+
+                }
+
+                if (rdr_LUC.Checked == true)
+                {
+
+                }
+
+            }
         }
 
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_semanas.Text = "";
+            txt_tasaMantenimiento.Text = "";
+            txt_costoUnidad.Text = "";
+            txt_costoPedir.Text = "";
 
+            dtg_semanas.Rows.Clear();
+            dtg_semanas.Columns.Clear();
+            dtg_resultado.Rows.Clear();
+            dtg_resultado.Columns.Clear();
 
+            rdr_EOQ.Checked = false;
+            rdr_L4L.Checked = false;
+            rdr_LTC.Checked = false;
+            rdr_LUC.Checked = false;
+        }
+
+        private void txt_semanas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_costoUnidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_costoPedir_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_tasaMantenimiento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // solo 1 punto decimal
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dtg_semanas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    if (char.IsSeparator(e.KeyChar))
+                    {
+                        e.Handled = false;
+                    }
+                    else
+                    {
+                        e.Handled = true;
+                    }
+                }
+            }
+        }
+
+        private void dtg_semanas_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridViewTextBoxEditingControl dataGridViewTextBoxEditingControl = (DataGridViewTextBoxEditingControl)e.Control;
+            dataGridViewTextBoxEditingControl.KeyPress -= new KeyPressEventHandler(this.dtg_semanas_KeyPress);
+            dataGridViewTextBoxEditingControl.KeyPress += new KeyPressEventHandler(this.dtg_semanas_KeyPress);
+        }
+
+       
     }
 }
