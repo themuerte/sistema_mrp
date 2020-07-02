@@ -56,6 +56,9 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
+            dtg_resultado.Rows.Clear();
+            dtg_resultado.Columns.Clear();
+
             List<int> demanda = new List<int>();
             for (int i = 0; i < dtg_semanas.Rows.Count - 1; i++)
             {
