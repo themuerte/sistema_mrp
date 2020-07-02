@@ -95,13 +95,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
                 if (rdr_LTC.Checked == true)
                 {
-
+                    LTC tC = new LTC(Convert.ToInt16(txt_semanas.Text), Convert.ToDouble(txt_costoPedir.Text), Convert.ToDouble(txt_costoUnidad.Text), Convert.ToDouble(txt_tasaMantenimiento.Text), demanda);
+                    tC.get_LTC(dtg_resultado);
                 }
 
-                if (rdr_LUC.Checked == true)
-                {
-
-                }
+               
 
             }
         }
@@ -121,7 +119,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             rdr_EOQ.Checked = false;
             rdr_L4L.Checked = false;
             rdr_LTC.Checked = false;
-            rdr_LUC.Checked = false;
+          
         }
 
         private void txt_semanas_KeyPress(object sender, KeyPressEventArgs e)
@@ -212,7 +210,5 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             dataGridViewTextBoxEditingControl.KeyPress -= new KeyPressEventHandler(this.dtg_semanas_KeyPress);
             dataGridViewTextBoxEditingControl.KeyPress += new KeyPressEventHandler(this.dtg_semanas_KeyPress);
         }
-
-       
     }
 }

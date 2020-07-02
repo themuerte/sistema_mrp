@@ -65,6 +65,7 @@
     <Compile Include="controlador\Conexion.cs" />
     <Compile Include="controlador\MRP\EOQ.cs" />
     <Compile Include="controlador\MRP\L4L.cs" />
+    <Compile Include="controlador\MRP\LTC.cs" />
     <Compile Include="controlador\PlanAgregado.cs" />
     <Compile Include="controlador\PlanProducto.cs" />
     <Compile Include="controlador\plan_agregado\EstrategiaPersecucion.cs" />

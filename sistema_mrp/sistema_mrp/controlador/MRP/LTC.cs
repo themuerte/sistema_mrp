@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace sistema_mrp.controlador.MRP
 {
-    class EOQ
+    class LTC
     {
         private int semanas;
         private double costo_pedir;
@@ -15,7 +15,7 @@ namespace sistema_mrp.controlador.MRP
         private double tasa_mantenimiento;
         private List<int> demanda = new List<int>();
 
-        public EOQ(int semanas, double costo_pedir, double costo_unitario,double tasa_mantenimiento, List<int> demanda)
+        public LTC(int semanas, double costo_pedir, double costo_unitario, double tasa_mantenimiento, List<int> demanda)
         {
             this.semanas = semanas;
             this.costo_pedir = costo_pedir;
@@ -24,17 +24,17 @@ namespace sistema_mrp.controlador.MRP
             this.demanda = demanda;
         }
 
-        public void get_EOQ(DataGridView dtg_resultado)
+        public void get_LTC(DataGridView dtg_resultado)
         {
             DataGridViewTextBoxColumn semanas1 = new DataGridViewTextBoxColumn();
             semanas1.HeaderText = "Semana";
-            semanas1.Width = 70;
+            semanas1.Width = 100;
             semanas1.ReadOnly = true;
             dtg_resultado.Columns.Add(semanas1);
 
             DataGridViewTextBoxColumn demanda1 = new DataGridViewTextBoxColumn();
             demanda1.HeaderText = "Demanda";
-            demanda1.Width = 80;
+            demanda1.Width = 100;
             demanda1.ReadOnly = true;
             dtg_resultado.Columns.Add(demanda1);
 
@@ -68,45 +68,15 @@ namespace sistema_mrp.controlador.MRP
             costo_total.ReadOnly = true;
             dtg_resultado.Columns.Add(costo_total);
 
-            double demanda_promedio = 0;
-            double suma = 0;
-            double Q_optimo;
-            double H;
+            int tabla_produccion = 0;
+            int suma = 0;
 
-            for(int i = 0; i < semanas; i++)
+            for (int i = 0; i < semanas; i++)
             {
-                suma += demanda[i];      
-            }
-
-            demanda_promedio = (suma / semanas) * 52;
-            H = (tasa_mantenimiento/100) * costo_unitario * 52;
-            Q_optimo = Math.Sqrt((2* demanda_promedio * costo_pedir)/H);
-
-            double invetario_final = 0;
-            double costo = 0;
-            double costo_mantenimiento = 0;
-            
-            for(int i = 0; i < semanas; i++)
-            {
-                if (demanda[i] > invetario_final)
-                {
-                    invetario_final = Q_optimo - demanda[i];
-                    costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
-                    costo = costo + costo_mantenimiento + costo_pedir;
-                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], Q_optimo , invetario_final, costo_mantenimiento, costo_pedir, costo });
-                }
-                else
-                {
-                    invetario_final = invetario_final - demanda[i];
-                    costo_mantenimiento = invetario_final * (tasa_mantenimiento/10);
-                    costo = costo + costo_mantenimiento;
-                    dtg_resultado.Rows.Add(new object[] { i + 1, demanda[i], 0, invetario_final, costo_mantenimiento, 0, costo });
-                }
-
+                suma += demanda[i];
             }
 
         }
-
 
     }
 }
