@@ -460,6 +460,7 @@
             this.tbNumeroPeriodos.Name = "tbNumeroPeriodos";
             this.tbNumeroPeriodos.Size = new System.Drawing.Size(100, 21);
             this.tbNumeroPeriodos.TabIndex = 45;
+            this.tbNumeroPeriodos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumeroPeriodos_KeyPress);
             // 
             // label9
             // 

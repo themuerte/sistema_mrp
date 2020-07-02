@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_demanda = new System.Windows.Forms.Label();
@@ -460,34 +460,34 @@
             // 
             // cModeloP
             // 
-            chartArea4.Name = "ChartArea1";
-            this.cModeloP.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.cModeloP.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.cModeloP.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.cModeloP.Legends.Add(legend1);
             this.cModeloP.Location = new System.Drawing.Point(478, 176);
             this.cModeloP.Name = "cModeloP";
             this.cModeloP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Legend = "Legend1";
-            series10.Name = "Inventario";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series11.Legend = "Legend1";
-            series11.Name = "QOptimo";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Legend = "Legend1";
-            series12.Name = "Inv, Prom.";
-            this.cModeloP.Series.Add(series10);
-            this.cModeloP.Series.Add(series11);
-            this.cModeloP.Series.Add(series12);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Inventario";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "QOptimo";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Inv, Prom.";
+            this.cModeloP.Series.Add(series1);
+            this.cModeloP.Series.Add(series2);
+            this.cModeloP.Series.Add(series3);
             this.cModeloP.Size = new System.Drawing.Size(427, 300);
             this.cModeloP.TabIndex = 35;
             this.cModeloP.Text = "Modelo P";
-            title4.Name = "Title1";
-            title4.Text = "Modelo P";
-            this.cModeloP.Titles.Add(title4);
+            title1.Name = "Title1";
+            title1.Text = "Modelo P";
+            this.cModeloP.Titles.Add(title1);
             // 
             // tbNumeroPeriodos
             // 
@@ -496,6 +496,7 @@
             this.tbNumeroPeriodos.Name = "tbNumeroPeriodos";
             this.tbNumeroPeriodos.Size = new System.Drawing.Size(100, 21);
             this.tbNumeroPeriodos.TabIndex = 37;
+            this.tbNumeroPeriodos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumeroPeriodos_KeyPress);
             // 
             // label12
             // 
