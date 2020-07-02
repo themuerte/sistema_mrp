@@ -42,7 +42,6 @@
             this.tbDescripcion.Name = "tbDescripcion";
             this.tbDescripcion.Size = new System.Drawing.Size(169, 20);
             this.tbDescripcion.TabIndex = 33;
-            this.tbDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDescripcion_KeyPress);
             // 
             // label1
             // 
@@ -59,7 +58,6 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(169, 20);
             this.tbNombre.TabIndex = 30;
-            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // lNombreComponente
             // 
