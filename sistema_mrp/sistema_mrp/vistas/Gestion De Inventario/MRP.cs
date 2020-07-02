@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_mrp.controlador;
 using sistema_mrp.controlador.MRP;
 
 namespace sistema_mrp.vistas.Gestion_De_Inventario
@@ -212,6 +213,66 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             DataGridViewTextBoxEditingControl dataGridViewTextBoxEditingControl = (DataGridViewTextBoxEditingControl)e.Control;
             dataGridViewTextBoxEditingControl.KeyPress -= new KeyPressEventHandler(this.dtg_semanas_KeyPress);
             dataGridViewTextBoxEditingControl.KeyPress += new KeyPressEventHandler(this.dtg_semanas_KeyPress);
+        }
+
+        private void btnCalcular2_Click(object sender, EventArgs e)
+        {
+            int index = dgvProducto.SelectedRows[0].Index;
+            int idProducto = int.Parse(dgvProducto.Rows[index].Cells[0].Value.ToString());
+            Producto prod = Producto.GetProductoById(idProducto);
+            int numSemanas = int.Parse(tbSemanas.Text);
+            Empresa empresa = Empresa.GetEmpresa();
+            List<int> demandaSemanal = new List<int>();
+            double[] demandaMensual = PlanProducto.GetDemandaEstimadaByProducto(prod.IdProducto);
+            int contador = 0;
+            for (int i = 0; i < demandaMensual.Length; i++)
+            {
+                int semana = 0;
+                while(semana < 4)
+                {
+                    if(contador == numSemanas)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        demandaSemanal.Add((int)Math.Round(demandaMensual[i] / 4));
+                        contador++;
+                    }
+                }    
+            }
+            if (rdr_L4L.Checked == true)
+            {
+                L4L l4 = new L4L(numSemanas, prod.CostoPedir, prod.CostoUnitario,prod.CostoMantenimiento , demandaSemanal);
+                l4.get_L4L(dtg_resultado);
+
+            }
+
+            if (rdr_EOQ.Checked == true)
+            {
+                EOQ oQ = new EOQ(numSemanas, prod.CostoPedir, prod.CostoUnitario, prod.CostoMantenimiento, demandaSemanal);
+                oQ.get_EOQ(dtg_resultado);
+            }
+
+            if (rdr_LTC.Checked == true)
+            {
+                LTC tC = new LTC(numSemanas, prod.CostoPedir, prod.CostoUnitario, prod.CostoMantenimiento, demandaSemanal);
+                tC.get_LTC(dtg_resultado);
+            }
+        }
+
+        private void MRP_Load(object sender, EventArgs e)
+        {
+            cargarProducto();
+        }
+        public void cargarProducto()
+        {
+            Trucazos.vaciarDataGridView(dgvProducto);
+            List<Object[]> productos = Producto.GetProductosCorto();
+            foreach (Object[] producto in productos)
+            {
+                dgvProducto.Rows.Add(producto);
+            }
         }
     }
 }
