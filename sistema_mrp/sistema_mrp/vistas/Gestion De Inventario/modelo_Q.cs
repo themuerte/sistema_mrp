@@ -250,17 +250,16 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             double stockSeguridad = double.Parse(txt_inventarioSegu.Text);
             double tiempoPedido = double.Parse(txt_TiempoEntreP.Text);
             double qOptimo = double.Parse(txt_Qoptimo.Text);
-            if(tiempoPedido <= 30)
+            
+            for (int i = 0; i < numeroPeriodos; i++)
             {
-                for (int i = 0; i < numeroPeriodos; i++)
-                {
-                    sQoptimo.Points.AddXY(i, qOptimo);
-                    sInventario.Points.AddXY(i - 0.001, 0);
-                    sInventario.Points.AddXY(i, qOptimo);
-                    sInventario.Points.AddXY(Math.Round(i + tiempoPedido/30,2), stockSeguridad);
-                    sSSeguridad.Points.AddXY(i, stockSeguridad);
-                }
+                sQoptimo.Points.AddXY(i, qOptimo);
+                sInventario.Points.AddXY(i - 0.001, 0);
+                sInventario.Points.AddXY(i, qOptimo);
+                sInventario.Points.AddXY(Math.Round(i + tiempoPedido/30,2), stockSeguridad);
+                sSSeguridad.Points.AddXY(i, stockSeguridad);
             }
+            
             
         }
     }

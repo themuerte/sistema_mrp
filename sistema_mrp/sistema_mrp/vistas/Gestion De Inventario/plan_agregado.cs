@@ -105,12 +105,22 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 ep.E = empresa;
                 List<Fila> resultado = ep.getPlanAgregadoSinBD(producto, diasHabiles, demanda, empresa);
                 rellenarPlaneacion(resultado, numPeriodos);
+                lTotal.Text = "Total: " + Math.Round(ep.CostoTotal, 2);
 
-            }else if (bFuerzasNiveladas.Checked)
+            }
+            else if (bFuerzasNiveladas.Checked)
             {
                 FuerzaNivelada fn = new FuerzaNivelada(numPeriodos, producto, demanda.ToArray(), diasHabiles.ToArray(), empresa);
                 List<Fila> resultado = fn.getPlanAgregado();
                 rellenarPlaneacion(resultado, numPeriodos);
+                lTotal.Text = "Total: " + Math.Round(fn.CostoTotal, 2);
+            }
+            else if (bOutsourcing.Checked)
+            {
+                Outsourcing os = new Outsourcing(demanda.ToArray(), diasHabiles.ToArray(), producto,numPeriodos, empresa);
+                List<Fila> resultado = os.getPlanAgregado();
+                rellenarPlaneacion(resultado, numPeriodos);
+                lTotal.Text = "Total: " + Math.Round(os.CostoTotal, 2);
             }
         }
         
@@ -152,6 +162,12 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     List<Fila> resultado = fn.getPlanAgregado();
                     rellenarPlaneacion(resultado, numMeses);
                     lTotal.Text = "Total: " + Math.Round(fn.CostoTotal, 2);
+                }else if (bOutsourcing.Checked)
+                {
+                    Outsourcing os = new Outsourcing(prod, numMeses);
+                    List<Fila> resultado = os.getPlanAgregado();
+                    rellenarPlaneacion(resultado, numMeses);
+                    lTotal.Text = "Total: " + Math.Round(os.CostoTotal, 2);
                 }
             }
             catch (Exception ex)
@@ -200,6 +216,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                     }
                     dtgResultado.Rows.Add(row);
                 }
+                Trucazos.expandirColumna(dtgResultado);
             }
             catch (Exception ex)
             {
@@ -208,10 +225,33 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             }
         }
 
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             dtgResultado.Rows.Clear();
             dtgResultado.Columns.Clear();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            dtg_semanas.Rows.Clear();
+            dtg_semanas.Columns.Clear();
+            limpiarCampos();
+        }
+
+        private void limpiarCampos()
+        {
+            tbCostoDeProducción.Text = "";
+            tbMantenimiento.Text = "";
+            tbCostoContratación.Text = "";
+            tbInventarioInicial.Text = "";
+            tbCostoDeSubContratación.Text = "";
+            tbCostoDeDespido.Text = "";
+            tbHorasRequeridas.Text = "";
+            tbStockSeguridad.Text = "";
+            tbCostoFaltante.Text = "";
+            tbCostoHorasNormal.Text = "";
+            tbFuerzaLaboral.Text = "";
         }
     }
 }

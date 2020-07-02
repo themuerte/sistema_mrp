@@ -421,6 +421,7 @@
             this.btnLimpiar.TabIndex = 38;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // panel3
             // 
@@ -457,7 +458,7 @@
             // dtgResultado
             // 
             this.dtgResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgResultado.Location = new System.Drawing.Point(49, 425);
+            this.dtgResultado.Location = new System.Drawing.Point(49, 436);
             this.dtgResultado.Name = "dtgResultado";
             this.dtgResultado.Size = new System.Drawing.Size(711, 187);
             this.dtgResultado.TabIndex = 42;
@@ -600,7 +601,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(795, 270);
+            this.button1.Location = new System.Drawing.Point(811, 473);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 28);
             this.button1.TabIndex = 47;
