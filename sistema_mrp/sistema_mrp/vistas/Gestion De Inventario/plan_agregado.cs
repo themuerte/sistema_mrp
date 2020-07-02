@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sistema_mrp.controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema_mrp.controlador.plan_agregado;
 
 namespace sistema_mrp.vistas.Gestion_De_Inventario
 {
@@ -68,7 +70,81 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             }
         }
 
+        private void plan_agregado_Load(object sender, EventArgs e)
+        {
+            cargarProducto();
+        }
 
+        public void cargarProducto()
+        {
+            Trucazos.vaciarDataGridView(dgvProducto);
+            List<Object[]> productos = Producto.GetProductosCorto();
+            foreach (Object[] producto in productos)
+            {
+                dgvProducto.Rows.Add(producto);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = dgvProducto.SelectedRows[0].Index;
+                int idProducto = int.Parse(dgvProducto.Rows[index].Cells[0].Value.ToString());
+                Producto prod = Producto.GetProductoById(idProducto);
+                int numMeses = int.Parse(tbMeses.Text);
+                if (bPersecución.Checked)
+                {
+                    EstrategiaPersecucion persecucion = new EstrategiaPersecucion(prod, numMeses);
+                    List<Fila> resultado = persecucion.getPlanAgregado();
+                    rellenarPlaneacion(resultado);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void rellenarPlaneacion(List<Fila> resultado)
+        {
+            try
+            {
+                int numMeses = int.Parse(tbMeses.Text);
+                Trucazos.vaciarDataGridView(dtgResultado);
+                dtgResultado.Columns.Clear();
+                DataGridViewTextBoxColumn primeraCol = new DataGridViewTextBoxColumn();
+                primeraCol.HeaderText = "";
+                primeraCol.ReadOnly = true;
+                dtgResultado.Columns.Add(primeraCol);
+
+                for (int i = 0; i < numMeses; i++)
+                {
+                    DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                    col.HeaderText = "Periodo " + (i + 1);
+                    col.ReadOnly = true;
+                    dtgResultado.Columns.Add(col);
+                }
+
+
+                foreach (Fila fila in resultado)
+                {
+                    Object[] row = new object[numMeses + 1];
+                    row[0] = fila.NombreFila;
+                    for (int i = 0; i < numMeses; i++)
+                    {
+                        row[i + 1] = fila.Valores[i];
+                    }
+                    dtgResultado.Rows.Add(row);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+        }
 
     }
 }

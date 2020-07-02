@@ -38,9 +38,9 @@ namespace sistema_mrp.controlador
             List<PlanAgregado> planAgregado = new List<PlanAgregado>();
             while (reader.Read())
             {
-                int vidPlanAgregado= reader.GetInt32(0);
+                int vidPlanAgregado = reader.GetInt32(0);
                 string vMes = reader.GetString(1);
-                double vDiasHabiles= reader.GetDouble(2);
+                double vDiasHabiles = reader.GetDouble(2);
 
                 PlanAgregado plan = new PlanAgregado(vidPlanAgregado, vMes, vDiasHabiles);
                 planAgregado.Add(plan);
@@ -49,6 +49,19 @@ namespace sistema_mrp.controlador
             con.Close();
             return planAgregado;
         }
+        public static double[] getDiasHabiles()
+        {
+            double[] dias = new double[12];
+            var emp = PlanAgregado.getPlanAgregados();
+            for (int i = 0; i < dias.Length; i++)
+            {
+                dias[i] = emp[i].DiasHabiles;
+            }
+            return dias;
+        }
+
+
+
         public static PlanAgregado GetPlanAgregadoById(int idPlanAgregado)
         {
 
@@ -64,7 +77,7 @@ namespace sistema_mrp.controlador
                 double vDiasHabiles = reader.GetDouble(2);
 
                 planAgregado = new PlanAgregado(vidPlanAgregado, vMes, vDiasHabiles);
-            
+
 
             }
             con.Close();
@@ -81,6 +94,7 @@ namespace sistema_mrp.controlador
             con.Close();
             return res;
         }
+        
 
     }
 }

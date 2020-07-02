@@ -29,13 +29,6 @@ namespace sistema_mrp.vistas.Administracion
         {
             
         }
-    
-
-
-   
-        
-    
-
         private void lNombreComponente_Click(object sender, EventArgs e)
         {
 
