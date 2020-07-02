@@ -128,7 +128,7 @@
             // 
             this.txtplanes.AutoSize = true;
             this.txtplanes.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtplanes.Location = new System.Drawing.Point(792, 145);
+            this.txtplanes.Location = new System.Drawing.Point(820, 147);
             this.txtplanes.Name = "txtplanes";
             this.txtplanes.Size = new System.Drawing.Size(55, 19);
             this.txtplanes.TabIndex = 7;
@@ -139,7 +139,7 @@
             this.bPersecución.AutoSize = true;
             this.bPersecución.Checked = true;
             this.bPersecución.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bPersecución.Location = new System.Drawing.Point(795, 171);
+            this.bPersecución.Location = new System.Drawing.Point(823, 173);
             this.bPersecución.Name = "bPersecución";
             this.bPersecución.Size = new System.Drawing.Size(87, 18);
             this.bPersecución.TabIndex = 8;
@@ -151,7 +151,7 @@
             // 
             this.bFuerzasNiveladas.AutoSize = true;
             this.bFuerzasNiveladas.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bFuerzasNiveladas.Location = new System.Drawing.Point(795, 195);
+            this.bFuerzasNiveladas.Location = new System.Drawing.Point(823, 197);
             this.bFuerzasNiveladas.Name = "bFuerzasNiveladas";
             this.bFuerzasNiveladas.Size = new System.Drawing.Size(108, 18);
             this.bFuerzasNiveladas.TabIndex = 9;
@@ -162,7 +162,7 @@
             // 
             this.bOutsourcing.AutoSize = true;
             this.bOutsourcing.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bOutsourcing.Location = new System.Drawing.Point(795, 219);
+            this.bOutsourcing.Location = new System.Drawing.Point(823, 221);
             this.bOutsourcing.Name = "bOutsourcing";
             this.bOutsourcing.Size = new System.Drawing.Size(90, 18);
             this.bOutsourcing.TabIndex = 10;
@@ -173,7 +173,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 195);
+            this.label3.Location = new System.Drawing.Point(20, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 19);
             this.label3.TabIndex = 11;
@@ -183,7 +183,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 221);
+            this.label4.Location = new System.Drawing.Point(33, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 14);
             this.label4.TabIndex = 12;
@@ -193,7 +193,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(47, 243);
+            this.label5.Location = new System.Drawing.Point(60, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 14);
             this.label5.TabIndex = 13;
@@ -203,7 +203,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(26, 266);
+            this.label6.Location = new System.Drawing.Point(41, 305);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 14);
             this.label6.TabIndex = 14;
@@ -213,17 +213,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 290);
+            this.label7.Location = new System.Drawing.Point(55, 340);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 14);
             this.label7.TabIndex = 16;
             this.label7.Text = "Inventario Inicial";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(260, 291);
+            this.label8.Location = new System.Drawing.Point(301, 340);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 14);
             this.label8.TabIndex = 20;
@@ -233,7 +234,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(265, 267);
+            this.label9.Location = new System.Drawing.Point(307, 305);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 14);
             this.label9.TabIndex = 19;
@@ -243,7 +244,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(266, 244);
+            this.label10.Location = new System.Drawing.Point(307, 268);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 14);
             this.label10.TabIndex = 18;
@@ -253,7 +254,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(223, 222);
+            this.label11.Location = new System.Drawing.Point(264, 234);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 14);
             this.label11.TabIndex = 17;
@@ -262,7 +263,7 @@
             // tbCostoDeProducción
             // 
             this.tbCostoDeProducción.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoDeProducción.Location = new System.Drawing.Point(137, 219);
+            this.tbCostoDeProducción.Location = new System.Drawing.Point(154, 227);
             this.tbCostoDeProducción.Name = "tbCostoDeProducción";
             this.tbCostoDeProducción.Size = new System.Drawing.Size(80, 21);
             this.tbCostoDeProducción.TabIndex = 21;
@@ -270,7 +271,7 @@
             // tbMantenimiento
             // 
             this.tbMantenimiento.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMantenimiento.Location = new System.Drawing.Point(137, 241);
+            this.tbMantenimiento.Location = new System.Drawing.Point(153, 261);
             this.tbMantenimiento.Name = "tbMantenimiento";
             this.tbMantenimiento.Size = new System.Drawing.Size(81, 21);
             this.tbMantenimiento.TabIndex = 22;
@@ -278,7 +279,7 @@
             // tbCostoContratación
             // 
             this.tbCostoContratación.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoContratación.Location = new System.Drawing.Point(137, 264);
+            this.tbCostoContratación.Location = new System.Drawing.Point(153, 297);
             this.tbCostoContratación.Name = "tbCostoContratación";
             this.tbCostoContratación.Size = new System.Drawing.Size(81, 21);
             this.tbCostoContratación.TabIndex = 23;
@@ -286,7 +287,7 @@
             // tbInventarioInicial
             // 
             this.tbInventarioInicial.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbInventarioInicial.Location = new System.Drawing.Point(137, 288);
+            this.tbInventarioInicial.Location = new System.Drawing.Point(153, 333);
             this.tbInventarioInicial.Name = "tbInventarioInicial";
             this.tbInventarioInicial.Size = new System.Drawing.Size(81, 21);
             this.tbInventarioInicial.TabIndex = 24;
@@ -294,7 +295,7 @@
             // tbCostoDeSubContratación
             // 
             this.tbCostoDeSubContratación.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoDeSubContratación.Location = new System.Drawing.Point(371, 219);
+            this.tbCostoDeSubContratación.Location = new System.Drawing.Point(412, 227);
             this.tbCostoDeSubContratación.Name = "tbCostoDeSubContratación";
             this.tbCostoDeSubContratación.Size = new System.Drawing.Size(67, 21);
             this.tbCostoDeSubContratación.TabIndex = 25;
@@ -302,15 +303,15 @@
             // tbCostoDeDespido
             // 
             this.tbCostoDeDespido.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoDeDespido.Location = new System.Drawing.Point(372, 241);
+            this.tbCostoDeDespido.Location = new System.Drawing.Point(412, 261);
             this.tbCostoDeDespido.Name = "tbCostoDeDespido";
-            this.tbCostoDeDespido.Size = new System.Drawing.Size(66, 21);
+            this.tbCostoDeDespido.Size = new System.Drawing.Size(67, 21);
             this.tbCostoDeDespido.TabIndex = 26;
             // 
             // tbHorasRequeridas
             // 
             this.tbHorasRequeridas.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbHorasRequeridas.Location = new System.Drawing.Point(371, 264);
+            this.tbHorasRequeridas.Location = new System.Drawing.Point(412, 297);
             this.tbHorasRequeridas.Name = "tbHorasRequeridas";
             this.tbHorasRequeridas.Size = new System.Drawing.Size(67, 21);
             this.tbHorasRequeridas.TabIndex = 27;
@@ -318,7 +319,7 @@
             // tbStockSeguridad
             // 
             this.tbStockSeguridad.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStockSeguridad.Location = new System.Drawing.Point(371, 288);
+            this.tbStockSeguridad.Location = new System.Drawing.Point(412, 333);
             this.tbStockSeguridad.Name = "tbStockSeguridad";
             this.tbStockSeguridad.Size = new System.Drawing.Size(67, 21);
             this.tbStockSeguridad.TabIndex = 28;
@@ -326,7 +327,7 @@
             // tbFuerzaLaboral
             // 
             this.tbFuerzaLaboral.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFuerzaLaboral.Location = new System.Drawing.Point(562, 288);
+            this.tbFuerzaLaboral.Location = new System.Drawing.Point(629, 333);
             this.tbFuerzaLaboral.Name = "tbFuerzaLaboral";
             this.tbFuerzaLaboral.Size = new System.Drawing.Size(67, 21);
             this.tbFuerzaLaboral.TabIndex = 36;
@@ -334,7 +335,7 @@
             // tbCostoHorasExtras
             // 
             this.tbCostoHorasExtras.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoHorasExtras.Location = new System.Drawing.Point(562, 264);
+            this.tbCostoHorasExtras.Location = new System.Drawing.Point(629, 297);
             this.tbCostoHorasExtras.Name = "tbCostoHorasExtras";
             this.tbCostoHorasExtras.Size = new System.Drawing.Size(67, 21);
             this.tbCostoHorasExtras.TabIndex = 35;
@@ -342,7 +343,7 @@
             // tbCostoHorasNormal
             // 
             this.tbCostoHorasNormal.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoHorasNormal.Location = new System.Drawing.Point(562, 241);
+            this.tbCostoHorasNormal.Location = new System.Drawing.Point(629, 261);
             this.tbCostoHorasNormal.Name = "tbCostoHorasNormal";
             this.tbCostoHorasNormal.Size = new System.Drawing.Size(67, 21);
             this.tbCostoHorasNormal.TabIndex = 34;
@@ -350,7 +351,7 @@
             // tbCostoFaltante
             // 
             this.tbCostoFaltante.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCostoFaltante.Location = new System.Drawing.Point(562, 219);
+            this.tbCostoFaltante.Location = new System.Drawing.Point(629, 227);
             this.tbCostoFaltante.Name = "tbCostoFaltante";
             this.tbCostoFaltante.Size = new System.Drawing.Size(67, 21);
             this.tbCostoFaltante.TabIndex = 33;
@@ -359,7 +360,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(472, 291);
+            this.label12.Location = new System.Drawing.Point(540, 336);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 14);
             this.label12.TabIndex = 32;
@@ -369,7 +370,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(453, 266);
+            this.label13.Location = new System.Drawing.Point(523, 305);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(103, 14);
             this.label13.TabIndex = 31;
@@ -379,7 +380,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(448, 244);
+            this.label14.Location = new System.Drawing.Point(514, 268);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(112, 14);
             this.label14.TabIndex = 30;
@@ -389,7 +390,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(474, 222);
+            this.label15.Location = new System.Drawing.Point(542, 234);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 14);
             this.label15.TabIndex = 29;
@@ -458,10 +459,11 @@
             // dtgResultado
             // 
             this.dtgResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgResultado.Location = new System.Drawing.Point(49, 436);
+            this.dtgResultado.Location = new System.Drawing.Point(49, 466);
             this.dtgResultado.Name = "dtgResultado";
             this.dtgResultado.Size = new System.Drawing.Size(711, 187);
             this.dtgResultado.TabIndex = 42;
+            this.dtgResultado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgResultado_CellContentClick);
             // 
             // tcModo1
             // 
@@ -470,7 +472,7 @@
             this.tcModo1.Location = new System.Drawing.Point(49, 50);
             this.tcModo1.Name = "tcModo1";
             this.tcModo1.SelectedIndex = 0;
-            this.tcModo1.Size = new System.Drawing.Size(715, 357);
+            this.tcModo1.Size = new System.Drawing.Size(737, 391);
             this.tcModo1.TabIndex = 43;
             // 
             // tabPage1
@@ -509,7 +511,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(707, 331);
+            this.tabPage1.Size = new System.Drawing.Size(729, 365);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Nuevos";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -601,7 +603,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(811, 473);
+            this.button1.Location = new System.Drawing.Point(795, 500);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 28);
             this.button1.TabIndex = 47;
@@ -613,7 +615,7 @@
             // 
             this.lTotal.AutoSize = true;
             this.lTotal.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTotal.Location = new System.Drawing.Point(791, 436);
+            this.lTotal.Location = new System.Drawing.Point(792, 464);
             this.lTotal.Name = "lTotal";
             this.lTotal.Size = new System.Drawing.Size(50, 19);
             this.lTotal.TabIndex = 48;
@@ -623,7 +625,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 648);
+            this.ClientSize = new System.Drawing.Size(952, 674);
             this.Controls.Add(this.lTotal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tcModo1);

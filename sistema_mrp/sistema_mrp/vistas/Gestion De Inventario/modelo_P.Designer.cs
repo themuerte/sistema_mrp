@@ -86,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 4);
+            this.label2.Location = new System.Drawing.Point(22, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 1;
@@ -106,7 +106,7 @@
             // 
             this.lbl_demanda.AutoSize = true;
             this.lbl_demanda.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_demanda.Location = new System.Drawing.Point(148, 116);
+            this.lbl_demanda.Location = new System.Drawing.Point(162, 117);
             this.lbl_demanda.Name = "lbl_demanda";
             this.lbl_demanda.Size = new System.Drawing.Size(57, 14);
             this.lbl_demanda.TabIndex = 3;
@@ -116,7 +116,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(111, 147);
+            this.label5.Location = new System.Drawing.Point(125, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 14);
             this.label5.TabIndex = 4;
@@ -126,17 +126,17 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(159, 230);
+            this.label7.Location = new System.Drawing.Point(144, 236);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 14);
+            this.label7.Size = new System.Drawing.Size(46, 14);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Desvision ";
+            this.label7.Text = "Desvias";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(24, 260);
+            this.label8.Location = new System.Drawing.Point(23, 266);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 14);
             this.label8.TabIndex = 7;
@@ -166,7 +166,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(140, 14);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Cantidad optima de pedir";
+            this.label9.Text = "Cantidad óptima de pedir";
             // 
             // label10
             // 
@@ -222,7 +222,7 @@
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(114, 298);
+            this.btn_calcular.Location = new System.Drawing.Point(124, 317);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(75, 25);
             this.btn_calcular.TabIndex = 19;
@@ -237,7 +237,7 @@
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
-            this.btn_limpiar.Location = new System.Drawing.Point(218, 298);
+            this.btn_limpiar.Location = new System.Drawing.Point(228, 317);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_limpiar.Size = new System.Drawing.Size(75, 25);
@@ -250,11 +250,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 180);
+            this.label6.Location = new System.Drawing.Point(111, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 14);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Periodo de revision";
+            this.label6.Text = "Periodo de revisión";
             // 
             // txt_periodoRevi
             // 
@@ -341,7 +341,7 @@
             this.groupBox1.Controls.Add(this.rdr_anual);
             this.groupBox1.Controls.Add(this.rdr_semanal);
             this.groupBox1.Controls.Add(this.rdr_mensual);
-            this.groupBox1.Location = new System.Drawing.Point(71, 39);
+            this.groupBox1.Location = new System.Drawing.Point(26, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(295, 50);
             this.groupBox1.TabIndex = 29;
@@ -364,7 +364,7 @@
             // 
             // txt_inventarioAct
             // 
-            this.txt_inventarioAct.Location = new System.Drawing.Point(228, 204);
+            this.txt_inventarioAct.Location = new System.Drawing.Point(229, 204);
             this.txt_inventarioAct.Name = "txt_inventarioAct";
             this.txt_inventarioAct.Size = new System.Drawing.Size(100, 20);
             this.txt_inventarioAct.TabIndex = 33;
@@ -373,7 +373,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(125, 207);
+            this.label4.Location = new System.Drawing.Point(125, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 14);
             this.label4.TabIndex = 32;

@@ -18,6 +18,7 @@ namespace sistema_mrp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             Application.Run(new btn_GesInventario());
         }
     }

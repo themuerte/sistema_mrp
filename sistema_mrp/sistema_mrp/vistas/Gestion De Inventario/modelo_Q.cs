@@ -276,5 +276,20 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 e.Handled = true;
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_numPedidos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_inventarioSegu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
