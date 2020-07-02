@@ -319,6 +319,7 @@
             this.tbProbabilidadDemanda.Name = "tbProbabilidadDemanda";
             this.tbProbabilidadDemanda.Size = new System.Drawing.Size(134, 20);
             this.tbProbabilidadDemanda.TabIndex = 49;
+            this.tbProbabilidadDemanda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbProbabilidadDemanda_KeyPress);
             // 
             // label9
             // 
@@ -335,6 +336,7 @@
             this.tbDesviacion.Name = "tbDesviacion";
             this.tbDesviacion.Size = new System.Drawing.Size(134, 20);
             this.tbDesviacion.TabIndex = 47;
+            this.tbDesviacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDesviacion_KeyPress);
             // 
             // label10
             // 
@@ -351,6 +353,7 @@
             this.tbPeriodoRevision.Name = "tbPeriodoRevision";
             this.tbPeriodoRevision.Size = new System.Drawing.Size(134, 20);
             this.tbPeriodoRevision.TabIndex = 45;
+            this.tbPeriodoRevision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPeriodoRevision_KeyPress);
             // 
             // label11
             // 
@@ -367,6 +370,7 @@
             this.tbPlazodeEntregaP.Name = "tbPlazodeEntregaP";
             this.tbPlazodeEntregaP.Size = new System.Drawing.Size(134, 20);
             this.tbPlazodeEntregaP.TabIndex = 43;
+            this.tbPlazodeEntregaP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPlazodeEntregaP_KeyPress);
             // 
             // label12
             // 
@@ -383,6 +387,7 @@
             this.tbDemandaDiaria.Name = "tbDemandaDiaria";
             this.tbDemandaDiaria.Size = new System.Drawing.Size(134, 20);
             this.tbDemandaDiaria.TabIndex = 41;
+            this.tbDemandaDiaria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDemandaDiaria_KeyPress);
             // 
             // label13
             // 
@@ -420,6 +425,7 @@
             this.tbCostoUnitario.Name = "tbCostoUnitario";
             this.tbCostoUnitario.Size = new System.Drawing.Size(134, 20);
             this.tbCostoUnitario.TabIndex = 55;
+            this.tbCostoUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoUnitario_KeyPress);
             // 
             // label15
             // 
@@ -436,6 +442,7 @@
             this.tbCostoFaltante.Name = "tbCostoFaltante";
             this.tbCostoFaltante.Size = new System.Drawing.Size(134, 20);
             this.tbCostoFaltante.TabIndex = 53;
+            this.tbCostoFaltante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoFaltante_KeyPress);
             // 
             // label23
             // 
@@ -452,6 +459,7 @@
             this.tbStockSeguridad.Name = "tbStockSeguridad";
             this.tbStockSeguridad.Size = new System.Drawing.Size(134, 20);
             this.tbStockSeguridad.TabIndex = 51;
+            this.tbStockSeguridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbStockSeguridad_KeyPress);
             // 
             // label22
             // 
@@ -468,6 +476,7 @@
             this.tbInventarioInicial.Name = "tbInventarioInicial";
             this.tbInventarioInicial.Size = new System.Drawing.Size(134, 20);
             this.tbInventarioInicial.TabIndex = 49;
+            this.tbInventarioInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInventarioInicial_KeyPress);
             // 
             // label20
             // 
@@ -484,6 +493,7 @@
             this.tbCostoMantenimiento.Name = "tbCostoMantenimiento";
             this.tbCostoMantenimiento.Size = new System.Drawing.Size(134, 20);
             this.tbCostoMantenimiento.TabIndex = 45;
+            this.tbCostoMantenimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoMantenimiento_KeyPress);
             // 
             // label6
             // 
@@ -540,6 +550,7 @@
             this.tbCostoHrsExtras.Name = "tbCostoHrsExtras";
             this.tbCostoHrsExtras.Size = new System.Drawing.Size(134, 20);
             this.tbCostoHrsExtras.TabIndex = 55;
+            this.tbCostoHrsExtras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoHrsExtras_KeyPress);
             // 
             // label25
             // 
@@ -556,6 +567,7 @@
             this.tbCostosxHoras.Name = "tbCostosxHoras";
             this.tbCostosxHoras.Size = new System.Drawing.Size(134, 20);
             this.tbCostosxHoras.TabIndex = 53;
+            this.tbCostosxHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostosxHoras_KeyPress);
             // 
             // label24
             // 
@@ -572,6 +584,7 @@
             this.tbHorasRequeridas.Name = "tbHorasRequeridas";
             this.tbHorasRequeridas.Size = new System.Drawing.Size(134, 20);
             this.tbHorasRequeridas.TabIndex = 47;
+            this.tbHorasRequeridas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHorasRequeridas_KeyPress);
             // 
             // label21
             // 
@@ -588,6 +601,7 @@
             this.tbCostoPorPedir.Name = "tbCostoPorPedir";
             this.tbCostoPorPedir.Size = new System.Drawing.Size(134, 20);
             this.tbCostoPorPedir.TabIndex = 43;
+            this.tbCostoPorPedir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoPorPedir_KeyPress);
             // 
             // label14
             // 
@@ -621,6 +635,7 @@
             this.tbInventario.Size = new System.Drawing.Size(100, 20);
             this.tbInventario.TabIndex = 23;
             this.tbInventario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.tbInventario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInventario_KeyPress);
             // 
             // tbNombre
             // 
@@ -628,6 +643,7 @@
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(134, 20);
             this.tbNombre.TabIndex = 22;
+            this.tbNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombre_KeyPress);
             // 
             // label2
             // 
@@ -720,6 +736,7 @@
             this.tbCostoDespido.Name = "tbCostoDespido";
             this.tbCostoDespido.Size = new System.Drawing.Size(134, 20);
             this.tbCostoDespido.TabIndex = 61;
+            this.tbCostoDespido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoDespido_KeyPress);
             // 
             // label19
             // 
@@ -736,6 +753,7 @@
             this.tbFuerzaLaboral.Name = "tbFuerzaLaboral";
             this.tbFuerzaLaboral.Size = new System.Drawing.Size(134, 20);
             this.tbFuerzaLaboral.TabIndex = 59;
+            this.tbFuerzaLaboral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFuerzaLaboral_KeyPress);
             // 
             // label18
             // 
@@ -752,6 +770,7 @@
             this.tbCostoContratacion.Name = "tbCostoContratacion";
             this.tbCostoContratacion.Size = new System.Drawing.Size(134, 20);
             this.tbCostoContratacion.TabIndex = 57;
+            this.tbCostoContratacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoContratacion_KeyPress);
             // 
             // label17
             // 
@@ -768,6 +787,7 @@
             this.tbCostoSubContratacion.Name = "tbCostoSubContratacion";
             this.tbCostoSubContratacion.Size = new System.Drawing.Size(134, 20);
             this.tbCostoSubContratacion.TabIndex = 55;
+            this.tbCostoSubContratacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoSubContratacion_KeyPress);
             // 
             // label16
             // 
@@ -784,6 +804,7 @@
             this.tbDiaTrabajadoXAnio.Name = "tbDiaTrabajadoXAnio";
             this.tbDiaTrabajadoXAnio.Size = new System.Drawing.Size(134, 20);
             this.tbDiaTrabajadoXAnio.TabIndex = 53;
+            this.tbDiaTrabajadoXAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDiaTrabajadoXAnio_KeyPress);
             // 
             // label5
             // 
