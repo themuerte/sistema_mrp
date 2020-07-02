@@ -43,7 +43,7 @@ namespace sistema_mrp.controlador
         public String get_tiempoEntreP()
         {
             double tiempo_entreP;
-            tiempo_entreP = Convert.ToDouble(get_Qoptimo()) / demanda_anual;
+            tiempo_entreP = demanda_anual /Convert.ToDouble(get_Qoptimo()) ;
             return Convert.ToString(tiempo_entreP);
         }
 

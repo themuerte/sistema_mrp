@@ -69,17 +69,18 @@ namespace sistema_mrp.controlador.MRP
             dtg_resultado.Columns.Add(costo_total);
 
             double demanda_promedio = 0;
+            double suma = 0;
             double Q_optimo;
             double H;
 
             for(int i = 0; i < semanas; i++)
             {
-                demanda_promedio += demanda[i];      
+                suma += demanda[i];      
             }
 
-            demanda_promedio = (demanda_promedio / semanas) * 52;
+            demanda_promedio = (suma / semanas) * 52;
             H = tasa_mantenimiento * costo_unitario * 52;
-            Q_optimo = Math.Sqrt((2*demanda_promedio*costo_unitario)/H);
+            Q_optimo = Math.Sqrt((2*suma*costo_unitario)/H);
 
             double invetario_final = 0;
             double costo = 0;
