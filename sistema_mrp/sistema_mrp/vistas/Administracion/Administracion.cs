@@ -16,10 +16,12 @@ namespace sistema_mrp.vistas.Administracion
 
         Producto productoSel;
         Empresa empresa;
+        PlanAgregado pa;
         public Administracion()
         {
             InitializeComponent();
             empresa = Empresa.GetEmpresa();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace sistema_mrp.vistas.Administracion
         {
             recargarTablaProductos();
             cargarEmpresaDatos();
+            cargarDiasHabiles();
         }
 
         private void cargarEmpresaDatos()
@@ -60,7 +63,19 @@ namespace sistema_mrp.vistas.Administracion
 
 
         }
-
+        public void cargarDiasHabiles()
+        {
+            Trucazos.vaciarDataGridView(dgvDiasHabiles);
+            List<PlanAgregado> pas = PlanAgregado.getPlanAgregados();
+            if (pas.Count > 0)
+            {
+                foreach (PlanAgregado pa in pas)
+                {
+                    Object[] row = { pa.IdPlanAgregado, pa.Mes, pa.DiasHabiles };
+                    dgvDiasHabiles.Rows.Add(row);
+                }
+            }
+        }
         public void recargarTablaProductos()
         {
             Trucazos.vaciarDataGridView(dgvProductos);
@@ -75,9 +90,6 @@ namespace sistema_mrp.vistas.Administracion
             
         }
 
-        
-
-      
 
         private void dgvProductos_SelectionChanged(object sender, EventArgs e)
         {
@@ -96,6 +108,21 @@ namespace sistema_mrp.vistas.Administracion
                     Console.WriteLine(ex.Message);
                 }
                 
+            }
+        }
+
+        public void llenarDatosDemanda()
+        {
+            List<PlanProducto> demandaProd = PlanProducto.GetPlanProductosByProducto(productoSel.IdProducto);
+            if(demandaProd.Count == 0)
+            {
+                PlanProducto.GenerarDemandaDefault(productoSel.IdProducto);
+            }
+            Trucazos.vaciarDataGridView(dgvDemanda);
+            foreach (PlanProducto dp in demandaProd)
+            {
+                Object[] row = { dp.IdPlanProducto, dp.IdPlanAgregado, dp.DemandaEstimada };
+                dgvDemanda.Rows.Add(row);
             }
         }
 
@@ -122,6 +149,8 @@ namespace sistema_mrp.vistas.Administracion
                 tbCostoFaltante.Text =         Math.Round(productoSel.CostoFaltante, 2) + "";
                 tbCostosxHoras.Text =          Math.Round(productoSel.CostoHrs, 2) + "";
                 tbCostoHrsExtras.Text =        Math.Round(productoSel.CostoHrsExtras,2) + "";
+
+                llenarDatosDemanda();
             }
             catch (Exception ex)
             {
@@ -136,21 +165,6 @@ namespace sistema_mrp.vistas.Administracion
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -287,9 +301,6 @@ namespace sistema_mrp.vistas.Administracion
             }
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-        }
 
         private void btnEditarOD_Click(object sender, EventArgs e)
         {
@@ -327,6 +338,49 @@ namespace sistema_mrp.vistas.Administracion
             btn_GesInventario btn_Ges = new btn_GesInventario();// este es la vista inicio pero no se por que se llama asi en vez de inicio_P
             this.Hide();
             btn_Ges.Show();
+        }
+
+        private void dgvDemanda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                PlanProducto pp;
+                int index = dgvDemanda.SelectedRows[0].Index;
+                var celda = dgvDemanda.Rows[index].Cells[0].Value.ToString();
+                int idPlanProducto = int.Parse(celda);
+                pp = PlanProducto.GetPlanProductosById(idPlanProducto);
+
+                EditDemanda editDemanda = new EditDemanda(this, pp);
+                editDemanda.Show();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void dgvDiasHabiles_SelectionChanged(object sender, EventArgs e)
+        {
+           
+            
+        }
+
+        private void dgvDiasHabiles_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+
+                int row = dgvDiasHabiles.SelectedRows[0].Index;
+                int idPlanAgregado = int.Parse(dgvDiasHabiles.Rows[row].Cells[0].Value.ToString());
+                EditDiasHabiles editDiasHabiles = new EditDiasHabiles(this, PlanAgregado.GetPlanAgregadoById(idPlanAgregado));
+                editDiasHabiles.Show();
+                editDiasHabiles.Show();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace sistema_mrp.controlador
 {
-    class PlanAgregado
+    public class PlanAgregado
     {
         int idPlanAgregado;
         string mes;

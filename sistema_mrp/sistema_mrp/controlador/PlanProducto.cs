@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace sistema_mrp.controlador
 {
-    class PlanProducto
+    public class PlanProducto
     {
         int idPlanProducto;
         int idPlanAgregado;
@@ -78,7 +78,29 @@ namespace sistema_mrp.controlador
             con.Close();
             return planAgregado;
         }
+        public static PlanProducto GetPlanProductosById(int idPlanProducto)
+        {
 
+            var con = new Conexion().getConexion();
+            con.Open();
+            var cmd = new NpgsqlCommand($"SELECT * FROM prod.plan_producto WHERE id_plan_producto={idPlanProducto};", con);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            PlanProducto plan = null;
+            while (reader.Read())
+            {
+                int vidPlanProducto = reader.GetInt32(0);
+                int vidPlanAgregado = reader.GetInt32(1);
+                int vidProducto = reader.GetInt32(2);
+                double vDemandaEstimada = reader.GetDouble(3);
+
+                 plan= new PlanProducto(vidPlanProducto, vidPlanAgregado, vidProducto, vDemandaEstimada);
+
+                
+
+            }
+            con.Close();
+            return plan;
+        }
         public static int GenerarDemandaDefault(int idProducto)
         {
             var con = new Conexion().getConexion();

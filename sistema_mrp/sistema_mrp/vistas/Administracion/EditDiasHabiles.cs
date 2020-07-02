@@ -11,15 +11,17 @@ using System.Windows.Forms;
 
 namespace sistema_mrp.vistas.Administracion
 {
-    public partial class AddProducto : Form
+    public partial class EditDiasHabiles : Form
     {
 
-        Producto productoSel;
+        PlanAgregado pa;
         Administracion papa;
-        public AddProducto(Administracion papa)
+        public EditDiasHabiles(Administracion papa, PlanAgregado pa)
         {
             InitializeComponent();
             this.papa = papa;
+            this.pa = pa;
+            lNombreMes.Text = "Mes de " + pa.Mes;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -81,7 +83,7 @@ namespace sistema_mrp.vistas.Administracion
 
         private void btnAddProduct_Click_1(object sender, EventArgs e)
         {
-            if (tbNombre.Text == "" || tbDescripcion.Text == "")
+            if (tbDescripcion.Text == "")
             {
                 MessageBox.Show("Rellene los campos vacíos!");
             }
@@ -89,20 +91,22 @@ namespace sistema_mrp.vistas.Administracion
             {
                 try
                 {
-                    string nombre = tbNombre.Text;
-                    string descripcion = tbDescripcion.Text;
-
-                    Producto.AddProductoCorto(nombre, descripcion);
-                    
-                    papa.recargarTablaProductos();
+                    double diasHabiles = double.Parse(tbDescripcion.Text);
+                    pa.UpdateDiasHabiles(diasHabiles);
+                    papa.cargarDiasHabiles();
                     this.Dispose(true);
-
+                    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

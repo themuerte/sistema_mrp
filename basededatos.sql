@@ -122,4 +122,7 @@ INSERT INTO prod.plan_producto(id_plan_agregado, id_producto,  demanda_estimada)
 
 SELECT * FROM prod.plan_producto WHERE id_producto=3 ORDER BY id_plan_agregado;
 
-UPDATE prod.plan_producto set demanda_estimada = 0 where id_plan_producto = 1
+UPDATE prod.plan_producto set demanda_estimada = 0 where id_plan_producto = 1;
+
+select* from prod.plan_agregado
+SELECT * FROM prod.plan_agregado

@@ -68,6 +68,18 @@
     <Compile Include="controlador\PlanProducto.cs" />
     <Compile Include="controlador\Producto.cs" />
     <Compile Include="controlador\Trucazos.cs" />
+    <Compile Include="vistas\Administracion\EditDiasHabiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Administracion\EditDiasHabiles.Designer.cs">
+      <DependentUpon>EditDiasHabiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Administracion\EditDemanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vistas\Administracion\EditDemanda.Designer.cs">
+      <DependentUpon>EditDemanda.cs</DependentUpon>
+    </Compile>
     <Compile Include="vistas\Administracion\AddProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +164,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="vistas\Administracion\EditDiasHabiles.resx">
+      <DependentUpon>EditDiasHabiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vistas\Administracion\EditDemanda.resx">
+      <DependentUpon>EditDemanda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vistas\Administracion\AddProducto.resx">
       <DependentUpon>AddProducto.cs</DependentUpon>
     </EmbeddedResource>
