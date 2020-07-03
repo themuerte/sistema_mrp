@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(123, 81);
+            this.label2.Location = new System.Drawing.Point(123, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 14);
             this.label2.TabIndex = 1;
@@ -95,7 +95,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(108, 113);
+            this.label3.Location = new System.Drawing.Point(105, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 14);
             this.label3.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 151);
+            this.label1.Location = new System.Drawing.Point(76, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 14);
             this.label1.TabIndex = 3;
@@ -115,26 +115,27 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(123, 180);
+            this.label4.Location = new System.Drawing.Point(123, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 14);
             this.label4.TabIndex = 4;
             this.label4.Text = "Costo de pedir";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 238);
+            this.label5.Location = new System.Drawing.Point(81, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 14);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Dias trabajados por año";
+            this.label5.Text = "Días trabajados por año";
             // 
             // txt_demanda
             // 
             this.txt_demanda.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_demanda.Location = new System.Drawing.Point(221, 75);
+            this.txt_demanda.Location = new System.Drawing.Point(221, 78);
             this.txt_demanda.Name = "txt_demanda";
             this.txt_demanda.Size = new System.Drawing.Size(100, 21);
             this.txt_demanda.TabIndex = 6;
@@ -143,7 +144,7 @@
             // txt_costoPro
             // 
             this.txt_costoPro.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_costoPro.Location = new System.Drawing.Point(221, 110);
+            this.txt_costoPro.Location = new System.Drawing.Point(221, 119);
             this.txt_costoPro.Name = "txt_costoPro";
             this.txt_costoPro.Size = new System.Drawing.Size(100, 21);
             this.txt_costoPro.TabIndex = 7;
@@ -152,7 +153,7 @@
             // txt_costoPedir
             // 
             this.txt_costoPedir.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_costoPedir.Location = new System.Drawing.Point(221, 180);
+            this.txt_costoPedir.Location = new System.Drawing.Point(221, 198);
             this.txt_costoPedir.Name = "txt_costoPedir";
             this.txt_costoPedir.Size = new System.Drawing.Size(100, 21);
             this.txt_costoPedir.TabIndex = 9;
@@ -161,7 +162,7 @@
             // txt_costoM
             // 
             this.txt_costoM.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_costoM.Location = new System.Drawing.Point(221, 148);
+            this.txt_costoM.Location = new System.Drawing.Point(221, 161);
             this.txt_costoM.Name = "txt_costoM";
             this.txt_costoM.Size = new System.Drawing.Size(100, 21);
             this.txt_costoM.TabIndex = 8;
@@ -171,7 +172,7 @@
             // txt_diasAño
             // 
             this.txt_diasAño.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_diasAño.Location = new System.Drawing.Point(221, 238);
+            this.txt_diasAño.Location = new System.Drawing.Point(221, 275);
             this.txt_diasAño.Name = "txt_diasAño";
             this.txt_diasAño.Size = new System.Drawing.Size(100, 21);
             this.txt_diasAño.TabIndex = 10;
@@ -184,7 +185,7 @@
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(119, 274);
+            this.btn_calcular.Location = new System.Drawing.Point(120, 340);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(75, 31);
             this.btn_calcular.TabIndex = 11;
@@ -199,7 +200,7 @@
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar.ForeColor = System.Drawing.Color.White;
-            this.btn_limpiar.Location = new System.Drawing.Point(235, 274);
+            this.btn_limpiar.Location = new System.Drawing.Point(236, 340);
             this.btn_limpiar.Name = "btn_limpiar";
             this.btn_limpiar.Size = new System.Drawing.Size(75, 31);
             this.btn_limpiar.TabIndex = 12;
@@ -211,27 +212,27 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(452, 101);
+            this.label6.Location = new System.Drawing.Point(525, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 14);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Q optimo";
+            this.label6.Text = "Q óptimo";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(674, 98);
+            this.label7.Location = new System.Drawing.Point(714, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 14);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Numeros de pedidos al año";
+            this.label7.Text = "Números de pedidos al año";
             // 
             // lbl_plazoE
             // 
             this.lbl_plazoE.AutoSize = true;
             this.lbl_plazoE.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_plazoE.Location = new System.Drawing.Point(115, 211);
+            this.lbl_plazoE.Location = new System.Drawing.Point(112, 242);
             this.lbl_plazoE.Name = "lbl_plazoE";
             this.lbl_plazoE.Size = new System.Drawing.Size(94, 14);
             this.lbl_plazoE.TabIndex = 15;
@@ -240,7 +241,7 @@
             // txt_plazoE
             // 
             this.txt_plazoE.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_plazoE.Location = new System.Drawing.Point(221, 211);
+            this.txt_plazoE.Location = new System.Drawing.Point(221, 235);
             this.txt_plazoE.Name = "txt_plazoE";
             this.txt_plazoE.Size = new System.Drawing.Size(100, 21);
             this.txt_plazoE.TabIndex = 16;
@@ -250,7 +251,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(498, 169);
+            this.label8.Location = new System.Drawing.Point(518, 171);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 14);
             this.label8.TabIndex = 19;
@@ -260,7 +261,7 @@
             // 
             this.txt_costoTotal.Enabled = false;
             this.txt_costoTotal.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_costoTotal.Location = new System.Drawing.Point(568, 166);
+            this.txt_costoTotal.Location = new System.Drawing.Point(588, 168);
             this.txt_costoTotal.Name = "txt_costoTotal";
             this.txt_costoTotal.Size = new System.Drawing.Size(100, 21);
             this.txt_costoTotal.TabIndex = 23;
@@ -269,16 +270,17 @@
             // 
             this.txt_numPedidos.Enabled = false;
             this.txt_numPedidos.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_numPedidos.Location = new System.Drawing.Point(831, 98);
+            this.txt_numPedidos.Location = new System.Drawing.Point(874, 100);
             this.txt_numPedidos.Name = "txt_numPedidos";
             this.txt_numPedidos.Size = new System.Drawing.Size(100, 21);
             this.txt_numPedidos.TabIndex = 21;
+            this.txt_numPedidos.TextChanged += new System.EventHandler(this.txt_numPedidos_TextChanged);
             // 
             // txt_Qoptimo
             // 
             this.txt_Qoptimo.Enabled = false;
             this.txt_Qoptimo.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Qoptimo.Location = new System.Drawing.Point(568, 95);
+            this.txt_Qoptimo.Location = new System.Drawing.Point(588, 97);
             this.txt_Qoptimo.Name = "txt_Qoptimo";
             this.txt_Qoptimo.Size = new System.Drawing.Size(100, 21);
             this.txt_Qoptimo.TabIndex = 20;
@@ -287,7 +289,7 @@
             // 
             this.txt_TiempoEntreP.Enabled = false;
             this.txt_TiempoEntreP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TiempoEntreP.Location = new System.Drawing.Point(570, 132);
+            this.txt_TiempoEntreP.Location = new System.Drawing.Point(590, 134);
             this.txt_TiempoEntreP.Name = "txt_TiempoEntreP";
             this.txt_TiempoEntreP.Size = new System.Drawing.Size(98, 21);
             this.txt_TiempoEntreP.TabIndex = 25;
@@ -296,7 +298,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(452, 135);
+            this.label10.Location = new System.Drawing.Point(461, 137);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 14);
             this.label10.TabIndex = 24;
@@ -306,7 +308,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(103, 45);
+            this.label11.Location = new System.Drawing.Point(25, 29);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 20);
             this.label11.TabIndex = 27;
@@ -316,7 +318,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(646, 56);
+            this.label12.Location = new System.Drawing.Point(666, 58);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 20);
             this.label12.TabIndex = 28;
@@ -327,16 +329,17 @@
             // 
             this.txt_inventarioSegu.Enabled = false;
             this.txt_inventarioSegu.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_inventarioSegu.Location = new System.Drawing.Point(831, 132);
+            this.txt_inventarioSegu.Location = new System.Drawing.Point(874, 134);
             this.txt_inventarioSegu.Name = "txt_inventarioSegu";
             this.txt_inventarioSegu.Size = new System.Drawing.Size(100, 21);
             this.txt_inventarioSegu.TabIndex = 30;
+            this.txt_inventarioSegu.TextChanged += new System.EventHandler(this.txt_inventarioSegu_TextChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(676, 139);
+            this.label13.Location = new System.Drawing.Point(734, 141);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(131, 14);
             this.label13.TabIndex = 29;
@@ -348,7 +351,7 @@
             this.panel3.Controls.Add(this.label15);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(969, 44);
+            this.panel3.Size = new System.Drawing.Size(986, 44);
             this.panel3.TabIndex = 41;
             // 
             // label15
@@ -360,7 +363,7 @@
             this.label15.Location = new System.Drawing.Point(0, 0);
             this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(936, 39);
+            this.label15.Size = new System.Drawing.Size(953, 39);
             this.label15.TabIndex = 0;
             this.label15.Text = "Modelo Q";
             this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -474,41 +477,41 @@
             // 
             // cModeloQ
             // 
-            chartArea1.Name = "ChartArea1";
-            this.cModeloQ.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.cModeloQ.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.cModeloQ.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.cModeloQ.Legends.Add(legend3);
             this.cModeloQ.Location = new System.Drawing.Point(482, 210);
             this.cModeloQ.Name = "cModeloQ";
             this.cModeloQ.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "QOptimo";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Inventario";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "SSeguridad";
-            this.cModeloQ.Series.Add(series1);
-            this.cModeloQ.Series.Add(series2);
-            this.cModeloQ.Series.Add(series3);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "QOptimo";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Inventario";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Legend = "Legend1";
+            series9.Name = "SSeguridad";
+            this.cModeloQ.Series.Add(series7);
+            this.cModeloQ.Series.Add(series8);
+            this.cModeloQ.Series.Add(series9);
             this.cModeloQ.Size = new System.Drawing.Size(427, 300);
             this.cModeloQ.TabIndex = 43;
             this.cModeloQ.Text = "Modelo Q";
-            title1.Name = "tModeloQ";
-            title1.Text = "Modelo Q";
-            this.cModeloQ.Titles.Add(title1);
+            title3.Name = "tModeloQ";
+            title3.Text = "Modelo Q";
+            this.cModeloQ.Titles.Add(title3);
             // 
             // modelo_Q
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(943, 621);
+            this.ClientSize = new System.Drawing.Size(986, 621);
             this.Controls.Add(this.bUpdateChart);
             this.Controls.Add(this.tbNumeroPeriodos);
             this.Controls.Add(this.label9);

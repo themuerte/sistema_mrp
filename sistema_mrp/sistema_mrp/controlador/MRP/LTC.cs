@@ -100,7 +100,7 @@ namespace sistema_mrp.controlador.MRP
 
                 }
             }
-
+            //commit
             double invetario_final = 0;
             double costo = 0;
             double costo_mantenimiento = 0;

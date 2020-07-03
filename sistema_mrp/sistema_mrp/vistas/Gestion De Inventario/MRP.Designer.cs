@@ -207,11 +207,11 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Location = new System.Drawing.Point(239, 56);
+            this.btnAceptar.Location = new System.Drawing.Point(231, 51);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(68, 26);
+            this.btnAceptar.Size = new System.Drawing.Size(59, 26);
             this.btnAceptar.TabIndex = 55;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -261,7 +261,7 @@
             this.dtg_resultado.Location = new System.Drawing.Point(17, 349);
             this.dtg_resultado.Name = "dtg_resultado";
             this.dtg_resultado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_resultado.Size = new System.Drawing.Size(911, 204);
+            this.dtg_resultado.Size = new System.Drawing.Size(862, 204);
             this.dtg_resultado.TabIndex = 60;
             // 
             // txt_tasaMantenimiento
@@ -288,7 +288,7 @@
             this.dtg_semanas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_semanas.Location = new System.Drawing.Point(313, 56);
             this.dtg_semanas.Name = "dtg_semanas";
-            this.dtg_semanas.Size = new System.Drawing.Size(587, 139);
+            this.dtg_semanas.Size = new System.Drawing.Size(545, 139);
             this.dtg_semanas.TabIndex = 59;
             this.dtg_semanas.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dtg_semanas_EditingControlShowing);
             this.dtg_semanas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dtg_semanas_KeyPress);

@@ -253,5 +253,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             tbCostoHorasNormal.Text = "";
             tbFuerzaLaboral.Text = "";
         }
+
+        private void dtgResultado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
