@@ -35,7 +35,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbl_demanda = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.btn_limpiar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_periodoRevi = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.rdr_dias = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.rdr_semanal = new System.Windows.Forms.RadioButton();
@@ -74,6 +72,16 @@
             this.tbNumeroPeriodos = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.bUpdateChart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tbModeloP.SuspendLayout();
             this.tpDatosNuevos.SuspendLayout();
@@ -86,138 +94,138 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(126, 4);
+            this.label2.Location = new System.Drawing.Point(159, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Datos";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(642, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Resultado";
-            // 
             // lbl_demanda
             // 
-            this.lbl_demanda.AutoSize = true;
             this.lbl_demanda.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_demanda.Location = new System.Drawing.Point(148, 116);
+            this.lbl_demanda.Location = new System.Drawing.Point(24, 110);
             this.lbl_demanda.Name = "lbl_demanda";
-            this.lbl_demanda.Size = new System.Drawing.Size(57, 14);
+            this.lbl_demanda.Size = new System.Drawing.Size(200, 21);
             this.lbl_demanda.TabIndex = 3;
-            this.lbl_demanda.Text = "Demanda";
+            this.lbl_demanda.Text = "Demanda:";
+            this.lbl_demanda.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(111, 147);
+            this.label5.Location = new System.Drawing.Point(24, 147);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 14);
+            this.label5.Size = new System.Drawing.Size(200, 21);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Plazo de entrega";
+            this.label5.Text = "Plazo de entrega(días):";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(159, 230);
+            this.label7.Location = new System.Drawing.Point(24, 230);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 14);
+            this.label7.Size = new System.Drawing.Size(200, 21);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Desvision ";
+            this.label7.Text = "Desviación:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(24, 260);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(196, 14);
+            this.label8.Size = new System.Drawing.Size(200, 21);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Probabilidad de cumplir la demanda";
+            this.label8.Text = "Probabilidad de cumplir la demanda:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_demandaP
             // 
+            this.txt_demandaP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_demandaP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_demandaP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_demandaP.Location = new System.Drawing.Point(229, 110);
+            this.txt_demandaP.Location = new System.Drawing.Point(229, 111);
             this.txt_demandaP.Name = "txt_demandaP";
-            this.txt_demandaP.Size = new System.Drawing.Size(100, 21);
+            this.txt_demandaP.Size = new System.Drawing.Size(100, 14);
             this.txt_demandaP.TabIndex = 8;
             // 
             // txt_plazoEntrega
             // 
+            this.txt_plazoEntrega.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_plazoEntrega.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_plazoEntrega.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_plazoEntrega.Location = new System.Drawing.Point(229, 144);
+            this.txt_plazoEntrega.Location = new System.Drawing.Point(229, 145);
             this.txt_plazoEntrega.Name = "txt_plazoEntrega";
-            this.txt_plazoEntrega.Size = new System.Drawing.Size(100, 21);
+            this.txt_plazoEntrega.Size = new System.Drawing.Size(100, 14);
             this.txt_plazoEntrega.TabIndex = 9;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(616, 115);
+            this.label9.Location = new System.Drawing.Point(616, 49);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 14);
+            this.label9.Size = new System.Drawing.Size(143, 14);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Cantidad optima de pedir";
+            this.label9.Text = "Cantidad óptima de pedir:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(680, 142);
+            this.label10.Location = new System.Drawing.Point(874, 49);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 14);
+            this.label10.Size = new System.Drawing.Size(66, 14);
             this.label10.TabIndex = 14;
-            this.label10.Text = "Desv Estand Q";
+            this.label10.Text = "Desviación:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(475, 112);
+            this.label11.Location = new System.Drawing.Point(475, 49);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 14);
+            this.label11.Size = new System.Drawing.Size(17, 14);
             this.label11.TabIndex = 13;
-            this.label11.Text = "z";
+            this.label11.Text = "Z:";
             // 
             // txt_cantidadOptima
             // 
+            this.txt_cantidadOptima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_cantidadOptima.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_cantidadOptima.Enabled = false;
             this.txt_cantidadOptima.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidadOptima.Location = new System.Drawing.Point(768, 112);
+            this.txt_cantidadOptima.Location = new System.Drawing.Point(765, 49);
             this.txt_cantidadOptima.Name = "txt_cantidadOptima";
-            this.txt_cantidadOptima.Size = new System.Drawing.Size(100, 21);
+            this.txt_cantidadOptima.Size = new System.Drawing.Size(100, 14);
             this.txt_cantidadOptima.TabIndex = 18;
             // 
             // txt_desvEstandarDem
             // 
+            this.txt_desvEstandarDem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_desvEstandarDem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_desvEstandarDem.Enabled = false;
             this.txt_desvEstandarDem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_desvEstandarDem.Location = new System.Drawing.Point(768, 139);
+            this.txt_desvEstandarDem.Location = new System.Drawing.Point(946, 49);
             this.txt_desvEstandarDem.Name = "txt_desvEstandarDem";
-            this.txt_desvEstandarDem.Size = new System.Drawing.Size(100, 21);
+            this.txt_desvEstandarDem.Size = new System.Drawing.Size(100, 14);
             this.txt_desvEstandarDem.TabIndex = 17;
             // 
             // txt_z
             // 
+            this.txt_z.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_z.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_z.Enabled = false;
             this.txt_z.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_z.Location = new System.Drawing.Point(499, 109);
+            this.txt_z.Location = new System.Drawing.Point(498, 49);
             this.txt_z.Name = "txt_z";
-            this.txt_z.Size = new System.Drawing.Size(100, 21);
+            this.txt_z.Size = new System.Drawing.Size(100, 14);
             this.txt_z.TabIndex = 16;
             // 
             // btn_calcular
             // 
-            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
             this.btn_calcular.FlatAppearance.BorderSize = 0;
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,7 +240,7 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
             this.btn_limpiar.FlatAppearance.BorderSize = 0;
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,36 +256,23 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 180);
+            this.label6.Location = new System.Drawing.Point(23, 180);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 14);
+            this.label6.Size = new System.Drawing.Size(200, 21);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Periodo de revision";
+            this.label6.Text = "Periodo de revisión (días):";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txt_periodoRevi
             // 
+            this.txt_periodoRevi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_periodoRevi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_periodoRevi.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_periodoRevi.Location = new System.Drawing.Point(229, 177);
+            this.txt_periodoRevi.Location = new System.Drawing.Point(228, 179);
             this.txt_periodoRevi.Name = "txt_periodoRevi";
-            this.txt_periodoRevi.Size = new System.Drawing.Size(100, 21);
+            this.txt_periodoRevi.Size = new System.Drawing.Size(100, 14);
             this.txt_periodoRevi.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, -1);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(935, 44);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Modelo P";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // rdr_dias
             // 
@@ -350,47 +345,63 @@
             // 
             // txt_desviacion
             // 
-            this.txt_desviacion.Location = new System.Drawing.Point(229, 230);
+            this.txt_desviacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_desviacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_desviacion.Location = new System.Drawing.Point(229, 232);
             this.txt_desviacion.Name = "txt_desviacion";
-            this.txt_desviacion.Size = new System.Drawing.Size(100, 20);
+            this.txt_desviacion.Size = new System.Drawing.Size(100, 13);
             this.txt_desviacion.TabIndex = 30;
             // 
             // txt_probabilidadDemanda
             // 
-            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(229, 260);
+            this.txt_probabilidadDemanda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_probabilidadDemanda.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_probabilidadDemanda.Location = new System.Drawing.Point(229, 262);
             this.txt_probabilidadDemanda.Name = "txt_probabilidadDemanda";
-            this.txt_probabilidadDemanda.Size = new System.Drawing.Size(100, 20);
+            this.txt_probabilidadDemanda.Size = new System.Drawing.Size(100, 13);
             this.txt_probabilidadDemanda.TabIndex = 31;
             // 
             // txt_inventarioAct
             // 
-            this.txt_inventarioAct.Location = new System.Drawing.Point(228, 204);
+            this.txt_inventarioAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txt_inventarioAct.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_inventarioAct.Location = new System.Drawing.Point(230, 205);
             this.txt_inventarioAct.Name = "txt_inventarioAct";
-            this.txt_inventarioAct.Size = new System.Drawing.Size(100, 20);
+            this.txt_inventarioAct.Size = new System.Drawing.Size(100, 13);
             this.txt_inventarioAct.TabIndex = 33;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(125, 207);
+            this.label4.Location = new System.Drawing.Point(24, 207);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 14);
+            this.label4.Size = new System.Drawing.Size(200, 21);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Inventario actual";
+            this.label4.Text = "Inventario actual:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbModeloP
             // 
+            this.tbModeloP.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tbModeloP.Controls.Add(this.tpDatosNuevos);
             this.tbModeloP.Controls.Add(this.tpProducto);
-            this.tbModeloP.Location = new System.Drawing.Point(28, 87);
+            this.tbModeloP.HotTrack = true;
+            this.tbModeloP.Location = new System.Drawing.Point(28, 35);
+            this.tbModeloP.Multiline = true;
             this.tbModeloP.Name = "tbModeloP";
             this.tbModeloP.SelectedIndex = 0;
-            this.tbModeloP.Size = new System.Drawing.Size(406, 393);
+            this.tbModeloP.Size = new System.Drawing.Size(406, 380);
             this.tbModeloP.TabIndex = 34;
             // 
             // tpDatosNuevos
             // 
+            this.tpDatosNuevos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tpDatosNuevos.Controls.Add(this.label17);
+            this.tpDatosNuevos.Controls.Add(this.label16);
+            this.tpDatosNuevos.Controls.Add(this.label15);
+            this.tpDatosNuevos.Controls.Add(this.label14);
+            this.tpDatosNuevos.Controls.Add(this.label13);
+            this.tpDatosNuevos.Controls.Add(this.label3);
             this.tpDatosNuevos.Controls.Add(this.txt_demandaP);
             this.tpDatosNuevos.Controls.Add(this.txt_inventarioAct);
             this.tpDatosNuevos.Controls.Add(this.label2);
@@ -407,28 +418,28 @@
             this.tpDatosNuevos.Controls.Add(this.btn_limpiar);
             this.tpDatosNuevos.Controls.Add(this.txt_periodoRevi);
             this.tpDatosNuevos.Controls.Add(this.btn_calcular);
-            this.tpDatosNuevos.Location = new System.Drawing.Point(4, 22);
+            this.tpDatosNuevos.Location = new System.Drawing.Point(4, 25);
             this.tpDatosNuevos.Name = "tpDatosNuevos";
             this.tpDatosNuevos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosNuevos.Size = new System.Drawing.Size(398, 367);
+            this.tpDatosNuevos.Size = new System.Drawing.Size(398, 351);
             this.tpDatosNuevos.TabIndex = 0;
             this.tpDatosNuevos.Text = "Datos Nuevos";
-            this.tpDatosNuevos.UseVisualStyleBackColor = true;
             // 
             // tpProducto
             // 
+            this.tpProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tpProducto.Controls.Add(this.dgvProductos);
-            this.tpProducto.Location = new System.Drawing.Point(4, 22);
+            this.tpProducto.Location = new System.Drawing.Point(4, 25);
             this.tpProducto.Name = "tpProducto";
             this.tpProducto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProducto.Size = new System.Drawing.Size(398, 367);
+            this.tpProducto.Size = new System.Drawing.Size(398, 351);
             this.tpProducto.TabIndex = 1;
             this.tpProducto.Text = "Producto Existente";
-            this.tpProducto.UseVisualStyleBackColor = true;
             // 
             // dgvProductos
             // 
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
@@ -464,8 +475,9 @@
             this.cModeloP.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.cModeloP.Legends.Add(legend1);
-            this.cModeloP.Location = new System.Drawing.Point(478, 176);
+            this.cModeloP.Location = new System.Drawing.Point(478, 96);
             this.cModeloP.Name = "cModeloP";
+            this.cModeloP.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             this.cModeloP.RightToLeft = System.Windows.Forms.RightToLeft.No;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -482,7 +494,7 @@
             this.cModeloP.Series.Add(series1);
             this.cModeloP.Series.Add(series2);
             this.cModeloP.Series.Add(series3);
-            this.cModeloP.Size = new System.Drawing.Size(427, 300);
+            this.cModeloP.Size = new System.Drawing.Size(585, 370);
             this.cModeloP.TabIndex = 35;
             this.cModeloP.Text = "Modelo P";
             title1.Name = "Title1";
@@ -491,10 +503,12 @@
             // 
             // tbNumeroPeriodos
             // 
+            this.tbNumeroPeriodos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tbNumeroPeriodos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumeroPeriodos.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNumeroPeriodos.Location = new System.Drawing.Point(646, 491);
+            this.tbNumeroPeriodos.Location = new System.Drawing.Point(179, 433);
             this.tbNumeroPeriodos.Name = "tbNumeroPeriodos";
-            this.tbNumeroPeriodos.Size = new System.Drawing.Size(100, 21);
+            this.tbNumeroPeriodos.Size = new System.Drawing.Size(112, 14);
             this.tbNumeroPeriodos.TabIndex = 37;
             this.tbNumeroPeriodos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumeroPeriodos_KeyPress);
             // 
@@ -502,7 +516,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(518, 494);
+            this.label12.Location = new System.Drawing.Point(29, 433);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(115, 14);
             this.label12.TabIndex = 36;
@@ -510,35 +524,134 @@
             // 
             // bUpdateChart
             // 
-            this.bUpdateChart.Location = new System.Drawing.Point(752, 489);
+            this.bUpdateChart.AutoSize = true;
+            this.bUpdateChart.BackColor = System.Drawing.Color.Transparent;
+            this.bUpdateChart.FlatAppearance.BorderSize = 0;
+            this.bUpdateChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bUpdateChart.Image = global::sistema_mrp.Properties.Resources.refresh;
+            this.bUpdateChart.Location = new System.Drawing.Point(294, 427);
+            this.bUpdateChart.Margin = new System.Windows.Forms.Padding(0);
             this.bUpdateChart.Name = "bUpdateChart";
-            this.bUpdateChart.Size = new System.Drawing.Size(116, 23);
+            this.bUpdateChart.Size = new System.Drawing.Size(33, 24);
             this.bUpdateChart.TabIndex = 38;
-            this.bUpdateChart.Text = "Actualizar Gráfico";
-            this.bUpdateChart.UseVisualStyleBackColor = true;
+            this.bUpdateChart.UseVisualStyleBackColor = false;
             this.bUpdateChart.Click += new System.EventHandler(this.bUpdateChart_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(179, 450);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 1);
+            this.label1.TabIndex = 39;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(230, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 1);
+            this.label3.TabIndex = 40;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Location = new System.Drawing.Point(230, 220);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 1);
+            this.label13.TabIndex = 41;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Location = new System.Drawing.Point(230, 247);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(110, 1);
+            this.label14.TabIndex = 42;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Location = new System.Drawing.Point(230, 277);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 1);
+            this.label15.TabIndex = 43;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Location = new System.Drawing.Point(229, 161);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 1);
+            this.label16.TabIndex = 44;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Location = new System.Drawing.Point(227, 194);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(110, 1);
+            this.label17.TabIndex = 45;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label18.Location = new System.Drawing.Point(765, 63);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(100, 2);
+            this.label18.TabIndex = 40;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.Location = new System.Drawing.Point(947, 63);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(100, 2);
+            this.label19.TabIndex = 41;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.Location = new System.Drawing.Point(498, 63);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(100, 2);
+            this.label20.TabIndex = 42;
             // 
             // modelo_P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 621);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1075, 500);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bUpdateChart);
             this.Controls.Add(this.tbNumeroPeriodos);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cModeloP);
             this.Controls.Add(this.tbModeloP);
             this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_cantidadOptima);
             this.Controls.Add(this.txt_desvEstandarDem);
             this.Controls.Add(this.txt_z);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "modelo_P";
+            this.Load += new System.EventHandler(this.modelo_P_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tbModeloP.ResumeLayout(false);
@@ -554,7 +667,6 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_demanda;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -571,7 +683,6 @@
         private System.Windows.Forms.Button btn_limpiar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_periodoRevi;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdr_dias;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton rdr_semanal;
@@ -593,5 +704,15 @@
         private System.Windows.Forms.TextBox tbNumeroPeriodos;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button bUpdateChart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

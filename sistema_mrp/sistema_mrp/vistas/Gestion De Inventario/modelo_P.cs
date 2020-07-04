@@ -219,5 +219,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 e.Handled = true;
             }
         }
+
+        private void modelo_P_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
+
