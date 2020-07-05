@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btn_GesInventario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_inicio = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_salir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.MensajeSalir = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,14 +49,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(261, 104);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // lbl_inicio
             // 
             this.lbl_inicio.AutoSize = true;
-            this.lbl_inicio.Font = new System.Drawing.Font("Microsoft JhengHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_inicio.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_inicio.Location = new System.Drawing.Point(73, 32);
             this.lbl_inicio.Name = "lbl_inicio";
-            this.lbl_inicio.Size = new System.Drawing.Size(103, 41);
+            this.lbl_inicio.Size = new System.Drawing.Size(101, 38);
             this.lbl_inicio.TabIndex = 0;
             this.lbl_inicio.Text = "Inicio";
             this.lbl_inicio.Click += new System.EventHandler(this.lbl_inicio_Click);
@@ -64,7 +69,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(50, 145);
             this.button1.Name = "button1";
@@ -83,9 +88,9 @@
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(35, 34);
             this.btn_salir.TabIndex = 3;
-            this.btn_salir.Text = "}";
             this.btn_salir.UseVisualStyleBackColor = true;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            this.btn_salir.MouseHover += new System.EventHandler(this.btn_salir_MouseHover);
             // 
             // button2
             // 
@@ -93,7 +98,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(50, 244);
             this.button2.Name = "button2";
@@ -112,8 +117,13 @@
             this.Controls.Add(this.btn_salir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "btn_GesInventario";
+            this.Opacity = 0.94D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.btn_GesInventario_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_GesInventario_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -127,6 +137,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolTip MensajeSalir;
     }
 }
 

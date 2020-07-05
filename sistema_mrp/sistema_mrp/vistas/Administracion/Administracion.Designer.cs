@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administracion));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +44,8 @@
             this.mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.demanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lIdProductoSel = new System.Windows.Forms.Label();
-            this.btnEditarPP = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ModP = new System.Windows.Forms.TabPage();
-            this.btnEditarP1 = new System.Windows.Forms.Button();
             this.tbProbabilidadDemanda = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbDesviacion = new System.Windows.Forms.TextBox();
@@ -68,9 +67,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.tbCostoMantenimiento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnEditarP2 = new System.Windows.Forms.Button();
             this.MRP = new System.Windows.Forms.TabPage();
-            this.btnEditarP3 = new System.Windows.Forms.Button();
             this.tbCostoHrsExtras = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.tbCostosxHoras = new System.Windows.Forms.TextBox();
@@ -90,7 +87,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditarOD = new System.Windows.Forms.Button();
             this.tbCostoDespido = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tbFuerzaLaboral = new System.Windows.Forms.TextBox();
@@ -103,6 +99,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbNombreEmpresa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.MensajeSalir = new System.Windows.Forms.ToolTip(this.components);
+            this.btnEditarPP = new System.Windows.Forms.Button();
+            this.btnEditarP1 = new System.Windows.Forms.Button();
+            this.btnEditarP2 = new System.Windows.Forms.Button();
+            this.btnEditarP3 = new System.Windows.Forms.Button();
+            this.btnEditarOD = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.dgvBOM.SuspendLayout();
             this.tpProductosDetalles.SuspendLayout();
@@ -115,34 +119,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiasHabiles)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 545);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cerrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dgvProductos
             // 
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
             this.nombre,
             this.descripcion});
-            this.dgvProductos.Location = new System.Drawing.Point(20, 55);
+            this.dgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.dgvProductos.Location = new System.Drawing.Point(3, 55);
             this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(654, 92);
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.Size = new System.Drawing.Size(654, 125);
             this.dgvProductos.TabIndex = 1;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
             // idProducto
             // 
             this.idProducto.HeaderText = "idProducto";
+            this.idProducto.MinimumWidth = 6;
             this.idProducto.Name = "idProducto";
             this.idProducto.ReadOnly = true;
             this.idProducto.Visible = false;
@@ -150,54 +149,69 @@
             // nombre
             // 
             this.nombre.HeaderText = "nombre";
+            this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
             // 
             // descripcion
             // 
             this.descripcion.HeaderText = "descripcion";
+            this.descripcion.MinimumWidth = 6;
             this.descripcion.Name = "descripcion";
             // 
             // lProd
             // 
             this.lProd.AutoSize = true;
-            this.lProd.Location = new System.Drawing.Point(292, 17);
+            this.lProd.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lProd.Location = new System.Drawing.Point(274, 17);
             this.lProd.Name = "lProd";
-            this.lProd.Size = new System.Drawing.Size(55, 13);
+            this.lProd.Size = new System.Drawing.Size(117, 28);
             this.lProd.TabIndex = 4;
             this.lProd.Text = "Productos";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 12);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(10, 284);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(126, 38);
             this.button2.TabIndex = 6;
-            this.button2.Text = "Volver";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Atrás";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(569, 26);
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.Location = new System.Drawing.Point(54, 396);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(105, 23);
+            this.btnAddProduct.Size = new System.Drawing.Size(113, 32);
             this.btnAddProduct.TabIndex = 8;
             this.btnAddProduct.Text = "Nuevo Producto";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // dgvBOM
             // 
             this.dgvBOM.Controls.Add(this.tpProductosDetalles);
             this.dgvBOM.Controls.Add(this.tpEmpresa);
-            this.dgvBOM.Location = new System.Drawing.Point(12, 41);
+            this.dgvBOM.Location = new System.Drawing.Point(142, 46);
             this.dgvBOM.Name = "dgvBOM";
             this.dgvBOM.SelectedIndex = 0;
-            this.dgvBOM.Size = new System.Drawing.Size(883, 502);
+            this.dgvBOM.Size = new System.Drawing.Size(935, 502);
             this.dgvBOM.TabIndex = 16;
             // 
             // tpProductosDetalles
             // 
+            this.tpProductosDetalles.BackColor = System.Drawing.SystemColors.Control;
             this.tpProductosDetalles.Controls.Add(this.dgvDemanda);
             this.tpProductosDetalles.Controls.Add(this.lIdProductoSel);
             this.tpProductosDetalles.Controls.Add(this.btnEditarPP);
@@ -211,78 +225,77 @@
             this.tpProductosDetalles.Controls.Add(this.tbNombre);
             this.tpProductosDetalles.Controls.Add(this.label2);
             this.tpProductosDetalles.Controls.Add(this.lNombreComponente);
+            this.tpProductosDetalles.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tpProductosDetalles.Location = new System.Drawing.Point(4, 22);
             this.tpProductosDetalles.Name = "tpProductosDetalles";
             this.tpProductosDetalles.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProductosDetalles.Size = new System.Drawing.Size(875, 476);
+            this.tpProductosDetalles.Size = new System.Drawing.Size(927, 476);
             this.tpProductosDetalles.TabIndex = 0;
             this.tpProductosDetalles.Text = "Productos";
-            this.tpProductosDetalles.UseVisualStyleBackColor = true;
+            this.tpProductosDetalles.Click += new System.EventHandler(this.tpProductosDetalles_Click);
             // 
             // dgvDemanda
             // 
             this.dgvDemanda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDemanda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvDemanda.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDemanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDemanda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPlanProducto,
             this.mes,
             this.demanda});
-            this.dgvDemanda.Location = new System.Drawing.Point(693, 55);
+            this.dgvDemanda.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.dgvDemanda.Location = new System.Drawing.Point(16, 188);
             this.dgvDemanda.Name = "dgvDemanda";
-            this.dgvDemanda.Size = new System.Drawing.Size(156, 377);
+            this.dgvDemanda.RowHeadersWidth = 51;
+            this.dgvDemanda.Size = new System.Drawing.Size(578, 110);
             this.dgvDemanda.TabIndex = 30;
             this.dgvDemanda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDemanda_CellDoubleClick);
             // 
             // idPlanProducto
             // 
             this.idPlanProducto.HeaderText = "id";
+            this.idPlanProducto.MinimumWidth = 6;
             this.idPlanProducto.Name = "idPlanProducto";
             this.idPlanProducto.Visible = false;
             // 
             // mes
             // 
             this.mes.HeaderText = "mes";
+            this.mes.MinimumWidth = 6;
             this.mes.Name = "mes";
             // 
             // demanda
             // 
             this.demanda.HeaderText = "demanda";
+            this.demanda.MinimumWidth = 6;
             this.demanda.Name = "demanda";
             // 
             // lIdProductoSel
             // 
             this.lIdProductoSel.AutoSize = true;
-            this.lIdProductoSel.Location = new System.Drawing.Point(32, 202);
+            this.lIdProductoSel.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lIdProductoSel.Location = new System.Drawing.Point(14, 330);
             this.lIdProductoSel.Name = "lIdProductoSel";
-            this.lIdProductoSel.Size = new System.Drawing.Size(15, 13);
+            this.lIdProductoSel.Size = new System.Drawing.Size(17, 14);
             this.lIdProductoSel.TabIndex = 18;
             this.lIdProductoSel.Text = "id";
-            // 
-            // btnEditarPP
-            // 
-            this.btnEditarPP.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarPP.Location = new System.Drawing.Point(645, 194);
-            this.btnEditarPP.Name = "btnEditarPP";
-            this.btnEditarPP.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarPP.TabIndex = 29;
-            this.btnEditarPP.Text = "E";
-            this.btnEditarPP.UseVisualStyleBackColor = true;
-            this.btnEditarPP.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.ModP);
             this.tabControl1.Controls.Add(this.ModQ);
             this.tabControl1.Controls.Add(this.MRP);
-            this.tabControl1.Location = new System.Drawing.Point(20, 245);
+            this.tabControl1.Location = new System.Drawing.Point(663, 17);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(654, 197);
+            this.tabControl1.Size = new System.Drawing.Size(251, 306);
             this.tabControl1.TabIndex = 28;
             // 
             // ModP
             // 
+            this.ModP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.ModP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ModP.Controls.Add(this.btnEditarP1);
             this.ModP.Controls.Add(this.tbProbabilidadDemanda);
             this.ModP.Controls.Add(this.label9);
@@ -294,112 +307,108 @@
             this.ModP.Controls.Add(this.label12);
             this.ModP.Controls.Add(this.tbDemandaDiaria);
             this.ModP.Controls.Add(this.label13);
+            this.ModP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModP.Location = new System.Drawing.Point(4, 22);
             this.ModP.Name = "ModP";
             this.ModP.Padding = new System.Windows.Forms.Padding(3);
-            this.ModP.Size = new System.Drawing.Size(646, 171);
+            this.ModP.Size = new System.Drawing.Size(243, 280);
             this.ModP.TabIndex = 0;
-            this.ModP.Text = "Primera Parte";
-            this.ModP.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarP1
-            // 
-            this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarP1.Location = new System.Drawing.Point(618, 140);
-            this.btnEditarP1.Name = "btnEditarP1";
-            this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP1.TabIndex = 30;
-            this.btnEditarP1.Text = "E";
-            this.btnEditarP1.UseVisualStyleBackColor = true;
-            this.btnEditarP1.Click += new System.EventHandler(this.btnEditarP1_Click);
+            this.ModP.Text = "Datos 1";
             // 
             // tbProbabilidadDemanda
             // 
-            this.tbProbabilidadDemanda.Location = new System.Drawing.Point(378, 120);
+            this.tbProbabilidadDemanda.Location = new System.Drawing.Point(22, 216);
             this.tbProbabilidadDemanda.Name = "tbProbabilidadDemanda";
-            this.tbProbabilidadDemanda.Size = new System.Drawing.Size(134, 20);
+            this.tbProbabilidadDemanda.Size = new System.Drawing.Size(134, 23);
             this.tbProbabilidadDemanda.TabIndex = 49;
             this.tbProbabilidadDemanda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbProbabilidadDemanda_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(352, 90);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(20, 199);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 13);
+            this.label9.Size = new System.Drawing.Size(174, 15);
             this.label9.TabIndex = 48;
             this.label9.Text = "Probabilidad de la Demanda:";
             // 
             // tbDesviacion
             // 
-            this.tbDesviacion.Location = new System.Drawing.Point(217, 120);
+            this.tbDesviacion.Location = new System.Drawing.Point(21, 120);
             this.tbDesviacion.Name = "tbDesviacion";
-            this.tbDesviacion.Size = new System.Drawing.Size(134, 20);
+            this.tbDesviacion.Size = new System.Drawing.Size(134, 23);
             this.tbDesviacion.TabIndex = 47;
             this.tbDesviacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDesviacion_KeyPress);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(191, 90);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(19, 103);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.Size = new System.Drawing.Size(71, 15);
             this.label10.TabIndex = 46;
             this.label10.Text = "Desviación:";
             // 
             // tbPeriodoRevision
             // 
-            this.tbPeriodoRevision.Location = new System.Drawing.Point(427, 61);
+            this.tbPeriodoRevision.Location = new System.Drawing.Point(22, 167);
             this.tbPeriodoRevision.Name = "tbPeriodoRevision";
-            this.tbPeriodoRevision.Size = new System.Drawing.Size(134, 20);
+            this.tbPeriodoRevision.Size = new System.Drawing.Size(134, 23);
             this.tbPeriodoRevision.TabIndex = 45;
             this.tbPeriodoRevision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPeriodoRevision_KeyPress);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(401, 31);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(20, 150);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 13);
+            this.label11.Size = new System.Drawing.Size(120, 15);
             this.label11.TabIndex = 44;
-            this.label11.Text = "Periodo de Revisión: ";
+            this.label11.Text = "Periodo de Revisión";
             // 
             // tbPlazodeEntregaP
             // 
-            this.tbPlazodeEntregaP.Location = new System.Drawing.Point(273, 61);
+            this.tbPlazodeEntregaP.Location = new System.Drawing.Point(19, 73);
             this.tbPlazodeEntregaP.Name = "tbPlazodeEntregaP";
-            this.tbPlazodeEntregaP.Size = new System.Drawing.Size(134, 20);
+            this.tbPlazodeEntregaP.Size = new System.Drawing.Size(134, 23);
             this.tbPlazodeEntregaP.TabIndex = 43;
             this.tbPlazodeEntregaP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPlazodeEntregaP_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(247, 31);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(16, 56);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 13);
+            this.label12.Size = new System.Drawing.Size(103, 15);
             this.label12.TabIndex = 42;
             this.label12.Text = "Plazo de Entrega";
             // 
             // tbDemandaDiaria
             // 
-            this.tbDemandaDiaria.Location = new System.Drawing.Point(112, 61);
+            this.tbDemandaDiaria.Location = new System.Drawing.Point(19, 30);
             this.tbDemandaDiaria.Name = "tbDemandaDiaria";
-            this.tbDemandaDiaria.Size = new System.Drawing.Size(134, 20);
+            this.tbDemandaDiaria.Size = new System.Drawing.Size(134, 23);
             this.tbDemandaDiaria.TabIndex = 41;
             this.tbDemandaDiaria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDemandaDiaria_KeyPress);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(86, 31);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(16, 15);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 13);
+            this.label13.Size = new System.Drawing.Size(99, 15);
             this.label13.TabIndex = 40;
-            this.label13.Text = "Demanda Diaria:";
+            this.label13.Text = "Demanda Diaria";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // ModQ
             // 
+            this.ModQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
             this.ModQ.Controls.Add(this.tbCostoUnitario);
             this.ModQ.Controls.Add(this.label15);
             this.ModQ.Controls.Add(this.tbCostoFaltante);
@@ -414,109 +423,113 @@
             this.ModQ.Location = new System.Drawing.Point(4, 22);
             this.ModQ.Name = "ModQ";
             this.ModQ.Padding = new System.Windows.Forms.Padding(3);
-            this.ModQ.Size = new System.Drawing.Size(646, 171);
+            this.ModQ.Size = new System.Drawing.Size(243, 280);
             this.ModQ.TabIndex = 1;
-            this.ModQ.Text = "Segunda Parte";
-            this.ModQ.UseVisualStyleBackColor = true;
+            this.ModQ.Text = "Datos 2";
             // 
             // tbCostoUnitario
             // 
-            this.tbCostoUnitario.Location = new System.Drawing.Point(246, 61);
+            this.tbCostoUnitario.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoUnitario.Location = new System.Drawing.Point(18, 81);
             this.tbCostoUnitario.Name = "tbCostoUnitario";
-            this.tbCostoUnitario.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoUnitario.Size = new System.Drawing.Size(134, 21);
             this.tbCostoUnitario.TabIndex = 55;
             this.tbCostoUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoUnitario_KeyPress);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(225, 31);
+            this.label15.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(16, 63);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 13);
+            this.label15.Size = new System.Drawing.Size(101, 14);
             this.label15.TabIndex = 54;
             this.label15.Text = "Costo por unidad:";
             // 
             // tbCostoFaltante
             // 
-            this.tbCostoFaltante.Location = new System.Drawing.Point(91, 61);
+            this.tbCostoFaltante.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoFaltante.Location = new System.Drawing.Point(18, 36);
             this.tbCostoFaltante.Name = "tbCostoFaltante";
-            this.tbCostoFaltante.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoFaltante.Size = new System.Drawing.Size(134, 21);
             this.tbCostoFaltante.TabIndex = 53;
             this.tbCostoFaltante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoFaltante_KeyPress);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(61, 31);
+            this.label23.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(16, 18);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 13);
+            this.label23.Size = new System.Drawing.Size(88, 14);
             this.label23.TabIndex = 52;
             this.label23.Text = "Costo Faltante: ";
             // 
             // tbStockSeguridad
             // 
-            this.tbStockSeguridad.Location = new System.Drawing.Point(246, 121);
+            this.tbStockSeguridad.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbStockSeguridad.Location = new System.Drawing.Point(18, 168);
             this.tbStockSeguridad.Name = "tbStockSeguridad";
-            this.tbStockSeguridad.Size = new System.Drawing.Size(134, 20);
+            this.tbStockSeguridad.Size = new System.Drawing.Size(134, 21);
             this.tbStockSeguridad.TabIndex = 51;
             this.tbStockSeguridad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbStockSeguridad_KeyPress);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(216, 91);
+            this.label22.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(16, 150);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(102, 13);
+            this.label22.Size = new System.Drawing.Size(109, 14);
             this.label22.TabIndex = 50;
             this.label22.Text = "Stock de seguridad:";
             // 
             // tbInventarioInicial
             // 
-            this.tbInventarioInicial.Location = new System.Drawing.Point(416, 121);
+            this.tbInventarioInicial.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInventarioInicial.Location = new System.Drawing.Point(20, 206);
             this.tbInventarioInicial.Name = "tbInventarioInicial";
-            this.tbInventarioInicial.Size = new System.Drawing.Size(134, 20);
+            this.tbInventarioInicial.Size = new System.Drawing.Size(134, 21);
             this.tbInventarioInicial.TabIndex = 49;
             this.tbInventarioInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInventarioInicial_KeyPress);
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(390, 91);
+            this.label20.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(16, 191);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 13);
+            this.label20.Size = new System.Drawing.Size(93, 14);
             this.label20.TabIndex = 48;
             this.label20.Text = "Inventario Inicial";
             // 
             // tbCostoMantenimiento
             // 
-            this.tbCostoMantenimiento.Location = new System.Drawing.Point(416, 61);
+            this.tbCostoMantenimiento.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoMantenimiento.Location = new System.Drawing.Point(18, 128);
             this.tbCostoMantenimiento.Name = "tbCostoMantenimiento";
-            this.tbCostoMantenimiento.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoMantenimiento.Size = new System.Drawing.Size(134, 21);
             this.tbCostoMantenimiento.TabIndex = 45;
             this.tbCostoMantenimiento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoMantenimiento_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(390, 31);
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(16, 110);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 13);
+            this.label6.Size = new System.Drawing.Size(142, 14);
             this.label6.TabIndex = 44;
             this.label6.Text = "Costo del mantenimiento:";
             // 
-            // btnEditarP2
-            // 
-            this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarP2.Location = new System.Drawing.Point(615, 140);
-            this.btnEditarP2.Name = "btnEditarP2";
-            this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP2.TabIndex = 30;
-            this.btnEditarP2.Text = "E";
-            this.btnEditarP2.UseVisualStyleBackColor = true;
-            this.btnEditarP2.Click += new System.EventHandler(this.btnEditarP2_Click);
-            // 
             // MRP
             // 
+            this.MRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
             this.MRP.Controls.Add(this.btnEditarP3);
             this.MRP.Controls.Add(this.tbCostoHrsExtras);
             this.MRP.Controls.Add(this.label25);
@@ -528,128 +541,134 @@
             this.MRP.Controls.Add(this.label14);
             this.MRP.Location = new System.Drawing.Point(4, 22);
             this.MRP.Name = "MRP";
-            this.MRP.Size = new System.Drawing.Size(646, 171);
+            this.MRP.Size = new System.Drawing.Size(243, 280);
             this.MRP.TabIndex = 2;
-            this.MRP.Text = "Tercera Parte";
-            this.MRP.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarP3
-            // 
-            this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarP3.Location = new System.Drawing.Point(604, 112);
-            this.btnEditarP3.Name = "btnEditarP3";
-            this.btnEditarP3.Size = new System.Drawing.Size(29, 25);
-            this.btnEditarP3.TabIndex = 56;
-            this.btnEditarP3.Text = "E";
-            this.btnEditarP3.UseVisualStyleBackColor = true;
-            this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
+            this.MRP.Text = "Datos 3";
             // 
             // tbCostoHrsExtras
             // 
-            this.tbCostoHrsExtras.Location = new System.Drawing.Point(359, 127);
+            this.tbCostoHrsExtras.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoHrsExtras.Location = new System.Drawing.Point(8, 169);
             this.tbCostoHrsExtras.Name = "tbCostoHrsExtras";
-            this.tbCostoHrsExtras.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoHrsExtras.Size = new System.Drawing.Size(134, 21);
             this.tbCostoHrsExtras.TabIndex = 55;
             this.tbCostoHrsExtras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoHrsExtras_KeyPress);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(329, 97);
+            this.label25.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(6, 152);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(115, 13);
+            this.label25.Size = new System.Drawing.Size(126, 14);
             this.label25.TabIndex = 54;
             this.label25.Text = "Costo por horas extras:";
             // 
             // tbCostosxHoras
             // 
-            this.tbCostosxHoras.Location = new System.Drawing.Point(123, 127);
+            this.tbCostosxHoras.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostosxHoras.Location = new System.Drawing.Point(7, 118);
             this.tbCostosxHoras.Name = "tbCostosxHoras";
-            this.tbCostosxHoras.Size = new System.Drawing.Size(134, 20);
+            this.tbCostosxHoras.Size = new System.Drawing.Size(134, 21);
             this.tbCostosxHoras.TabIndex = 53;
             this.tbCostosxHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostosxHoras_KeyPress);
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(93, 97);
+            this.label24.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(4, 101);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(84, 13);
+            this.label24.Size = new System.Drawing.Size(93, 14);
             this.label24.TabIndex = 52;
             this.label24.Text = "Costo por horas:";
             // 
             // tbHorasRequeridas
             // 
-            this.tbHorasRequeridas.Location = new System.Drawing.Point(359, 60);
+            this.tbHorasRequeridas.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbHorasRequeridas.Location = new System.Drawing.Point(7, 68);
             this.tbHorasRequeridas.Name = "tbHorasRequeridas";
-            this.tbHorasRequeridas.Size = new System.Drawing.Size(134, 20);
+            this.tbHorasRequeridas.Size = new System.Drawing.Size(134, 21);
             this.tbHorasRequeridas.TabIndex = 47;
             this.tbHorasRequeridas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHorasRequeridas_KeyPress);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(329, 30);
+            this.label21.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(4, 51);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(163, 13);
+            this.label21.Size = new System.Drawing.Size(181, 14);
             this.label21.TabIndex = 46;
             this.label21.Text = "Horas requeridas para producirlo:";
             // 
             // tbCostoPorPedir
             // 
-            this.tbCostoPorPedir.Location = new System.Drawing.Point(123, 60);
+            this.tbCostoPorPedir.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoPorPedir.Location = new System.Drawing.Point(7, 25);
             this.tbCostoPorPedir.Name = "tbCostoPorPedir";
-            this.tbCostoPorPedir.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoPorPedir.Size = new System.Drawing.Size(134, 21);
             this.tbCostoPorPedir.TabIndex = 43;
             this.tbCostoPorPedir.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoPorPedir_KeyPress);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(93, 30);
+            this.label14.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(4, 8);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 13);
+            this.label14.Size = new System.Drawing.Size(91, 14);
             this.label14.TabIndex = 42;
             this.label14.Text = "Costo por Pedir:";
             // 
             // tbDescripcion
             // 
-            this.tbDescripcion.Location = new System.Drawing.Point(206, 199);
+            this.tbDescripcion.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescripcion.Location = new System.Drawing.Point(188, 327);
             this.tbDescripcion.Name = "tbDescripcion";
-            this.tbDescripcion.Size = new System.Drawing.Size(283, 20);
+            this.tbDescripcion.Size = new System.Drawing.Size(283, 21);
             this.tbDescripcion.TabIndex = 27;
+            this.tbDescripcion.TextChanged += new System.EventHandler(this.tbDescripcion_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 169);
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(185, 309);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(70, 14);
             this.label1.TabIndex = 26;
             this.label1.Text = "Descripción:";
             // 
             // tbInventario
             // 
-            this.tbInventario.Location = new System.Drawing.Point(515, 197);
+            this.tbInventario.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInventario.Location = new System.Drawing.Point(496, 324);
             this.tbInventario.Name = "tbInventario";
-            this.tbInventario.Size = new System.Drawing.Size(100, 20);
+            this.tbInventario.Size = new System.Drawing.Size(100, 21);
             this.tbInventario.TabIndex = 23;
             this.tbInventario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.tbInventario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbInventario_KeyPress);
             // 
             // tbNombre
             // 
-            this.tbNombre.Location = new System.Drawing.Point(53, 199);
+            this.tbNombre.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombre.Location = new System.Drawing.Point(34, 327);
             this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(134, 20);
+            this.tbNombre.Size = new System.Drawing.Size(134, 21);
             this.tbNombre.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(512, 169);
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(494, 306);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(63, 14);
             this.label2.TabIndex = 18;
             this.label2.Text = "Inventario:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -657,16 +676,17 @@
             // lNombreComponente
             // 
             this.lNombreComponente.AutoSize = true;
-            this.lNombreComponente.Location = new System.Drawing.Point(27, 169);
+            this.lNombreComponente.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNombreComponente.Location = new System.Drawing.Point(32, 309);
             this.lNombreComponente.Name = "lNombreComponente";
-            this.lNombreComponente.Size = new System.Drawing.Size(50, 13);
+            this.lNombreComponente.Size = new System.Drawing.Size(56, 14);
             this.lNombreComponente.TabIndex = 17;
             this.lNombreComponente.Text = "Nombre: ";
             // 
             // tpEmpresa
             // 
+            this.tpEmpresa.BackColor = System.Drawing.SystemColors.Control;
             this.tpEmpresa.Controls.Add(this.dgvDiasHabiles);
-            this.tpEmpresa.Controls.Add(this.btnEditarOD);
             this.tpEmpresa.Controls.Add(this.tbCostoDespido);
             this.tpEmpresa.Controls.Add(this.label19);
             this.tpEmpresa.Controls.Add(this.tbFuerzaLaboral);
@@ -679,25 +699,28 @@
             this.tpEmpresa.Controls.Add(this.label5);
             this.tpEmpresa.Controls.Add(this.tbNombreEmpresa);
             this.tpEmpresa.Controls.Add(this.label7);
+            this.tpEmpresa.Controls.Add(this.btnEditarOD);
             this.tpEmpresa.Location = new System.Drawing.Point(4, 22);
             this.tpEmpresa.Name = "tpEmpresa";
-            this.tpEmpresa.Size = new System.Drawing.Size(875, 476);
+            this.tpEmpresa.Size = new System.Drawing.Size(927, 476);
             this.tpEmpresa.TabIndex = 2;
             this.tpEmpresa.Text = "Otros Datos";
-            this.tpEmpresa.UseVisualStyleBackColor = true;
             // 
             // dgvDiasHabiles
             // 
             this.dgvDiasHabiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiasHabiles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvDiasHabiles.BackgroundColor = System.Drawing.Color.White;
             this.dgvDiasHabiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiasHabiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dgvDiasHabiles.Location = new System.Drawing.Point(564, 38);
+            this.dgvDiasHabiles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.dgvDiasHabiles.Location = new System.Drawing.Point(53, 271);
             this.dgvDiasHabiles.Name = "dgvDiasHabiles";
-            this.dgvDiasHabiles.Size = new System.Drawing.Size(201, 315);
+            this.dgvDiasHabiles.RowHeadersWidth = 51;
+            this.dgvDiasHabiles.Size = new System.Drawing.Size(624, 175);
             this.dgvDiasHabiles.TabIndex = 63;
             this.dgvDiasHabiles.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDiasHabiles_CellMouseDoubleClick);
             this.dgvDiasHabiles.SelectionChanged += new System.EventHandler(this.dgvDiasHabiles_SelectionChanged);
@@ -705,143 +728,240 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "mes";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "diasHabiles";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // btnEditarOD
-            // 
-            this.btnEditarOD.Image = global::sistema_mrp.Properties.Resources.edit;
-            this.btnEditarOD.Location = new System.Drawing.Point(479, 328);
-            this.btnEditarOD.Name = "btnEditarOD";
-            this.btnEditarOD.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarOD.TabIndex = 62;
-            this.btnEditarOD.Text = "E";
-            this.btnEditarOD.UseVisualStyleBackColor = true;
-            this.btnEditarOD.Click += new System.EventHandler(this.btnEditarOD_Click);
             // 
             // tbCostoDespido
             // 
-            this.tbCostoDespido.Location = new System.Drawing.Point(195, 302);
+            this.tbCostoDespido.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoDespido.Location = new System.Drawing.Point(53, 191);
             this.tbCostoDespido.Name = "tbCostoDespido";
-            this.tbCostoDespido.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoDespido.Size = new System.Drawing.Size(134, 21);
             this.tbCostoDespido.TabIndex = 61;
             this.tbCostoDespido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoDespido_KeyPress);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(169, 272);
+            this.label19.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(51, 162);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 13);
+            this.label19.Size = new System.Drawing.Size(101, 14);
             this.label19.TabIndex = 60;
             this.label19.Text = "Costo de despido:";
             // 
             // tbFuerzaLaboral
             // 
-            this.tbFuerzaLaboral.Location = new System.Drawing.Point(370, 302);
+            this.tbFuerzaLaboral.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFuerzaLaboral.Location = new System.Drawing.Point(265, 193);
             this.tbFuerzaLaboral.Name = "tbFuerzaLaboral";
-            this.tbFuerzaLaboral.Size = new System.Drawing.Size(134, 20);
+            this.tbFuerzaLaboral.Size = new System.Drawing.Size(134, 21);
             this.tbFuerzaLaboral.TabIndex = 59;
             this.tbFuerzaLaboral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFuerzaLaboral_KeyPress);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(344, 272);
+            this.label18.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(262, 162);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 13);
+            this.label18.Size = new System.Drawing.Size(86, 14);
             this.label18.TabIndex = 58;
             this.label18.Text = "Fuerza Laboral:";
             // 
             // tbCostoContratacion
             // 
-            this.tbCostoContratacion.Location = new System.Drawing.Point(195, 227);
+            this.tbCostoContratacion.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoContratacion.Location = new System.Drawing.Point(265, 115);
             this.tbCostoContratacion.Name = "tbCostoContratacion";
-            this.tbCostoContratacion.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoContratacion.Size = new System.Drawing.Size(134, 21);
             this.tbCostoContratacion.TabIndex = 57;
             this.tbCostoContratacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoContratacion_KeyPress);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(169, 197);
+            this.label17.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(262, 87);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 13);
+            this.label17.Size = new System.Drawing.Size(129, 14);
             this.label17.TabIndex = 56;
             this.label17.Text = "Costo de Contratación: ";
             // 
             // tbCostoSubContratacion
             // 
-            this.tbCostoSubContratacion.Location = new System.Drawing.Point(370, 227);
+            this.tbCostoSubContratacion.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCostoSubContratacion.Location = new System.Drawing.Point(440, 115);
             this.tbCostoSubContratacion.Name = "tbCostoSubContratacion";
-            this.tbCostoSubContratacion.Size = new System.Drawing.Size(134, 20);
+            this.tbCostoSubContratacion.Size = new System.Drawing.Size(134, 21);
             this.tbCostoSubContratacion.TabIndex = 55;
             this.tbCostoSubContratacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCostoSubContratacion_KeyPress);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(344, 197);
+            this.label16.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(438, 87);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 13);
+            this.label16.Size = new System.Drawing.Size(144, 14);
             this.label16.TabIndex = 54;
             this.label16.Text = "Costo de Subcontratación:";
             // 
             // tbDiaTrabajadoXAnio
             // 
-            this.tbDiaTrabajadoXAnio.Location = new System.Drawing.Point(195, 154);
+            this.tbDiaTrabajadoXAnio.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDiaTrabajadoXAnio.Location = new System.Drawing.Point(53, 115);
             this.tbDiaTrabajadoXAnio.Name = "tbDiaTrabajadoXAnio";
-            this.tbDiaTrabajadoXAnio.Size = new System.Drawing.Size(134, 20);
+            this.tbDiaTrabajadoXAnio.Size = new System.Drawing.Size(134, 21);
             this.tbDiaTrabajadoXAnio.TabIndex = 53;
             this.tbDiaTrabajadoXAnio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDiaTrabajadoXAnio_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(169, 124);
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(51, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 13);
+            this.label5.Size = new System.Drawing.Size(136, 14);
             this.label5.TabIndex = 52;
             this.label5.Text = "Días Trabajado  por Año:";
             // 
             // tbNombreEmpresa
             // 
-            this.tbNombreEmpresa.Location = new System.Drawing.Point(189, 83);
+            this.tbNombreEmpresa.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombreEmpresa.Location = new System.Drawing.Point(180, 16);
             this.tbNombreEmpresa.Name = "tbNombreEmpresa";
-            this.tbNombreEmpresa.Size = new System.Drawing.Size(315, 20);
+            this.tbNombreEmpresa.Size = new System.Drawing.Size(315, 21);
             this.tbNombreEmpresa.TabIndex = 51;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(173, 55);
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(51, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.Size = new System.Drawing.Size(128, 14);
             this.label7.TabIndex = 50;
             this.label7.Text = "Nombre de la Empresa:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(493, 13);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(173, 28);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Administración";
+            // 
+            // MensajeSalir
+            // 
+            this.MensajeSalir.Popup += new System.Windows.Forms.PopupEventHandler(this.MensajeSalir_Popup);
+            // 
+            // btnEditarPP
+            // 
+            this.btnEditarPP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarPP.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarPP.Location = new System.Drawing.Point(602, 321);
+            this.btnEditarPP.Name = "btnEditarPP";
+            this.btnEditarPP.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarPP.TabIndex = 29;
+            this.btnEditarPP.UseVisualStyleBackColor = true;
+            this.btnEditarPP.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnEditarP1
+            // 
+            this.btnEditarP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarP1.Location = new System.Drawing.Point(214, 251);
+            this.btnEditarP1.Name = "btnEditarP1";
+            this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP1.TabIndex = 30;
+            this.btnEditarP1.UseVisualStyleBackColor = true;
+            this.btnEditarP1.Click += new System.EventHandler(this.btnEditarP1_Click);
+            // 
+            // btnEditarP2
+            // 
+            this.btnEditarP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarP2.Location = new System.Drawing.Point(215, 252);
+            this.btnEditarP2.Name = "btnEditarP2";
+            this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP2.TabIndex = 30;
+            this.btnEditarP2.UseVisualStyleBackColor = true;
+            this.btnEditarP2.Click += new System.EventHandler(this.btnEditarP2_Click);
+            // 
+            // btnEditarP3
+            // 
+            this.btnEditarP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarP3.Location = new System.Drawing.Point(211, 252);
+            this.btnEditarP3.Name = "btnEditarP3";
+            this.btnEditarP3.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP3.TabIndex = 56;
+            this.btnEditarP3.UseVisualStyleBackColor = true;
+            this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
+            // 
+            // btnEditarOD
+            // 
+            this.btnEditarOD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarOD.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarOD.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarOD.Location = new System.Drawing.Point(490, 185);
+            this.btnEditarOD.Name = "btnEditarOD";
+            this.btnEditarOD.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarOD.TabIndex = 62;
+            this.btnEditarOD.UseVisualStyleBackColor = true;
+            this.btnEditarOD.Click += new System.EventHandler(this.btnEditarOD_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
+            this.button1.Location = new System.Drawing.Point(12, 565);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 50);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
             // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 675);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.ClientSize = new System.Drawing.Size(1173, 627);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvBOM);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Administracion";
+            this.Opacity = 0.98D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion";
             this.Load += new System.EventHandler(this.Administracion_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Administracion_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.dgvBOM.ResumeLayout(false);
             this.tpProductosDetalles.ResumeLayout(false);
@@ -858,6 +978,7 @@
             this.tpEmpresa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiasHabiles)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -938,5 +1059,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolTip MensajeSalir;
     }
 }
