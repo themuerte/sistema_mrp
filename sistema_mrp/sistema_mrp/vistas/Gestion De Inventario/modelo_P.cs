@@ -22,6 +22,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             tbNumeroPeriodos.Text = "5";
         }
 
+       
         private void cargarProductosTabla()
         {
             Trucazos.vaciarDataGridView(dgvProductos);
@@ -218,6 +219,16 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             {
                 e.Handled = true;
             }
+        }
+
+        private void modelo_P_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void modelo_P_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

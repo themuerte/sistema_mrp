@@ -22,6 +22,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             tbNumeroPeriodos.Text = "5";
         }
 
+        
+
         private void btn_limpiar_Click(object sender, EventArgs e)
         {
             txt_costoM.Text = "";
@@ -290,6 +292,11 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         private void txt_inventarioSegu_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void modelo_Q_MouseDown(object sender, MouseEventArgs e)
+        {
+           
         }
     }
 }
