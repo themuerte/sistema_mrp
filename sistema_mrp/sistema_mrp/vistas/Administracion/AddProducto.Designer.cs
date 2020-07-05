@@ -106,8 +106,13 @@
             this.label3.Size = new System.Drawing.Size(380, 54);
             this.label3.TabIndex = 38;
             this.label3.Text = "Ingrese el nuevo producto";
+<<<<<<< HEAD
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label3_MouseDown);
+=======
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+>>>>>>> 19cbc7ac8de050fe960cefb021aa07c2bf6c3775
             // 
             // AddProducto
             // 
