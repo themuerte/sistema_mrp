@@ -122,7 +122,7 @@ namespace sistema_mrp.vistas.Administracion
 
         }
 
-<<<<<<< HEAD
+
         private void btnAddProduct_MouseDown(object sender, MouseEventArgs e)
         {
            
@@ -138,11 +138,7 @@ namespace sistema_mrp.vistas.Administracion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-=======
-        private void label3_Click(object sender, EventArgs e)
-        {
 
->>>>>>> 19cbc7ac8de050fe960cefb021aa07c2bf6c3775
         }
     }
 }
