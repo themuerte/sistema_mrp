@@ -697,5 +697,15 @@ namespace sistema_mrp.vistas.Administracion
             MensajeSalir.ToolTipTitle = "Cerrar Aplicación";
             MensajeSalir.ToolTipIcon = ToolTipIcon.Info;
         }
+
+        private void MensajeSalir_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
