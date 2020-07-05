@@ -312,7 +312,7 @@
             this.ModP.Padding = new System.Windows.Forms.Padding(3);
             this.ModP.Size = new System.Drawing.Size(243, 280);
             this.ModP.TabIndex = 0;
-            this.ModP.Text = "Primera Parte";
+            this.ModP.Text = "Datos 1";
             // 
             // tbProbabilidadDemanda
             // 
@@ -424,7 +424,7 @@
             this.ModQ.Padding = new System.Windows.Forms.Padding(3);
             this.ModQ.Size = new System.Drawing.Size(243, 280);
             this.ModQ.TabIndex = 1;
-            this.ModQ.Text = "Segunda Parte";
+            this.ModQ.Text = "Datos 2";
             // 
             // tbCostoUnitario
             // 
@@ -542,7 +542,7 @@
             this.MRP.Name = "MRP";
             this.MRP.Size = new System.Drawing.Size(243, 280);
             this.MRP.TabIndex = 2;
-            this.MRP.Text = "Tercera Parte";
+            this.MRP.Text = "Datos 3";
             // 
             // tbCostoHrsExtras
             // 
@@ -886,7 +886,7 @@
             // 
             this.btnEditarP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarP1.Location = new System.Drawing.Point(172, 218);
+            this.btnEditarP1.Location = new System.Drawing.Point(214, 251);
             this.btnEditarP1.Name = "btnEditarP1";
             this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
             this.btnEditarP1.TabIndex = 30;
@@ -897,7 +897,7 @@
             // 
             this.btnEditarP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarP2.Location = new System.Drawing.Point(170, 203);
+            this.btnEditarP2.Location = new System.Drawing.Point(215, 252);
             this.btnEditarP2.Name = "btnEditarP2";
             this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
             this.btnEditarP2.TabIndex = 30;
@@ -908,9 +908,9 @@
             // 
             this.btnEditarP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarP3.Location = new System.Drawing.Point(160, 169);
+            this.btnEditarP3.Location = new System.Drawing.Point(211, 252);
             this.btnEditarP3.Name = "btnEditarP3";
-            this.btnEditarP3.Size = new System.Drawing.Size(29, 25);
+            this.btnEditarP3.Size = new System.Drawing.Size(25, 25);
             this.btnEditarP3.TabIndex = 56;
             this.btnEditarP3.UseVisualStyleBackColor = true;
             this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
