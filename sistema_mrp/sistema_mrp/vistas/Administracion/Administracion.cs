@@ -707,5 +707,10 @@ namespace sistema_mrp.vistas.Administracion
         {
 
         }
+
+        private void tbDescripcion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
