@@ -53,15 +53,14 @@
             this.panel1.Controls.Add(this.btn_MRP);
             this.panel1.Controls.Add(this.btn_modeloP);
             this.panel1.Controls.Add(this.label1);
-<<<<<<< HEAD
+
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 632);
-=======
+
             this.panel1.Location = new System.Drawing.Point(0, -3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(225, 636);
->>>>>>> c26d060b1f998059c275264fe610a14c6835894b
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
@@ -170,15 +169,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 38);
             this.label1.TabIndex = 0;
-<<<<<<< HEAD
-            this.label1.Text = " ";
-            // 
-            // panel_prin
-            // 
-            this.panel_prin.Location = new System.Drawing.Point(226, 0);
-            this.panel_prin.Name = "panel_prin";
-            this.panel_prin.Size = new System.Drawing.Size(943, 632);
-=======
+
             this.label1.Text = "Gestion De Inventario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -187,7 +178,6 @@
             this.panel_prin.Location = new System.Drawing.Point(231, -3);
             this.panel_prin.Name = "panel_prin";
             this.panel_prin.Size = new System.Drawing.Size(927, 627);
->>>>>>> c26d060b1f998059c275264fe610a14c6835894b
             this.panel_prin.TabIndex = 1;
             this.panel_prin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prin_Paint);
             this.panel_prin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_prin_MouseDown);

@@ -31,21 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administracion));
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lProd = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.dgvBOM = new System.Windows.Forms.TabControl();
             this.tpProductosDetalles = new System.Windows.Forms.TabPage();
             this.dgvDemanda = new System.Windows.Forms.DataGridView();
-            this.idPlanProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.demanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lIdProductoSel = new System.Windows.Forms.Label();
+            this.btnEditarPP = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.ModP = new System.Windows.Forms.TabPage();
+            this.btnEditarP1 = new System.Windows.Forms.Button();
             this.tbProbabilidadDemanda = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbDesviacion = new System.Windows.Forms.TextBox();
@@ -67,7 +63,9 @@
             this.label20 = new System.Windows.Forms.Label();
             this.tbCostoMantenimiento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnEditarP2 = new System.Windows.Forms.Button();
             this.MRP = new System.Windows.Forms.TabPage();
+            this.btnEditarP3 = new System.Windows.Forms.Button();
             this.tbCostoHrsExtras = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.tbCostosxHoras = new System.Windows.Forms.TextBox();
@@ -99,14 +97,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbNombreEmpresa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnEditarOD = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.MensajeSalir = new System.Windows.Forms.ToolTip(this.components);
-            this.btnEditarPP = new System.Windows.Forms.Button();
-            this.btnEditarP1 = new System.Windows.Forms.Button();
-            this.btnEditarP2 = new System.Windows.Forms.Button();
-            this.btnEditarP3 = new System.Windows.Forms.Button();
-            this.btnEditarOD = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPlanProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.demanda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.dgvBOM.SuspendLayout();
             this.tpProductosDetalles.SuspendLayout();
@@ -137,26 +137,6 @@
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick);
             this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
-            // 
-            // idProducto
-            // 
-            this.idProducto.HeaderText = "idProducto";
-            this.idProducto.MinimumWidth = 6;
-            this.idProducto.Name = "idProducto";
-            this.idProducto.ReadOnly = true;
-            this.idProducto.Visible = false;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "descripcion";
-            this.descripcion.MinimumWidth = 6;
-            this.descripcion.Name = "descripcion";
             // 
             // lProd
             // 
@@ -252,25 +232,6 @@
             this.dgvDemanda.TabIndex = 30;
             this.dgvDemanda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDemanda_CellDoubleClick);
             // 
-            // idPlanProducto
-            // 
-            this.idPlanProducto.HeaderText = "id";
-            this.idPlanProducto.MinimumWidth = 6;
-            this.idPlanProducto.Name = "idPlanProducto";
-            this.idPlanProducto.Visible = false;
-            // 
-            // mes
-            // 
-            this.mes.HeaderText = "mes";
-            this.mes.MinimumWidth = 6;
-            this.mes.Name = "mes";
-            // 
-            // demanda
-            // 
-            this.demanda.HeaderText = "demanda";
-            this.demanda.MinimumWidth = 6;
-            this.demanda.Name = "demanda";
-            // 
             // lIdProductoSel
             // 
             this.lIdProductoSel.AutoSize = true;
@@ -280,6 +241,17 @@
             this.lIdProductoSel.Size = new System.Drawing.Size(17, 14);
             this.lIdProductoSel.TabIndex = 18;
             this.lIdProductoSel.Text = "id";
+            // 
+            // btnEditarPP
+            // 
+            this.btnEditarPP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarPP.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarPP.Location = new System.Drawing.Point(602, 321);
+            this.btnEditarPP.Name = "btnEditarPP";
+            this.btnEditarPP.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarPP.TabIndex = 29;
+            this.btnEditarPP.UseVisualStyleBackColor = true;
+            this.btnEditarPP.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabControl1
             // 
@@ -314,6 +286,17 @@
             this.ModP.Size = new System.Drawing.Size(243, 280);
             this.ModP.TabIndex = 0;
             this.ModP.Text = "Datos 1";
+            // 
+            // btnEditarP1
+            // 
+            this.btnEditarP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarP1.Location = new System.Drawing.Point(214, 251);
+            this.btnEditarP1.Name = "btnEditarP1";
+            this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP1.TabIndex = 30;
+            this.btnEditarP1.UseVisualStyleBackColor = true;
+            this.btnEditarP1.Click += new System.EventHandler(this.btnEditarP1_Click);
             // 
             // tbProbabilidadDemanda
             // 
@@ -527,6 +510,17 @@
             this.label6.TabIndex = 44;
             this.label6.Text = "Costo del mantenimiento:";
             // 
+            // btnEditarP2
+            // 
+            this.btnEditarP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarP2.Location = new System.Drawing.Point(215, 252);
+            this.btnEditarP2.Name = "btnEditarP2";
+            this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP2.TabIndex = 30;
+            this.btnEditarP2.UseVisualStyleBackColor = true;
+            this.btnEditarP2.Click += new System.EventHandler(this.btnEditarP2_Click);
+            // 
             // MRP
             // 
             this.MRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
@@ -544,6 +538,17 @@
             this.MRP.Size = new System.Drawing.Size(243, 280);
             this.MRP.TabIndex = 2;
             this.MRP.Text = "Datos 3";
+            // 
+            // btnEditarP3
+            // 
+            this.btnEditarP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarP3.Location = new System.Drawing.Point(211, 252);
+            this.btnEditarP3.Name = "btnEditarP3";
+            this.btnEditarP3.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarP3.TabIndex = 56;
+            this.btnEditarP3.UseVisualStyleBackColor = true;
+            this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
             // 
             // tbCostoHrsExtras
             // 
@@ -857,6 +862,18 @@
             this.label7.TabIndex = 50;
             this.label7.Text = "Nombre de la Empresa:";
             // 
+            // btnEditarOD
+            // 
+            this.btnEditarOD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarOD.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarOD.Image = global::sistema_mrp.Properties.Resources.success;
+            this.btnEditarOD.Location = new System.Drawing.Point(490, 185);
+            this.btnEditarOD.Name = "btnEditarOD";
+            this.btnEditarOD.Size = new System.Drawing.Size(25, 25);
+            this.btnEditarOD.TabIndex = 62;
+            this.btnEditarOD.UseVisualStyleBackColor = true;
+            this.btnEditarOD.Click += new System.EventHandler(this.btnEditarOD_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -873,62 +890,6 @@
             // 
             this.MensajeSalir.Popup += new System.Windows.Forms.PopupEventHandler(this.MensajeSalir_Popup);
             // 
-            // btnEditarPP
-            // 
-            this.btnEditarPP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarPP.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarPP.Location = new System.Drawing.Point(602, 321);
-            this.btnEditarPP.Name = "btnEditarPP";
-            this.btnEditarPP.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarPP.TabIndex = 29;
-            this.btnEditarPP.UseVisualStyleBackColor = true;
-            this.btnEditarPP.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnEditarP1
-            // 
-            this.btnEditarP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarP1.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarP1.Location = new System.Drawing.Point(214, 251);
-            this.btnEditarP1.Name = "btnEditarP1";
-            this.btnEditarP1.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP1.TabIndex = 30;
-            this.btnEditarP1.UseVisualStyleBackColor = true;
-            this.btnEditarP1.Click += new System.EventHandler(this.btnEditarP1_Click);
-            // 
-            // btnEditarP2
-            // 
-            this.btnEditarP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarP2.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarP2.Location = new System.Drawing.Point(215, 252);
-            this.btnEditarP2.Name = "btnEditarP2";
-            this.btnEditarP2.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP2.TabIndex = 30;
-            this.btnEditarP2.UseVisualStyleBackColor = true;
-            this.btnEditarP2.Click += new System.EventHandler(this.btnEditarP2_Click);
-            // 
-            // btnEditarP3
-            // 
-            this.btnEditarP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarP3.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarP3.Location = new System.Drawing.Point(211, 252);
-            this.btnEditarP3.Name = "btnEditarP3";
-            this.btnEditarP3.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarP3.TabIndex = 56;
-            this.btnEditarP3.UseVisualStyleBackColor = true;
-            this.btnEditarP3.Click += new System.EventHandler(this.btnEditarP3_Click);
-            // 
-            // btnEditarOD
-            // 
-            this.btnEditarOD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarOD.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarOD.Image = global::sistema_mrp.Properties.Resources.success;
-            this.btnEditarOD.Location = new System.Drawing.Point(490, 185);
-            this.btnEditarOD.Name = "btnEditarOD";
-            this.btnEditarOD.Size = new System.Drawing.Size(25, 25);
-            this.btnEditarOD.TabIndex = 62;
-            this.btnEditarOD.UseVisualStyleBackColor = true;
-            this.btnEditarOD.Click += new System.EventHandler(this.btnEditarOD_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
@@ -943,6 +904,45 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             this.button1.MouseHover += new System.EventHandler(this.button1_MouseHover);
+            // 
+            // idProducto
+            // 
+            this.idProducto.HeaderText = "idProducto";
+            this.idProducto.MinimumWidth = 6;
+            this.idProducto.Name = "idProducto";
+            this.idProducto.ReadOnly = true;
+            this.idProducto.Visible = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.MinimumWidth = 6;
+            this.descripcion.Name = "descripcion";
+            // 
+            // idPlanProducto
+            // 
+            this.idPlanProducto.HeaderText = "id";
+            this.idPlanProducto.MinimumWidth = 6;
+            this.idPlanProducto.Name = "idPlanProducto";
+            this.idPlanProducto.Visible = false;
+            // 
+            // mes
+            // 
+            this.mes.HeaderText = "Mes";
+            this.mes.MinimumWidth = 6;
+            this.mes.Name = "mes";
+            // 
+            // demanda
+            // 
+            this.demanda.HeaderText = "Demanda";
+            this.demanda.MinimumWidth = 6;
+            this.demanda.Name = "demanda";
             // 
             // Administracion
             // 
@@ -999,9 +999,6 @@
         private System.Windows.Forms.Label lNombreComponente;
         private System.Windows.Forms.TabPage tpEmpresa;
         private System.Windows.Forms.Label lIdProductoSel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.Button btnEditarPP;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage ModP;
@@ -1052,14 +1049,17 @@
         private System.Windows.Forms.TextBox tbCostoUnitario;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgvDemanda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPlanProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn demanda;
         private System.Windows.Forms.DataGridView dgvDiasHabiles;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolTip MensajeSalir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPlanProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn demanda;
     }
 }
