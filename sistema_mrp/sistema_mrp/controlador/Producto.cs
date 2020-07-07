@@ -140,24 +140,27 @@ namespace sistema_mrp.controlador
             while (reader.Read())
             {
                 int vidProducto = reader.GetInt32(0);
-                string vnombre = reader.GetString(1);
-                string vdescripcion = reader.GetString(2);
-                double vinventario = reader.GetDouble(3);
-                double vcostoUnitario = reader.GetDouble(4);
-                double vcostoPedir = reader.GetDouble(5);
-                double vcostoMantenimiento = reader.GetDouble(6);
-                double vdesviacionDemanda = reader.GetDouble(7);
-                double vdemandaDiaria = reader.GetDouble(8);
-                double vprobabilidadDemanda = reader.GetDouble(9);
-                double vplazoEntregaDias = reader.GetDouble(10);
-                double vinventarioInicial = reader.GetDouble(11);
-                double vhorasRequeridas = reader.GetDouble(12);
-                double vstockSeguridad = reader.GetDouble(13);
-                double vcostoFaltante = reader.GetDouble(14);
-                double vcostoHrs = reader.GetDouble(15);
-                double vcostoHrsExtras = reader.GetDouble(16);
-                double vperiodoRevision = reader.GetDouble(17);
 
+
+                string vnombre = reader.GetString(1);//nombre
+                string vdescripcion = reader.GetString(2);//descripcion
+                double vinventario = reader.GetDouble(3);//inventario
+                double vcostoUnitario = reader.GetDouble(4);//costo_unitario
+                double vcostoPedir = reader.GetDouble(5); ;//costo_pedir
+                double vcostoMantenimiento = reader.GetDouble(6);//costo_mantenimiento
+                double vdesviacionDemanda = reader.GetDouble(7);//desviacion_demanda
+                double vdemandaDiaria = reader.GetDouble(8);//demanda_diaria
+                double vperiodoRevision = reader.GetDouble(9);//periodo_revision
+                double vprobabilidadDemanda = reader.GetDouble(10);//probabilidad_demanda
+                double vplazoEntregaDias = reader.GetDouble(11);//plazo_entrega_dias
+                double vinventarioInicial = reader.GetDouble(12);//inventario_inicial
+                double vhorasRequeridas = reader.GetDouble(13);//horas_requeridas
+                double vstockSeguridad = reader.GetDouble(14);//stock_seguridad
+                double vcostoFaltante = reader.GetDouble(15);//costo_faltante
+                double vcostoHrs = reader.GetDouble(16);//costo_hrs
+                double vcostoHrsExtras = reader.GetDouble(17);//costohrs_extras
+
+                //Console.WriteLine(vdemandaDiaria + "-" + vplazoEntregaDias + "-" + vperiodoRevision + "-" + vdesviacionDemanda + "-" + vprobabilidadDemanda);
                 prod = new Producto(vidProducto, vnombre, vdescripcion, vinventario, vcostoUnitario, vcostoPedir, vcostoMantenimiento, vdesviacionDemanda, vdemandaDiaria, vprobabilidadDemanda, vplazoEntregaDias, vinventarioInicial, vhorasRequeridas, vstockSeguridad, vcostoFaltante, vcostoHrs, vcostoHrsExtras, vperiodoRevision);
                 
 
@@ -205,6 +208,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET nombre ='{this.Nombre}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -216,6 +220,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET descripcion ='{this.Descripcion}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -227,6 +232,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET inventario ='{this.Inventario}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -238,6 +244,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET costo_unitario ='{this.CostoUnitario}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -249,6 +256,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET costo_pedir ='{this.CostoPedir}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -260,6 +268,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET costo_mantenimiento ='{this.CostoMantenimiento}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -271,6 +280,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET desviacion_demanda ='{this.DesviacionDemanda}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -282,6 +292,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET demanda_diaria ='{this.DemandaDiaria}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -293,6 +304,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET probabilidad_demanda ='{this.ProbabilidadDemanda}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -304,6 +316,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET plazo_entrega_dias ='{this.PlazoEntregaDias}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -315,6 +328,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET inventario_inicial ='{this.InventarioInicial}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -326,6 +340,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET horas_requeridas ='{this.HorasRequeridas}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -337,6 +352,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET stock_seguridad ='{this.StockSeguridad}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -348,6 +364,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET costo_faltante ='{this.CostoFaltante}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -360,6 +377,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET costo_hrs ='{this.CostoHrs}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -371,6 +389,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET costo_hrs_extras ='{this.CostoHrsExtras}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();
@@ -382,6 +401,7 @@ namespace sistema_mrp.controlador
             var con = new Conexion().getConexion();
             con.Open();
             string consulta = $"UPDATE prod.producto SET periodo_revision ='{periodo_revision}' WHERE id_producto={this.IdProducto}";
+            Console.WriteLine(consulta);
             var cmd = new NpgsqlCommand(consulta, con);
             int res = cmd.ExecuteNonQuery();
             con.Close();

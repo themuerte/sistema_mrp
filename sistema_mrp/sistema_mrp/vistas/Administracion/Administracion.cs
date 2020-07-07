@@ -132,17 +132,26 @@ namespace sistema_mrp.vistas.Administracion
             {
                 int idProducto = int.Parse(lIdProductoSel.Text);
                 productoSel = Producto.GetProductoById(idProducto);
+                Console.WriteLine("Producto: " + productoSel.Nombre);
                 tbNombre.Text = productoSel.Nombre;
                 tbDescripcion.Text = productoSel.Descripcion;
                 tbInventario.Text =            Math.Round(productoSel.Inventario, 2) + "";
                 tbCostoUnitario.Text =         Math.Round(productoSel.CostoUnitario, 2) + "";
+                Console.WriteLine("CostoUnitario: " + productoSel.CostoUnitario);
                 tbCostoPorPedir.Text =         Math.Round(productoSel.CostoPedir, 2) + "";
+                Console.WriteLine("Costo Pedir: " + productoSel.CostoPedir);
                 tbCostoMantenimiento.Text =    Math.Round(productoSel.CostoMantenimiento, 2) + "";
+                Console.WriteLine("Costo Mantenimiento: " + productoSel.CostoMantenimiento);
                 tbDesviacion.Text =            Math.Round(productoSel.DesviacionDemanda, 2) + "";
+                Console.WriteLine("Desviación de la demanda: " + productoSel.DesviacionDemanda);
                 tbDemandaDiaria.Text =         Math.Round(productoSel.DemandaDiaria, 2) + "";
+                Console.WriteLine("Demanda diaria: " + productoSel.DemandaDiaria);
                 tbPeriodoRevision.Text =       Math.Round(productoSel.PeriodoRevision, 2) + "";
+                Console.WriteLine("Período de revisión" + productoSel.PeriodoRevision);
                 tbProbabilidadDemanda.Text =   Math.Round(productoSel.ProbabilidadDemanda, 2) + "";
+                Console.WriteLine("Probabilidad de la demanda" + productoSel.ProbabilidadDemanda);
                 tbPlazodeEntregaP.Text =       Math.Round(productoSel.PlazoEntregaDias, 2) + "";
+                Console.WriteLine("Plazo de Entrega días: " + productoSel.PlazoEntregaDias);
                 tbInventarioInicial.Text =     Math.Round(productoSel.InventarioInicial, 2) + "";
                 tbHorasRequeridas.Text =       Math.Round(productoSel.HorasRequeridas, 2) + "";
                 tbStockSeguridad.Text =        Math.Round(productoSel.StockSeguridad, 2) + "";
@@ -666,6 +675,11 @@ namespace sistema_mrp.vistas.Administracion
             {
                 e.Handled = true;
             }
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
