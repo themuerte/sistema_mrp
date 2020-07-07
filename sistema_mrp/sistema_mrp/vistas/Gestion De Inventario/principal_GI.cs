@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 using sistema_mrp.vistas;
 using sistema_mrp.vistas.Gestion_De_Inventario;
 
@@ -21,6 +22,12 @@ namespace sistema_mrp.vistas.Gestion_de_inventario
 
             this.Location = new Point(0,0);
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg,
+        int wparam, int lparam);
 
         private void internal_frame(object ob)//metodo para generar los componentes adentro del panel
         {
@@ -75,6 +82,30 @@ namespace sistema_mrp.vistas.Gestion_de_inventario
         private void panel_prin_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel_prin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_salir_MouseHover(object sender, EventArgs e)
+        {
+            MensajeSalir.SetToolTip(btn_salir, "Al precionar este Botón estará cerrando la aplicación");
+            MensajeSalir.ToolTipTitle = "Cerrar Aplicación";
+            MensajeSalir.ToolTipIcon = ToolTipIcon.Info;
         }
     }
 }

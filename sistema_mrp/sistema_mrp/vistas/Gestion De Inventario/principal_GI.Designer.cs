@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(principal_GI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_salir = new System.Windows.Forms.Button();
             this.btn_modeloQ = new System.Windows.Forms.Button();
@@ -37,6 +39,7 @@
             this.btn_modeloP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel_prin = new System.Windows.Forms.Panel();
+            this.MensajeSalir = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +53,17 @@
             this.panel1.Controls.Add(this.btn_MRP);
             this.panel1.Controls.Add(this.btn_modeloP);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 3);
+
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(223, 621);
+            this.panel1.Size = new System.Drawing.Size(225, 632);
+
+            this.panel1.Location = new System.Drawing.Point(0, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(225, 636);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btn_salir
             // 
@@ -61,13 +71,15 @@
             this.btn_salir.FlatAppearance.BorderSize = 0;
             this.btn_salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salir.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salir.ForeColor = System.Drawing.Color.White;
             this.btn_salir.Image = global::sistema_mrp.Properties.Resources.shapes_and_symbols;
-            this.btn_salir.Location = new System.Drawing.Point(10, 571);
+            this.btn_salir.Location = new System.Drawing.Point(10, 561);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(55, 41);
+            this.btn_salir.Size = new System.Drawing.Size(64, 50);
             this.btn_salir.TabIndex = 6;
             this.btn_salir.UseVisualStyleBackColor = false;
             this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
+            this.btn_salir.MouseHover += new System.EventHandler(this.btn_salir_MouseHover);
             // 
             // btn_modeloQ
             // 
@@ -157,15 +169,18 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 38);
             this.label1.TabIndex = 0;
+
             this.label1.Text = "Gestion De Inventario";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel_prin
             // 
-            this.panel_prin.Location = new System.Drawing.Point(231, 3);
+            this.panel_prin.Location = new System.Drawing.Point(231, -3);
             this.panel_prin.Name = "panel_prin";
-            this.panel_prin.Size = new System.Drawing.Size(943, 621);
+            this.panel_prin.Size = new System.Drawing.Size(927, 627);
             this.panel_prin.TabIndex = 1;
             this.panel_prin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prin_Paint);
+            this.panel_prin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_prin_MouseDown);
             // 
             // principal_GI
             // 
@@ -174,8 +189,11 @@
             this.ClientSize = new System.Drawing.Size(1173, 627);
             this.Controls.Add(this.panel_prin);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "principal_GI";
+            this.Opacity = 0.98D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "principal_GI";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -193,5 +211,6 @@
         private System.Windows.Forms.Button btn_modeloP;
         private System.Windows.Forms.Panel panel_prin;
         private System.Windows.Forms.Button btn_salir;
+        private System.Windows.Forms.ToolTip MensajeSalir;
     }
 }

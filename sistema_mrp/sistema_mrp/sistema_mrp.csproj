@@ -191,12 +191,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editarbtn.bmp" />
-    <None Include="vistas\Administracion\edit.png" />
+    <None Include="Resources\success.png" />
+    <Content Include="vistas\Administracion\success.png" />
+    <Content Include="vistas\logo mrp.svg" />
     <Content Include="vistas\shapes-and-symbols.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>

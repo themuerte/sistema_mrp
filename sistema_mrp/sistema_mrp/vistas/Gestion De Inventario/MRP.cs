@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using sistema_mrp.controlador;
 using sistema_mrp.controlador.MRP;
 
+
 namespace sistema_mrp.vistas.Gestion_De_Inventario
 {
     public partial class MRP : Form
@@ -18,6 +19,8 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
         {
             InitializeComponent();
         }
+
+       
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -276,6 +279,19 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             {
                 dgvProducto.Rows.Add(producto);
             }
+        }
+
+        private void txt_semanas_TextChanged(object sender, EventArgs e)
+        {
+       
+               
+                Controls.Add(new Label() { Height = 1, Dock = DockStyle.Bottom, BackColor = Color.Black });
+            
+        }
+
+        private void MRP_MouseDown(object sender, MouseEventArgs e)
+        {
+          
         }
     }
 }
