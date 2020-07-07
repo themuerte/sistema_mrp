@@ -25,11 +25,11 @@ namespace sistema_mrp.controlador
 
         public Conexion()
         {
-            Host = "ec2-52-72-65-76.compute-1.amazonaws.com";
-            Database = "d15ljbcj7f07q1";
-            User = "vxiievzjdxcafz";
+            Host = "ec2-54-161-208-31.compute-1.amazonaws.com";
+            Database = "dfolm9hqbsvhdf";
+            User = "jdsifucfjvmdxh";
             Port = "5432";
-            Password = "541953b00714c02e021c29f7dc0e8fa7df08791c485ebb61943d4ba449f9290c";
+            Password = "cf2094bfe814b2e301ca97945829d80b58fcb5841c5eb7b6529fab69f3370e5a";
             ConexionString = "Host=" + Host + ";Port=" + Port + ";Username=" + User + ";Password=" + Password + ";Database=" + Database + ";SSL Mode=Prefer;Trust Server Certificate=true";
         }
 
