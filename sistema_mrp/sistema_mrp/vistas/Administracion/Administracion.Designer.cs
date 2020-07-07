@@ -117,17 +117,22 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(93, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cerrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvProductos
             // 
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
@@ -149,12 +154,12 @@
             // 
             // nombre
             // 
-            this.nombre.HeaderText = "nombre";
+            this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             // 
             // descripcion
             // 
-            this.descripcion.HeaderText = "descripcion";
+            this.descripcion.HeaderText = "Descripción";
             this.descripcion.Name = "descripcion";
             // 
             // lProd
@@ -168,22 +173,29 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(12, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
             this.button2.Text = "Volver";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddProduct
             // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btnAddProduct.FlatAppearance.BorderSize = 0;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Location = new System.Drawing.Point(569, 26);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(105, 23);
             this.btnAddProduct.TabIndex = 8;
             this.btnAddProduct.Text = "Nuevo Producto";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // dgvBOM
@@ -198,6 +210,7 @@
             // 
             // tpProductosDetalles
             // 
+            this.tpProductosDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tpProductosDetalles.Controls.Add(this.dgvDemanda);
             this.tpProductosDetalles.Controls.Add(this.lIdProductoSel);
             this.tpProductosDetalles.Controls.Add(this.btnEditarPP);
@@ -217,12 +230,12 @@
             this.tpProductosDetalles.Size = new System.Drawing.Size(875, 476);
             this.tpProductosDetalles.TabIndex = 0;
             this.tpProductosDetalles.Text = "Productos";
-            this.tpProductosDetalles.UseVisualStyleBackColor = true;
             // 
             // dgvDemanda
             // 
             this.dgvDemanda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDemanda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvDemanda.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvDemanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDemanda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idPlanProducto,
@@ -232,6 +245,7 @@
             this.dgvDemanda.Name = "dgvDemanda";
             this.dgvDemanda.Size = new System.Drawing.Size(156, 377);
             this.dgvDemanda.TabIndex = 30;
+            this.dgvDemanda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDemanda_CellContentClick);
             this.dgvDemanda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDemanda_CellDoubleClick);
             // 
             // idPlanProducto
@@ -242,12 +256,12 @@
             // 
             // mes
             // 
-            this.mes.HeaderText = "mes";
+            this.mes.HeaderText = "Mes";
             this.mes.Name = "mes";
             // 
             // demanda
             // 
-            this.demanda.HeaderText = "demanda";
+            this.demanda.HeaderText = "Demanda";
             this.demanda.Name = "demanda";
             // 
             // lIdProductoSel
@@ -283,6 +297,7 @@
             // 
             // ModP
             // 
+            this.ModP.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ModP.Controls.Add(this.btnEditarP1);
             this.ModP.Controls.Add(this.tbProbabilidadDemanda);
             this.ModP.Controls.Add(this.label9);
@@ -300,7 +315,6 @@
             this.ModP.Size = new System.Drawing.Size(646, 171);
             this.ModP.TabIndex = 0;
             this.ModP.Text = "Primera Parte";
-            this.ModP.UseVisualStyleBackColor = true;
             // 
             // btnEditarP1
             // 
@@ -326,9 +340,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(352, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 13);
+            this.label9.Size = new System.Drawing.Size(141, 13);
             this.label9.TabIndex = 48;
-            this.label9.Text = "Probabilidad de la Demanda:";
+            this.label9.Text = "Probabilidad de la demanda:";
             // 
             // tbDesviacion
             // 
@@ -360,9 +374,9 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(401, 31);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 13);
+            this.label11.Size = new System.Drawing.Size(103, 13);
             this.label11.TabIndex = 44;
-            this.label11.Text = "Periodo de Revisión: ";
+            this.label11.Text = "Periodo de revisión: ";
             // 
             // tbPlazodeEntregaP
             // 
@@ -377,9 +391,9 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(247, 31);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 13);
+            this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 42;
-            this.label12.Text = "Plazo de Entrega";
+            this.label12.Text = "Plazo de entrega:";
             // 
             // tbDemandaDiaria
             // 
@@ -394,12 +408,13 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(86, 31);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 13);
+            this.label13.Size = new System.Drawing.Size(84, 13);
             this.label13.TabIndex = 40;
-            this.label13.Text = "Demanda Diaria:";
+            this.label13.Text = "Demanda diaria:";
             // 
             // ModQ
             // 
+            this.ModQ.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ModQ.Controls.Add(this.tbCostoUnitario);
             this.ModQ.Controls.Add(this.label15);
             this.ModQ.Controls.Add(this.tbCostoFaltante);
@@ -417,7 +432,6 @@
             this.ModQ.Size = new System.Drawing.Size(646, 171);
             this.ModQ.TabIndex = 1;
             this.ModQ.Text = "Segunda Parte";
-            this.ModQ.UseVisualStyleBackColor = true;
             // 
             // tbCostoUnitario
             // 
@@ -449,9 +463,9 @@
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(61, 31);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(81, 13);
+            this.label23.Size = new System.Drawing.Size(78, 13);
             this.label23.TabIndex = 52;
-            this.label23.Text = "Costo Faltante: ";
+            this.label23.Text = "Costo faltante: ";
             // 
             // tbStockSeguridad
             // 
@@ -483,9 +497,9 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(390, 91);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(84, 13);
+            this.label20.Size = new System.Drawing.Size(86, 13);
             this.label20.TabIndex = 48;
-            this.label20.Text = "Inventario Inicial";
+            this.label20.Text = "Inventario inicial:";
             // 
             // tbCostoMantenimiento
             // 
@@ -517,6 +531,7 @@
             // 
             // MRP
             // 
+            this.MRP.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.MRP.Controls.Add(this.btnEditarP3);
             this.MRP.Controls.Add(this.tbCostoHrsExtras);
             this.MRP.Controls.Add(this.label25);
@@ -531,7 +546,6 @@
             this.MRP.Size = new System.Drawing.Size(646, 171);
             this.MRP.TabIndex = 2;
             this.MRP.Text = "Tercera Parte";
-            this.MRP.UseVisualStyleBackColor = true;
             // 
             // btnEditarP3
             // 
@@ -608,9 +622,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(93, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 13);
+            this.label14.Size = new System.Drawing.Size(81, 13);
             this.label14.TabIndex = 42;
-            this.label14.Text = "Costo por Pedir:";
+            this.label14.Text = "Costo por pedir:";
             // 
             // tbDescripcion
             // 
@@ -666,6 +680,7 @@
             // 
             // tpEmpresa
             // 
+            this.tpEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tpEmpresa.Controls.Add(this.dgvDiasHabiles);
             this.tpEmpresa.Controls.Add(this.btnEditarOD);
             this.tpEmpresa.Controls.Add(this.tbCostoDespido);
@@ -685,12 +700,12 @@
             this.tpEmpresa.Size = new System.Drawing.Size(875, 476);
             this.tpEmpresa.TabIndex = 2;
             this.tpEmpresa.Text = "Otros Datos";
-            this.tpEmpresa.UseVisualStyleBackColor = true;
             // 
             // dgvDiasHabiles
             // 
             this.dgvDiasHabiles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiasHabiles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvDiasHabiles.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvDiasHabiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiasHabiles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -711,12 +726,12 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "mes";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mes";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "diasHabiles";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Días hábiles";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // btnEditarOD
@@ -760,9 +775,9 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(344, 272);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 13);
+            this.label18.Size = new System.Drawing.Size(76, 13);
             this.label18.TabIndex = 58;
-            this.label18.Text = "Fuerza Laboral:";
+            this.label18.Text = "Fuerza laboral:";
             // 
             // tbCostoContratacion
             // 
@@ -777,9 +792,9 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(169, 197);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 13);
+            this.label17.Size = new System.Drawing.Size(117, 13);
             this.label17.TabIndex = 56;
-            this.label17.Text = "Costo de Contratación: ";
+            this.label17.Text = "Costo de contratación: ";
             // 
             // tbCostoSubContratacion
             // 
@@ -794,9 +809,9 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(344, 197);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(133, 13);
+            this.label16.Size = new System.Drawing.Size(131, 13);
             this.label16.TabIndex = 54;
-            this.label16.Text = "Costo de Subcontratación:";
+            this.label16.Text = "Costo de subcontratación:";
             // 
             // tbDiaTrabajadoXAnio
             // 
@@ -811,9 +826,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(169, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 13);
+            this.label5.Size = new System.Drawing.Size(124, 13);
             this.label5.TabIndex = 52;
-            this.label5.Text = "Días Trabajado  por Año:";
+            this.label5.Text = "Días trabajados por año:";
             // 
             // tbNombreEmpresa
             // 
@@ -827,21 +842,23 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(173, 55);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 13);
+            this.label7.Size = new System.Drawing.Size(116, 13);
             this.label7.TabIndex = 50;
-            this.label7.Text = "Nombre de la Empresa:";
+            this.label7.Text = "Nombre de la empresa:";
             // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 675);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(920, 558);
             this.Controls.Add(this.dgvBOM);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Administracion";
-            this.Text = "Administracion";
+            this.Text = "Administración";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Administracion_FormClosing);
             this.Load += new System.EventHandler(this.Administracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.dgvBOM.ResumeLayout(false);
@@ -879,9 +896,6 @@
         private System.Windows.Forms.Label lNombreComponente;
         private System.Windows.Forms.TabPage tpEmpresa;
         private System.Windows.Forms.Label lIdProductoSel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.Button btnEditarPP;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage ModP;
@@ -932,10 +946,13 @@
         private System.Windows.Forms.TextBox tbCostoUnitario;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView dgvDemanda;
+        private System.Windows.Forms.DataGridView dgvDiasHabiles;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPlanProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn mes;
         private System.Windows.Forms.DataGridViewTextBoxColumn demanda;
-        private System.Windows.Forms.DataGridView dgvDiasHabiles;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

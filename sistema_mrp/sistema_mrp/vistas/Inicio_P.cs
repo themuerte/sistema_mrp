@@ -44,6 +44,8 @@ namespace sistema_mrp
             Administracion administracion = new Administracion();
             this.Hide();
             administracion.Show();
+            
+
         }
 
         private void lbl_inicio_Click(object sender, EventArgs e)

@@ -36,14 +36,12 @@
             this.btn_modeloQ = new System.Windows.Forms.Button();
             this.btn_modeloP = new System.Windows.Forms.Button();
             this.panel_prin = new System.Windows.Forms.Panel();
-            this.btnAdmin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
-            this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_atras);
             this.panel1.Controls.Add(this.btn_MRP);
@@ -63,7 +61,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Gestion De Inventario";
+            this.label1.Text = "Gestión de Inventario";
             // 
             // btn_atras
             // 
@@ -85,7 +83,7 @@
             // 
             this.btn_MRP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
             this.btn_MRP.FlatAppearance.BorderSize = 0;
-            this.btn_MRP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btn_MRP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(19)))), ((int)(((byte)(26)))));
             this.btn_MRP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MRP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_MRP.ForeColor = System.Drawing.Color.White;
@@ -101,7 +99,7 @@
             // 
             this.btn_planeacioA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
             this.btn_planeacioA.FlatAppearance.BorderSize = 0;
-            this.btn_planeacioA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btn_planeacioA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(19)))), ((int)(((byte)(26)))));
             this.btn_planeacioA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_planeacioA.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_planeacioA.ForeColor = System.Drawing.Color.White;
@@ -117,7 +115,7 @@
             // 
             this.btn_modeloQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
             this.btn_modeloQ.FlatAppearance.BorderSize = 0;
-            this.btn_modeloQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btn_modeloQ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(19)))), ((int)(((byte)(26)))));
             this.btn_modeloQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modeloQ.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modeloQ.ForeColor = System.Drawing.Color.White;
@@ -133,7 +131,7 @@
             // 
             this.btn_modeloP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
             this.btn_modeloP.FlatAppearance.BorderSize = 0;
-            this.btn_modeloP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btn_modeloP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(19)))), ((int)(((byte)(26)))));
             this.btn_modeloP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modeloP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modeloP.ForeColor = System.Drawing.Color.White;
@@ -153,21 +151,6 @@
             this.panel_prin.TabIndex = 1;
             this.panel_prin.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_prin_Paint);
             // 
-            // btnAdmin
-            // 
-            this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
-            this.btnAdmin.FlatAppearance.BorderSize = 0;
-            this.btnAdmin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnAdmin.Location = new System.Drawing.Point(925, 60);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(131, 39);
-            this.btnAdmin.TabIndex = 6;
-            this.btnAdmin.Text = "Administración";
-            this.btnAdmin.UseVisualStyleBackColor = false;
-            // 
             // principal_GI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +160,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "principal_GI";
-            this.Text = "principal_GI";
+            this.Text = "DAM";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.principal_GI_FormClosing);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -194,6 +177,5 @@
         private System.Windows.Forms.Button btn_MRP;
         private System.Windows.Forms.Button btn_modeloP;
         private System.Windows.Forms.Panel panel_prin;
-        private System.Windows.Forms.Button btnAdmin;
     }
 }

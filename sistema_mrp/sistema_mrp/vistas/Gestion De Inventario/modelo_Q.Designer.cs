@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -90,9 +90,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(123, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 14);
+            this.label2.Size = new System.Drawing.Size(92, 14);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Demanda anual";
+            this.label2.Text = "Demanda anual:";
             // 
             // label3
             // 
@@ -100,9 +100,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(108, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 14);
+            this.label3.Size = new System.Drawing.Size(110, 14);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Costo del producto";
+            this.label3.Text = "Costo del producto:";
             // 
             // label1
             // 
@@ -110,9 +110,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(73, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 14);
+            this.label1.Size = new System.Drawing.Size(139, 14);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Costo de mantenimiento";
+            this.label1.Text = "Costo de mantenimiento:";
             // 
             // label4
             // 
@@ -120,9 +120,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(123, 180);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 14);
+            this.label4.Size = new System.Drawing.Size(86, 14);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Costo de pedir";
+            this.label4.Text = "Costo de pedir:";
             // 
             // label5
             // 
@@ -130,9 +130,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(81, 238);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 14);
+            this.label5.Size = new System.Drawing.Size(134, 14);
             this.label5.TabIndex = 5;
-            this.label5.Text = "Dias trabajados por año";
+            this.label5.Text = "Dias trabajados por año:";
             // 
             // txt_demanda
             // 
@@ -182,7 +182,7 @@
             // 
             // btn_calcular
             // 
-            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btn_calcular.FlatAppearance.BorderSize = 0;
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -197,7 +197,7 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(143)))), ((int)(((byte)(212)))));
+            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btn_limpiar.FlatAppearance.BorderSize = 0;
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -217,7 +217,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 19);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Q Óptimo";
+            this.label6.Text = "Q Óptimo:";
             // 
             // label7
             // 
@@ -234,9 +234,9 @@
             this.lbl_plazoE.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_plazoE.Location = new System.Drawing.Point(115, 211);
             this.lbl_plazoE.Name = "lbl_plazoE";
-            this.lbl_plazoE.Size = new System.Drawing.Size(94, 14);
+            this.lbl_plazoE.Size = new System.Drawing.Size(97, 14);
             this.lbl_plazoE.TabIndex = 15;
-            this.lbl_plazoE.Text = "Plazo de entrega";
+            this.lbl_plazoE.Text = "Plazo de entrega:";
             // 
             // txt_plazoE
             // 
@@ -313,7 +313,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(103, 45);
+            this.label11.Location = new System.Drawing.Point(179, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 20);
             this.label11.TabIndex = 27;
@@ -365,6 +365,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tabPage1.Controls.Add(this.txt_diasAño);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label3);
@@ -386,10 +387,10 @@
             this.tabPage1.Size = new System.Drawing.Size(390, 382);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Nuevos";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tabPage2.Controls.Add(this.dgvProductos);
             this.tabPage2.Location = new System.Drawing.Point(23, 4);
             this.tabPage2.Name = "tabPage2";
@@ -397,7 +398,6 @@
             this.tabPage2.Size = new System.Drawing.Size(390, 382);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Producto Registrado";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dgvProductos
             // 
@@ -449,41 +449,41 @@
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(65, 436);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(115, 14);
+            this.label9.Size = new System.Drawing.Size(118, 14);
             this.label9.TabIndex = 44;
-            this.label9.Text = "Número de Períodos";
+            this.label9.Text = "Número de períodos:";
             // 
             // cModeloQ
             // 
-            chartArea4.Name = "ChartArea1";
-            this.cModeloQ.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.cModeloQ.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.cModeloQ.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.cModeloQ.Legends.Add(legend2);
             this.cModeloQ.Location = new System.Drawing.Point(538, 163);
             this.cModeloQ.Name = "cModeloQ";
             this.cModeloQ.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             this.cModeloQ.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series10.Legend = "Legend1";
-            series10.Name = "QOptimo";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series11.Legend = "Legend1";
-            series11.Name = "Inventario";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series12.Legend = "Legend1";
-            series12.Name = "SSeguridad";
-            this.cModeloQ.Series.Add(series10);
-            this.cModeloQ.Series.Add(series11);
-            this.cModeloQ.Series.Add(series12);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "QOptimo";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Inventario";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "SSeguridad";
+            this.cModeloQ.Series.Add(series4);
+            this.cModeloQ.Series.Add(series5);
+            this.cModeloQ.Series.Add(series6);
             this.cModeloQ.Size = new System.Drawing.Size(427, 300);
             this.cModeloQ.TabIndex = 43;
             this.cModeloQ.Text = "Modelo Q";
-            title4.Name = "tModeloQ";
-            title4.Text = "Modelo Q";
-            this.cModeloQ.Titles.Add(title4);
+            title2.Name = "tModeloQ";
+            title2.Text = "Modelo Q";
+            this.cModeloQ.Titles.Add(title2);
             // 
             // label14
             // 

@@ -58,19 +58,22 @@
             this.lMes.AutoSize = true;
             this.lMes.Location = new System.Drawing.Point(108, 85);
             this.lMes.Name = "lMes";
-            this.lMes.Size = new System.Drawing.Size(76, 13);
+            this.lMes.Size = new System.Drawing.Size(73, 13);
             this.lMes.TabIndex = 28;
-            this.lMes.Text = "Mes de Enero:";
+            this.lMes.Text = "Mes de Enero";
             this.lMes.Click += new System.EventHandler(this.lNombreComponente_Click);
             // 
             // btnAddProduct
             // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.Location = new System.Drawing.Point(78, 184);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(105, 23);
             this.btnAddProduct.TabIndex = 34;
             this.btnAddProduct.Text = "Editar";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click_1);
             // 
             // label2
@@ -86,6 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(282, 268);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAddProduct);
@@ -93,7 +97,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lMes);
             this.Name = "EditDemanda";
-            this.Text = "Administracion";
+            this.Text = "Administración";
             this.Load += new System.EventHandler(this.Administracion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

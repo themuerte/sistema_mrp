@@ -22,6 +22,7 @@ namespace sistema_mrp.vistas.Administracion
             this.papa = papa;
             this.pp = pp;
             lMes.Text = "Mes NO. " + pp.IdPlanAgregado;
+            this.CenterToScreen();
         }
 
 

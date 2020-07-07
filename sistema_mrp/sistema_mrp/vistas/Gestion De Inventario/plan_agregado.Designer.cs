@@ -66,6 +66,17 @@
             this.dtgResultado = new System.Windows.Forms.DataGridView();
             this.tcModo1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tModo2 = new System.Windows.Forms.TabPage();
             this.btnCalcular2 = new System.Windows.Forms.Button();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
@@ -76,19 +87,8 @@
             this.tbMeses = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lTotal = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_semanas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgResultado)).BeginInit();
             this.tcModo1.SuspendLayout();
@@ -106,9 +106,9 @@
             this.label2.Location = new System.Drawing.Point(11, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 14);
+            this.label2.Size = new System.Drawing.Size(101, 14);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Número de datos";
+            this.label2.Text = "Número de datos:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txt_numeroDatos
@@ -125,7 +125,7 @@
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
             this.btnAceptar.FlatAppearance.BorderSize = 0;
-            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
@@ -198,9 +198,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(626, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 14);
+            this.label4.Size = new System.Drawing.Size(118, 14);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Costo de Producción";
+            this.label4.Text = "Costo de producción:";
             // 
             // label5
             // 
@@ -208,9 +208,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(646, 70);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 14);
+            this.label5.Size = new System.Drawing.Size(91, 14);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Mantenimiento";
+            this.label5.Text = "Mantenimiento:";
             // 
             // label6
             // 
@@ -218,9 +218,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(630, 97);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 14);
+            this.label6.Size = new System.Drawing.Size(124, 14);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Costo Contratación";
+            this.label6.Text = "Costo de contratación:";
             // 
             // label7
             // 
@@ -228,9 +228,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(641, 123);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 14);
+            this.label7.Size = new System.Drawing.Size(96, 14);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Inventario Inicial";
+            this.label7.Text = "Inventario inicial:";
             // 
             // label8
             // 
@@ -239,7 +239,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(115, 15);
             this.label8.TabIndex = 20;
-            this.label8.Text = "Stock de reguridad";
+            this.label8.Text = "Stock de seguridad:";
             // 
             // label9
             // 
@@ -249,7 +249,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 14);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Horas Requeridas";
+            this.label9.Text = "Horas requeridas:";
             // 
             // label10
             // 
@@ -258,7 +258,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 15);
             this.label10.TabIndex = 18;
-            this.label10.Text = "Costo de Despido";
+            this.label10.Text = "Costo de despido:";
             // 
             // label11
             // 
@@ -268,7 +268,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(148, 14);
             this.label11.TabIndex = 17;
-            this.label11.Text = "Costo de Sub-Contratación";
+            this.label11.Text = "Costo de sub-contratación:";
             // 
             // tbCostoDeProducción
             // 
@@ -397,7 +397,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(115, 15);
             this.label12.TabIndex = 32;
-            this.label12.Text = "Fuerza Laboral";
+            this.label12.Text = "Fuerza laboral:";
             // 
             // label13
             // 
@@ -406,7 +406,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(115, 15);
             this.label13.TabIndex = 31;
-            this.label13.Text = "Costo Horas Extras";
+            this.label13.Text = "Costo horas extras:";
             // 
             // label14
             // 
@@ -415,7 +415,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(115, 15);
             this.label14.TabIndex = 30;
-            this.label14.Text = "Costo Horas Normal";
+            this.label14.Text = "Costo horas normal:";
             // 
             // label15
             // 
@@ -424,12 +424,12 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(115, 15);
             this.label15.TabIndex = 29;
-            this.label15.Text = "Costo Faltante";
+            this.label15.Text = "Costo faltante:";
             // 
             // btnCalcular
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
-            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btnCalcular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.ForeColor = System.Drawing.Color.White;
@@ -444,7 +444,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
-            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
@@ -458,6 +458,7 @@
             // 
             // dtg_semanas
             // 
+            this.dtg_semanas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dtg_semanas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_semanas.Location = new System.Drawing.Point(24, 76);
             this.dtg_semanas.Name = "dtg_semanas";
@@ -538,6 +539,105 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Nuevos";
             // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label20.Location = new System.Drawing.Point(947, 109);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 1);
+            this.label20.TabIndex = 70;
+            // 
+            // label28
+            // 
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label28.Location = new System.Drawing.Point(750, 56);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(80, 1);
+            this.label28.TabIndex = 78;
+            // 
+            // label27
+            // 
+            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label27.Location = new System.Drawing.Point(949, 53);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(70, 1);
+            this.label27.TabIndex = 77;
+            // 
+            // label26
+            // 
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label26.Location = new System.Drawing.Point(751, 86);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(80, 1);
+            this.label26.TabIndex = 76;
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label25.Location = new System.Drawing.Point(750, 113);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(80, 1);
+            this.label25.TabIndex = 75;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label24.Location = new System.Drawing.Point(750, 143);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(80, 1);
+            this.label24.TabIndex = 74;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label23.Location = new System.Drawing.Point(750, 167);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(80, 1);
+            this.label23.TabIndex = 73;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label22.Location = new System.Drawing.Point(749, 195);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(80, 1);
+            this.label22.TabIndex = 72;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label18.Location = new System.Drawing.Point(950, 164);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 1);
+            this.label18.TabIndex = 68;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Location = new System.Drawing.Point(950, 193);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 1);
+            this.label17.TabIndex = 67;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Location = new System.Drawing.Point(118, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 1);
+            this.label1.TabIndex = 66;
+            // 
             // tModo2
             // 
             this.tModo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -555,6 +655,7 @@
             // btnCalcular2
             // 
             this.btnCalcular2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
+            this.btnCalcular2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btnCalcular2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular2.ForeColor = System.Drawing.Color.White;
@@ -607,9 +708,9 @@
             this.label16.Location = new System.Drawing.Point(82, 94);
             this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 14);
+            this.label16.Size = new System.Drawing.Size(104, 14);
             this.label16.TabIndex = 42;
-            this.label16.Text = "Número de meses";
+            this.label16.Text = "Número de meses:";
             this.label16.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tbMeses
@@ -623,7 +724,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -645,33 +746,6 @@
             this.lTotal.TabIndex = 48;
             this.lTotal.Text = "Total:";
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(118, 53);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 1);
-            this.label1.TabIndex = 66;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Location = new System.Drawing.Point(950, 193);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 1);
-            this.label17.TabIndex = 67;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label18.Location = new System.Drawing.Point(950, 164);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 1);
-            this.label18.TabIndex = 68;
-            // 
             // label19
             // 
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
@@ -681,15 +755,6 @@
             this.label19.Size = new System.Drawing.Size(70, 1);
             this.label19.TabIndex = 69;
             // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label20.Location = new System.Drawing.Point(947, 109);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 1);
-            this.label20.TabIndex = 70;
-            // 
             // label21
             // 
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
@@ -698,69 +763,6 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(70, 1);
             this.label21.TabIndex = 71;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label22.Location = new System.Drawing.Point(749, 195);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(80, 1);
-            this.label22.TabIndex = 72;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label23.Location = new System.Drawing.Point(750, 167);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(80, 1);
-            this.label23.TabIndex = 73;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label24.Location = new System.Drawing.Point(750, 143);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(80, 1);
-            this.label24.TabIndex = 74;
-            // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label25.Location = new System.Drawing.Point(750, 113);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(80, 1);
-            this.label25.TabIndex = 75;
-            // 
-            // label26
-            // 
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label26.Location = new System.Drawing.Point(751, 86);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(80, 1);
-            this.label26.TabIndex = 76;
-            // 
-            // label27
-            // 
-            this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label27.Location = new System.Drawing.Point(949, 53);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(70, 1);
-            this.label27.TabIndex = 77;
-            // 
-            // label28
-            // 
-            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label28.Location = new System.Drawing.Point(750, 56);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(80, 1);
-            this.label28.TabIndex = 78;
             // 
             // plan_agregado
             // 

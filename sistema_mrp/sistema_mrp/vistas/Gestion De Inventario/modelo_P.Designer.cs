@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_demanda = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -225,7 +225,7 @@
             // 
             // btn_calcular
             // 
-            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btn_calcular.FlatAppearance.BorderSize = 0;
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_calcular.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -240,7 +240,7 @@
             // 
             // btn_limpiar
             // 
-            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.btn_limpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(73)))), ((int)(((byte)(73)))));
             this.btn_limpiar.FlatAppearance.BorderSize = 0;
             this.btn_limpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpiar.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -526,35 +526,35 @@
             // 
             // cModeloP
             // 
-            chartArea3.Name = "ChartArea1";
-            this.cModeloP.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.cModeloP.Legends.Add(legend3);
+            chartArea2.Name = "ChartArea1";
+            this.cModeloP.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.cModeloP.Legends.Add(legend2);
             this.cModeloP.Location = new System.Drawing.Point(478, 96);
             this.cModeloP.Name = "cModeloP";
             this.cModeloP.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             this.cModeloP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.Legend = "Legend1";
-            series7.Name = "Inventario";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "QOptimo";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series9.Legend = "Legend1";
-            series9.Name = "Inv, Prom.";
-            this.cModeloP.Series.Add(series7);
-            this.cModeloP.Series.Add(series8);
-            this.cModeloP.Series.Add(series9);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Inventario";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "QOptimo";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Inv, Prom.";
+            this.cModeloP.Series.Add(series4);
+            this.cModeloP.Series.Add(series5);
+            this.cModeloP.Series.Add(series6);
             this.cModeloP.Size = new System.Drawing.Size(585, 370);
             this.cModeloP.TabIndex = 35;
             this.cModeloP.Text = "Modelo P";
-            title3.Name = "Title1";
-            title3.Text = "Modelo P";
-            this.cModeloP.Titles.Add(title3);
+            title2.Name = "Title1";
+            title2.Text = "Modelo P";
+            this.cModeloP.Titles.Add(title2);
             // 
             // tbNumeroPeriodos
             // 
@@ -573,9 +573,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(29, 433);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(115, 14);
+            this.label12.Size = new System.Drawing.Size(118, 14);
             this.label12.TabIndex = 36;
-            this.label12.Text = "Número de Períodos";
+            this.label12.Text = "Número de períodos:";
             // 
             // bUpdateChart
             // 

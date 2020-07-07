@@ -22,6 +22,7 @@ namespace sistema_mrp.vistas.Administracion
             this.papa = papa;
             this.pa = pa;
             lNombreMes.Text = "Mes de " + pa.Mes;
+            this.CenterToScreen();
         }
         private void button1_Click(object sender, EventArgs e)
         {

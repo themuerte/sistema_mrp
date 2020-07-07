@@ -21,6 +21,7 @@ namespace sistema_mrp.vistas.Administracion
         {
             InitializeComponent();
             empresa = Empresa.GetEmpresa();
+            this.CenterToScreen();
             
         }
 
@@ -675,6 +676,16 @@ namespace sistema_mrp.vistas.Administracion
             {
                 e.Handled = true;
             }
+        }
+
+        private void dgvDemanda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Administracion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
