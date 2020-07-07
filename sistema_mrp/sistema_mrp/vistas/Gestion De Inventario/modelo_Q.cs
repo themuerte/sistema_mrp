@@ -226,17 +226,7 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
 
         private void bUpdateChart_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                int numeroPeriodos = int.Parse(tbNumeroPeriodos.Text);
-                cargarGrafico(numeroPeriodos);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            
         }
 
         private void cargarGrafico(int numeroPeriodos)
@@ -274,6 +264,21 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int numeroPeriodos = int.Parse(tbNumeroPeriodos.Text);
+                cargarGrafico(numeroPeriodos);
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
         }
     }

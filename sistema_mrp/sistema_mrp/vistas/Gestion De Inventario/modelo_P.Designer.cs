@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_demanda = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,6 +63,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tbModeloP = new System.Windows.Forms.TabControl();
             this.tpDatosNuevos = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tpProducto = new System.Windows.Forms.TabPage();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.idProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,12 +79,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.bUpdateChart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -382,10 +382,11 @@
             // 
             // tbModeloP
             // 
-            this.tbModeloP.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tbModeloP.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tbModeloP.Controls.Add(this.tpDatosNuevos);
             this.tbModeloP.Controls.Add(this.tpProducto);
             this.tbModeloP.HotTrack = true;
+            this.tbModeloP.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tbModeloP.Location = new System.Drawing.Point(28, 35);
             this.tbModeloP.Multiline = true;
             this.tbModeloP.Name = "tbModeloP";
@@ -418,37 +419,91 @@
             this.tpDatosNuevos.Controls.Add(this.btn_limpiar);
             this.tpDatosNuevos.Controls.Add(this.txt_periodoRevi);
             this.tpDatosNuevos.Controls.Add(this.btn_calcular);
-            this.tpDatosNuevos.Location = new System.Drawing.Point(4, 25);
+            this.tpDatosNuevos.Location = new System.Drawing.Point(23, 4);
             this.tpDatosNuevos.Name = "tpDatosNuevos";
             this.tpDatosNuevos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDatosNuevos.Size = new System.Drawing.Size(398, 351);
+            this.tpDatosNuevos.Size = new System.Drawing.Size(379, 372);
             this.tpDatosNuevos.TabIndex = 0;
             this.tpDatosNuevos.Text = "Datos Nuevos";
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Location = new System.Drawing.Point(227, 194);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(110, 1);
+            this.label17.TabIndex = 45;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Location = new System.Drawing.Point(229, 161);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(110, 1);
+            this.label16.TabIndex = 44;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label15.Location = new System.Drawing.Point(230, 277);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(110, 1);
+            this.label15.TabIndex = 43;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label14.Location = new System.Drawing.Point(230, 247);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(110, 1);
+            this.label14.TabIndex = 42;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label13.Location = new System.Drawing.Point(230, 220);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(110, 1);
+            this.label13.TabIndex = 41;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Location = new System.Drawing.Point(230, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 1);
+            this.label3.TabIndex = 40;
             // 
             // tpProducto
             // 
             this.tpProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tpProducto.Controls.Add(this.dgvProductos);
-            this.tpProducto.Location = new System.Drawing.Point(4, 25);
+            this.tpProducto.Location = new System.Drawing.Point(23, 4);
             this.tpProducto.Name = "tpProducto";
             this.tpProducto.Padding = new System.Windows.Forms.Padding(3);
-            this.tpProducto.Size = new System.Drawing.Size(398, 351);
+            this.tpProducto.Size = new System.Drawing.Size(379, 372);
             this.tpProducto.TabIndex = 1;
             this.tpProducto.Text = "Producto Existente";
             // 
             // dgvProductos
             // 
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(166)))), ((int)(((byte)(67)))));
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProducto,
             this.nombre,
             this.descripcion});
-            this.dgvProductos.Location = new System.Drawing.Point(6, 39);
+            this.dgvProductos.Location = new System.Drawing.Point(21, 37);
             this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(386, 264);
+            this.dgvProductos.Size = new System.Drawing.Size(336, 264);
             this.dgvProductos.TabIndex = 2;
             this.dgvProductos.SelectionChanged += new System.EventHandler(this.dgvProductos_SelectionChanged);
             // 
@@ -471,35 +526,35 @@
             // 
             // cModeloP
             // 
-            chartArea1.Name = "ChartArea1";
-            this.cModeloP.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.cModeloP.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.cModeloP.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.cModeloP.Legends.Add(legend3);
             this.cModeloP.Location = new System.Drawing.Point(478, 96);
             this.cModeloP.Name = "cModeloP";
             this.cModeloP.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             this.cModeloP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Inventario";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "QOptimo";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Inv, Prom.";
-            this.cModeloP.Series.Add(series1);
-            this.cModeloP.Series.Add(series2);
-            this.cModeloP.Series.Add(series3);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Legend = "Legend1";
+            series7.Name = "Inventario";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "QOptimo";
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Legend = "Legend1";
+            series9.Name = "Inv, Prom.";
+            this.cModeloP.Series.Add(series7);
+            this.cModeloP.Series.Add(series8);
+            this.cModeloP.Series.Add(series9);
             this.cModeloP.Size = new System.Drawing.Size(585, 370);
             this.cModeloP.TabIndex = 35;
             this.cModeloP.Text = "Modelo P";
-            title1.Name = "Title1";
-            title1.Text = "Modelo P";
-            this.cModeloP.Titles.Add(title1);
+            title3.Name = "Title1";
+            title3.Text = "Modelo P";
+            this.cModeloP.Titles.Add(title3);
             // 
             // tbNumeroPeriodos
             // 
@@ -545,60 +600,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 1);
             this.label1.TabIndex = 39;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(230, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 1);
-            this.label3.TabIndex = 40;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Location = new System.Drawing.Point(230, 220);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(110, 1);
-            this.label13.TabIndex = 41;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Location = new System.Drawing.Point(230, 247);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(110, 1);
-            this.label14.TabIndex = 42;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Location = new System.Drawing.Point(230, 277);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 1);
-            this.label15.TabIndex = 43;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Location = new System.Drawing.Point(229, 161);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 1);
-            this.label16.TabIndex = 44;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(18)))), ((int)(((byte)(26)))));
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Location = new System.Drawing.Point(227, 194);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(110, 1);
-            this.label17.TabIndex = 45;
             // 
             // label18
             // 

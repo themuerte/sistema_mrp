@@ -277,5 +277,15 @@ namespace sistema_mrp.vistas.Gestion_De_Inventario
                 dgvProducto.Rows.Add(producto);
             }
         }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbSemanas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
