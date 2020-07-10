@@ -9,6 +9,7 @@ namespace sistema_mrp.controlador
 {
     class Conexion
     {
+	//hola
         private string host;
         private string database;
         private string user;
